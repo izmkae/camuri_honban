@@ -1,0 +1,206 @@
+{
+  "sections": {
+    "01d42623-6eea-41c0-935c-b7f7eeedaae6": {
+      "type": "top-slideshow",
+      "blocks": {
+        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_slide_01_pc.png",
+            "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。",
+            "link": "shopify:\/\/products\/test-fucabori-cap-01"
+          }
+        },
+        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_slide_02_pc.png",
+            "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。",
+            "link": "shopify:\/\/blogs\/culture\/社長のあたまから-xxxxxxxxxxxxxxx"
+          }
+        },
+        "1545ef27-f327-42ee-afd6-98e911429776": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_slide_03_pc.png",
+            "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。\n3行テストキャップ。",
+            "link": "shopify:\/\/products\/test-fucabori-cap-02"
+          }
+        }
+      },
+      "block_order": [
+        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1",
+        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2",
+        "1545ef27-f327-42ee-afd6-98e911429776"
+      ],
+      "settings": {
+      }
+    },
+    "top_about_F9UPNq": {
+      "type": "top_about",
+      "settings": {
+        "topAboutText": "「帽⼦が似合わない」\nそう思っている全ての⼈へ。\nみんなのアタマと気持ちに\nフィットする帽⼦を、\nCAMURIが形にします。",
+        "topAboutLink": "shopify:\/\/pages\/about",
+        "topAboutImg": "shopify:\/\/shop_images\/img_top_about.png"
+      }
+    },
+    "top_contents_wVXE7f": {
+      "type": "top_contents",
+      "blocks": {
+        "content_set_KN433e": {
+          "type": "content_set",
+          "settings": {
+            "topContentImage": "shopify:\/\/shop_images\/img_contents_01.png",
+            "topContentHeading": "深さも選べるバケットハットで<br>親子でリンク。",
+            "topContentLink": ""
+          }
+        },
+        "content_set_iGpr9F": {
+          "type": "content_set",
+          "settings": {
+            "topContentImage": "shopify:\/\/shop_images\/img_contents_02.png",
+            "topContentHeading": "深さも選べるバケットハットで<br>親子でリンク。",
+            "topContentLink": ""
+          }
+        },
+        "content_set_49jWmc": {
+          "type": "content_set",
+          "settings": {
+            "topContentImage": "shopify:\/\/shop_images\/img_contents_03.png",
+            "topContentHeading": "深さも選べるバケットハットで<br>親子でリンク。",
+            "topContentLink": ""
+          }
+        },
+        "content_set_YhtAFa": {
+          "type": "content_set",
+          "settings": {
+            "topContentImage": "shopify:\/\/shop_images\/img_contents_01.png",
+            "topContentHeading": "深さも選べるバケットハットで<br>親子でリンク。",
+            "topContentLink": ""
+          }
+        },
+        "content_set_eahmKR": {
+          "type": "content_set",
+          "settings": {
+            "topContentImage": "shopify:\/\/shop_images\/img_contents_02.png",
+            "topContentHeading": "深さも選べるバケットハットで<br>親子でリンク。",
+            "topContentLink": ""
+          }
+        },
+        "content_set_dAbr8U": {
+          "type": "content_set",
+          "settings": {
+            "topContentImage": "shopify:\/\/shop_images\/img_contents_03.png",
+            "topContentHeading": "深さも選べるバケットハットで<br>親子でリンク。",
+            "topContentLink": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_set_KN433e",
+        "content_set_iGpr9F",
+        "content_set_49jWmc",
+        "content_set_YhtAFa",
+        "content_set_eahmKR",
+        "content_set_dAbr8U"
+      ],
+      "settings": {
+      }
+    },
+    "top_jornal_drLd3i": {
+      "type": "top_jornal",
+      "settings": {
+        "title": "JOURNAL",
+        "news_list": "culture",
+        "post_limit": 10,
+        "news_list_date": true,
+        "news_list_category": true
+      }
+    },
+    "top_item_xUxTWh": {
+      "type": "top_item",
+      "blocks": {
+        "item_category_z9qmRL": {
+          "type": "item_category",
+          "settings": {
+            "topItemCatImage": "shopify:\/\/shop_images\/img_cat_cap.png",
+            "topItemCatName": "キャップ",
+            "topItemCatText": "カジュアル感が人気",
+            "topItemCatLink": ""
+          }
+        },
+        "item_category_naADdd": {
+          "type": "item_category",
+          "settings": {
+            "topItemCatImage": "shopify:\/\/shop_images\/img_cat_hat.png",
+            "topItemCatName": "ハット",
+            "topItemCatText": "洋服を選ばない",
+            "topItemCatLink": ""
+          }
+        },
+        "item_category_J9QjJN": {
+          "type": "item_category",
+          "settings": {
+            "topItemCatImage": "shopify:\/\/shop_images\/img_cat_knit.png",
+            "topItemCatName": "ニットキャップ",
+            "topItemCatText": "柔らかな被り心地",
+            "topItemCatLink": ""
+          }
+        },
+        "item_category_Hhgi7f": {
+          "type": "item_category",
+          "settings": {
+            "topItemCatImage": "shopify:\/\/shop_images\/img_cat_beret.png",
+            "topItemCatName": "ベレー",
+            "topItemCatText": "個性が加わる",
+            "topItemCatLink": ""
+          }
+        },
+        "item_category_fqQ9ej": {
+          "type": "item_category",
+          "settings": {
+            "topItemCatImage": "shopify:\/\/shop_images\/img_cat_casket.png",
+            "topItemCatName": "キャスケット",
+            "topItemCatText": "こなれ感が出る",
+            "topItemCatLink": ""
+          }
+        },
+        "item_category_J6KhLJ": {
+          "type": "item_category",
+          "settings": {
+            "topItemCatImage": "shopify:\/\/shop_images\/img_cat_care.png",
+            "topItemCatName": "その他雑貨",
+            "topItemCatText": "帽子のケアなど",
+            "topItemCatLink": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_category_z9qmRL",
+        "item_category_naADdd",
+        "item_category_J9QjJN",
+        "item_category_Hhgi7f",
+        "item_category_fqQ9ej",
+        "item_category_J6KhLJ"
+      ],
+      "settings": {
+        "title": "ITEM",
+        "collection": "top-item",
+        "products_to_show": 8
+      }
+    },
+    "camuri_tryit_qBjbcw": {
+      "type": "camuri_tryit",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "01d42623-6eea-41c0-935c-b7f7eeedaae6",
+    "top_about_F9UPNq",
+    "top_contents_wVXE7f",
+    "top_jornal_drLd3i",
+    "top_item_xUxTWh",
+    "camuri_tryit_qBjbcw"
+  ]
+}

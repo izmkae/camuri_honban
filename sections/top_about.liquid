@@ -1,0 +1,39 @@
+<section id="aboutSec">
+	<div class="txtBlock">
+		<p>
+			{{ section.settings.topAboutText | newline_to_br }}
+		</p>
+	</div>
+	<div class="imgBlock"><img src="{{  section.settings.topAboutImg | img_url: 'master' }}"></div>
+	<div class="btnBlock"><a href="{{ section.settings.topAboutLink }}" class="btnStyleB01">ABOUT</a></div>
+</section>
+
+{% schema %}
+  {
+    "name": "トップ アバウト",
+    "tag": "section",
+	"class": "top_about",
+    "settings": [
+		{
+			"type": "textarea",
+			"id": "topAboutText",
+			"label": "コピー"
+		},
+		{
+			"type": "url",
+			"id": "topAboutLink",
+			"label": "リンク"
+		},
+		{
+			"type": "image_picker",
+			"id": "topAboutImg",
+			"label": "画像"
+		}
+	],
+	"presets": [
+		{
+			"name": "トップ アバウト"
+		}
+	]
+  }
+{% endschema %}

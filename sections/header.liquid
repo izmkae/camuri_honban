@@ -1,0 +1,226 @@
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- if settings.predictive_search_enabled -%}
+	<link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
+
+<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
+
+<script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+	<symbol id="icon-search" viewbox="0 0 18 19" fill="none">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"/>
+	</symbol>
+
+	<symbol id="icon-reset" class="icon icon-close"  fill="none" viewBox="0 0 18 18" stroke="currentColor">
+		<circle r="8.5" cy="9" cx="9" stroke-opacity="0.2"/>
+		<path d="M6.82972 6.82915L1.17193 1.17097" stroke-linecap="round" stroke-linejoin="round" transform="translate(5 5)"/>
+		<path d="M1.22896 6.88502L6.77288 1.11523" stroke-linecap="round" stroke-linejoin="round" transform="translate(5 5)"/>
+	</symbol>
+
+	<symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+		<path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+	</symbol>
+</svg>
+
+{%- liquid
+	for block in section.blocks
+		if block.type == '@app'
+			assign has_app_block = true
+		endif
+	endfor
+-%}
+
+	<header id="header">
+		<div class="headMsg">コットンキャップ待望の新入荷 !</div>
+		<div class="headerIn">
+			<h1 class="hLogo">
+				<a href="{{ routes.root_url }}"><img src="{{ 'logo_camuri.svg' | asset_url }}" alt="CAMURI | カムリ"></a>
+			</h1>
+			<div class="hMenu">
+				<div class="hCart">
+					<a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+						{%- liquid
+							if cart == empty
+								render 'icon-cart-empty'
+							else
+								render 'icon-cart'
+							endif
+						-%}
+						<span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+						{%- if cart != empty -%}
+							<div class="cart-count-bubble">
+								{%- if cart.item_count < 100 -%}
+									<span aria-hidden="true">{{ cart.item_count }}</span>
+								{%- endif -%}
+								<span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+							</div>
+						{%- endif -%}
+					</a>
+				</div>
+				<div class="hNavBtn"><span></span><span></span></div>
+			</div>
+		</div>
+	</header>
+
+	<nav id="gNaviWrapper">
+		<div id="gNaviIn"> 
+			<div id="gMenu01"> 
+				<div class="hSearchBlock">
+					
+					<form action="{{ routes.search_url }}" method="get" role="search" class="search">
+						<div class="field">
+							<input
+							class="search__input field__input"
+							id="Search-In-Template"
+							type="search"
+							name="q"
+							value="{{ search.terms | escape }}"
+							placeholder="{{ 'general.search.search' | t }}"
+							{%- if settings.predictive_search_enabled -%}
+								role="combobox"
+								aria-expanded="false"
+								aria-owns="predictive-search-results"
+								aria-controls="predictive-search-results"
+								aria-haspopup="listbox"
+								aria-autocomplete="list"
+								autocorrect="off"
+								autocomplete="off"
+								autocapitalize="off"
+								spellcheck="false"
+							{%- endif -%}
+							>
+							<label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
+							<input name="options[prefix]" type="hidden" value="last">
+
+							{%- if settings.predictive_search_enabled -%}
+							<div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
+								{%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
+							</div>
+
+							<span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+							{%- endif -%}
+
+							<button
+							type="reset"
+							class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+							aria-label="{{ 'general.search.reset' | t }}"
+							>
+							<svg class="icon icon-close" aria-hidden="true" focusable="false">
+								<use xlink:href="#icon-reset">
+							</svg>
+							</button>
+							<button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+							<svg class="icon icon-search" aria-hidden="true" focusable="false">
+								<use xlink:href="#icon-search">
+							</svg>
+							</button>
+						</div>
+					</form>
+
+				</div>
+				<a class="hBtnStyle"><span class="txtEn">MY PAGE</span><span class="txtJa">マイページ / 会員登録</span></a>
+			</div>
+			<div id="gMenu02"> 
+				<ul class="menuList">
+					<li><a href="#"><span class="txtEn">ABOUT</span><span class="txtJa">CAMURIについて</span></a></li>
+					<li><a href="#"><span class="txtEn">JOURNAL</span><span class="txtJa">よみもの</span></a></li>
+				</ul>
+			</div>
+			<div id="gMenu03"> 
+				<ul class="menuList">
+					<li><a href="#"><span class="txtEn">ITEM</span><span class="txtJa">商品一覧</span></a></li>
+				</ul>
+				<div class="acMenuBox">
+					<input id="acMenu01" name="acMenu01" type="checkbox" />
+					<label for="acMenu01">種類で選ぶ</label>
+					<ul class="acMenuList">
+						<li><a href="#">キャップ</a></li>
+						<li><a href="#">ハット</a></li>
+						<li><a href="#">ニットキャップ</a></li>
+						<li><a href="#">ベレー</a></li>
+						<li><a href="#">キャスケット</a></li>
+						<li><a href="#">その他</a></li>
+					</ul>
+				</div>
+				<div class="acMenuBox">
+					<input id="acMenu02" name="acMenu02" type="checkbox" />
+					<label for="acMenu02">サイズで選ぶ</label>
+					<ul class="acMenuList">
+						<li><a href="">1（キッズ）～54cm</a></li>
+						<li><a href="">2　～56cm</a></li>
+						<li><a href="">3　～58cm</a></li>
+						<li><a href="">4　～60cm</a></li>
+						<li><a href="">5　～62cm</a></li>
+					</ul>
+				</div>
+				<p class="menuTtl"><a href="">試着サービス</a></p>
+			</div>
+			<div id="gMenu04"> 
+				<ul class="hSNSMenu">
+					<li><a href="{{ settings.social_instagram_link }}"><img src="{{ 'ico_instagram.png' | asset_url }}" alt="Instagram"></a></li>
+					<li><a href="{{ settings.social_facebook_link }}"><img src="{{ 'ico_facebook.png' | asset_url }}" alt="Facebook"></a></li>
+					<li><a href="{{ settings.social_twitter_link }}"><img src="{{ 'ico_x.png' | asset_url }}" alt="X"></a></li>
+					<li><a href="{{ settings.social_line_link }}"><img src="{{ 'ico_line.png' | asset_url }}" alt="Line"></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": {{ shop.name | json }},
+		{% if settings.logo %}
+			"logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
+		{% endif %}
+		"sameAs": [
+			{{ settings.social_twitter_link | json }},
+			{{ settings.social_facebook_link | json }},
+			{{ settings.social_pinterest_link | json }},
+			{{ settings.social_instagram_link | json }},
+			{{ settings.social_tiktok_link | json }},
+			{{ settings.social_tumblr_link | json }},
+			{{ settings.social_snapchat_link | json }},
+			{{ settings.social_youtube_link | json }},
+			{{ settings.social_vimeo_link | json }}
+		],
+		"url": {{ request.origin | append: page.url | json }}
+	}
+</script>
+
+{%- if request.page_type == 'index' -%}
+	{% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"name": {{ shop.name | json }},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": {{ potential_action_target | json }},
+				"query-input": "required name=search_term_string"
+			},
+			"url": {{ request.origin | append: page.url | json }}
+		}
+	</script>
+{%- endif -%}
+
+{% schema %}
+{
+	"name": "t:sections.header.name",
+	"class": "section-header"
+}
+{% endschema %}

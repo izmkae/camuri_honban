@@ -1,0 +1,84 @@
+{%- assign blog = blogs[section.settings.news_list] -%}
+
+<section id="journalSec">
+    <h2>{{ section.settings.title | escape }}</h2>
+    <div class="inner">
+        <div class="lineup">
+          
+            <ul id="journalList">
+              {% for article in blog.articles limit: section.settings.post_limit %}
+                <li>
+                    <a href="{{ article.url }}"> 
+                        <div class="imgBlock">
+                          {% if article.image == blank %}
+                            <img src="{{ 'img_noimage_sqr.png' | asset_url }}" alt="No image">
+                          {% else %}
+                            <img src="{{ article.image.src | image_url: width: 533 }}">
+                          {% endif %}
+                           <div class="tabWrap"><span>TIPS</span></div>
+                        </div>
+                        <p class="journalTtl">{{ article.title }}</p>
+                        <p class="journalDate">{{  article.published_date | date: "%Y.%m.%d" }}</p>
+                    </a>
+                    <div class="tagList">
+                      {{ current_tags }} 
+                      
+                      {% for tag in article.tags %}
+                        <a class="blog-tag__link" href="{{ blog.url }}/tagged/{{ tag | handle }}">#{{ tag | remove_first: "#" }}</a>　
+                      {% endfor %}
+                    </div>
+                  </li>
+              {%- endfor -%}
+            </ul>
+        </div>
+    </div>
+    <div class="btnBlock"><a href="{{ blog.url }}" class="btnStyleB01">MORE READ</a></div>
+</section>
+
+{% schema %}
+{
+  "name": "トップ ジャーナル",
+  "tag": "section",
+  "class": "top_journal",
+  "settings": [
+    {
+      "id": "title",
+      "type": "text",
+      "label": "見出し",
+      "default": "JOURNAL"
+    },
+    {
+      "id": "news_list",
+      "type": "blog",
+      "label": "表示するブログ記事を選択"
+    },
+    {
+      "id": "post_limit",
+      "type": "range",
+      "label": "表示数を選択",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "id": "news_list_date",
+      "type": "checkbox",
+      "label": "日付を表示する",
+      "default": true
+    },
+    {
+      "id": "news_list_category",
+      "type": "checkbox",
+      "label": "カテゴリーを表示する",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "トップ ジャーナル",
+      "category": "トップ ジャーナル"
+    }
+  ]
+}
+{% endschema %}

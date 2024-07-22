@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "camuri_main-list-collections",
+      "settings": {
+        "sort": "alphabetical",
+        "image_ratio": "adapt"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

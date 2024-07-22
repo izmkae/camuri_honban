@@ -1,0 +1,354 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300;1,400&display=swap");
+/*
+min-font-size ($font_size, $min_font_size)
+$font_size (vw):     可変フォントサイズ
+$min_font_size (px): 最小フォントサイズ
+*/
+/*
+max-font-size ($font_size, $max_font_size)
+$font_size (vw):     可変フォントサイズ
+$max_font_size (px): 最大フォントサイズ
+*/
+/*-------------------------------------------------------------------
+	Override
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	Fitting
+-------------------------------------------------------------------*/
+h2 {
+  font-size: 3.24vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (min-width: 1388.88889px) {
+  h2 {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 800px) {
+  h2 {
+    font-size: 6.66vw;
+  }
+}
+h2 span {
+  display: block;
+  font-size: 1.63vw;
+  font-weight: normal;
+}
+@media screen and (min-width: 1104.29448px) {
+  h2 span {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  h2 span {
+    font-size: 3.73vw;
+  }
+}
+
+h3 {
+  font-size: 2.16vw;
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (min-width: 1388.88889px) {
+  h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  h3 {
+    font-size: 5.33vw;
+  }
+}
+
+.contentIn {
+  width: 92vw;
+  max-width: 1100px;
+  margin: auto;
+}
+
+#fittingAboutSec .contentIn {
+  padding: 34px 0 186px;
+}
+@media screen and (max-width: 800px) {
+  #fittingAboutSec .contentIn {
+    padding: 8.53vw 0 24.8vw;
+  }
+}
+#fittingAboutSec .mainImgBlock {
+  padding-top: 71px;
+}
+@media screen and (max-width: 800px) {
+  #fittingAboutSec .mainImgBlock {
+    padding-top: 6vw;
+    height: 75.73vw;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fittingAboutSec .mainImgBlock img {
+    width: auto;
+    height: 75.73vw;
+    object-fit: cover;
+  }
+}
+#fittingAboutSec .txtBlock {
+  padding-top: 63px;
+}
+@media screen and (max-width: 800px) {
+  #fittingAboutSec .txtBlock {
+    padding-top: 8.53vw;
+  }
+}
+#fittingAboutSec .txtBlock p {
+  padding-top: 41px;
+  font-size: 1.15vw;
+  line-height: 1.87;
+  text-align: center;
+}
+@media screen and (min-width: 1391.30435px) {
+  #fittingAboutSec .txtBlock p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fittingAboutSec .txtBlock p {
+    padding-top: 6vw;
+    font-size: 3.73vw;
+  }
+}
+#fittingAboutSec .fittingPointList {
+  padding: 111px 20px 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+@media screen and (max-width: 800px) {
+  #fittingAboutSec .fittingPointList {
+    padding: 25vw 0 0;
+  }
+}
+#fittingAboutSec .fittingPointList li {
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  #fittingAboutSec .fittingPointList li {
+    width: 100%;
+    margin-bottom: 16.53vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fittingAboutSec .fittingPointList li img {
+    width: 49.86vw;
+    margin: auto;
+  }
+}
+#fittingAboutSec .fittingPointList li p {
+  padding-top: 32px;
+  font-size: 1.44vw;
+  font-weight: bold;
+  line-height: 1.75;
+}
+@media screen and (min-width: 1388.88889px) {
+  #fittingAboutSec .fittingPointList li p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fittingAboutSec .fittingPointList li p {
+    padding-top: 5.86vw;
+    font-size: 4.26vw;
+  }
+}
+
+#fittingFlowSec {
+  background-color: #E1DFD9;
+}
+#fittingFlowSec .contentIn {
+  padding: 108px 0 157px;
+}
+@media screen and (max-width: 800px) {
+  #fittingFlowSec .contentIn {
+    padding: 13.6vw 0 14.66vw;
+  }
+}
+#fittingFlowSec .fittingFlowList {
+  width: 940px;
+  margin: 102px auto 0;
+  border-top: 2px solid #000000;
+}
+@media screen and (max-width: 800px) {
+  #fittingFlowSec .fittingFlowList {
+    width: 92vw;
+    margin-top: 12.8vw;
+  }
+}
+#fittingFlowSec .fittingFlowList li {
+  height: 350px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  border-bottom: 2px solid #000000;
+}
+@media screen and (max-width: 800px) {
+  #fittingFlowSec .fittingFlowList li {
+    height: auto;
+    display: block;
+    padding: 14.66vw;
+  }
+}
+#fittingFlowSec .fittingFlowList li:nth-child(1) .imgBlock img {
+  width: 35.24vw;
+}
+#fittingFlowSec .fittingFlowList li:nth-child(2) .imgBlock img {
+  width: 25.23vw;
+}
+#fittingFlowSec .fittingFlowList li:nth-child(3) .imgBlock img {
+  width: 31.14vw;
+}
+#fittingFlowSec .fittingFlowList li:nth-child(4) .imgBlock img {
+  width: 53.7vw;
+}
+#fittingFlowSec .fittingFlowList li:nth-child(5) .imgBlock img {
+  width: 30.26vw;
+}
+#fittingFlowSec .fittingFlowList li .imgBlock {
+  width: 50%;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  #fittingFlowSec .fittingFlowList li .imgBlock {
+    width: 100%;
+    margin-top: 5.6vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fittingFlowSec .fittingFlowList li .imgBlock img {
+    width: 100%;
+  }
+}
+#fittingFlowSec .fittingFlowList li .txtBlock {
+  width: 50%;
+}
+@media screen and (max-width: 800px) {
+  #fittingFlowSec .fittingFlowList li .txtBlock {
+    width: 67.2vw;
+    margin: 14.66vw auto 0;
+  }
+}
+#fittingFlowSec .fittingFlowList li .txtBlock .titleTxt {
+  font-size: 1.44vw;
+  font-weight: bold;
+}
+@media screen and (min-width: 1388.88889px) {
+  #fittingFlowSec .fittingFlowList li .txtBlock .titleTxt {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fittingFlowSec .fittingFlowList li .txtBlock .titleTxt {
+    font-size: 4.26vw;
+  }
+}
+#fittingFlowSec .fittingFlowList li .txtBlock .descTxt, #fittingFlowSec .fittingFlowList li .txtBlock .descTxt2 {
+  width: 382px;
+  padding-top: 25px;
+  font-size: 1.15vw;
+  line-height: 1.6em;
+}
+@media screen and (min-width: 1391.30435px) {
+  #fittingFlowSec .fittingFlowList li .txtBlock .descTxt, #fittingFlowSec .fittingFlowList li .txtBlock .descTxt2 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fittingFlowSec .fittingFlowList li .txtBlock .descTxt, #fittingFlowSec .fittingFlowList li .txtBlock .descTxt2 {
+    width: 100%;
+    padding-top: 6.13vw;
+    font-size: 3.73vw;
+  }
+}
+#fittingFlowSec .fittingFlowList li .txtBlock .descTxt .stg, #fittingFlowSec .fittingFlowList li .txtBlock .descTxt2 .stg {
+  font-weight: bold;
+}
+#fittingFlowSec .fittingFlowList li .txtBlock .descTxt2 {
+  font-size: 1.01vw;
+}
+@media screen and (min-width: 1386.13861px) {
+  #fittingFlowSec .fittingFlowList li .txtBlock .descTxt2 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fittingFlowSec .fittingFlowList li .txtBlock .descTxt2 {
+    font-size: 3.73vw;
+  }
+}
+
+#fittingNoteSec .contentIn {
+  padding: 94px 0 172px;
+}
+@media screen and (max-width: 800px) {
+  #fittingNoteSec .contentIn {
+    padding: 14.93vw 0 24.53vw;
+  }
+}
+#fittingNoteSec .contentWrap {
+  border: 1px solid #000000;
+  padding: 60px 80px 50px;
+}
+@media screen and (max-width: 800px) {
+  #fittingNoteSec .contentWrap {
+    padding: 10.4vw 6.66vw;
+  }
+}
+#fittingNoteSec .contentWrap .fittingNoteList {
+  margin-top: 50px;
+  line-height: 2.5;
+}
+@media screen and (max-width: 800px) {
+  #fittingNoteSec .contentWrap .fittingNoteList {
+    margin-top: 8.26vw;
+    line-height: 2;
+    font-size: 3.73vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fittingNoteSec .contentWrap .fittingNoteList li {
+    margin-bottom: 3.73vw;
+  }
+}
+#fittingNoteSec .contentWrap .fittingNoteList li a {
+  font-weight: bold;
+}
+#fittingNoteSec .btnBlock a {
+  width: 650px;
+  margin: 158px auto 0;
+}
+@media screen and (max-width: 800px) {
+  #fittingNoteSec .btnBlock a {
+    width: 100%;
+    margin: 19.46vw auto 0;
+  }
+}

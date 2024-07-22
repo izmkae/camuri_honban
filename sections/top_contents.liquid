@@ -1,0 +1,63 @@
+<section id="contentSec">
+    <ul id="contentList">
+      {%- for block in section.blocks -%}
+      <li>
+          <a href="{{ section.settings.topContentLink }}">
+              <img src="{{  block.settings.topContentImage | img_url: 'master' }}">
+              <div class="txtBlock">
+                  <p class="ttlStyle">{{ block.settings.topContentHeading | newline_to_br }}</p>
+                  <div class="btnBlock"><span class="btnStyleW01">VIEW</span></div>
+              </div>
+          </a>
+        </li>
+		{%- endfor -%}
+    </ul>
+</section>
+
+{% schema %}
+  {
+    "name": "トップ コンテンツ",
+    "tag": "section",
+	"class": "top_contents",
+    "settings": [
+		
+	],
+    "blocks": [
+		{
+			"type": "content_set",
+			"name": "Top Content",
+			"limit": 6,
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "topContentImage",
+					"label": "画像"
+				},
+				{
+					"type": "text",
+					"id": "topContentHeading",
+					"label": "タイトル"
+				},
+				{
+					"type": "url",
+					"id": "topContentLink",
+					"label": "リンク"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "トップ コンテンツ",
+            "blocks": [
+  				{
+  					"type": "content_set"
+  				},
+  				{
+  					"type": "content_set"
+  				}
+  			]
+  		}
+	]
+  }
+{% endschema %}

@@ -1,0 +1,120 @@
+<section id="itemSec">
+	<h2>{{ section.settings.title | escape }}</h2>
+	<ul id="itemList">
+		{%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+		<li>
+			<a href="{{ product.url }}"> 
+				<div class="imgBlock">
+					<img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title }}">
+					<div class="tabWrap">
+						{%- if product.metafields.camuri.label_limited -%}
+						<span class="labelLimited">LIMITED</span>
+						{%- endif -%}
+						{%- if product.available == false -%}
+						<span class="labelSolidOut">SOLD OUT</span>
+						{%- endif -%}
+					</div>
+				</div>
+				<p class="itemTtl">{{ product.title }}</p>
+				<p class="itemPrice">{{ product.price | money }}<span>（税込）</span></p>
+				<p class="itemTxt">{{ product.metafields.camuri.excerpt }}</p>
+			</a>
+			<div class="tagList">
+			{% for tag in product.tags %}
+			  <a href="/collections/all/{{ tag }}" class="tagColWht">{{ tag }}</a>
+			{% endfor %}
+			</div>
+		</li>
+		{%- endfor -%}
+	</ul>
+
+	<div class="btnBlock"><a href="#" class="btnStyleB01">ALL ITEM</a></div>
+
+	<div id="categoryblock">
+		<h2><span>CATEGORY</span></h2>
+		<ul id="categoryList">
+		  {%- for block in section.blocks -%}
+			<li>
+				<a href="{{block.settings.topItemCatLink }}">
+					<div class="imgBlock"><img src="{{  block.settings.topItemCatImage | img_url: 'master' }}"></div>
+					<p class="catTxt">{{ block.settings.topItemCatText | escape  }}</p>
+					<p class="catTtl"><span>{{ block.settings.topItemCatName | escape }}</span></p>
+				</a>
+			</li>
+		  {%- endfor -%}
+		</ul>
+	</div>
+</section>
+
+{% schema %}
+  {
+	"name": "トップ アイテム",
+	"tag": "section",
+	"class": "top_item",
+	"settings": [
+		{
+			"id": "title",
+			"type": "text",
+			"label": "見出し",
+			"default": "ITEM"
+		},
+		{
+			"type": "collection",
+			"id": "collection",
+			"label": "t:sections.featured-collection.settings.collection.label"
+		},
+		{
+			"type": "range",	
+			"id": "products_to_show",
+			"min": 2,
+			"max": 8,
+			"step": 1,
+			"default": 8,
+			"label": "t:sections.featured-collection.settings.products_to_show.label"
+		}
+	],
+	"blocks": [
+		{
+			"type": "item_category",
+			"name": "Item Category",
+			"limit": 6,
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "topItemCatImage",
+					"label": "画像",
+					"info": "180 x 150px"                  
+				},
+				{
+					"type": "text",
+					"id": "topItemCatName",
+					"label": "カテゴリー名"
+				},
+				{
+					"type": "text",
+					"id": "topItemCatText",
+					"label": "カテゴリー一言"
+				},
+				{
+					"type": "url",
+					"id": "topItemCatLink",
+					"label": "リンク"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "トップ アイテム",
+			"blocks": [
+				{
+					"type": "item_category"
+				},
+				{
+					"type": "item_category"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}
