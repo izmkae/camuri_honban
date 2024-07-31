@@ -1,8 +1,25 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "01d42623-6eea-41c0-935c-b7f7eeedaae6": {
       "type": "top-slideshow",
       "blocks": {
+        "slide_FTPQVJ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/xx-2.jpg",
+            "heading": "Image slide",
+            "link": ""
+          }
+        },
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1": {
           "type": "slide",
           "settings": {
@@ -29,6 +46,7 @@
         }
       },
       "block_order": [
+        "slide_FTPQVJ",
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1",
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2",
         "1545ef27-f327-42ee-afd6-98e911429776"
@@ -40,8 +58,7 @@
       "type": "top_about",
       "settings": {
         "topAboutText": "「帽⼦が似合わない」\nそう思っている全ての⼈へ。\nみんなのアタマと気持ちに\nフィットする帽⼦を、\nCAMURIが形にします。",
-        "topAboutLink": "shopify:\/\/pages\/about",
-        "topAboutImg": "shopify:\/\/shop_images\/img_top_about.png"
+        "topAboutLink": "shopify:\/\/pages\/about"
       }
     },
     "top_contents_wVXE7f": {
@@ -50,7 +67,6 @@
         "content_set_KN433e": {
           "type": "content_set",
           "settings": {
-            "topContentImage": "shopify:\/\/shop_images\/img_contents_01.png",
             "topContentHeading": "深さも選べるバケットハットで<br>親子でリンク。",
             "topContentLink": ""
           }
@@ -58,7 +74,6 @@
         "content_set_iGpr9F": {
           "type": "content_set",
           "settings": {
-            "topContentImage": "shopify:\/\/shop_images\/img_contents_02.png",
             "topContentHeading": "深さも選べるバケットハットで<br>親子でリンク。",
             "topContentLink": ""
           }
@@ -66,7 +81,6 @@
         "content_set_49jWmc": {
           "type": "content_set",
           "settings": {
-            "topContentImage": "shopify:\/\/shop_images\/img_contents_03.png",
             "topContentHeading": "深さも選べるバケットハットで<br>親子でリンク。",
             "topContentLink": ""
           }
@@ -74,7 +88,6 @@
         "content_set_YhtAFa": {
           "type": "content_set",
           "settings": {
-            "topContentImage": "shopify:\/\/shop_images\/img_contents_01.png",
             "topContentHeading": "深さも選べるバケットハットで<br>親子でリンク。",
             "topContentLink": ""
           }
@@ -82,7 +95,6 @@
         "content_set_eahmKR": {
           "type": "content_set",
           "settings": {
-            "topContentImage": "shopify:\/\/shop_images\/img_contents_02.png",
             "topContentHeading": "深さも選べるバケットハットで<br>親子でリンク。",
             "topContentLink": ""
           }
@@ -90,7 +102,6 @@
         "content_set_dAbr8U": {
           "type": "content_set",
           "settings": {
-            "topContentImage": "shopify:\/\/shop_images\/img_contents_03.png",
             "topContentHeading": "深さも選べるバケットハットで<br>親子でリンク。",
             "topContentLink": ""
           }
