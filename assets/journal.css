@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&Poppins:ital,wght@0,400;0,600;1,300;1,400&display=swap");
 /*
 min-font-size ($font_size, $min_font_size)
 $font_size (vw):     可変フォントサイズ
@@ -13,15 +13,189 @@ $max_font_size (px): 最大フォントサイズ
 /*-------------------------------------------------------------------
 	Override
 -------------------------------------------------------------------*/
-html {
-  font-size: 16px;
+/*-------------------------------------------------------------------
+	Common
+-------------------------------------------------------------------*/
+#journalReccomendSec .contentIn {
+  width: 100%;
+  max-width: 1100px;
+  margin: 3.2vw auto 6.78vw;
+  border: 2px solid #000000;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec .contentIn {
+    width: 91.48vw;
+    border: 1px solid #000000;
+    margin: 7.46vw auto 7.46vw;
+  }
+}
+#journalReccomendSec h3 {
+  font-size: 2.16vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  line-height: 4.9vw;
+  border-bottom: 2px solid #000000;
+}
+@media screen and (min-width: 1388.88889px) {
+  #journalReccomendSec h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec h3 {
+    font-size: 5.33vw;
+    line-height: 10.66vw;
+    padding-left: 0;
+    border-bottom: 1px solid #000000;
+  }
+}
+#journalReccomendSec #journalReccomendList {
+  padding: 1.83%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList {
+    padding: 4.53vw;
+  }
+}
+#journalReccomendSec #journalReccomendList::after {
+  display: block;
+  content: "";
+  width: 37.8vw;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList {
+    padding: 4vw;
+  }
+}
+#journalReccomendSec #journalReccomendList li {
+  width: 50%;
+  padding: 1.83%;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li {
+    width: 100%;
+    padding: 5.33vw 0;
+    border-bottom: 1px solid #D3D3D3;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li:last-child {
+    border-bottom: none;
+  }
+}
+#journalReccomendSec #journalReccomendList li a {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+#journalReccomendSec #journalReccomendList li .imgBlock {
+  width: 42.4%;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li .imgBlock {
+    width: 26.66vw;
+  }
+}
+#journalReccomendSec #journalReccomendList li .txtBlock {
+  width: 53%;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock {
+    width: 53.86vw;
+  }
+}
+#journalReccomendSec #journalReccomendList li .txtBlock .journalTtl {
+  font-size: 1.28vw;
+  font-weight: bold;
+  line-height: 1.4;
+}
+@media screen and (min-width: 1406.25px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .journalTtl {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .journalTtl {
+    font-size: 4vw;
+  }
+}
+#journalReccomendSec #journalReccomendList li .txtBlock .journalDate {
+  margin-top: 1.15vw;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.01vw;
+  font-weight: 600;
+}
+@media screen and (min-width: 1584.15842px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .journalDate {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .journalDate {
+    margin-top: 2vw;
+    font-size: 3.2vw;
+  }
+}
+#journalReccomendSec #journalReccomendList li .txtBlock .tagList {
+  margin-top: 0.5vw;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .tagList {
+    margin-top: 1.86vw;
+  }
+}
+#journalReccomendSec #journalReccomendList li .txtBlock .tagList span {
+  font-size: 0.86vw;
+  padding: 0.39vw 0.79vw;
+  background-color: #E1DFD9;
+}
+@media screen and (min-width: 1395.34884px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .tagList span {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .tagList span {
+    font-size: 3.2vw;
+    background-color: initial;
+  }
+}
+#journalReccomendSec #journalReccomendList li .txtBlock .tagList span::before {
+  content: '#';
 }
 
 /*-------------------------------------------------------------------
-	journal
+	journal list
 -------------------------------------------------------------------*/
 #journalListPage #journalSec {
-  padding: 8.22vw 10.31vw 6.78vw;
+  padding: 8.22vw 10.31vw 3.2vw;
+}
+@media screen and (max-width: 800px) {
+  #journalListPage #journalSec {
+    padding: 7.46vw 4.26vw 7.46vw;
+  }
 }
 #journalListPage #journalSec h2 {
   font-size: 4.32vw;
@@ -35,37 +209,7 @@ html {
     padding-left: 0;
   }
 }
-#journalListPage #journalSec .journalCategoryList01 {
-  margin-top: 6.78vw;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -ms-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  flex-flow: row wrap;
-}
-#journalListPage #journalSec .journalCategoryList01 li {
-  margin-left: 1.8vw;
-  margin-bottom: 0.79vw;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 1.8vw;
-}
-#journalListPage #journalSec .journalCategoryList01 li a {
-  color: #B1B1B1;
-}
-#journalListPage #journalSec .journalTagBlock {
-  margin-top: 6.78vw;
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
-}
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox label {
+#journalListPage #journalSec .journalBlock .acJournalBox label {
   position: relative;
   display: block;
   height: 4.32vw;
@@ -78,14 +222,15 @@ html {
   padding-right: 3.6vw;
 }
 @media screen and (max-width: 800px) {
-  #journalListPage #journalSec .journalTagBlock .acJournalTagBox label {
+  #journalListPage #journalSec .journalBlock .acJournalBox label {
     height: 10.66vw;
     line-height: 10.66vw;
     font-size: 3.73vw;
     font-weight: normal;
+    text-align: left;
   }
 }
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox label::before, #journalListPage #journalSec .journalTagBlock .acJournalTagBox label::after {
+#journalListPage #journalSec .journalBlock .acJournalBox label::before, #journalListPage #journalSec .journalBlock .acJournalBox label::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -97,28 +242,28 @@ html {
   transition: all 0.5s;
 }
 @media screen and (max-width: 800px) {
-  #journalListPage #journalSec .journalTagBlock .acJournalTagBox label::before, #journalListPage #journalSec .journalTagBlock .acJournalTagBox label::after {
+  #journalListPage #journalSec .journalBlock .acJournalBox label::before, #journalListPage #journalSec .journalBlock .acJournalBox label::after {
     top: 2.8vw;
     right: 4vw;
     height: 16px;
   }
 }
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox label::after {
+#journalListPage #journalSec .journalBlock .acJournalBox label::after {
   transform: rotate(90deg);
 }
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox label:hover {
+#journalListPage #journalSec .journalBlock .acJournalBox label:hover {
   color: #808080;
 }
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox label:hover::before, #journalListPage #journalSec .journalTagBlock .acJournalTagBox label:hover::after {
+#journalListPage #journalSec .journalBlock .acJournalBox label:hover::before, #journalListPage #journalSec .journalBlock .acJournalBox label:hover::after {
   background-color: #808080;
 }
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox .acBlock {
+#journalListPage #journalSec .journalBlock .acJournalBox .acBlock {
   height: 0;
   opacity: 0;
   transition: all 0.5s;
   padding: 0 1.8vw;
 }
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox .acBlock .journalTagList01 {
+#journalListPage #journalSec .journalBlock .acJournalBox .acBlock .journalTagList01 {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: flex-start;
@@ -132,30 +277,93 @@ html {
   flex-wrap: wrap;
   flex-flow: row wrap;
 }
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox .acBlock .journalTagList01 li {
+#journalListPage #journalSec .journalBlock .acJournalBox .acBlock .journalTagList01 li {
   margin-left: 1.15vw;
 }
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox .acBlock .journalTagList01 li a {
+#journalListPage #journalSec .journalBlock .acJournalBox .acBlock .journalTagList01 li a {
   height: 2.16vw;
   padding: 0.36vw 0.72vw;
   border: 1px solid #000000;
 }
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox input {
+#journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 {
+  transition: all 0.5s;
+}
+@media screen and (max-width: 800px) {
+  #journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 {
+    height: 0;
+    opacity: 0;
+  }
+}
+#journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 .journalCategoryList01 {
+  margin-top: 6.78vw;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+@media screen and (max-width: 800px) {
+  #journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 .journalCategoryList01 {
+    margin-top: 0;
+  }
+}
+#journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 .journalCategoryList01 li {
+  margin-right: 1.8vw;
+  margin-bottom: 0.79vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.8vw;
+}
+@media screen and (max-width: 800px) {
+  #journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 .journalCategoryList01 li {
+    font-size: 3.73vw;
+  }
+}
+#journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 .journalCategoryList01 li a {
+  color: #B1B1B1;
+}
+#journalListPage #journalSec .journalBlock .acJournalBox input {
   display: none;
   transition: all 0.5s;
 }
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox input:checked ~ label::before {
+#journalListPage #journalSec .journalBlock .acJournalBox input:checked ~ label::before {
   transform: rotate(45deg);
 }
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox input:checked ~ label::after {
+#journalListPage #journalSec .journalBlock .acJournalBox input:checked ~ label::after {
   transform: rotate(135deg);
 }
-#journalListPage #journalSec .journalTagBlock .acJournalTagBox input:checked ~ .acBlock {
+#journalListPage #journalSec .journalBlock .acJournalBox input:checked ~ .acBlock {
   height: auto;
   opacity: 1;
   padding: 1.8vw;
 }
+#journalListPage #journalSec .journalBlock .acJournalBox input:checked ~ .acBlock2 {
+  height: auto;
+  opacity: 1;
+  padding: 1.8vw;
+}
+#journalListPage #journalSec #journalCategory.journalBlock .acJournalBox label {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  #journalListPage #journalSec #journalCategory.journalBlock .acJournalBox label {
+    display: block;
+  }
+}
+#journalListPage #journalSec #journalTag {
+  margin-top: 2.02vw;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
 #journalListPage #journalSec #journalList {
+  padding-top: 9.37vw;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: flex-start;
@@ -177,7 +385,7 @@ html {
 #journalListPage #journalSec #journalList li {
   width: 23.08vw;
   text-align: left;
-  margin: 3.53vw 1.19vw;
+  margin: 3.6vw 1.19vw;
 }
 @media screen and (max-width: 800px) {
   #journalListPage #journalSec #journalList li {
@@ -236,5 +444,453 @@ html {
 @media screen and (max-width: 800px) {
   #journalListPage #journalSec #journalList li .tagList {
     font-size: 2.93vw;
+  }
+}
+
+/*-------------------------------------------------------------------
+	journal Detail
+-------------------------------------------------------------------*/
+#journalDetailPage #journalHeadSec {
+  padding: 5.48vw 0 3.03vw;
+  background-color: #E1DFD9;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalHeadSec {
+    padding: 8.53vw 0 9.33vw;
+  }
+}
+#journalDetailPage #journalHeadSec .contentIn {
+  width: 67.8vw;
+  max-width: 940px;
+  margin: auto;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalHeadSec .contentIn {
+    width: 92vw;
+  }
+}
+#journalDetailPage #journalHeadSec .contentIn h1 {
+  font-size: 2.16vw;
+  line-height: 1.6em;
+  font-weight: bold;
+}
+@media screen and (min-width: 1388.88889px) {
+  #journalDetailPage #journalHeadSec .contentIn h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalHeadSec .contentIn h1 {
+    font-size: 5.33vw;
+  }
+}
+#journalDetailPage #journalHeadSec .contentIn .journalDate {
+  margin-top: 2.1%;
+  font-size: 1.44vw;
+  font-weight: bold;
+}
+@media screen and (min-width: 1388.88889px) {
+  #journalDetailPage #journalHeadSec .contentIn .journalDate {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalHeadSec .contentIn .journalDate {
+    margin-top: 6.4vw;
+    font-size: 3.73vw;
+  }
+}
+#journalDetailPage #journalHeadSec .contentIn .tagList {
+  margin-top: 2.4%;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalHeadSec .contentIn .tagList {
+    margin-top: 6.4vw;
+  }
+}
+#journalDetailPage #journalHeadSec .contentIn .tagList span {
+  font-size: 1.15vw;
+  padding-right: 3.72vw;
+}
+@media screen and (min-width: 1391.30435px) {
+  #journalDetailPage #journalHeadSec .contentIn .tagList span {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalHeadSec .contentIn .tagList span {
+    font-size: 3.2vw;
+    padding-right: 5.6vw;
+  }
+}
+#journalDetailPage #journalHeadSec .contentIn .imgBlock {
+  margin-top: 2.4%;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalHeadSec .contentIn .imgBlock {
+    margin-top: 3.73vw;
+  }
+}
+#journalDetailPage #journalHeadSec .contentIn .imgBlock img {
+  width: 100%;
+}
+#journalDetailPage #journalHeadSec .contentIn .shareButtonBlock {
+  margin-top: 3.1vw;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.01vw;
+  font-weight: bold;
+}
+@media screen and (min-width: 1386.13861px) {
+  #journalDetailPage #journalHeadSec .contentIn .shareButtonBlock {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalHeadSec .contentIn .shareButtonBlock {
+    margin-top: 3.73vw;
+    font-size: 2.93vw;
+  }
+}
+#journalDetailPage #journalHeadSec .contentIn .shareButtonBlock ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+#journalDetailPage #journalHeadSec .contentIn .shareButtonBlock ul li {
+  width: 1.65vw;
+  margin: 0 1.01vw;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalHeadSec .contentIn .shareButtonBlock ul li {
+    width: 6.13vw;
+    margin: 0 3.73vw;
+  }
+}
+#journalDetailPage #journalHeadSec .contentIn .shareButtonBlock ul li.ico_x {
+  width: 1.51vw;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalHeadSec .contentIn .shareButtonBlock ul li.ico_x {
+    width: 5.86vw;
+  }
+}
+#journalDetailPage #journalBodySec {
+  padding: 3.68vw 0 5.77vw;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalBodySec {
+    padding: 9.86vw 0 11.94vw;
+  }
+}
+#journalDetailPage #journalBodySec .contentIn {
+  width: 46.89vw;
+  max-width: 650px;
+  margin: auto;
+  font-size: 1.15vw;
+}
+@media screen and (min-width: 1391.30435px) {
+  #journalDetailPage #journalBodySec .contentIn {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalBodySec .contentIn {
+    width: 92vw;
+    font-size: 3.73vw;
+  }
+}
+#journalDetailPage #journalBodySec .contentIn .acIndexBox label {
+  position: relative;
+  display: block;
+  height: 80px;
+  line-height: 80px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  border-bottom: 1px solid #000000;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalBodySec .contentIn .acIndexBox label {
+    height: 10.66vw;
+    line-height: 10.66vw;
+    font-size: 3.73vw;
+    font-weight: normal;
+  }
+}
+#journalDetailPage #journalBodySec .contentIn .acIndexBox label::before, #journalDetailPage #journalBodySec .contentIn .acIndexBox label::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 27px;
+  right: 1.8vw;
+  width: 2px;
+  height: 23px;
+  background-color: #000000;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalBodySec .contentIn .acIndexBox label::before, #journalDetailPage #journalBodySec .contentIn .acIndexBox label::after {
+    top: 2.8vw;
+    right: 4vw;
+    height: 16px;
+  }
+}
+#journalDetailPage #journalBodySec .contentIn .acIndexBox label::after {
+  transform: rotate(90deg);
+}
+#journalDetailPage #journalBodySec .contentIn .acIndexBox label:hover {
+  color: #808080;
+}
+#journalDetailPage #journalBodySec .contentIn .acIndexBox label:hover::before, #journalDetailPage #journalBodySec .contentIn .acIndexBox label:hover::after {
+  background-color: #808080;
+}
+#journalDetailPage #journalBodySec .contentIn .acIndexBox .acBlock {
+  height: 0;
+  opacity: 0;
+  transition: all 0.5s;
+  padding: 0 1.8vw;
+}
+#journalDetailPage #journalBodySec .contentIn .acIndexBox input {
+  display: none;
+  transition: all 0.5s;
+}
+#journalDetailPage #journalBodySec .contentIn .acIndexBox input:checked ~ label::before {
+  transform: rotate(45deg);
+}
+#journalDetailPage #journalBodySec .contentIn .acIndexBox input:checked ~ label::after {
+  transform: rotate(135deg);
+}
+#journalDetailPage #journalBodySec .contentIn .acIndexBox input:checked ~ .acBlock {
+  height: auto;
+  opacity: 1;
+  padding: 1.8vw;
+}
+#journalDetailPage #journalBodySec .contentIn .journalMain p {
+  padding: 1.8vw 0;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalBodySec .contentIn .journalMain p {
+    padding: 5.86vw 0;
+  }
+}
+#journalDetailPage #journalBodySec .contentIn .journalMain h2 {
+  margin-top: 4.18vw;
+  padding: 1.51vw 1.51vw 1.15vw;
+  background-color: #E1DFD9;
+  font-size: 1.8vw;
+  font-weight: bold;
+}
+@media screen and (min-width: 1388.88889px) {
+  #journalDetailPage #journalBodySec .contentIn .journalMain h2 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalBodySec .contentIn .journalMain h2 {
+    padding: 3.46vw 3.46vw 2.4vw;
+    font-size: 5.33vw;
+  }
+}
+#journalDetailPage #journalBodySec .contentIn .journalMain h3 {
+  margin-top: 2.81vw;
+  font-size: 1.44vw;
+  font-weight: bold;
+}
+@media screen and (min-width: 1388.88889px) {
+  #journalDetailPage #journalBodySec .contentIn .journalMain h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalBodySec .contentIn .journalMain h3 {
+    margin-top: 6.4vw;
+    font-size: 4.8vw;
+  }
+}
+#journalDetailPage #journalBodySec .contentIn .journalMain h4 {
+  margin-top: 1.73vw;
+  font-weight: bold;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalBodySec .contentIn .journalMain h4 {
+    margin-top: 5.6vw;
+  }
+}
+#journalDetailPage #journalBodySec .contentIn .journalMain h5 {
+  margin-top: 1.73vw;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalBodySec .contentIn .journalMain h5 {
+    margin-top: 5.6vw;
+  }
+}
+#journalDetailPage #journalBodySec .contentIn .journalMain img {
+  margin: 1.15vw 0;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalBodySec .contentIn .journalMain img {
+    margin: 4vw 0;
+  }
+}
+#journalDetailPage #journalBodySec .btnBlock {
+  margin-top: 5.77vw;
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalBodySec .btnBlock {
+    margin-top: 8vw;
+  }
+}
+#journalDetailPage #journalBodySec .btnBlock a {
+  width: 100%;
+  height: 4.68vw;
+  line-height: 4.68vw;
+  border-radius: 2.16vw;
+  font-size: 1.12rem;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalBodySec .btnBlock a {
+    height: 14.66vw;
+    line-height: 14.66vw;
+    border-radius: 12vw;
+    font-size: 4vw;
+  }
+}
+#journalDetailPage #journalRelatedSec {
+  padding: 52px 0 38px;
+  background-color: #F4F4F4;
+}
+#journalDetailPage #journalRelatedSec .contentIn {
+  width: 78.18vw;
+  max-width: 860px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalRelatedSec .contentIn {
+    width: 91.48vw;
+    margin: 7.46vw auto 7.46vw;
+  }
+}
+#journalDetailPage #journalRelatedSec h3 {
+  font-size: 2.16vw;
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (min-width: 1388.88889px) {
+  #journalDetailPage #journalRelatedSec h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalRelatedSec h3 {
+    font-size: 5.33vw;
+  }
+}
+#journalDetailPage #journalRelatedSec .relatedItemList {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalRelatedSec .relatedItemList {
+    width: 92vw;
+    margin: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+  }
+}
+#journalDetailPage #journalRelatedSec .relatedItemList li {
+  width: 28%;
+  margin: 35px 2.6% 0;
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalRelatedSec .relatedItemList li {
+    width: 43.2vw;
+    margin: 8vw 0;
+  }
+}
+#journalDetailPage #journalRelatedSec .relatedItemList li .itemTtl {
+  margin-top: 20px;
+  font-size: 1.58vw;
+  font-weight: bold;
+}
+@media screen and (min-width: 1582.27848px) {
+  #journalDetailPage #journalRelatedSec .relatedItemList li .itemTtl {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalRelatedSec .relatedItemList li .itemTtl {
+    margin-top: 5.06vw;
+    font-size: 4.26vw;
+  }
+}
+#journalDetailPage #journalRelatedSec .relatedItemList li .itemPrice {
+  margin-top: 7px;
+  font-size: 1.29vw;
+  font-weight: bold;
+}
+@media screen and (min-width: 1395.34884px) {
+  #journalDetailPage #journalRelatedSec .relatedItemList li .itemPrice {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalRelatedSec .relatedItemList li .itemPrice {
+    margin-top: 1.6vw;
+    font-size: 4.26vw;
+  }
+}
+#journalDetailPage #journalRelatedSec .relatedItemList li .itemPrice span {
+  font-size: 1.01vw;
+}
+@media screen and (min-width: 1386.13861px) {
+  #journalDetailPage #journalRelatedSec .relatedItemList li .itemPrice span {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalDetailPage #journalRelatedSec .relatedItemList li .itemPrice span {
+    font-size: 3.2vw;
   }
 }

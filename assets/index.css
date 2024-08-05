@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&Poppins:ital,wght@0,400;0,600;1,300;1,400&display=swap");
 /*
 min-font-size ($font_size, $min_font_size)
 $font_size (vw):     可変フォントサイズ
@@ -26,6 +26,15 @@ $max_font_size (px): 最大フォントサイズ
 .mainVisualIn {
   position: absolute;
   z-index: 1;
+}
+.mainVisualIn .hLogo img {
+  width: 9.37vw;
+  height: auto;
+}
+@media screen and (max-width: 800px) {
+  .mainVisualIn .hLogo img {
+    width: 11.18vw;
+  }
 }
 
 .content {
@@ -200,8 +209,16 @@ $max_font_size (px): 最大フォントサイズ
   width: 100%;
   height: 100%;
 }
+#contentSec #contentList li a img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+}
 #contentSec #contentList li a .txtBlock {
   position: absolute;
+  width: 100%;
   left: 0;
   bottom: 0;
   color: #FFFFFF;
@@ -352,23 +369,18 @@ $max_font_size (px): 最大フォントサイズ
 #journalSec .slick-list {
   overflow: visible;
 }
-#journalSec .slick-nav-arrows {
-  position: absolute;
-  top: -40px;
-  right: 0%;
-}
 #journalSec .slick-arrow {
-  display: inline-flex;
+  position: absolute;
   width: 48px;
   height: 48px;
-  align-items: center;
-  justify-content: center;
+  top: 45%;
+  z-index: 10;
 }
-#journalSec .slick-next {
-  right: 0;
+#journalSec .next-arrow {
+  right: -5.74vw;
 }
-#journalSec .slick-prev {
-  left: -80px;
+#journalSec .prev-arrow {
+  left: -5.74vw;
 }
 #journalSec .slick-next:before, #journalSec .slick-prev:before {
   color: #000;
@@ -514,7 +526,14 @@ $max_font_size (px): 最大フォントサイズ
     margin-bottom: 12vw;
   }
 }
-#tryitSec #tryitList li .flexBlock {
+#tryitSec #tryitList li a {
+  display: block;
+  cursor: pointer;
+}
+#tryitSec #tryitList li a .imgBlock {
+  background-color: #000000;
+}
+#tryitSec #tryitList li a .flexBlock {
   margin-top: 1.8vw;
   display: -webkit-flex;
   display: flex;
@@ -529,17 +548,49 @@ $max_font_size (px): 最大フォントサイズ
   flex-wrap: wrap;
   flex-flow: row wrap;
 }
-#tryitSec #tryitList li .flexBlock .listTtl {
+#tryitSec #tryitList li a .flexBlock .listTtl {
   width: 16.59vw;
-  font-size: 1.44vw;
+  font-size: 1.15vw;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.56;
 }
 @media screen and (max-width: 800px) {
-  #tryitSec #tryitList li .flexBlock .listTtl {
+  #tryitSec #tryitList li a .flexBlock .listTtl {
     width: 64vw;
     font-size: 5.33vw;
   }
+}
+#tryitSec #tryitList li a .flexBlock .btnBlock2 span {
+  display: block;
+  width: 7.57vw;
+  height: 2.59vw;
+  line-height: 2.4vw;
+  font-size: 1.15vw;
+  border-radius: 1.8vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transition: 0.5s;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  #tryitSec #tryitList li a .flexBlock .btnBlock2 span {
+    width: 28vw;
+    height: 9.06vw;
+    line-height: 8vw;
+    font-size: 4vw;
+    border-radius: 6.66vw;
+  }
+}
+#tryitSec #tryitList li a .flexBlock .btnBlock2 span.btnStyleB01 {
+  border: 2px solid #000000;
+  color: #000000;
+}
+#tryitSec #tryitList li a:hover img {
+  color: #808080;
+}
+#tryitSec #tryitList li a:hover .flexBlock .btnBlock2 span {
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 #reviewSec {

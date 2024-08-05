@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&Poppins:ital,wght@0,400;0,600;1,300;1,400&display=swap");
 /*
 min-font-size ($font_size, $min_font_size)
 $font_size (vw):     可変フォントサイズ
@@ -141,6 +141,7 @@ h3 {
   }
 }
 #fittingAboutSec .fittingPointList li {
+  width: 25.7%;
   text-align: center;
 }
 @media screen and (max-width: 800px) {
@@ -192,7 +193,7 @@ h3 {
 @media screen and (max-width: 800px) {
   #fittingFlowSec .fittingFlowList {
     width: 92vw;
-    margin-top: 12.8vw;
+    margin: 12.8vw auto 0;
   }
 }
 #fittingFlowSec .fittingFlowList li {
@@ -215,23 +216,28 @@ h3 {
   #fittingFlowSec .fittingFlowList li {
     height: auto;
     display: block;
-    padding: 14.66vw;
+    padding: 14.66vw 0;
   }
 }
 #fittingFlowSec .fittingFlowList li:nth-child(1) .imgBlock img {
   width: 35.24vw;
+  max-width: 201.98px;
 }
 #fittingFlowSec .fittingFlowList li:nth-child(2) .imgBlock img {
   width: 25.23vw;
+  max-width: 144.62px;
 }
 #fittingFlowSec .fittingFlowList li:nth-child(3) .imgBlock img {
   width: 31.14vw;
+  max-width: 178.48px;
 }
 #fittingFlowSec .fittingFlowList li:nth-child(4) .imgBlock img {
   width: 53.7vw;
+  max-width: 307.75px;
 }
 #fittingFlowSec .fittingFlowList li:nth-child(5) .imgBlock img {
   width: 30.26vw;
+  max-width: 173.41px;
 }
 #fittingFlowSec .fittingFlowList li .imgBlock {
   width: 50%;
@@ -253,7 +259,7 @@ h3 {
 }
 @media screen and (max-width: 800px) {
   #fittingFlowSec .fittingFlowList li .txtBlock {
-    width: 67.2vw;
+    width: 75vw;
     margin: 14.66vw auto 0;
   }
 }
@@ -269,6 +275,8 @@ h3 {
 @media screen and (max-width: 800px) {
   #fittingFlowSec .fittingFlowList li .txtBlock .titleTxt {
     font-size: 4.26vw;
+    text-indent: -1.2em;
+    padding-left: 1.2em;
   }
 }
 #fittingFlowSec .fittingFlowList li .txtBlock .descTxt, #fittingFlowSec .fittingFlowList li .txtBlock .descTxt2 {
@@ -344,11 +352,15 @@ h3 {
 }
 #fittingNoteSec .btnBlock a {
   width: 650px;
+  height: 65px;
+  line-height: 65px;
   margin: 158px auto 0;
 }
 @media screen and (max-width: 800px) {
   #fittingNoteSec .btnBlock a {
     width: 100%;
+    height: 55px;
+    line-height: 55px;
     margin: 19.46vw auto 0;
   }
 }

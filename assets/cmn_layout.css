@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&Poppins:ital,wght@0,400;0,600;1,300;1,400&display=swap");
 /*
 min-font-size ($font_size, $min_font_size)
 $font_size (vw):     可変フォントサイズ
@@ -52,7 +52,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-  font-size: 1.15vw;
+  font-size: 16px;
   font-weight: 400;
   color: #000000;
   text-align: left;
@@ -63,6 +63,7 @@ body {
 @media screen and (max-width: 800px) {
   body {
     font-size: 3.73vw;
+    font-family: "Noto Sans JP", sans-serif;
   }
 }
 
@@ -135,6 +136,14 @@ li {
     font-size: 2.66vw;
   }
 }
+#header.fixed .headerIn .hLogo img, #header.fixed .mainVisualIn .hLogo img {
+  width: 4.54vw;
+}
+@media screen and (max-width: 800px) {
+  #header.fixed .headerIn .hLogo img, #header.fixed .mainVisualIn .hLogo img {
+    width: 11.18vw;
+  }
+}
 
 .headerIn, .mainVisualIn {
   width: 100%;
@@ -160,7 +169,6 @@ li {
 }
 .headerIn .hLogo img, .mainVisualIn .hLogo img {
   width: 4.54vw;
-  height: auto;
 }
 @media screen and (max-width: 800px) {
   .headerIn .hLogo img, .mainVisualIn .hLogo img {
@@ -322,6 +330,9 @@ li {
 #gNaviWrapper #gNaviIn .menuList li span {
   display: block;
 }
+#gNaviWrapper #gNaviIn .menuList li a:hover span {
+  color: #808080;
+}
 #gNaviWrapper #gNaviIn .menuList li .txtEn {
   font-family: "Poppins", sans-serif;
   font-size: 3.24vw;
@@ -411,8 +422,16 @@ li {
   line-height: 2em;
   font-size: 1.15vw;
 }
+@media screen and (max-width: 800px) {
+  #gNaviWrapper #gNaviIn .acMenuBox .acMenuList li {
+    font-size: 3.73vw;
+  }
+}
 #gNaviWrapper #gNaviIn .acMenuBox .acMenuList li::before {
   content: '・';
+}
+#gNaviWrapper #gNaviIn .acMenuBox .acMenuList li a:hover {
+  color: #808080;
 }
 #gNaviWrapper #gNaviIn .acMenuBox input {
   display: none;
@@ -478,6 +497,9 @@ li {
     font-size: 4.26vw;
   }
 }
+#gNaviWrapper #gNaviIn .menuTtl a:hover {
+  color: #808080;
+}
 
 /*-------------------------------------------------------------------
 	footer
@@ -512,7 +534,7 @@ li {
   flex-flow: row wrap;
 }
 #footer #fNewsletterSnsBlock #newsletterBlock {
-  width: 50vw;
+  width: 50%;
   height: 25.25vw;
   padding: 3.96vw 11.83vw 3.96vw 10.31vw;
   background-color: #4A4A4A;
@@ -547,7 +569,7 @@ li {
   }
 }
 #footer #fNewsletterSnsBlock #snsBlock {
-  width: 50vw;
+  width: 50%;
   height: 25.25vw;
   background-color: #E1DFD9;
   padding-top: 3.96vw;
@@ -626,7 +648,7 @@ li {
   }
 }
 #footer #fMenuBlock #ttlBlock {
-  width: 50vw;
+  width: 50%;
   padding-left: 13.92vw;
 }
 @media screen and (max-width: 800px) {
@@ -636,7 +658,7 @@ li {
   }
 }
 #footer #fMenuBlock #fMenuFlex {
-  width: 50vw;
+  width: 50%;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: flex-start;
@@ -649,6 +671,7 @@ li {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   flex-flow: row wrap;
+  margin-top: 1vw;
 }
 @media screen and (max-width: 800px) {
   #footer #fMenuBlock #fMenuFlex {
@@ -677,7 +700,7 @@ li {
   }
 }
 #footer #fMenuBlock #fMenuFlex .fMenu li {
-  margin-top: 2.3vw;
+  margin-bottom: 2.3vw;
   font-size: 1.01vw;
   font-weight: bold;
 }
@@ -755,7 +778,7 @@ li {
   display: block;
   width: 7.57vw;
   height: 2.59vw;
-  line-height: 2.59vw;
+  line-height: 2.4vw;
   font-size: 1.15vw;
   border-radius: 1.8vw;
   font-family: "Poppins", sans-serif;
@@ -1240,5 +1263,122 @@ li {
   #tryitSec #tryitList li .flexBlock .listTtl {
     width: 64vw;
     font-size: 5.33vw;
+  }
+}
+
+#writingByBlock {
+  margin-top: 4.83vw;
+  width: 59.09vw;
+  max-width: 650px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  background-color: #E1DFD9;
+  padding: 5% 4.3% 5% 7.3%;
+}
+@media screen and (max-width: 800px) {
+  #writingByBlock {
+    margin-top: 15.73vw;
+    padding: 7.46vw 5.33vw 5.6vw;
+  }
+}
+#writingByBlock .imgBlock {
+  width: 28%;
+}
+@media screen and (max-width: 800px) {
+  #writingByBlock .imgBlock {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  #writingByBlock .imgBlock img {
+    width: 28.26vw;
+  }
+}
+#writingByBlock .txtBlock {
+  width: 63.6%;
+  margin-left: 4.25%;
+}
+@media screen and (max-width: 800px) {
+  #writingByBlock .txtBlock {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+#writingByBlock .txtBlock .txt01 {
+  font-size: 1.15vw;
+  font-weight: bold;
+}
+@media screen and (min-width: 1391.30435px) {
+  #writingByBlock .txtBlock .txt01 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #writingByBlock .txtBlock .txt01 {
+    margin-top: 4vw;
+    text-align: center;
+    font-size: 3.73vw;
+  }
+}
+#writingByBlock .txtBlock .writerName {
+  font-size: 1.44vw;
+  font-weight: bold;
+}
+@media screen and (min-width: 1388.88889px) {
+  #writingByBlock .txtBlock .writerName {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #writingByBlock .txtBlock .writerName {
+    font-size: 5.33vw;
+    margin-top: 0;
+    text-align: center;
+  }
+}
+#writingByBlock .txtBlock .writerProfile {
+  font-size: 1.15vw;
+  line-height: 1.8;
+}
+@media screen and (min-width: 1391.30435px) {
+  #writingByBlock .txtBlock .writerProfile {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #writingByBlock .txtBlock .writerProfile {
+    margin-top: 4vw;
+    font-size: 3.73vw;
+  }
+}
+
+/* ----------------------------------------------------------------------- 
+	title
+----------------------------------------------------------------------- */
+.menuTitleStyle {
+  font-size: 4.32vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: left;
+}
+@media screen and (min-width: 1388.88889px) {
+  .menuTitleStyle {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .menuTitleStyle {
+    font-size: 10.66vw;
   }
 }
