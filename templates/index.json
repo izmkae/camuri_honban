@@ -58,7 +58,8 @@
       "type": "top_about",
       "settings": {
         "topAboutText": "「帽⼦が似合わない」\nそう思っている全ての⼈へ。\nみんなのアタマと気持ちに\nフィットする帽⼦を、\nCAMURIが形にします。",
-        "topAboutLink": "shopify:\/\/pages\/about"
+        "topAboutLink": "shopify:\/\/pages\/about",
+        "topAboutImg": "shopify:\/\/shop_images\/top_illust_1_r.png"
       }
     },
     "top_contents_wVXE7f": {
