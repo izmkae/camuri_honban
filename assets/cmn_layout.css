@@ -719,6 +719,7 @@ li {
   margin-top: 0.4vw;
   font-size: 0.93vw;
   font-weight: normal;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 800px) {
   #footer #fMenuBlock #fMenuFlex .fMenu li .fMenuSecondary li {
