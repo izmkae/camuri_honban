@@ -8,7 +8,7 @@
 {%- endif -%}
 
 {% if template contains 'page.camuri_about' %}
-  //テンプレートファイル名に page というワードを含んだページです
+	<link rel="stylesheet" href="{{ 'about.css' | asset_url }}" media="print" onload="this.media='all'">
 {% endif %}
 
 <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
