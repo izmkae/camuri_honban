@@ -1,0 +1,1182 @@
+﻿@charset "UTF-8";
+@import "__import";
+
+/* ----------------------------------------------------------------------- 
+
+	common layout 共通レイアウト
+
+----------------------------------------------------------------------- */
+.pcOnly {
+	@include media-sp {
+		display: none;
+	}
+}
+.spOnly {
+	display: none;
+	@include media-sp {
+		display: block;
+	}
+}
+
+/* ----------------------------------------------------------------------- 
+	settings
+----------------------------------------------------------------------- */
+html {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+*, *:before, *:after {
+		margin: 0px; 
+		padding: 0px;
+	box-sizing: inherit;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-family: $font;
+	font-size: 16px;
+	font-weight: 400;
+	color: $text;
+	text-align: left;
+	text-justify: inter-ideograph;
+	-webkit-text-size-adjust: 100%;
+	line-height: 1.6;
+		
+	@include media-sp {
+		font-size: 3.73vw;
+		font-family: $font_sp;
+	}
+}
+.wrapper {
+	position: relative;
+	height: 100%;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+	
+	@include media-pc {
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-transition: opacity .5s ease-in-out;
+		transition: opacity .5s ease-in-out;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+}
+div ul p {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+
+/*-------------------------------------------------------------------
+	header
+-------------------------------------------------------------------*/
+#header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: $idx_header;
+	background-color: $wht;
+	
+	@include media-sp {
+		height: $hdr_height_sp;
+	}
+
+	&.active {
+		z-index: $idx_header;
+		opacity: 1;
+		background-color: transparent;
+	}
+
+	.headMsg {
+		width: 100vw;
+		height: 2.88vw;
+		background-color: $blk;
+		color: $wht;
+		text-align: center;
+		padding: 0.38vw;
+		padding-top: 0.6vw;
+		
+		@include media-sp {
+			height: 8.53vw;
+			padding-top: 2.1vw;
+			font-size: 2.66vw;
+		}
+	}
+
+	&.fixed {
+		.headerIn, .mainVisualIn {
+			.hLogo {
+				img {
+					width: 4.54vw;
+
+					@include media-sp {
+						width: 11.18vw;
+					}
+				}
+			}
+		}
+	}
+}
+.headerIn, .mainVisualIn {
+	width: 100%;
+	height: 4.33vw;
+	padding: 0 2.88vw 0 1.44vw;
+	@include flex(center, space-between);
+
+	@include media-sp {
+		padding: 1.3vw 4vw 0;
+	}
+
+	.hLogo {
+		img {
+			width: 4.54vw;
+
+			@include media-sp {
+				width: 11.18vw;
+			}
+		}
+	}
+	.hMenu {
+		@include flex(center, flex-end);
+
+		.hCart {
+			
+		}
+		.hNavBtn {
+			position: relative;
+			width: 2.16vw;
+			height: 14px;
+			margin-left: 2.16vw;
+			box-sizing: border-box;
+
+			@include media-sp {
+				width: 5.33vw;
+				margin-left: 2.66vw;
+			}
+			
+			span {
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				background-color: $blk;
+
+				&:nth-of-type(1) {
+					top: 0;
+				}
+				&:nth-of-type(2) {
+					top: 13px;
+				}
+			}
+			&.active {
+				span {
+					&:nth-of-type(1) {
+						-webkit-transform: translateY(6px) rotate(45deg);
+								transform: translateY(6px) rotate(45deg);
+					}
+					&:nth-of-type(2) {
+						-webkit-transform: translateY(-6px) rotate(-45deg);
+								transform: translateY(-6px) rotate(-45deg);
+					}
+				}
+			}
+		}
+	}
+}
+#gNaviWrapper {
+	display: none;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	z-index: $idx_gNaviWrapper;
+	position: fixed;
+	background: $bge;
+	overflow: auto;
+	
+	#gNaviIn {
+		@include flex(flex-start, space-between);
+		padding: 9.95vw 10.31vw 5vw; 
+
+		@include media-sp {
+			width: 100vw;
+			padding: 27.4vw 8vw 5vw;
+		}
+
+		#gMenu01, #gMenu02, #gMenu03, #gMenu04 {
+			@include media-sp {
+				width: 100%;
+			}
+		}
+		.hSearchBlock {
+			
+			.field {
+				.field__input {
+					width: 25.25vw;
+					height: 4.32vw;
+					background-color: transparent;
+				}
+				.field__button {
+					height: 6rem;
+				}
+				.field__label {
+					line-height: 2.5;
+				}
+			}
+		}
+
+		.hBtnStyle {
+			display: block;
+			width: 25.25vw;
+			height: 4.32vw;
+			line-height: 4.32vw;
+			transition: 0.5s;
+			text-align: center;
+			border: 1px solid $blk;
+			margin-top: 3.39vw;
+			margin-bottom: 3.39vw;
+
+			@include media-sp {
+				width: 100%;
+				height: 11.2vw;
+			}
+
+			.txtEn {
+				font-size: 1.44vw;
+				font-family: $font_en;
+				font-weight: 600;
+
+				@include media-sp {
+					font-size: 4.26vw;
+					line-height: 11.2vw;
+				}
+			}
+			.txtJa {
+				font-size: 0.93vw;
+				padding-left: 1.37vw; 
+
+				@include media-sp {
+					font-size: 2.93vw;
+					line-height: 11.2vw;
+				}
+			}
+
+			&:hover {
+				background-color: $blk;
+				color: $bge;
+			}
+		}
+
+		.menuList {
+			@include media-sp {
+				margin-top: 8vw;
+				width: 100%;
+			}
+			li {
+				&+li {
+					margin-top: 2.5vw;
+					@include media-sp {
+						margin-top: 8vw;
+					}
+				}
+				span {
+					display: block;
+				}
+				a {
+					&:hover {
+						span{
+							color: $hover;
+						}
+					}
+				}
+				.txtEn {
+					font-family: $font_en;
+					font-size: 3.24vw;
+					font-weight: bold;
+					line-height: 1;
+
+					@include media-sp {
+						font-size: 10.13vw;
+					}
+				}
+				.txtJa {
+					margin-top: 0.72vw;
+					font-size: 0.93vw;
+
+					@include media-sp {
+						font-size: 2.93vw;
+					}
+				}
+			}
+		}
+
+		.acMenuBox {
+			margin-top: 2.5vw;
+			width: 17.02vw;
+
+			@include media-sp {
+				margin-top: 6.88vw;
+				width: 100%;
+			}
+
+			label{
+				position: relative;
+				display: block;
+				cursor: pointer;
+				font-size: 1.29vw;
+				font-weight: bold;
+				padding-bottom: 10px;
+				border-bottom: 1px solid $blk;
+
+				@include media-sp {
+					font-size: 4.26vw;
+				}
+
+				&::before, &::after,{
+					content: '';
+					display: inline-block;
+					position: absolute;
+					right: 12px;
+					width: 2px;
+					height: 25px;
+					background-color: $blk;
+					transition: all 0.5s;
+
+					@include media-sp {
+						height: 16px;
+					}
+
+				}
+				&::after {
+					transform: rotate(90deg);
+				}
+				&:hover{
+					color: $hover;
+
+					&::before, &::after,{
+						background-color: $hover;
+					}
+				}
+			}
+			.acMenuList {
+				height: auto;
+				padding: 0px;
+				overflow: hidden;
+				opacity: 1;
+				transition: 0.5s;	
+				margin-top: 0.86vw;
+				margin-left: 3.96vw;
+				font-weight: bold;
+
+				@include media-sp {
+					margin-top: 3.76vw;
+					height: 0px;
+					opacity: 0;
+				}
+
+				li {
+					line-height: 2em;
+					font-size: 1.15vw;
+
+					@include media-sp {
+						font-size: 3.73vw;
+					}					
+
+					&::before {
+						content: '・';
+					}
+					a {
+						&:hover {
+							color: $hover;
+						}
+					}
+				}
+			}
+			input{
+				display: none;
+				transition: all 0.5s;
+
+				&:checked {
+					& ~ label {
+						&::before {
+							transform: rotate(45deg);
+						}
+						&::after {
+							transform: rotate(135deg);
+						}
+					}
+					& ~ .acMenuList {
+						height: 0px;
+						opacity: 0;
+
+						@include media-sp {
+							height: auto;
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+		.hSNSMenu {
+			width: 2.52vw;
+
+			@include media-sp {
+				margin-top: 10.66vw;
+				width: 100%;
+				@include flex(flex-start, flex-start);
+			}
+
+			li {
+				margin-bottom: 2.7vw;
+				@include media-sp {
+					width: 7.73vw;
+					margin-right: 6.66vw;
+				}
+
+			}
+		}
+		.menuTtl {
+			margin-top: 2.6vw;
+			a {
+				font-size: 1.29vw;
+				font-weight: bold;
+				padding-bottom: 10px;
+
+				@include media-sp {
+					margin-top: 6.88vw;
+					font-size: 4.26vw;
+				}
+				&:hover {
+					color: $hover;
+				}
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------------------------
+	footer
+-------------------------------------------------------------------*/
+#footer {
+	width: 100%;
+	background-color: #C9C9C9;
+
+	h3 {
+		font-family: $font_en;
+		font-size: 2.16vw;
+		font-weight: 600;
+		text-align: center;
+
+		@include media-sp {
+			font-size: 5.33vw;
+		}
+	}
+
+	#fNewsletterSnsBlock {
+		@include flex(flex-start, flex-start);
+		#newsletterBlock {
+			width: 50%;
+			height: 25.25vw;
+			padding: 3.96vw 11.83vw 3.96vw 10.31vw;
+			background-color: #4A4A4A;
+			color:$wht;
+
+			@include media-sp {
+				width: 100vw;
+				height: auto;
+				padding: 6.66vw 8vw 8.79vw;
+			}
+			h3 {
+				color:$wht;
+			}
+			.newsletterTxt {
+				margin-top: 1.8vw;
+				line-height: 1.75;
+
+				@include media-sp {
+					margin-top: 5.06vw;
+					font-size: 3.2vw;
+				}
+			}
+			.formBlock {
+				margin-top: 2.02vw;
+				@include media-sp {
+					margin-top: 5.6vw;
+				}
+			}
+		}
+		#snsBlock {
+			width: 50%;
+			height: 25.25vw;
+			background-color: $bge;
+			padding-top: 3.96vw;
+
+			@include media-sp {
+				width: 100vw;
+				height: auto;
+				padding: 6.66vw 0 21.27vw;
+			}
+
+			.fSNSMenu {
+				margin-top: 4.4vw;
+				@include flex(flex-start, center);
+
+				@include media-sp {
+					margin-top: 7.65vw;
+				}
+				li {
+					width: 3.6vw;
+					margin: 0 1.58vw;
+
+					@include media-sp {
+						width: 10.93vw;
+						margin: 0 4.8vw;
+					}
+
+					&.fSNSX {
+						width: 3.31vw;
+						
+						@include media-sp {
+							width: 10.04vw;
+						}
+					}
+				}
+			}
+		}
+	}
+	#fMenuBlock {
+		@include flex(flex-start, flex-start);
+		padding: 3.96vw 0 6.78vw;
+
+		@include media-sp {
+			padding: 6.66vw 0 12.53vw;
+		}
+
+		h3 {
+			text-align: left;
+
+			@include media-sp {
+				text-align: center;
+			}
+		}
+		
+		#ttlBlock {
+			width: 50%;
+			padding-left: 13.92vw;
+
+			@include media-sp {
+				width: 100vw;
+				padding-left: 0;
+			}
+		}
+		#fMenuFlex {
+			width: 50%;
+			@include flex(flex-start, flex-start);
+			margin-top: 1vw;
+
+			@include media-sp {
+				width: 100vw;
+				padding: 0 8vw 0;
+				@include flex(flex-start, space-between);
+			}
+
+			.fMenu {
+				margin-right: 4.68vw;
+
+				@include media-sp {
+					margin-right: 0;
+				}
+				li {
+					margin-bottom: 2.3vw;
+					font-size: 1.01vw;
+					font-weight: bold;
+
+					@include media-sp {
+						font-size: 3.2vw;
+						margin-top: 7.46vw;
+					}
+
+					.fMenuSecondary {
+						@include media-sp {
+							margin-top: 4.8vw;
+						}
+						li {
+							margin-top: 0.4vw;
+							font-size: 0.93vw;
+							font-weight: normal;
+							margin-bottom: 0;
+
+							@include media-sp {
+								margin-top: 3.73vw;
+								font-size: 3.2vw;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#fCopy {
+		padding-right: 2.88vw;
+		padding-bottom: 1.6vw;
+		text-align: right;
+		font-size: 0.8vw;
+
+		@include media-sp {
+			height: auto;
+			font-size: 2.66vw;
+			text-align: center;
+			
+		}
+	}
+}
+
+/* ----------------------------------------------------------------------- 
+	common layout
+----------------------------------------------------------------------- */
+.content {
+	@include clearfix;
+	position: relative;
+	padding-top: $hdr_height_pc;
+
+	@include media-sp {
+		padding-top: $hdr_height_sp;
+	}
+}
+
+/* ----------------------------------------------------------------------- 
+	label
+----------------------------------------------------------------------- */
+.labelLimited {
+	background-color: #E26768;
+	color: $wht;
+}
+.labelSolidOut {
+	background-color: $blk;
+	color: $wht;
+}
+/* ----------------------------------------------------------------------- 
+	button
+----------------------------------------------------------------------- */
+.btnBlock {
+	span, a {
+		display: block;
+		width: 7.57vw;
+		height: 2.59vw;
+		line-height: 2.4vw;
+		font-size: 1.15vw;
+		border-radius: 1.8vw;
+		font-family: $font_en;
+		font-weight: 600;
+		transition: 0.5s;
+		text-align: center;
+
+		@include media-sp {
+			width: 28vw;
+			height: 9.06vw;
+			line-height: 8vw;
+			font-size: 4vw;
+			border-radius: 6.66vw;
+		}
+
+		&.btnStyleW01 {
+			border: 2px solid $wht;
+			color: $wht;
+
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+		}
+
+		&.btnStyleB01 {
+			border: 2px solid $blk;
+			color: $blk;
+
+			&:hover {
+				background-color: $blk;
+				color: $wht;
+			}
+		}
+	}
+}
+/* ----------------------------------------------------------------------- 
+	itemList
+----------------------------------------------------------------------- */
+#itemSec {
+	padding: 8.22vw 10.31vw 17.46vw;
+
+	@include media-sp {
+		padding: 11.46vw 4vw 34.4vw;
+	}
+
+	h2 {
+		font-family: $font_en;
+		font-weight: 600;
+
+		@include media-sp {
+			font-size: 8vw;
+			padding-left: 0;
+		}
+	}
+
+	#itemList {
+		padding-top: 7.5vw;
+		@include flex(flex-start, space-between);
+
+		li {
+			width: 17.31vw;
+			margin-bottom: 5.84vw;
+
+			@include media-sp {
+				width: 43.2vw;
+				margin-bottom: 10.66vw;
+			}
+
+			.imgBlock {
+				position: relative;
+
+				.tabWrap {
+					position: absolute;
+					top: 0;
+					right:0;
+					@include flex(flex-start, space-between);
+
+					span {
+						padding: 0.12vw 0.36vw;
+						font-size: 1.15vw;
+
+						@include media-sp {
+							padding: 0 1.6vw;
+							font-size: 3.2vw;
+						}
+					}
+
+					.labelLimited {
+						background-color: #E26768;
+						color: $wht;
+					}
+					.labelSolidOut {
+						background-color: $blk;
+						color: $wht;
+					}
+				}
+			}
+			.itemTtl {
+				margin-top:1.83vw;
+				font-size: 1.58vw;
+				font-weight: bold;
+				line-height: 1.55;
+
+				@include media-sp {
+					font-size: 4.26vw;
+					
+				}
+			}
+			.itemPrice {
+				margin-top: 0.79vw;
+				font-size: 1.37vw;
+				font-weight: bold;
+				@include media-sp {
+					font-size: 4.26vw;
+				}
+
+				span {
+					font-size: 1.01vw;
+					@include media-sp {
+						font-size: 3.73vw;
+					}
+				}
+			}
+			.itemTxt {
+				margin-top: 1.08vw;
+				font-size: 1.15vw;
+				@include media-sp {
+					font-size: 3.73vw;
+				}
+			}
+			.tagList {
+				margin-top: 2vw;
+				@include flex(flex-start, flex-start);
+
+				a, span {
+					display: block;
+					padding: 0.4vw 1.08vw;
+					border-radius: 1.8vw;
+					font-size: 0.93vw;
+					margin: 5px;
+
+					@include media-sp {
+						padding: 1.33vw 2.4vw;
+						border-radius: 6.66vw;
+						font-size: 2.93vw;
+					}
+
+					&.tagColBry {
+						background-color: #575757;
+						color: $wht;
+					}
+					&.tagColWht {
+						background-color: $wht;
+						border: 1px solid $blk;
+					}
+				 }
+			}
+		}
+	}
+
+	.btnBlock {
+		margin-top: 2.04vw;
+		text-align: center;
+
+		@include media-sp {
+			margin-top: 6.72vw;
+		}
+		a {
+			display: block;
+			width: 20.2vw;
+			height: 4.32vw;
+			line-height: 4.32vw;
+			margin: auto;
+			border-radius: 2.8vw;
+			font-size: 1.44vw;
+
+			@include media-sp {
+				width: 50.4vw;
+				height: 11.2vw;
+				line-height: 11.2vw;
+				border-radius: 25.2vw;
+				font-size: 4vw;
+			}
+		}
+	}
+
+	#categoryblock {
+		padding-top: 6.52vw;
+
+		@include media-sp {
+			padding-top: 18.15vw;
+		}
+
+		h2 {
+			font-family: $font_en;
+			font-size: 2.3vw;
+			font-weight: 600;
+			text-align: center;
+
+			@include media-sp {
+				font-size: 7.46vw;
+			}
+
+			span {
+				position: relative;
+
+				&::before {
+					content: '';
+					position: absolute;
+					width: 2px;
+					height: 3.3vw;
+					top: 0.2vw;
+					left: -2.8vw;
+					background-color: $blk;
+					transform: rotate(-35deg);
+
+					@include media-sp {
+						height: 8.5vw;
+						left: -4.5vw;
+					}
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					width: 2px;
+					height: 3.3vw;
+					top: 0.2vw;
+					right: -2.8vw;
+					background-color: $blk;
+					transform: rotate(35deg);
+
+					@include media-sp {
+						height: 8.5vw;
+						right: -4.5vw;
+					}
+				}
+			}
+		}
+
+		#categoryList {
+			margin-top: -1.7vw;
+			padding: 6.34vw 4.68vw 4.61vw;
+			background-color: $wht;
+			@include flex(flex-start, space-between);
+
+			@include media-sp {
+				margin-top: -5.33vw;
+				padding: 15.25vw 4vw 0;
+			}
+
+			li {
+				width: 10vw;
+				text-align: center;
+
+				@include media-sp {
+					width: 41.6vw;
+					margin-bottom: 11.2vw;
+				}
+
+				.imgBlock {
+					width: 6.49vw;
+					//height: 5.41vw;
+					//@include flex(center, center);
+					margin: auto;
+					text-align: center;
+					@include media-sp {
+						width: 23.01vw;
+						//height: 25.05vw;
+					}
+				}
+
+				.catTxt {
+					margin-top: 1.35vw;
+					font-size: 1.01vw;
+					@include media-sp {
+						margin-top: 5.01vw;
+						font-size: 3.73vw;
+					}
+				}
+				.catTtl {
+					font-size: 1.29vw;
+					font-weight: bold;
+					line-height: 1.6;
+
+					@include media-sp {
+						font-size: 4.26vw;
+					}
+
+					span {
+						border-bottom: 1px solid $blk;
+						padding-bottom: 0.64vw;
+						@include media-sp {
+							border-bottom: none;
+						}
+					}
+				}
+				a {
+					&:hover {
+						.imgBlock {
+							img {
+								@include opacity(0.6);
+							}
+						}
+						.catTxt { 
+							@include opacity(0.6);
+						}
+						.catTtl { 
+							@include opacity(0.6);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#tryitSec {
+	position: relative;
+	z-index: 3;
+
+	.flowTxtWrap {
+		display: flex;
+		position: absolute;
+		width : 100%;
+		top: -2.5vw;
+		overflow : hidden;
+
+		@include media-sp {
+			top: -8vw;
+		}
+
+		.flowTxt {
+			width: auto;
+			white-space : nowrap;
+			line-height : 1em;
+			font-family: $font_en;
+			font-style: italic;
+			font-size: 4.9vw;
+			font-weight: 600;
+			letter-spacing: 0.01em;
+			margin-left: 20px;
+			
+			@include media-sp {
+				font-size: 13.33vw;
+			}
+
+		}
+		.flowTxt1 {
+			animation: loop 80s -25s linear infinite;
+		}
+
+		.flowTxt2 {
+			animation: loop2 80s linear infinite;
+		}
+
+		@keyframes loop {
+			from {
+				transform: translateX(0);
+			}
+			to {
+				transform: translateX(-100%);
+			}
+		}
+
+		@keyframes loop2 {
+			from {
+				transform: translateX(0);
+			}
+			to {
+				transform: translateX(-200%);
+			}
+		}
+	}
+	h2 {
+		padding-top: 12.98vw;
+		font-family: $font_en;
+		font-size: 2.74vw;
+		font-weight: 600;
+		text-align: center;
+
+		@include media-sp {
+			padding-top: 18.86vw;
+			font-size: 8vw;
+		}
+	}
+	#tryitList {
+		@include flex(flex-start, space-between);
+		padding: 2.03vw 10.31vw 9.37vw;
+
+		@include media-sp {
+			padding: 7.43vw 4vw 2.66vw;
+		}
+
+		li {
+			width: 24.89vw;
+
+			@include media-sp {
+				width: 92vw;
+				margin-bottom: 12vw;
+			}
+
+			.flexBlock {
+				margin-top: 1.8vw;
+				@include flex(center, space-between);
+
+				.listTtl{
+					width: 16.59vw;
+					font-size: 1.44vw;
+					font-weight: 600;
+					line-height: 1.5;
+
+					@include media-sp {
+						width: 64vw;
+						font-size: 5.33vw;
+					}
+				}
+			}
+		}
+	}
+}
+#writingByBlock {
+	margin-top: 4.83vw;
+	width: 59.09vw;
+	max-width: 650px;
+	@include flex(center, flex-start);
+	background-color: $bge;
+	padding: 5% 4.3% 5% 7.3%;
+
+	@include media-sp {
+		margin-top: 15.73vw;
+		padding: 7.46vw 5.33vw 5.6vw;
+	}
+
+	.imgBlock {
+		width: 28%;
+
+		@include media-sp {
+			width: 100%;
+			text-align: center;
+		}
+
+		img {
+			@include media-sp {
+				width: 28.26vw;
+			}
+		}
+	}
+	.txtBlock {
+		width: 63.6%;
+		margin-left: 4.25%;
+
+		@include media-sp {
+			width: 100%;
+			margin-left: 0;
+		}
+
+		.txt01 {
+			@include max-font-size(1.15vw, 16px);
+			font-weight: bold;
+
+			@include media-sp {
+				margin-top: 4vw;
+				text-align: center;
+				font-size: 3.73vw;
+			}
+		}
+		.writerName {
+			@include max-font-size (1.44vw, 20px);
+			font-weight: bold;
+
+			@include media-sp {
+				font-size: 5.33vw;
+				margin-top: 0;
+				text-align: center;
+			}
+		}
+		.writerProfile {
+			@include max-font-size(1.15vw, 16px);
+			line-height: 1.8;
+
+			@include media-sp {
+				margin-top: 4vw;
+				font-size: 3.73vw;
+			}
+		}
+	}
+}
+/* ----------------------------------------------------------------------- 
+	title
+----------------------------------------------------------------------- */
+.menuTitleStyle {
+	@include max-font-size(4.32vw, 60px);
+	font-family: $font_en;
+	font-weight: 600;
+	text-align: left;
+
+	@include media-sp {
+		font-size: 10.66vw;
+	}
+}
