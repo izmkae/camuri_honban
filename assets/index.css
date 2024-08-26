@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&Poppins:ital,wght@0,400;0,600;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,300;0,600;1,300;1,600&display=swap");
 /*
 min-font-size ($font_size, $min_font_size)
 $font_size (vw):     可変フォントサイズ
@@ -194,7 +194,7 @@ $max_font_size (px): 最大フォントサイズ
   flex-flow: row wrap;
 }
 #contentSec #contentList li {
-  width: 33.33vw;
+  width: 33.33%;
   height: 33.33vw;
 }
 @media screen and (max-width: 800px) {
@@ -448,6 +448,7 @@ $max_font_size (px): 最大フォントサイズ
 }
 #tryitSec .flowTxtWrap .flowTxt {
   width: auto;
+  height: 5.5vw;
   white-space: nowrap;
   line-height: 1em;
   font-family: "Poppins", sans-serif;
@@ -530,9 +531,6 @@ $max_font_size (px): 最大フォントサイズ
   display: block;
   cursor: pointer;
 }
-#tryitSec #tryitList li a .imgBlock {
-  background-color: #000000;
-}
 #tryitSec #tryitList li a .flexBlock {
   margin-top: 1.8vw;
   display: -webkit-flex;
@@ -586,7 +584,10 @@ $max_font_size (px): 最大フォントサイズ
   color: #000000;
 }
 #tryitSec #tryitList li a:hover img {
-  color: #808080;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -khtml-opacity: 0.6;
+  -ms-filter: "alpha(opacity=$opacity)";
 }
 #tryitSec #tryitList li a:hover .flexBlock .btnBlock2 span {
   background-color: #000000;
