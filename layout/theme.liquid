@@ -282,26 +282,6 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-
-    <!-- CSS -->
-    {{ 'cmn_layout.css' | asset_url | stylesheet_tag }}
-
-{% if template contains 'page.camuri_about' %}
-	<link rel="stylesheet" href="{{ 'about.css' | asset_url }}" media="print" onload="this.media='all'">
-{% endif %}
-    
-    <!-- JS -->
-    {{ 'jquery.js' | asset_url | script_tag }}
-    {{ 'common.js' | asset_url | script_tag }}
-    
-    {% if template == 'index' %} 
-    {{ 'slick.css' | asset_url | stylesheet_tag }}
-    {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
-    {{ 'index.css' | asset_url | stylesheet_tag }}
-
-    {{ 'slick.min.js' | asset_url | script_tag }}
-    {{ 'index.js' | asset_url | script_tag }}
-    {% endif %}
   </head>
   <body>
     <div class="wrapper">
