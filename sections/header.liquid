@@ -29,11 +29,11 @@
 	{{ 'fitting.css' | asset_url | stylesheet_tag }}
 {% endif %}
 
-{% if template contains 'product' %}
+
 	{{ 'slick.css' | asset_url | stylesheet_tag }}
 	{{ 'slick-theme.css' | asset_url | stylesheet_tag }}
 	{{ 'product.css' | asset_url | stylesheet_tag }}
-{% endif %}
+
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>

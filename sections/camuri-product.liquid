@@ -8,7 +8,7 @@
 					<li><img src="{{ media.preview_image | image_url: width: 1000 }}" alt="{{ media.alt | escape }}"></li>
 				{%- endfor -%}
 			</ul>
-			<div class="zoomIcon"><a><img src="_asset/images/_common/ico_magnifying_glass.png"></a></div>
+			<div class="zoomIcon"><a><img src="{{ 'ico_magnifying_glass.png' | asset_url }}" alt="CAMURI | カムリ"></a></div>
 		</div>
 		<ul class="thumbImgList">
 			{%- for media in product.media -%}
