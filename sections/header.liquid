@@ -10,7 +10,9 @@
 {% if template contains 'page.camuri_about' %}
 	<link rel="stylesheet" href="{{ 'about.css' | asset_url }}" media="print" onload="this.media='all'">
 {% endif %}
-
+{% if template contains 'page.camuri_fitting' %}
+	<link rel="stylesheet" href="{{ 'fitting.css' | asset_url }}" media="print" onload="this.media='all'">
+{% endif %}
 <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
