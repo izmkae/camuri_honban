@@ -13,7 +13,7 @@
       "type": "main-blog",
       "disabled": true,
       "custom_css": [
-        "p {width: 200px;}"
+
       ],
       "settings": {
         "layout": "grid",
