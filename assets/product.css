@@ -210,7 +210,12 @@ $max_font_size (px): 最大フォントサイズ
 #productBasicInfoSec .infoBlock .tabWrap span {
   padding: 4px 18px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.33vw;
+}
+@media screen and (min-width: 1203.00752px) {
+  #productBasicInfoSec .infoBlock .tabWrap span {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 800px) {
   #productBasicInfoSec .infoBlock .tabWrap span {
@@ -221,8 +226,13 @@ $max_font_size (px): 最大フォントサイズ
 }
 #productBasicInfoSec .infoBlock .productCopy {
   margin-top: 20px;
-  font-size: 1rem;
+  font-size: 1.33vw;
   font-weight: bold;
+}
+@media screen and (min-width: 1203.00752px) {
+  #productBasicInfoSec .infoBlock .productCopy {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 800px) {
   #productBasicInfoSec .infoBlock .productCopy {
@@ -232,9 +242,14 @@ $max_font_size (px): 最大フォントサイズ
 }
 #productBasicInfoSec .infoBlock .productName {
   margin-top: 15px;
-  font-size: 2.18rem;
+  font-size: 2.91vw;
   font-weight: bold;
   line-height: 1.4;
+}
+@media screen and (min-width: 1202.74914px) {
+  #productBasicInfoSec .infoBlock .productName {
+    font-size: 35px;
+  }
 }
 @media screen and (max-width: 800px) {
   #productBasicInfoSec .infoBlock .productName {
@@ -244,12 +259,22 @@ $max_font_size (px): 最大フォントサイズ
 }
 #productBasicInfoSec .infoBlock .productCode {
   margin-top: 5px;
-  font-size: 1rem;
+  font-size: 1.33vw;
+}
+@media screen and (min-width: 1203.00752px) {
+  #productBasicInfoSec .infoBlock .productCode {
+    font-size: 16px;
+  }
 }
 #productBasicInfoSec .infoBlock .productPrice {
   margin-top: 15px;
-  font-size: 2.18rem;
+  font-size: 2.91vw;
   font-weight: bold;
+}
+@media screen and (min-width: 1202.74914px) {
+  #productBasicInfoSec .infoBlock .productPrice {
+    font-size: 35px;
+  }
 }
 @media screen and (max-width: 800px) {
   #productBasicInfoSec .infoBlock .productPrice {
@@ -257,8 +282,13 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #productBasicInfoSec .infoBlock .productPrice span {
-  font-size: 1rem;
+  font-size: 1.33vw;
   line-height: 3;
+}
+@media screen and (min-width: 1203.00752px) {
+  #productBasicInfoSec .infoBlock .productPrice span {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 800px) {
   #productBasicInfoSec .infoBlock .productPrice span {
@@ -326,14 +356,27 @@ $max_font_size (px): 最大フォントサイズ
     margin-top: 4.53;
   }
 }
+#productDetailSec #productDescription {
+  font-size: 1.33vw;
+}
+@media screen and (min-width: 1203.00752px) {
+  #productDetailSec #productDescription {
+    font-size: 16px;
+  }
+}
 #productDetailSec #productDescription h1 {
   margin-top: 120px;
-  font-size: 1.56rem;
+  font-size: 2.08vw;
   font-weight: bold;
   padding: 15px;
   text-align: center;
   background-color: #E1DFD9;
   line-height: 1.4;
+}
+@media screen and (min-width: 1201.92308px) {
+  #productDetailSec #productDescription h1 {
+    font-size: 25px;
+  }
 }
 @media screen and (max-width: 800px) {
   #productDetailSec #productDescription h1 {
@@ -344,8 +387,13 @@ $max_font_size (px): 最大フォントサイズ
 }
 #productDetailSec #productDescription h2 {
   margin-top: 100px;
-  font-size: 1.56rem;
+  font-size: 2.08vw;
   font-weight: bold;
+}
+@media screen and (min-width: 1201.92308px) {
+  #productDetailSec #productDescription h2 {
+    font-size: 25px;
+  }
 }
 @media screen and (max-width: 800px) {
   #productDetailSec #productDescription h2 {
@@ -355,8 +403,13 @@ $max_font_size (px): 最大フォントサイズ
 }
 #productDetailSec #productDescription p {
   margin-top: 35px;
-  font-size: 1rem;
+  font-size: 1.33vw;
   line-height: 1.87;
+}
+@media screen and (min-width: 1203.00752px) {
+  #productDetailSec #productDescription p {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 800px) {
   #productDetailSec #productDescription p {
@@ -366,7 +419,12 @@ $max_font_size (px): 最大フォントサイズ
 }
 #productDetailSec #productDescription .sTxt {
   margin-top: 1.22vw;
-  font-size: 0.87rem;
+  font-size: 1.16vw;
+}
+@media screen and (min-width: 1206.89655px) {
+  #productDetailSec #productDescription .sTxt {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 800px) {
   #productDetailSec #productDescription .sTxt {
