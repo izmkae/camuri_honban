@@ -12,7 +12,6 @@
 		</div>
 		<ul class="thumbImgList">
 			{%- for media in product.media -%}
-			<img src="{{ media | img_url: '100x100'}}" alt="{{ media.alt }}">
 				<li><img src="{{ media.preview_image | image_url: width: 500 }}" alt="{{ media.alt | escape }}"></li>
 			{%- endfor -%}
 		</ul>
