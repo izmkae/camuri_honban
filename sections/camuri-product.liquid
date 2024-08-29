@@ -12,7 +12,7 @@
 		</div>
 		<ul class="thumbImgList">
 			{%- for media in product.media -%}
-				<li><img src="{{ media.preview_image | image_url: width: 500 }}" alt="{{ media.alt | escape }}"></li>
+				<li><img src="{{ media | img_url: width: 500}}" alt="{{ media.alt | escape  }}"></li>
 			{%- endfor -%}
 		</ul>
 	</div>
