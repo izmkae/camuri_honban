@@ -297,7 +297,12 @@ $max_font_size (px): 最大フォントサイズ
 }
 #productBasicInfoSec .infoBlock .form__label, #productBasicInfoSec .infoBlock .quantity__label {
   margin-top: 30px;
-  font-size: 1.25rem;
+  font-size: 1.66vw;
+}
+@media screen and (min-width: 1204.81928px) {
+  #productBasicInfoSec .infoBlock .form__label, #productBasicInfoSec .infoBlock .quantity__label {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 800px) {
   #productBasicInfoSec .infoBlock .form__label, #productBasicInfoSec .infoBlock .quantity__label {
