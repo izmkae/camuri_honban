@@ -12,6 +12,7 @@
 		</div>
 		<ul class="thumbImgList">
 			{%- for media in product.media -%}
+				{% assign idx = 1 %}
 				<li><img src="{{ media.preview_image | image_url: width: 500 }}" alt="{{ media.alt | escape }}"></li>
 			{%- endfor -%}
 		</ul>
@@ -40,7 +41,7 @@
 		{%- when 'price' -%}
 			<p class="productPrice">{{ product.price | money }}<span>（税込）</span></p>
 		{%- when 'product_no' -%}
-			<p class="productCode">商品番号　{{ product.metafields.descriptors.product_no | escape }}</p>
+			<p class="productCode">商品番号　{{ product.metafields.camuri.product_no | escape }}</p>
 		{%- when 'variant_picker' -%}
 			<div class="variationBlock">
 				{% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
