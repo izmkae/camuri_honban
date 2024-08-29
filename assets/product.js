@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 	$('.thumbImgList').slick({
 		infinite: true,
-		slidesToShow: 8,
+		slidesToShow: 20,
 		focusOnSelect: true,
 		asNavFor: '.mainImgList',
 		variableWidth: true,
