@@ -5,14 +5,15 @@
 		<div class="mainImgWrap">
 			<ul class="mainImgList">
 				{%- for media in product.media -%}
-					<li><img src="{{ media | img_url: width: 1000}}" alt="{{ media.alt | escape  }}"></li>
+					<li><img src="{{ media.preview_image | image_url: width: 1000 }}" alt="{{ media.alt | escape }}"></li>
 				{%- endfor -%}
 			</ul>
 			<div class="zoomIcon"><a><img src="{{ 'ico_magnifying_glass.png' | asset_url }}" alt="CAMURI | カムリ"></a></div>
 		</div>
-		<ul class="thumbImgListw">
+		<ul class="thumbImgList">
 			{%- for media in product.media -%}
-				<li><img src="{{ media | img_url: width: 500}}" alt="{{ media.alt | escape  }}"></li>
+			<img src="{{ media | img_url: '100x100'}}" alt="{{ media.alt }}">
+				<li><img src="{{ media.preview_image | image_url: width: 500 }}" alt="{{ media.alt | escape }}"></li>
 			{%- endfor -%}
 		</ul>
 	</div>
