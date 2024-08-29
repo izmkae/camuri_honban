@@ -315,6 +315,9 @@ $max_font_size (px): 最大フォントサイズ
   padding: 0.88rem 1.8rem;
   letter-spacing: 0;
 }
+#productBasicInfoSec .infoBlock .product-form__buttons {
+  margin-top: 44px;
+}
 #productBasicInfoSec .infoBlock .quantity {
   width: 240px;
   min-height: 50px;
