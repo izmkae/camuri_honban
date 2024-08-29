@@ -1380,7 +1380,7 @@
         "id": "social_line_link",
         "label": "t:settings_schema.social-media.settings.social_line_link.label",
         "placeholder": "t:settings_schema.social-media.settings.social_line_link.info"
-      }
+      },
       {
         "type": "text",
         "id": "social_threads_link",
