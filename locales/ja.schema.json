@@ -95,6 +95,10 @@
           "label": "Line",
           "info": "https:\/\/page.line.me\/shopify"
         },
+        "social_threads_link": {
+          "label": "Threads",
+          "info": "https:\/\/threads.net\/@shopify"
+        },
         "header": {
           "content": "ソーシャルアカウント"
         }
