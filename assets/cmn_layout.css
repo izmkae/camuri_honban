@@ -189,6 +189,13 @@ li {
   flex-wrap: wrap;
   flex-flow: row wrap;
 }
+.headerIn .hMenu .hCart .header__icon,
+.headerIn .hMenu .hCart .header__icon--cart .icon, .mainVisualIn .hMenu .hCart .header__icon,
+.mainVisualIn .hMenu .hCart .header__icon--cart .icon {
+  height: auto;
+  width: auto;
+  padding: 0;
+}
 .headerIn .hMenu .hNavBtn, .mainVisualIn .hMenu .hNavBtn {
   position: relative;
   width: 2.16vw;
