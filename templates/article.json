@@ -1,8 +1,22 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
       "type": "main-article",
       "blocks": {
+        "table_of_contents_theme_extension_ngjNAn": {
+          "type": "shopify:\/\/apps\/table-of-contents\/blocks\/theme-extension\/d06f5754-affb-4dc7-a2a9-18d74d225f70",
+          "settings": {
+          }
+        },
         "featured_image": {
           "type": "featured_image",
           "settings": {
@@ -23,15 +37,20 @@
           }
         },
         "content": {
-          "type": "content"
+          "type": "content",
+          "settings": {
+          }
         }
       },
       "block_order": [
+        "table_of_contents_theme_extension_ngjNAn",
         "featured_image",
         "title",
         "share",
         "content"
-      ]
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
