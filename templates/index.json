@@ -15,7 +15,7 @@
         "slide_FTPQVJ": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/xx-2.jpg",
+            "image": "shopify:\/\/shop_images\/fv1.jpg",
             "heading": "Image slide",
             "link": ""
           }
@@ -23,7 +23,7 @@
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/img_slide_01_pc.png",
+            "image": "shopify:\/\/shop_images\/fv3.jpg",
             "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。",
             "link": "shopify:\/\/products\/test-fucabori-cap-01"
           }
@@ -31,25 +31,16 @@
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/img_slide_02_pc.png",
+            "image": "shopify:\/\/shop_images\/fv2.jpg",
             "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。",
             "link": "shopify:\/\/blogs\/culture\/社長のあたまから-xxxxxxxxxxxxxxx"
-          }
-        },
-        "1545ef27-f327-42ee-afd6-98e911429776": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/img_slide_03_pc.png",
-            "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。\n3行テストキャップ。",
-            "link": "shopify:\/\/products\/test-fucabori-cap-02"
           }
         }
       },
       "block_order": [
         "slide_FTPQVJ",
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1",
-        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2",
-        "1545ef27-f327-42ee-afd6-98e911429776"
+        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2"
       ],
       "settings": {
       }
