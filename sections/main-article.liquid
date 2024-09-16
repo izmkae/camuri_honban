@@ -1,5 +1,206 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
+  <div id="journalDetailPage" class="content headerOn">
+    <section id="journalHeadSec">
+      <div class="contentIn">
+        <h1>{{ article.title | escape }}</h1>
+        <p class="journalDate">{{- article.published_at | time_tag: format: 'date' -}}</p>
+        <div class="tagList"><span href="#">#COLUMN</span>　<span href="#">#ベレー</span></div>
+        <div class="imgBlock">
+          <img
+                srcset="
+                  {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
+                  {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
+                  {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
+                  {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
+                  {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
+                  {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
+                  {{ article.image | image_url }} {{ article.image.width }}w
+                "
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                src="{{ article.image | image_url: width: 1100 }}"
+                loading="eager"
+                fetchpriority="high"
+                width="{{ article.image.width }}"
+                height="{{ article.image.height }}"
+                alt="{{ article.image.alt | escape }}"
+              >
+        </div>
+        <div class="shareButtonBlock">
+          <p>please shere</p>
+          <ul>
+            <li><a href="#"><img src="_asset/images/_common/ico_instagram.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="_asset/images/_common/ico_facebook.png" alt="Facebook"></a></li>
+            <li class="ico_x"><a href="#"><img src="_asset/images/_common/ico_x.png" alt="X"></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <section id="journalBodySec">
+      <div class="contentIn">
+        <p class="journalIntro">
+          はじめまして●●です。私には仕事でもプライベートでも長く帽子に関わってきましたが、
+          今まで何度となく難しいと思ってきた事があります。それは「自分にあった帽子を見つけ
+          て購入する」こと。
+          「え？それだけのこと？」そう思ったあなたは、きっと帽子を日頃から被り慣れている上
+          級者ではないでしょうか？あるいは実際に帽子を買った経験が
+        </p>
+        <div class="acIndexBox">
+          <input id="acIndex01" name="acIndex01" type="checkbox" />
+          <label for="acIndex01">Index</label>
+          <div class="acBlock">
+            アプリ使用確認
+          </div>
+        </div>
+        <div class="journalMain">
+          <h2>① 帽子の種類が●●●●●●●●●●●●●●●</h3>
+          <h3>1-1 帽子の種類が豊富なのは理由がある</h4>
+          <h4>1-1-1 　帽子の種類が●●●●●●●●●●</h5>
+          <h5>・1-1-1-1　帽子の種類が●●●●●●●●●●</h6>
+          <p>
+            はじめまして●●です。私には仕事でもプライベートでも長く帽子に関わってきましたが、
+            今まで何度となく難しいと思ってきた事があります。それは「自分にあった帽子を見つけ
+            て購入する」こと。
+            「え？それだけのこと？」そう思ったあなたは、きっと帽子を日頃から被り慣れている上
+            級者ではないでしょうか？あるいは実際に帽子を買った経験が
+            寒い季節に、暖かくスタイリングもしやすく、オフィスシーンにも取り入れやすく
+          </p>
+          <img src="_asset/images/dmy/img_blog.jpg">
+
+          <h3>1-2 帽子の種類が豊富なのは理由がある</h4>
+          <h4>1-2-1 　帽子の種類が●●●●●●●●●●</h5>
+          <p>
+            はじめまして●●です。私には仕事でもプライベートでも長く帽子に関わってきましたが、
+            今まで何度となく難しいと思ってきた事があります。それは「自分にあった帽子を見つけ
+            て購入する」こと。
+            「え？それだけのこと？」そう思ったあなたは、きっと帽子を日頃から被り慣れている上
+            級者ではないでしょうか？あるいは実際に帽子を買った経験が
+            寒い季節に、暖かくスタイリングもしやすく、オフィスシーンにも取り入れやすく
+          </p>
+          <img src="_asset/images/dmy/img_blog.jpg">
+
+          <h2>① 帽子の種類が●●●●●●●●●●●●●●●</h3>
+          <h3>1-1 帽子の種類が豊富なのは理由がある</h4>
+          <h4>1-1-1 　帽子の種類が●●●●●●●●●●</h5>
+          <h5>・1-1-1-1　帽子の種類が●●●●●●●●●●</h6>
+          <p>
+            はじめまして●●です。私には仕事でもプライベートでも長く帽子に関わってきましたが、
+            今まで何度となく難しいと思ってきた事があります。それは「自分にあった帽子を見つけ
+            て購入する」こと。
+            「え？それだけのこと？」そう思ったあなたは、きっと帽子を日頃から被り慣れている上
+            級者ではないでしょうか？あるいは実際に帽子を買った経験が
+            寒い季節に、暖かくスタイリングもしやすく、オフィスシーンにも取り入れやすく
+          </p>
+          <img src="_asset/images/dmy/img_blog.jpg">
+        </div>
+
+        <div id="writingByBlock">
+          <div class="imgBlock"><img src="_asset/images/dmy/img_prof.png"></div>
+          <div class="txtBlock">
+            <p class="txt01">writing by</p>
+            <p class="writerName">Shintarou Yoshida</p>
+            <p class="writerProfile">
+              滋賀県出身。毎日帽子をかぶり、帽子のことを考えまくる帽子マスターの称号を社内で持つブランド代表。家に何個帽子があるか、最近もはや分からない。好きな帽子は通に見えるという理由で「イスラムワッチ」。
+            </p>
+          </div>
+        </div>
+
+        <div class="btnBlock"><a href="#" class="btnStyleB01">ALL POST</a></div>
+      </div>
+    </section>
+
+    <section id="journalRelatedSec">
+      <div class="contentIn">
+        <h3>この記事に出てきた商品</h3>
+        <ul class="relatedItemList">
+          <li>
+            <img src="_asset/images/dmy/img_item_01.png">
+            <p class="itemTtl">FUCABORI CAP</p>
+            <p class="itemPrice">￥8,000<span>（税抜）</span></p>
+          </li>
+          <li>
+            <img src="_asset/images/dmy/img_item_01.png">
+            <p class="itemTtl">FUCABORI CAP</p>
+            <p class="itemPrice">￥8,000<span>（税抜）</span></p>
+          </li>
+          <li>
+            <img src="_asset/images/dmy/img_item_01.png">
+            <p class="itemTtl">FUCABORI CAP</p>
+            <p class="itemPrice">￥8,000<span>（税抜）</span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="journalReccomendSec">
+      <div class="contentIn">
+        <h3>RECOMMEND</h3>
+        <ul id="journalReccomendList">
+          <li>
+            <a href="#"> 
+              <div class="imgBlock">
+                <img src="_asset/images/dmy/img_journal_01.png">
+              </div>
+              <div class="txtBlock">
+                <p class="journalTtl">頭囲×深さの8展開！似合うサイズが見つかる「FUKABORI CAP」で毎日かぶる帽子が決まる。</p>
+                <p class="journalDate">2024.12.22</p>
+                <div class="tagList"><span href="#">COLUMN</span>　<span href="#">ベレー</span></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#"> 
+              <div class="imgBlock">
+                <img src="_asset/images/dmy/img_journal_01.png">
+              </div>
+              <div class="txtBlock">
+                <p class="journalTtl">頭囲×深さの8展開！似合うサイズが見つかる「FUKABORI CAP」で毎日かぶる帽子が決まる。</p>
+                <p class="journalDate">2024.12.22</p>
+                <div class="tagList"><span href="#">COLUMN</span>　<span href="#">ベレー</span></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#"> 
+              <div class="imgBlock">
+                <img src="_asset/images/dmy/img_journal_01.png">
+              </div>
+              <div class="txtBlock">
+                <p class="journalTtl">頭囲×深さの8展開！似合うサイズが見つかる「FUKABORI CAP」で毎日かぶる帽子が決まる。</p>
+                <p class="journalDate">2024.12.22</p>
+                <div class="tagList"><span href="#">COLUMN</span>　<span href="#">ベレー</span></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#"> 
+              <div class="imgBlock">
+                <img src="_asset/images/dmy/img_journal_01.png">
+              </div>
+              <div class="txtBlock">
+                <p class="journalTtl">頭囲×深さの8展開！似合うサイズが見つかる「FUKABORI CAP」で毎日かぶる帽子が決まる。</p>
+                <p class="journalDate">2024.12.22</p>
+                <div class="tagList"><span href="#">COLUMN</span>　<span href="#">ベレー</span></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <!--content-->
+
+
+
+
+
+
+
+
+
+
+
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
