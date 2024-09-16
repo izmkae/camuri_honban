@@ -4,7 +4,7 @@
     <section id="journalHeadSec">
       <div class="contentIn">
         <h1>{{ article.title | escape }}</h1>
-        <p class="journalDate">{{- article.published_at | time_tag: format: 'date: '%Y.%m.%d'' -}}</p>
+        <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
         <div class="tagList"><span href="#">#COLUMN</span>　<span href="#">#ベレー</span></div>
         <div class="imgBlock">
           <img
