@@ -29,6 +29,9 @@
 	{{ 'fitting.css' | asset_url | stylesheet_tag }}
 {% endif %}
 
+{% if template == 'article' %} 
+	{{ 'journal.css' | asset_url | stylesheet_tag }}
+{% endif %}
 
 	{{ 'slick.css' | asset_url | stylesheet_tag }}
 	{{ 'slick-theme.css' | asset_url | stylesheet_tag }}
