@@ -50,15 +50,15 @@
         </div>
 
         <div id="writingByBlock">
-          {%- if product.metafields.camuri.writer != blank -%}
+          {%- if article.metafields.camuri.writer != blank -%}
               <div class="imgBlock">
-                <img src="{{ product.metafields.camuri.writer.value.prof_image | image_url: width: 160 }}" alt="{{ product.metafields.camuri.writer.value.name | escape }}">      
+                <img src="{{ article.metafields.camuri.writer.value.prof_image | image_url: width: 160 }}" alt="{{ article.metafields.camuri.writer.value.name | escape }}">      
               </div>
           <div class="txtBlock">
             <p class="txt01">writing by</p>
-            <p class="writerName">{{ product.metafields.camuri.writer.value.name | escape }}</p>
+            <p class="writerName">{{ article.metafields.camuri.writer.value.name | escape }}</p>
             <p class="writerProfile">
-              {{ product.metafields.camuri.writer.value.profile | escape }}
+              {{ article.metafields.camuri.writer.value.profile | escape }}
             </p>
           </div>
           {%- endif -%}
