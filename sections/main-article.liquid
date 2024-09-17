@@ -7,26 +7,13 @@
         <h1>{{ article.title | escape }}</h1>
         <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
         <div class="tagList"><span href="#">#COLUMN</span>　<span href="#">#ベレー</span></div>
+        
+        {%- if article.metafields.camuri.blog_main_image.value != blank -%}
         <div class="imgBlock">
-          <img
-                srcset="
-                  {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
-                  {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
-                  {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
-                  {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
-                  {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
-                  {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
-                  {{ article.image | image_url }} {{ article.image.width }}w
-                "
-                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
-                src="{{ article.image | image_url: width: 1100 }}"
-                loading="eager"
-                fetchpriority="high"
-                width="{{ article.image.width }}"
-                height="{{ article.image.height }}"
-                alt="{{ article.image.alt | escape }}"
-              >
+          {{ article.metafields.camuri.blog_main_image.value | image_url: width: 940 | image_tag: loading: "lazy"}}
         </div>
+        {%- endif -%}
+        
         <div class="shareButtonBlock">
           <p>please shere</p>
           <ul>
@@ -40,13 +27,11 @@
     
     <section id="journalBodySec">
       <div class="contentIn">
-        <p class="journalIntro">
-          はじめまして●●です。私には仕事でもプライベートでも長く帽子に関わってきましたが、
-          今まで何度となく難しいと思ってきた事があります。それは「自分にあった帽子を見つけ
-          て購入する」こと。
-          「え？それだけのこと？」そう思ったあなたは、きっと帽子を日頃から被り慣れている上
-          級者ではないでしょうか？あるいは実際に帽子を買った経験が
-        </p>
+        {%- if article.metafields.camuri.blog_intro.value != blank -%}
+          <p class="journalIntro">
+          {{ article.metafields.camuri.blog_intro.value | escape | newline_to_br }}
+          </p>
+        {%- endif -%}
         <div class="acIndexBox">
           <input id="acIndex01" name="acIndex01" type="checkbox" />
           <label for="acIndex01">Index</label>
@@ -55,7 +40,7 @@
         </div>
 
         <div class="journalMain">
-           <div
+          <div
             class="article-template__content page-width page-width--narrow rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             itemprop="articleBody"
             {{ block.shopify_attributes }}
