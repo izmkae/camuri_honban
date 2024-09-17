@@ -3,75 +3,96 @@
   <div id="journalDetailPage" class="content headerOn">
     <section id="journalHeadSec">
       <div class="contentIn">
-        <h1>{{ article.title | escape }}</h1>
-        <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
-        <div class="tagList"><span href="#">#COLUMN</span>　<span href="#">#ベレー</span></div>
-        <div class="imgBlock">
-          <img
-                srcset="
-                  {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
-                  {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
-                  {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
-                  {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
-                  {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
-                  {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
-                  {{ article.image | image_url }} {{ article.image.width }}w
-                "
-                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
-                src="{{ article.image | image_url: width: 1100 }}"
-                loading="eager"
-                fetchpriority="high"
-                width="{{ article.image.width }}"
-                height="{{ article.image.height }}"
-                alt="{{ article.image.alt | escape }}"
-              >
-        </div>
-        <div class="shareButtonBlock">
-          <p>please shere</p>
-          <ul>
-            <li><a href="#"><img src="_asset/images/_common/ico_instagram.png" alt="Instagram"></a></li>
-            <li><a href="#"><img src="_asset/images/_common/ico_facebook.png" alt="Facebook"></a></li>
-            <li class="ico_x"><a href="#"><img src="_asset/images/_common/ico_x.png" alt="X"></a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    
-    <section id="journalBodySec">
-      <div class="contentIn">
-        <p class="journalIntro">
-          はじめまして●●です。私には仕事でもプライベートでも長く帽子に関わってきましたが、
-          今まで何度となく難しいと思ってきた事があります。それは「自分にあった帽子を見つけ
-          て購入する」こと。
-          「え？それだけのこと？」そう思ったあなたは、きっと帽子を日頃から被り慣れている上
-          級者ではないでしょうか？あるいは実際に帽子を買った経験が
-        </p>
-        <div class="acIndexBox">
-          <input id="acIndex01" name="acIndex01" type="checkbox" />
-          <label for="acIndex01">Index</label>
-          <div class="acBlock">
-           
-          </div>
-        </div>
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'title' -%}
+              <section id="journalHeadSec">
+                <div class="contentIn">
+                 <h1>{{ article.title | escape }}</h1>
+                  <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
+                  <div class="tagList"><span href="#">#COLUMN</span>　<span href="#">#ベレー</span></div>
+                  <div class="imgBlock">
+                    <img
+                          srcset="
+                            {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
+                            {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
+                            {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
+                            {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
+                            {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
+                            {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
+                            {{ article.image | image_url }} {{ article.image.width }}w
+                          "
+                          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                          src="{{ article.image | image_url: width: 1100 }}"
+                          loading="eager"
+                          fetchpriority="high"
+                          width="{{ article.image.width }}"
+                          height="{{ article.image.height }}"
+                          alt="{{ article.image.alt | escape }}"
+                        >
+                  </div>
+                  <div class="shareButtonBlock">
+                    <p>please shere</p>
+                    <ul>
+                      <li><a href="#"><img src="_asset/images/_common/ico_instagram.png" alt="Instagram"></a></li>
+                      <li><a href="#"><img src="_asset/images/_common/ico_facebook.png" alt="Facebook"></a></li>
+                      <li class="ico_x"><a href="#"><img src="_asset/images/_common/ico_x.png" alt="X"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
 
-        <div class="journalMain">
-          {{ article.content }}
-        </div>
+          {%- when 'content' -%}
+            <section id="journalBodySec">
+              <div class="contentIn">
+                <p class="journalIntro">
+                  はじめまして●●です。私には仕事でもプライベートでも長く帽子に関わってきましたが、
+                  今まで何度となく難しいと思ってきた事があります。それは「自分にあった帽子を見つけ
+                  て購入する」こと。
+                  「え？それだけのこと？」そう思ったあなたは、きっと帽子を日頃から被り慣れている上
+                  級者ではないでしょうか？あるいは実際に帽子を買った経験が
+                </p>
+                <div class="acIndexBox">
+                  <input id="acIndex01" name="acIndex01" type="checkbox" />
+                  <label for="acIndex01">Index</label>
+                  <div class="acBlock">
+                  </div>
+                </div>
 
-        <div id="writingByBlock">
-          <div class="imgBlock"><img src="_asset/images/dmy/img_prof.png"></div>
-          <div class="txtBlock">
-            <p class="txt01">writing by</p>
-            <p class="writerName">Shintarou Yoshida</p>
-            <p class="writerProfile">
-              滋賀県出身。毎日帽子をかぶり、帽子のことを考えまくる帽子マスターの称号を社内で持つブランド代表。家に何個帽子があるか、最近もはや分からない。好きな帽子は通に見えるという理由で「イスラムワッチ」。
-            </p>
-          </div>
-        </div>
+                <div class="journalMain">
+                  <div
+                    class="article-template__content page-width page-width--narrow rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    itemprop="articleBody"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{ article.content }}
+                  </div>
+                </div>
 
-        <div class="btnBlock"><a href="#" class="btnStyleB01">ALL POST</a></div>
-      </div>
-    </section>
+                <div id="writingByBlock">
+                  <div class="imgBlock"><img src="_asset/images/dmy/img_prof.png"></div>
+                  <div class="txtBlock">
+                    <p class="txt01">writing by</p>
+                    <p class="writerName">Shintarou Yoshida</p>
+                    <p class="writerProfile">
+                      滋賀県出身。毎日帽子をかぶり、帽子のことを考えまくる帽子マスターの称号を社内で持つブランド代表。家に何個帽子があるか、最近もはや分からない。好きな帽子は通に見えるという理由で「イスラムワッチ」。
+                    </p>
+                  </div>
+                </div>
+
+                <div class="btnBlock"><a href="#" class="btnStyleB01">ALL POST</a></div>
+              </div>
+            </section>
+          {%- when 'share' -%}
+            <div
+              class="article-template__social-sharing page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {{ block.shopify_attributes }}
+            >
+              {% assign share_url = request.origin | append: article.url %}
+              {% render 'share-button', block: block, share_link: share_url %}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
 
     <section id="journalRelatedSec">
       <div class="contentIn">
