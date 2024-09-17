@@ -50,9 +50,10 @@
           <input id="acIndex01" name="acIndex01" type="checkbox" />
           <label for="acIndex01">Index</label>
           <div class="acBlock">
-          
+            {% render block %}
           </div>
         </div>
+        
         <div class="journalMain">
           {{ article.content }}
         </div>
