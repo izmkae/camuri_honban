@@ -50,14 +50,18 @@
         </div>
 
         <div id="writingByBlock">
-          <div class="imgBlock"><img src="_asset/images/dmy/img_prof.png"></div>
+          {%- if product.metafields.camuri.writer != blank -%}
+              <div class="imgBlock">
+                <img src="{{ product.metafields.camuri.writer.value.prof_image | image_url: width: 160 }}" alt="{{ product.metafields.camuri.writer.value.name | escape }}">      
+              </div>
           <div class="txtBlock">
             <p class="txt01">writing by</p>
-            <p class="writerName">Shintarou Yoshida</p>
+            <p class="writerName">{{ product.metafields.camuri.writer.value.name | escape }}</p>
             <p class="writerProfile">
-              滋賀県出身。毎日帽子をかぶり、帽子のことを考えまくる帽子マスターの称号を社内で持つブランド代表。家に何個帽子があるか、最近もはや分からない。好きな帽子は通に見えるという理由で「イスラムワッチ」。
+              {{ product.metafields.camuri.writer.value.profile | escape }}
             </p>
           </div>
+          {%- endif -%}
         </div>
 
         <div class="btnBlock"><a href="#" class="btnStyleB01">ALL POST</a></div>
