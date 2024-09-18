@@ -75,6 +75,7 @@
     </section>
 
     {%- if article.metafields.camuri.blog_related_product != blank -%}
+    {{ article.metafields.camuri.blog_related_product | json }}
     <section id="journalRelatedSec">
       <div class="contentIn">
         <h3>この記事に出てきた商品</h3>
