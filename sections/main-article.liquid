@@ -75,12 +75,11 @@
     </section>
 
     {%- if article.metafields.camuri.blog_related_product != blank -%}
-    {{ article.metafields.camuri.blog_related_product | json }}
     <section id="journalRelatedSec">
       <div class="contentIn">
         <h3>この記事に出てきた商品</h3>
         <ul class="relatedItemList">
-        {% for product in article.metafields.camuri.blog_related_product -%}
+        {% for product in article.metafields.camuri.blog_related_product.value -%}
           <li>
             <a href="{{ product.url }}">
             <img src="{{ product.images[1].src }}">
