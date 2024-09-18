@@ -3,25 +3,28 @@
   <div class="contentIn">
     <h3>RECOMMEND</h3>
     <ul id="journalReccomendList">
+    {%- if section.settings.article1 != blank -%}
       <li>
-        <a href="#"> 
+        <a href="{{ section.settings.article1.url }}"> 
           <div class="imgBlock">
-            <img src="_asset/images/dmy/img_journal_01.png">
+            <img src="{{ section.settings.article1.image | image_url: width: 400 }}">
           </div>
           <div class="txtBlock">
-            <p class="journalTtl">頭囲×深さの8展開！似合うサイズが見つかる「FUKABORI CAP」で毎日かぶる帽子が決まる。</p>
-            <p class="journalDate">2024.12.22</p>
+            <p class="journalTtl">{{ section.settings.article1.title }}</p>
+            <p class="journalDate">{{ section.settings.article1.published_at | date: '%Y.%m.%d' }}</p>
             <div class="tagList"><span href="#">COLUMN</span>　<span href="#">ベレー</span></div>
           </div>
         </a>
       </li>
+    {%- endif -%}
+     
       <li>
         <a href="#"> 
           <div class="imgBlock">
             <img src="_asset/images/dmy/img_journal_01.png">
           </div>
           <div class="txtBlock">
-            <p class="journalTtl">頭囲×深さの8展開！似合うサイズが見つかる「FUKABORI CAP」で毎日かぶる帽子が決まる。</p>
+            <p class="journalTtl">2頭囲×深さの8展開！似合うサイズが見つかる「FUKABORI CAP」で毎日かぶる帽子が決まる。</p>
             <p class="journalDate">2024.12.22</p>
             <div class="tagList"><span href="#">COLUMN</span>　<span href="#">ベレー</span></div>
           </div>
