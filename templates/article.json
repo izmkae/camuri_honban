@@ -45,16 +45,6 @@
           "type": "content",
           "settings": {
           }
-        },
-        "article": {
-          "type": "article",
-          "settings": {
-          }
-        },
-        "article_PTakCE": {
-          "type": "article",
-          "settings": {
-          }
         }
       },
       "block_order": [
@@ -63,9 +53,7 @@
         "product_blog_tags_free_7pFnJ9",
         "table_of_contents_theme_extension_ngjNAn",
         "share",
-        "content",
-        "article",
-        "article_PTakCE"
+        "content"
       ],
       "settings": {
       }
