@@ -46,7 +46,7 @@
           "settings": {
           }
         },
-        "article1": {
+        "article": {
           "type": "article",
           "settings": {
           }
@@ -61,7 +61,7 @@
         "table_of_contents_theme_extension_ngjNAn",
         "share",
         "content",
-        "article1"
+        "article"
       ],
       "settings": {
       }
