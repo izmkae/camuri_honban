@@ -50,9 +50,12 @@
           "type": "article",
           "settings": {
           }
+        },
+        "article_PTakCE": {
+          "type": "article",
+          "settings": {
+          }
         }
-
-
       },
       "block_order": [
         "title",
@@ -61,7 +64,8 @@
         "table_of_contents_theme_extension_ngjNAn",
         "share",
         "content",
-        "article"
+        "article",
+        "article_PTakCE"
       ],
       "settings": {
       }
