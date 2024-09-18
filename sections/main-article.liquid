@@ -6,6 +6,14 @@
         {% render block %}
         <h1>{{ article.title | escape }}</h1>
         <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
+        <div class="tagList">
+          {%- if article.tags != blank -%}
+            {% for tag in section.settings.article.tags -%}
+              <span>{{ tag }}</span> 
+            {%- endfor %}
+          {%- endif -%}
+        </div>
+
         <div class="tagList"><span href="#">#COLUMN</span>　<span href="#">#ベレー</span></div>
         
         {%- if article.metafields.camuri.blog_main_image.value != blank -%}
