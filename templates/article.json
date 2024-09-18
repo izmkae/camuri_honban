@@ -46,22 +46,7 @@
           "settings": {
           }
         },
-        "article1": {
-          "type": "article",
-          "settings": {
-          }
-        },
-        "article2": {
-          "type": "article",
-          "settings": {
-          }
-        },
-        "article3": {
-          "type": "article",
-          "settings": {
-          }
-        },
-        "article4": {
+        "article": {
           "type": "article",
           "settings": {
           }
