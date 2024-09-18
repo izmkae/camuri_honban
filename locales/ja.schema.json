@@ -721,31 +721,10 @@
     "camuri-featured-blog": {
       "name": "RECOMMEND BLOGS",
       "settings": {
-        "heading": {
-          "label": "見出し"
+
+        "article": {
+          "label": "記事"
         },
-        "blog": {
-          "label": "ブログ"
-        },
-        "post_limit": {
-          "label": "表示するブログ記事数"
-        },
-        "show_view_all": {
-          "label": "ブログに表示されているよりも多くのブログ記事が含まれている場合、「すべてを表示」ボタンを有効にします"
-        },
-        "show_image": {
-          "label": "記事のサムネイルを表示する",
-          "info": "画像のアスペクト比が3:2のものを使用すると最適です。[詳しくはこちら](https:\/\/help.shopify.com\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
-        },
-        "show_date": {
-          "label": "日付を表示する"
-        },
-        "show_author": {
-          "label": "執筆者を表示する"
-        },
-        "columns_desktop": {
-          "label": "デスクトップの列数"
-        }
       },
       "presets": {
         "name": "ブログ RECCOMEND"
