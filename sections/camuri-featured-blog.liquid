@@ -1,16 +1,8 @@
-{%- liquid
-  assign posts_displayed = section.settings.blog.articles_count
-  if section.settings.post_limit <= section.settings.blog.articles_count or section.settings.post_limit <= 4
-    assign posts_exceed_limit = true
-    assign posts_displayed = section.settings.post_limit
-  endif
--%}
+
 <section id="journalReccomendSec">
   <div class="contentIn">
     <h3>RECOMMEND</h3>
     <ul id="journalReccomendList">
-    {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
-      {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
       <li>
         <a href="#"> 
           <div class="imgBlock">
@@ -23,9 +15,7 @@
           </div>
         </a>
       </li>
-      {%- endfor -%}
-    {%- endif -%}
-<!--       <li>
+      <li>
         <a href="#"> 
           <div class="imgBlock">
             <img src="_asset/images/dmy/img_journal_01.png">
@@ -72,7 +62,7 @@
             <div class="tagList"><span href="#">COLUMN</span>　<span href="#">ベレー</span></div>
           </div>
         </a>
-      </li> -->
+      </li>
     </ul>
   </div>
 </section>
