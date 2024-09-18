@@ -10,7 +10,7 @@
         {%- if article.tags != blank -%}
          <div class="tagList">
           {% for tag in article.tags -%}
-            <span>#{{ tag }}</span> 
+            <span>{{ tag }}</span> 
           {%- endfor %}
           </div>
         {%- endif -%}
@@ -544,26 +544,6 @@
           "default": "adapt",
           "label": "t:sections.main-article.blocks.featured_image.settings.image_height.label",
           "info": "t:sections.main-article.blocks.featured_image.settings.image_height.info"
-        },
-        {
-          "type": "article",
-          "id": "article1",
-          "label": "t:sections.camuri-featured-blog.settings.article1.label"
-        },
-        {
-          "type": "article",
-          "id": "article2",
-          "label": "t:sections.camuri-featured-blog.settings.article2.label"
-        },
-        {
-          "type": "article",
-          "id": "article3",
-          "label": "t:sections.camuri-featured-blog.settings.article3.label"
-        },
-        {
-          "type": "article",
-          "id": "article4",
-          "label": "t:sections.camuri-featured-blog.settings.article4.label"
         }
       ]
     },
@@ -611,6 +591,26 @@
           "content": "t:sections.main-article.blocks.share.settings.title_info.content"
         }
       ]
+    },
+    {
+      "type": "article",
+      "id": "article1",
+      "label": "t:sections.camuri-featured-blog.settings.article1.label"
+    },
+    {
+      "type": "article",
+      "id": "article2",
+      "label": "t:sections.camuri-featured-blog.settings.article2.label"
+    },
+    {
+      "type": "article",
+      "id": "article3",
+      "label": "t:sections.camuri-featured-blog.settings.article3.label"
+    },
+    {
+      "type": "article",
+      "id": "article4",
+      "label": "t:sections.camuri-featured-blog.settings.article4.label"
     }
   ]
 }
