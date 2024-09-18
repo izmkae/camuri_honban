@@ -46,11 +46,12 @@
           "settings": {
           }
         },
-        "article": {
-          "type": "article",
+        "article_reccomend01": {
+          "type": "article1",
           "settings": {
           }
         }
+
 
       },
       "block_order": [
@@ -60,7 +61,7 @@
         "table_of_contents_theme_extension_ngjNAn",
         "share",
         "content",
-        "article"
+        "article_reccomend01"
       ],
       "settings": {
       }
