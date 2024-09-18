@@ -79,12 +79,12 @@
       <div class="contentIn">
         <h3>この記事に出てきた商品</h3>
         <ul class="relatedItemList">
-        {% for blog_related_product in article.metafields.camuri.blog_related_product -%}
+        {% for product in article.metafields.camuri.blog_related_product -%}
           <li>
-            <a href="{{ blog_related_product.url }}">product.media[1]
-            <img src="{{ blog_related_product.images[1].src }}">
-            <p class="itemTtl">{{ blog_related_product.title | escape }}</p>
-            <p class="itemPrice">{{ blog_related_product.price | money }}<span>（税抜）</span></p>
+            <a href="{{ product.url }}">
+            <img src="{{ product.images[1].src }}">
+            <p class="itemTtl">{{ product.title | escape }}</p>
+            <p class="itemPrice">{{ product.price | money }}<span>（税抜）</span></p>
           </li>
         {%- endfor %}
         </ul>
