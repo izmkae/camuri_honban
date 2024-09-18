@@ -13,8 +13,6 @@
             {%- endfor %}
           {%- endif -%}
         </div>
-
-        <div class="tagList"><span href="#">#COLUMN</span>　<span href="#">#ベレー</span></div>
         
         {%- if article.metafields.camuri.blog_main_image.value != blank -%}
         <div class="imgBlock">
@@ -76,7 +74,25 @@
       </div>
     </section>
 
+    {%- if article.metafields.camuri.blog_related_product != blank -%}
     <section id="journalRelatedSec">
+      <div class="contentIn">
+        <h3>この記事に出てきた商品</h3>
+        <ul class="relatedItemList">
+        {% for blog_related_product in article.metafields.camuri.blog_related_product -%}
+          <li>
+            <a href="{{ blog_related_product.url }}">product.media[1]
+            <img src="{{ blog_related_product.images[1].src }}">
+            <p class="itemTtl">{{ blog_related_product.title | escape }}</p>
+            <p class="itemPrice">{{ blog_related_product.price | money }}<span>（税抜）</span></p>
+          </li>
+        {%- endfor %}
+        </ul>
+      </div>
+    </section>
+    {%- endif -%}
+
+<!--     <section id="journalRelatedSec">
       <div class="contentIn">
         <h3>この記事に出てきた商品</h3>
         <ul class="relatedItemList">
@@ -97,7 +113,7 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
     <section id="journalReccomendSec">
       <div class="contentIn">
