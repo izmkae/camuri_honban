@@ -46,8 +46,8 @@
           "settings": {
           }
         },
-        "article_reccomend01": {
-          "type": "article1",
+        "article1": {
+          "type": "article",
           "settings": {
           }
         }
@@ -61,7 +61,7 @@
         "table_of_contents_theme_extension_ngjNAn",
         "share",
         "content",
-        "article_reccomend01"
+        "article1"
       ],
       "settings": {
       }
