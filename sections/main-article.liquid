@@ -6,13 +6,14 @@
         {% render block %}
         <h1>{{ article.title | escape }}</h1>
         <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
-        <div class="tagList">
-          {%- if article.tags != blank -%}
-            {% for tag in section.settings.article.tags -%}
-              <span>{{ tag }}</span> 
-            {%- endfor %}
-          {%- endif -%}
-        </div>
+       
+        {%- if article.tags != blank -%}
+         <div class="tagList">
+          {% for tag in article.tags -%}
+            <span>{{ tag }}</span> 
+          {%- endfor %}
+          </div>
+        {%- endif -%}
         
         {%- if article.metafields.camuri.blog_main_image.value != blank -%}
         <div class="imgBlock">
@@ -91,29 +92,6 @@
       </div>
     </section>
     {%- endif -%}
-
-<!--     <section id="journalRelatedSec">
-      <div class="contentIn">
-        <h3>この記事に出てきた商品</h3>
-        <ul class="relatedItemList">
-          <li>
-            <img src="_asset/images/dmy/img_item_01.png">
-            <p class="itemTtl">FUCABORI CAP</p>
-            <p class="itemPrice">￥8,000<span>（税抜）</span></p>
-          </li>
-          <li>
-            <img src="_asset/images/dmy/img_item_01.png">
-            <p class="itemTtl">FUCABORI CAP</p>
-            <p class="itemPrice">￥8,000<span>（税抜）</span></p>
-          </li>
-          <li>
-            <img src="_asset/images/dmy/img_item_01.png">
-            <p class="itemTtl">FUCABORI CAP</p>
-            <p class="itemPrice">￥8,000<span>（税抜）</span></p>
-          </li>
-        </ul>
-      </div>
-    </section> -->
 
     <section id="journalReccomendSec">
       <div class="contentIn">
