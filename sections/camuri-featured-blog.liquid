@@ -1,4 +1,7 @@
-
+{%- if section.settings.article1 != blank 
+  or section.settings.article2 != blank 
+  or section.settings.article3 != blank 
+  or section.settings.article4 != blank -%}
 <section id="journalReccomendSec">
   <div class="contentIn">
     <h3>RECOMMEND</h3>
@@ -12,63 +15,81 @@
           <div class="txtBlock">
             <p class="journalTtl">{{ section.settings.article1.title }}</p>
             <p class="journalDate">{{ section.settings.article1.published_at | date: '%Y.%m.%d' }}</p>
-            <div class="tagList"><span href="#">COLUMN</span>　<span href="#">ベレー</span></div>
+            <div class="tagList">
+              {%- if section.settings.article1.tags != blank -%}
+                {% for tag in section.settings.article1.tags -%}
+                  <span>{{ tag }}</span> 
+                {%- endfor %}
+              {%- endif -%}
+            </div>
           </div>
         </a>
       </li>
     {%- endif -%}
-     
+    {%- if section.settings.article2 != blank -%}
       <li>
-        <a href="#"> 
+        <a href="{{ section.settings.article2.url }}"> 
           <div class="imgBlock">
-            <img src="_asset/images/dmy/img_journal_01.png">
+            <img src="{{ section.settings.article2.image | image_url: width: 400 }}">
           </div>
           <div class="txtBlock">
-            <p class="journalTtl">2頭囲×深さの8展開！似合うサイズが見つかる「FUKABORI CAP」で毎日かぶる帽子が決まる。</p>
-            <p class="journalDate">2024.12.22</p>
-            <div class="tagList"><span href="#">COLUMN</span>　<span href="#">ベレー</span></div>
+            <p class="journalTtl">{{ section.settings.article2.title }}</p>
+            <p class="journalDate">{{ section.settings.article2.published_at | date: '%Y.%m.%d' }}</p>
+            <div class="tagList">
+              {%- if section.settings.article1.tags != blank -%}
+                {% for tag in section.settings.article1.tags -%}
+                  <span>{{ tag }}</span> 
+                {%- endfor %}
+              {%- endif -%}
+            </div>
           </div>
         </a>
       </li>
+    {%- endif -%}
+    {%- if section.settings.article3 != blank -%}
       <li>
-        <a href="#"> 
+        <a href="{{ section.settings.article3.url }}"> 
           <div class="imgBlock">
-            <img src="_asset/images/dmy/img_journal_01.png">
+            <img src="{{ section.settings.article3.image | image_url: width: 400 }}">
           </div>
           <div class="txtBlock">
-            <p class="journalTtl">頭囲×深さの8展開！似合うサイズが見つかる「FUKABORI CAP」で毎日かぶる帽子が決まる。</p>
-            <p class="journalDate">2024.12.22</p>
-            <div class="tagList"><span href="#">COLUMN</span>　<span href="#">ベレー</span></div>
+            <p class="journalTtl">{{ section.settings.article3.title }}</p>
+            <p class="journalDate">{{ section.settings.article3.published_at | date: '%Y.%m.%d' }}</p>
+            <div class="tagList">
+              {%- if section.settings.article1.tags != blank -%}
+                {% for tag in section.settings.article1.tags -%}
+                  <span>{{ tag }}</span> 
+                {%- endfor %}
+              {%- endif -%}
+            </div>
           </div>
         </a>
       </li>
+    {%- endif -%}
+    {%- if section.settings.article4 != blank -%}
       <li>
-        <a href="#"> 
+        <a href="{{ section.settings.article4.url }}"> 
           <div class="imgBlock">
-            <img src="_asset/images/dmy/img_journal_01.png">
+            <img src="{{ section.settings.article4.image | image_url: width: 400 }}">
           </div>
           <div class="txtBlock">
-            <p class="journalTtl">頭囲×深さの8展開！似合うサイズが見つかる「FUKABORI CAP」で毎日かぶる帽子が決まる。</p>
-            <p class="journalDate">2024.12.22</p>
-            <div class="tagList"><span href="#">COLUMN</span>　<span href="#">ベレー</span></div>
+            <p class="journalTtl">{{ section.settings.article4.title }}</p>
+            <p class="journalDate">{{ section.settings.article4.published_at | date: '%Y.%m.%d' }}</p>
+            <div class="tagList">
+              {%- if section.settings.article1.tags != blank -%}
+                {% for tag in section.settings.article1.tags -%}
+                  <span>{{ tag }}</span> 
+                {%- endfor %}
+              {%- endif -%}
+            </div>
           </div>
         </a>
       </li>
-      <li>
-        <a href="#"> 
-          <div class="imgBlock">
-            <img src="_asset/images/dmy/img_journal_01.png">
-          </div>
-          <div class="txtBlock">
-            <p class="journalTtl">頭囲×深さの8展開！似合うサイズが見つかる「FUKABORI CAP」で毎日かぶる帽子が決まる。</p>
-            <p class="journalDate">2024.12.22</p>
-            <div class="tagList"><span href="#">COLUMN</span>　<span href="#">ベレー</span></div>
-          </div>
-        </a>
-      </li>
+    {%- endif -%}
     </ul>
   </div>
 </section>
+{%- endif -%}
 
 {% schema %}
 {
