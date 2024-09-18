@@ -721,9 +721,17 @@
     "camuri-featured-blog": {
       "name": "RECOMMEND BLOGS",
       "settings": {
-
-        "article": {
-          "label": "記事"
+        "article1": {
+          "label": "記事１"
+        },
+        "article2": {
+          "label": "記事２"
+        },
+        "article3": {
+          "label": "記事３"
+        },
+        "article4": {
+          "label": "記事４"
         },
       },
       "presets": {
