@@ -82,7 +82,7 @@
         {% for product in article.metafields.camuri.blog_related_product.value -%}
           <li>
             <a href="{{ product.url }}">
-            <img src="{{ product.images[1].src }}">
+            <img src="{{ product.featured_media | image_url: width: 300 }}">
             <p class="itemTtl">{{ product.title | escape }}</p>
             <p class="itemPrice">{{ product.price | money }}<span>（税抜）</span></p>
           </li>
