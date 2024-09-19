@@ -45,6 +45,15 @@
           "type": "content",
           "settings": {
           }
+        },
+        "article_xgi8Gz": {
+          "type": "article",
+          "settings": {
+            "article1": "ニュース\/帰山テスト",
+            "article2": "ニュース\/帰山テスト",
+            "article3": "",
+            "article4": ""
+          }
         }
       },
       "block_order": [
@@ -53,7 +62,8 @@
         "product_blog_tags_free_7pFnJ9",
         "table_of_contents_theme_extension_ngjNAn",
         "share",
-        "content"
+        "content",
+        "article_xgi8Gz"
       ],
       "settings": {
       }
