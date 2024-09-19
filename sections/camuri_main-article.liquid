@@ -101,37 +101,39 @@
     </section>
     {%- endif -%}
 
-{{ section.blocks.settings.article1 | json }}
 ※※※※
-    {%- if section.blocks.settings.article1 != blank -%}
-    <section id="journalReccomendSec">
-      <div class="contentIn">
-        <h3>RECOMMEND</h3>
-        <ul id="journalReccomendList">
-        {%- if  section.article.settings.article1 != blank -%}
-          <li>
-            <a href="{{  section.article.settings.article1.url }}"> 
-              <div class="imgBlock">
-                <img src="{{  section.article.settings.article1.image | image_url: width: 400 }}">
-              </div>
-              <div class="txtBlock">
-                <p class="journalTtl">{{  section.article.settings.article1.title }}</p>
-                <p class="journalDate">{{  section.article.settings.article1.published_at | date: '%Y.%m.%d' }}</p>
-                <div class="tagList">
-                  {%- if  section.article.settings.article1.tags != blank -%}
-                    {% for tag in  section.article.settings.article1.tags -%}
-                      <span>{{ tag }}</span> 
-                    {%- endfor %}
-                  {%- endif -%}
-                </div>
-              </div>
-            </a>
-          </li>
+       {%- for block in section.blocks -%}
+        {%- if block.settings.article1 != blank -%}
+        <section id="journalReccomendSec">
+          <div class="contentIn">
+            <h3>RECOMMEND</h3>
+            <ul id="journalReccomendList">
+            {%- if  block.settings.article1 != blank -%}
+              <li>
+                <a href="{{ block.settings.article1.url }}"> 
+                  <div class="imgBlock">
+                    <img src="{{ block.settings.article1.image | image_url: width: 400 }}">
+                  </div>
+                  <div class="txtBlock">
+                    <p class="journalTtl">{{ block.settings.article1.title }}</p>
+                    <p class="journalDate">{{ block.settings.article1.published_at | date: '%Y.%m.%d' }}</p>
+                    <div class="tagList">
+                      {%- if block.settings.article1.tags != blank -%}
+                        {% for tag in block.settings.article1.tags -%}
+                          <span>{{ tag }}</span> 
+                        {%- endfor %}
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {%- endif -%}
+            </ul>
+          </div>
+        </section>
         {%- endif -%}
-        </ul>
-      </div>
-    </section>
-    {%- endif -%}
+		{%- endfor -%}
+
 ※※※※
   </div>
   <!--content-->
