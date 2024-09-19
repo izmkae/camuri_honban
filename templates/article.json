@@ -46,7 +46,7 @@
           "settings": {
           }
         },
-        "articleA": {
+        "article": {
           "type": "article",
           "settings": {
             "article1": "ニュース\/帰山テスト",
@@ -63,7 +63,7 @@
         "table_of_contents_theme_extension_ngjNAn",
         "share",
         "content",
-        "article_h9nNWB"
+        "article"
       ],
       "settings": {
       }
