@@ -4,21 +4,21 @@
   <div id="journalDetailPage" class="content headerOn">
     <section id="journalHeadSec">
       <div class="contentIn">
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when '@app' -%}
-            <div class="page-width page-width--narrow">
-              {% render block %}
-            </div>
-        {%- endcase -%}
-      {%- endfor -%}
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when '@app' -%}
+              <div class="page-width page-width--narrow">
+                {% render block %}
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
         <h1>{{ article.title | escape }}</h1>
         <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
        
         {%- if article.tags != blank -%}
          <div class="tagList">
           {% for tag in article.tags -%}
-            <span>{{ tag }}</span> 
+            <span>#{{ tag }}</span> 
           {%- endfor %}
           </div>
         {%- endif -%}
@@ -101,7 +101,7 @@
     </section>
     {%- endif -%}
 
-
+{{ sections | json }}
 ※※※※
     {%- if sections.blocks.article.settings.article1 != blank -%}
     <section id="journalReccomendSec">
