@@ -4,7 +4,14 @@
   <div id="journalDetailPage" class="content headerOn">
     <section id="journalHeadSec">
       <div class="contentIn">
-        {% render block %}
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            <div class="page-width page-width--narrow">
+              {% render block %}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
         <h1>{{ article.title | escape }}</h1>
         <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
        
@@ -130,6 +137,8 @@
   <!--content-->
 
 </article>
+
+
 
 <script type="application/ld+json">
   {
