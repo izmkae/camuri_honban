@@ -2,141 +2,207 @@
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
 
   <div id="journalDetailPage" class="content headerOn">
-    <section id="journalHeadSec">
-      <div class="contentIn">
-        <h1>{{ article.title | escape }}</h1>
-        <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
-       
-        {%- if article.tags != blank -%}
-         <div class="tagList">
-          {% for tag in article.tags -%}
-            <span>#{{ tag }}</span> 
-          {%- endfor %}
-          </div>
-        {%- endif -%}
-        
-        {%- if article.metafields.camuri.blog_main_image.value != blank -%}
-        <div class="imgBlock">
-          {{ article.metafields.camuri.blog_main_image.value | image_url: width: 940 | image_tag: loading: "lazy"}}
-        </div>
-        {%- endif -%}
-        
-        <div class="shareButtonBlock">
-          <p>please shere</p>
-          <ul>
-            <li><a href="#"><img src="{{ 'ico_instagram.png' | asset_url }}" alt="Instagram"></a></li>
-            <li><a href="#"><img src="{{ 'ico_facebook.png' | asset_url }}" alt="Facebook"></a></li>
-            <li class="ico_x"><a href="#"><img src="{{ 'ico_x.png' | asset_url }}" alt="X"></a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    
-    <section id="journalBodySec">
-      <div class="contentIn">
-        {%- if article.metafields.camuri.blog_intro.value != blank -%}
-          <p class="journalIntro">
-          {{ article.metafields.camuri.blog_intro.value | escape | newline_to_br }}
-          </p>
-        {%- endif -%}
-        <div class="acIndexBox">
-          <input id="acIndex01" name="acIndex01" type="checkbox" />
-          <label for="acIndex01">Index</label>
-          <div class="acBlock">
-          </div>
-        </div>
-
-        <div class="journalMain">
-          <div
-            class="article-template__content page-width page-width--narrow rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-            itemprop="articleBody"
-            {{ block.shopify_attributes }}
-          >
-            {{ article.content }}
-          </div>
-        </div>
-
-        <div id="writingByBlock">
-          {%- if article.metafields.camuri.writer != blank -%}
-              <div class="imgBlock">
-                <img src="{{ article.metafields.camuri.writer.value.prof_image | image_url: width: 160 }}" alt="{{ article.metafields.camuri.writer.value.name | escape }}">      
-              </div>
-          <div class="txtBlock">
-            <p class="txt01">writing by</p>
-            <p class="writerName">{{ article.metafields.camuri.writer.value.name | escape }}</p>
-            <p class="writerProfile">
-              {{ article.metafields.camuri.writer.value.profile | escape }}
-            </p>
-          </div>
-          {%- endif -%}
-        </div>
-
-        <div class="btnBlock"><a href="#" class="btnStyleB01">ALL POST</a></div>
-      </div>
-    </section>
-
-    {%- if article.metafields.camuri.blog_related_product != blank -%}
-    <section id="journalRelatedSec">
-      <div class="contentIn">
-        <h3>この記事に出てきた商品</h3>
-        <ul class="relatedItemList">
-        {% for product in article.metafields.camuri.blog_related_product.value -%}
-          <li>
-            <a href="{{ product.url }}">
-            <img src="{{ product.featured_media | image_url: width: 300 }}">
-            <p class="itemTtl">{{ product.title | escape }}</p>
-            <p class="itemPrice">{{ product.price | money }}<span>（税抜）</span></p>
-          </li>
-        {%- endfor %}
-        </ul>
-      </div>
-    </section>
-    {%- endif -%}
               
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when '@app' -%}
-            <div class="page-width page-width--narrow">
-              {% render block %}
-            </div>
-          {%- when 'article' -%}
-            {%- if block.settings.article1 != blank -%}
-            <section id="journalReccomendSec">
-              <div class="contentIn">
-                <h3>RECOMMEND</h3>
-                <ul id="journalReccomendList">
-                {%- if  block.settings.article1 != blank -%}
-                  <li>
-                    <a href="{{ block.settings.article1.url }}"> 
-                      <div class="imgBlock">
-                        <img src="{{ block.settings.article1.image | image_url: width: 400 }}">
-                      </div>
-                      <div class="txtBlock">
-                        <p class="journalTtl">{{ block.settings.article1.title }}</p>
-                        <p class="journalDate">{{ block.settings.article1.published_at | date: '%Y.%m.%d' }}</p>
-                        <div class="tagList">
-                          {%- if block.settings.article1.tags != blank -%}
-                            {% for tag in block.settings.article1.tags -%}
-                              <span>{{ tag }}</span> 
-                            {%- endfor %}
-                          {%- endif -%}
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                {%- endif -%}
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when '@app' -%}
+          <div class="page-width page-width--narrow">
+            {% render block %}
+          </div>
+
+        {%- when 'title' -%}
+          <section id="journalHeadSec">
+            <div class="contentIn">
+              <h1>{{ article.title | escape }}</h1>
+              <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
+             
+              {%- if article.tags != blank -%}
+               <div class="tagList">
+                {% for tag in article.tags -%}
+                  <span>#{{ tag }}</span> 
+                {%- endfor %}
+                </div>
+              {%- endif -%}
+              
+              {%- if article.metafields.camuri.blog_main_image.value != blank -%}
+              <div class="imgBlock">
+                {{ article.metafields.camuri.blog_main_image.value | image_url: width: 940 | image_tag: loading: "lazy"}}
+              </div>
+              {%- endif -%}
+              
+              <div class="shareButtonBlock">
+                <p>please shere</p>
+                <ul>
+                  <li><a href="#"><img src="{{ 'ico_instagram.png' | asset_url }}" alt="Instagram"></a></li>
+                  <li><a href="#"><img src="{{ 'ico_facebook.png' | asset_url }}" alt="Facebook"></a></li>
+                  <li class="ico_x"><a href="#"><img src="{{ 'ico_x.png' | asset_url }}" alt="X"></a></li>
                 </ul>
               </div>
-            </section>
-            {%- endif -%}
-          {%- endcase -%}
-		{%- endfor -%}
+            </div>
+          </section>
+
+        {%- when 'content' -%}
+
+          <section id="journalBodySec">
+            <div class="contentIn">
+              {%- if article.metafields.camuri.blog_intro.value != blank -%}
+                <p class="journalIntro">
+                {{ article.metafields.camuri.blog_intro.value | escape | newline_to_br }}
+                </p>
+              {%- endif -%}
+              <div class="acIndexBox">
+                <input id="acIndex01" name="acIndex01" type="checkbox" />
+                <label for="acIndex01">Index</label>
+                <div class="acBlock">
+                </div>
+              </div>
+
+              <div class="journalMain">
+                <div
+                  class="article-template__content page-width page-width--narrow rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  itemprop="articleBody"
+                  {{ block.shopify_attributes }}
+                >
+                  {{ article.content }}
+                </div>
+              </div>
+
+              <div id="writingByBlock">
+                {%- if article.metafields.camuri.writer != blank -%}
+                    <div class="imgBlock">
+                      <img src="{{ article.metafields.camuri.writer.value.prof_image | image_url: width: 160 }}" alt="{{ article.metafields.camuri.writer.value.name | escape }}">      
+                    </div>
+                <div class="txtBlock">
+                  <p class="txt01">writing by</p>
+                  <p class="writerName">{{ article.metafields.camuri.writer.value.name | escape }}</p>
+                  <p class="writerProfile">
+                    {{ article.metafields.camuri.writer.value.profile | escape }}
+                  </p>
+                </div>
+                {%- endif -%}
+              </div>
+
+              <div class="btnBlock"><a href="#" class="btnStyleB01">ALL POST</a></div>
+            </div>
+          </section>
+
+          {%- if article.metafields.camuri.blog_related_product != blank -%}
+          <section id="journalRelatedSec">
+            <div class="contentIn">
+              <h3>この記事に出てきた商品</h3>
+              <ul class="relatedItemList">
+              {% for product in article.metafields.camuri.blog_related_product.value -%}
+                <li>
+                  <a href="{{ product.url }}">
+                  <img src="{{ product.featured_media | image_url: width: 300 }}">
+                  <p class="itemTtl">{{ product.title | escape }}</p>
+                  <p class="itemPrice">{{ product.price | money }}<span>（税抜）</span></p>
+                </li>
+              {%- endfor %}
+              </ul>
+            </div>
+          </section>
+          {%- endif -%}
+
+        {%- when 'article' -%}
+          {%- if block.settings.article1 != blank 
+          or block.settings.article2 != blank 
+          or block.settings.article3 != blank 
+          or block.settings.article4 != blank -%}
+          <section id="journalReccomendSec">
+            <div class="contentIn">
+              <h3>RECOMMEND</h3>
+              <ul id="journalReccomendList">
+              {%- if  block.settings.article1 != blank -%}
+                <li>
+                  <a href="{{ block.settings.article1.url }}"> 
+                    <div class="imgBlock">
+                      <img src="{{ block.settings.article1.image | image_url: width: 400 }}">
+                    </div>
+                    <div class="txtBlock">
+                      <p class="journalTtl">{{ block.settings.article1.title }}</p>
+                      <p class="journalDate">{{ block.settings.article1.published_at | date: '%Y.%m.%d' }}</p>
+                      <div class="tagList">
+                        {%- if block.settings.article1.tags != blank -%}
+                          {% for tag in block.settings.article1.tags -%}
+                            <span>{{ tag }}</span> 
+                          {%- endfor %}
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if  block.settings.article2 != blank -%}
+                <li>
+                  <a href="{{ block.settings.article2.url }}"> 
+                    <div class="imgBlock">
+                      <img src="{{ block.settings.article2.image | image_url: width: 400 }}">
+                    </div>
+                    <div class="txtBlock">
+                      <p class="journalTtl">{{ block.settings.article2.title }}</p>
+                      <p class="journalDate">{{ block.settings.article2.published_at | date: '%Y.%m.%d' }}</p>
+                      <div class="tagList">
+                        {%- if block.settings.article2.tags != blank -%}
+                          {% for tag in block.settings.article2.tags -%}
+                            <span>{{ tag }}</span> 
+                          {%- endfor %}
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if  block.settings.article3 != blank -%}
+                <li>
+                  <a href="{{ block.settings.article3.url }}"> 
+                    <div class="imgBlock">
+                      <img src="{{ block.settings.article3.image | image_url: width: 400 }}">
+                    </div>
+                    <div class="txtBlock">
+                      <p class="journalTtl">{{ block.settings.article3.title }}</p>
+                      <p class="journalDate">{{ block.settings.article3.published_at | date: '%Y.%m.%d' }}</p>
+                      <div class="tagList">
+                        {%- if block.settings.article3.tags != blank -%}
+                          {% for tag in block.settings.article3.tags -%}
+                            <span>{{ tag }}</span> 
+                          {%- endfor %}
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if  block.settings.article4 != blank -%}
+                <li>
+                  <a href="{{ block.settings.article4.url }}"> 
+                    <div class="imgBlock">
+                      <img src="{{ block.settings.article4.image | image_url: width: 400 }}">
+                    </div>
+                    <div class="txtBlock">
+                      <p class="journalTtl">{{ block.settings.article4.title }}</p>
+                      <p class="journalDate">{{ block.settings.article4.published_at | date: '%Y.%m.%d' }}</p>
+                      <div class="tagList">
+                        {%- if block.settings.article4.tags != blank -%}
+                          {% for tag in block.settings.article4.tags -%}
+                            <span>{{ tag }}</span> 
+                          {%- endfor %}
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              {%- endif -%}
+              </ul>
+            </div>
+          </section>
+          {%- endif -%}
+        {%- endcase -%}
+		  {%- endfor -%}
   </div>
   <!--content-->
 
 </article>
-
-
 
 <script type="application/ld+json">
   {
