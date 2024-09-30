@@ -614,7 +614,7 @@ li {
 @media screen and (max-width: 800px) {
   #footer #fNewsletterSnsBlock #newsletterBlock .camuri_mail_input:focus ~ .camuri_field_label,
   #footer #fNewsletterSnsBlock #newsletterBlock .camuri_mail_input:not(:placeholder-shown) ~ .field__label {
-    font-size: 1vw;
+    font-size: 2vw;
     line-height: 2.5;
   }
 }
