@@ -58,7 +58,7 @@
     }
   },
   "newsletter": {
-    "label": "メール",
+    "label": "メールアドレス",
     "success": "ご登録ありがとうございます",
     "button_label": "登録"
   },
