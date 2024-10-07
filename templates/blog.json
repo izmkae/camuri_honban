@@ -11,7 +11,7 @@
   "sections": {
     "main": {
       "type": "camuri_main-blog",
-      "disabled": true,
+      "disabled": flase,
       "custom_css": [
 
       ],
