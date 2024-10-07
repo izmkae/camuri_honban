@@ -72,7 +72,7 @@
               {%- if article.image -%}
                 <img src="{{ article.image.src | image_url: width: 320 }}">
               {%- else -%}
-                <img src="{{ 'img_noimage_sqr.png' | asset_url: width: 320 }}">
+                <img src="{{ 'img_noimage_sqr.png' | asset_url }}" alt="No image">
               {% endif %}
               <div class="tabWrap"><span>TIPS</span></div>
             </div>
