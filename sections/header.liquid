@@ -33,6 +33,12 @@
 	{{ 'journal.css' | asset_url | stylesheet_tag }}
 {% endif %}
 
+{{ template }}
+
+{% if template == 'article' %} 
+	{{ 'journal.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
 	{{ 'slick.css' | asset_url | stylesheet_tag }}
 	{{ 'slick-theme.css' | asset_url | stylesheet_tag }}
 	{{ 'product.css' | asset_url | stylesheet_tag }}
