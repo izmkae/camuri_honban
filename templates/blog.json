@@ -11,7 +11,7 @@
   "sections": {
     "main": {
       "type": "camuri_main-blog",
-      "disabled": false,
+      "disabled": true,
       "custom_css": [
 
       ],
@@ -24,9 +24,19 @@
         "padding_top": 32,
         "padding_bottom": 32
       }
+    },
+    "camuri_featured_blog_X4gzgd": {
+      "type": "camuri-featured-blog",
+      "settings": {
+        "article1": "ニュース/帰山テスト",
+        "article2": "ニュース/帰山テスト",
+        "article3": "",
+        "article4": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "camuri_featured_blog_X4gzgd"
   ]
 }
