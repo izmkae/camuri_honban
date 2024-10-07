@@ -15,39 +15,82 @@
     }
   }
 {%- endstyle -%}
-あああ
-{%- paginate blog.articles by 6 -%}
-  <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      テスト {{ blog.title | escape }}
-    </h1>
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
-      {%- for article in blog.articles -%}
-        <div
-          class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            style="--animation-order: {{ forloop.index }};"
-          {% endif %}
-        >
-          {%- render 'article-card',
-            article: article,
-            media_height: section.settings.image_height,
-            media_aspect_ratio: article.image.aspect_ratio,
-            show_image: section.settings.show_image,
-            show_date: section.settings.show_date,
-            show_author: section.settings.show_author,
-            show_excerpt: true
-          -%}
+{%- paginate blog.articles by 12 -%}
+<div id="journalListPage" class="headerOn main-blog page-width section-{{ section.id }}-padding">
+  <section id="journalSec">
+    <div class="contentIn">
+      <h2>JOURNAL</h2>
+
+      <div id="journalCategory" class="journalBlock">
+        <div class="acJournalBox">
+          <input id="acJournalCat01" name="acJournalCat01" type="checkbox" />
+          <label for="acJournalCat01">Category</label>
+          <div class="acBlock2">
+            <ul class="journalCategoryList01">
+              <li><span>ALL</span></li>
+              <li><a href="#">PEDIA</a></li>
+              <li><a href="#">COUNSELING</a></li>
+              <li><a href="#">CRAFTMAN</a></li>
+              <li><a href="#">INSIDE</a></li>
+              <li><a href="#">CREATION</a></li>
+              <li><a href="#">LIFE STYLE</a></li>
+              <li><a href="#">CULTURE</a></li>
+              <li><a href="#">PRODUCT</a></li>
+              <li><a href="#">STAFF VOICE</a></li>
+            </ul>
+          </div>
         </div>
-      {%- endfor -%}
-    </div>
+      </div>
 
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
-  </div>
+      <div id="journalTag" class="journalBlock">
+        <div class="acJournalBox">
+          <input id="acJournalTag01" name="acJournalTag01" type="checkbox" />
+          <label for="acJournalTag01">Tag Search</label>
+          <div class="acBlock">
+            <ul class="journalTagList01">
+              <li><a href="#">#帽子の種類</a></li>
+              <li><a href="#">#サファリハット</a></li>
+              <li><a href="#">#べれー</a></li>
+              <li><a href="#">#帽子の種類</a></li>
+              <li><a href="#">#サファリハット</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <ul id="journalList" class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+        {%- for article in blog.articles -%}
+        <li class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+        >
+          <a href="{{ article.url }}"> 
+            <div class="imgBlock">
+              <img src="{{ article.image.src | image_url: width: 320 }}">
+              <div class="tabWrap"><span>TIPS</span></div>
+            </div>
+            <p class="journalTtl">{{ article.title | escape }}</p>
+            {%- if show_date -%}
+              <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
+            {%- endif -%}
+          </a>
+          {%- if article.tags != blank -%}
+           <div class="tagList">
+            {% for tag in article.tags -%}
+              <span>#{{ tag }}</span> 
+            {%- endfor %}
+            </div>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </section>
+</div>
+
 {%- endpaginate -%}
 
 {% schema %}
