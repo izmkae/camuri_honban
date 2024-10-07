@@ -16,8 +16,8 @@
   }
 {%- endstyle -%}
 
-{%- paginate blog.articles by 12 -%}
 <div id="journalListPage" class="headerOn main-blog page-width section-{{ section.id }}-padding">
+  {%- paginate blog.articles by 12 -%}
   <section id="journalSec">
     <div class="contentIn">
       <h2>JOURNAL</h2>
@@ -93,102 +93,12 @@
       </ul>
     </div>
   </section>
+  {%- endpaginate -%}
 
-  {%- if block.settings.article1 != blank 
-  or block.settings.article2 != blank 
-  or block.settings.article3 != blank 
-  or block.settings.article4 != blank -%}
-  <section id="journalReccomendSec">
-    <div class="contentIn">
-      <h3>RECOMMEND</h3>
-      <ul id="journalReccomendList">
-      {%- if  block.settings.article1 != blank -%}
-        <li>
-          <a href="{{ block.settings.article1.url }}"> 
-            <div class="imgBlock">
-              <img src="{{ block.settings.article1.image | image_url: width: 400 }}">
-            </div>
-            <div class="txtBlock">
-              <p class="journalTtl">{{ block.settings.article1.title }}</p>
-              <p class="journalDate">{{ block.settings.article1.published_at | date: '%Y.%m.%d' }}</p>
-              <div class="tagList">
-                {%- if block.settings.article1.tags != blank -%}
-                  {% for tag in block.settings.article1.tags -%}
-                    <span>{{ tag }}</span>　
-                  {%- endfor %}
-                {%- endif -%}
-              </div>
-            </div>
-          </a>
-        </li>
-      {%- endif -%}
-      {%- if  block.settings.article2 != blank -%}
-        <li>
-          <a href="{{ block.settings.article2.url }}"> 
-            <div class="imgBlock">
-              <img src="{{ block.settings.article2.image | image_url: width: 400 }}">
-            </div>
-            <div class="txtBlock">
-              <p class="journalTtl">{{ block.settings.article2.title }}</p>
-              <p class="journalDate">{{ block.settings.article2.published_at | date: '%Y.%m.%d' }}</p>
-              <div class="tagList">
-                {%- if block.settings.article2.tags != blank -%}
-                  {% for tag in block.settings.article2.tags -%}
-                    <span>{{ tag }}</span>　
-                  {%- endfor %}
-                {%- endif -%}
-              </div>
-            </div>
-          </a>
-        </li>
-      {%- endif -%}
-      {%- if  block.settings.article3 != blank -%}
-        <li>
-          <a href="{{ block.settings.article3.url }}"> 
-            <div class="imgBlock">
-              <img src="{{ block.settings.article3.image | image_url: width: 400 }}">
-            </div>
-            <div class="txtBlock">
-              <p class="journalTtl">{{ block.settings.article3.title }}</p>
-              <p class="journalDate">{{ block.settings.article3.published_at | date: '%Y.%m.%d' }}</p>
-              <div class="tagList">
-                {%- if block.settings.article3.tags != blank -%}
-                  {% for tag in block.settings.article3.tags -%}
-                    <span>{{ tag }}</span>　
-                  {%- endfor %}
-                {%- endif -%}
-              </div>
-            </div>
-          </a>
-        </li>
-      {%- endif -%}
-      {%- if  block.settings.article4 != blank -%}
-        <li>
-          <a href="{{ block.settings.article4.url }}"> 
-            <div class="imgBlock">
-              <img src="{{ block.settings.article4.image | image_url: width: 400 }}">
-            </div>
-            <div class="txtBlock">
-              <p class="journalTtl">{{ block.settings.article4.title }}</p>
-              <p class="journalDate">{{ block.settings.article4.published_at | date: '%Y.%m.%d' }}</p>
-              <div class="tagList">
-                {%- if block.settings.article4.tags != blank -%}
-                  {% for tag in block.settings.article4.tags -%}
-                    <span>{{ tag }}</span>　
-                  {%- endfor %}
-                {%- endif -%}
-              </div>
-            </div>
-          </a>
-        </li>
-      {%- endif -%}
-      </ul>
-    </div>
-  </section>
-  {%- endif -%}
+  
 </div>
 
-{%- endpaginate -%}
+
 
 {% schema %}
 {
