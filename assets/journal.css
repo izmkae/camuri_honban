@@ -179,6 +179,7 @@ $max_font_size (px): 最大フォントサイズ
   padding: 0.39vw 0.79vw;
   background-color: #E1DFD9;
   white-space: nowrap;
+  margin-right: 10px;
 }
 @media screen and (min-width: 1395.34884px) {
   #journalReccomendSec #journalReccomendList li .txtBlock .tagList span {
