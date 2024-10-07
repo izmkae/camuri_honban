@@ -190,9 +190,6 @@ $max_font_size (px): 最大フォントサイズ
     background-color: initial;
   }
 }
-#journalReccomendSec #journalReccomendList li .txtBlock .tagList span::before {
-  content: '#';
-}
 
 /*-------------------------------------------------------------------
 	journal list
