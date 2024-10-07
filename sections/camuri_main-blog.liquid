@@ -69,7 +69,11 @@
         >
           <a href="{{ article.url }}"> 
             <div class="imgBlock">
-              <img src="{{ article.image.src | image_url: width: 320 }}">
+              {%- if article.image -%}
+                <img src="{{ article.image.src | image_url: width: 320 }}">
+              {%- else -%}
+                <img src="{{ 'img_noimage_sqr.png' | asset_url: width: 320 }}">
+              {% endif %}
               <div class="tabWrap"><span>TIPS</span></div>
             </div>
             <p class="journalTtl">{{ article.title | escape }}</p>

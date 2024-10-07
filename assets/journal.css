@@ -436,6 +436,25 @@ $max_font_size (px): 最大フォントサイズ
 }
 #journalListPage #journalSec #journalList li .imgBlock {
   position: relative;
+  width: 100%;
+}
+#journalListPage #journalSec #journalList li .imgBlock::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+}
+#journalListPage #journalSec #journalList li .imgBlock img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  object-fit: cover;
 }
 #journalListPage #journalSec #journalList li .imgBlock .tabWrap {
   position: absolute;
