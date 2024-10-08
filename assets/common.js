@@ -8,6 +8,18 @@ $('.hNavBtn').on('click', function() {
 	$(this).toggleClass('active');
 	$('#header').toggleClass('active');
 	$('#gNaviWrapper').fadeToggle();
+
+	$('.mvNavBtn').toggleClass('active');
+
+	return false;
+});
+
+$('.mvNavBtn').on('click', function() {
+	$(this).toggleClass('active');
+	$('.hNavBtn').toggleClass('active');
+	$('#header').toggleClass('active');
+	$('#gNaviWrapper').fadeToggle();
+
 	return false;
 });
 
