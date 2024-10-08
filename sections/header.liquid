@@ -175,16 +175,7 @@
 				</div>
 				{%- if shop.customer_accounts_enabled -%}
 				<a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="hBtnStyle">
-					{% render 'icon-account' %}
-					<span class="visually-hidden">
-						{%- liquid
-							if customer
-								echo 'customer.account_fallback' | t
-							else
-								echo 'customer.log_in' | t
-							endif
-						-%}
-					</span>
+
 
 					<span class="txtEn">MY PAGE</span><span class="txtJa">マイページ / 会員登録</span>
 				</a>
