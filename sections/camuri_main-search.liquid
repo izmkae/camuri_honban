@@ -68,9 +68,9 @@
     <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       <h1 class="h2 center">
         {%- if search.performed -%}
-          {{ search.terms | escape }}の{{- 'templates.search.title' | t -}}
+          {{- 'templates.search.title' | t -}}
         {%- else -%}
-          {{- 'general.search.search' | t -}}
+          {{ search.terms | escape }}の{{- 'general.search.search' | t -}}
         {%- endif -%}
       </h1>
       <div class="template-search__search">
