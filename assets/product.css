@@ -351,6 +351,7 @@ $max_font_size (px): 最大フォントサイズ
   height: 100%;
 }
 #modalSec .modalBg {
+  display: block;
   width: 100%;
   height: 100%;
   background-color: #000000;
@@ -360,7 +361,7 @@ $max_font_size (px): 最大フォントサイズ
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  height: 80%;
   max-width: 600px;
 }
 #modalSec .modalWrapper .zoomImgList li img {
