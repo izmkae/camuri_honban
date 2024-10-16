@@ -383,7 +383,7 @@ $max_font_size (px): 最大フォントサイズ
   width: 35px;
 }
 #modalSec .modalWrapper .zoomImgList .slick-next::before {
-  background: url(../images/_common/ico_right.png) !important;
+  background: url(ico_right.png) !important;
   background-size: contain !important;
 }
 #modalSec .modalWrapper .zoomImgList .slick-prev {
@@ -394,7 +394,7 @@ $max_font_size (px): 最大フォントサイズ
   width: 35px;
 }
 #modalSec .modalWrapper .zoomImgList .slick-prev::before {
-  background: url(../images/_common/ico_left.png) !important;
+  background: url(ico_left.png) !important;
   background-size: contain !important;
 }
 #modalSec .closeModal {
@@ -421,7 +421,7 @@ $max_font_size (px): 最大フォントサイズ
   position: absolute;
   top: 0;
   left: 0;
-  background: url(../images/_common/ico_mordal_close.png) !important;
+  background: url(ico_mordal_close.png) !important;
   background-size: contain !important;
   opacity: 0.75;
 }
