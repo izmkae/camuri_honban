@@ -361,8 +361,8 @@ $max_font_size (px): 最大フォントサイズ
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 80%;
-  max-width: 600px;
+  width: 70%;
+  max-width: 550px;
 }
 #modalSec .modalWrapper .zoomImgList li img {
   width: 100%;
