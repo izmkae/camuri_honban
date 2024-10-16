@@ -8,7 +8,7 @@
 					<li><img src="{{ media.preview_image | image_url: width: 1000 }}" alt="{{ media.alt | escape }}"></li>
 				{%- endfor -%}
 			</ul>
-			<div class="zoomIcon"><a><img src="{{ 'ico_magnifying_glass.png' | asset_url }}" alt="CAMURI | カムリ"></a></div>
+			<div class="zoomIcon"><button id="openModal"><img src="{{ 'ico_magnifying_glass.png' | asset_url }}" alt="CAMURI | カムリ"></button></div>
 		</div>
 		<ul class="thumbImgList">
 			{%- for media in product.media -%}
@@ -236,6 +236,19 @@
 	{%- endfor -%}
 	
 	</div> 
+</section>
+
+<section id="modalSec" class="modalArea">
+	<div id="modalBg" class="modalBg"></div>
+	<div class="modalWrapper">
+		<ul class="zoomImgList">
+			{%- for media in product.media -%}
+				{% assign idx = 1 %}
+				<li><img src="{{ media.preview_image | image_url: width: 500 }}" alt="{{ media.alt | escape }}"></li>
+			{%- endfor -%}
+		</ul>
+		<div id="closeModal" class="closeModal"></div>
+	</div>
 </section>
 
 <section id="productDetailSec">

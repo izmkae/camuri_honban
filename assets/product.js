@@ -21,4 +21,17 @@ $(document).ready(function(){
 		var index = nextSlide;
 		$(".thumbImgList .slick-slide").removeClass("slick-current").eq(index).addClass("slick-current");
 	});
+
+	$('#openModal').click(function(){
+		$('#modalSec').fadeIn();
+		slider.slick('setPosition');
+	});
+	$('#closeModal , #modalBg').click(function(){
+		$('#modalSec').fadeOut();
+  	});
+
+	//MordalSlider
+  	var slider = $('.zoomImgList');
+	slider.slick({});
+
 });
