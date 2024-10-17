@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "01d42623-6eea-41c0-935c-b7f7eeedaae6": {
@@ -15,7 +15,7 @@
         "slide_FTPQVJ": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fv1.jpg",
+            "image": "shopify://shop_images/fv1.jpg",
             "heading": "Image slide",
             "link": ""
           }
@@ -23,17 +23,17 @@
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fv3.jpg",
+            "image": "shopify://shop_images/fv3.jpg",
             "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。",
-            "link": "shopify:\/\/products\/test-fucabori-cap-01"
+            "link": "shopify://products/test-fucabori-cap-01"
           }
         },
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fv2.jpg",
+            "image": "shopify://shop_images/fv2.jpg",
             "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。",
-            "link": "shopify:\/\/blogs\/culture\/社長のあたまから-xxxxxxxxxxxxxxx"
+            "link": "shopify://blogs/culture/社長のあたまから-xxxxxxxxxxxxxxx"
           }
         }
       },
@@ -49,8 +49,8 @@
       "type": "top_about",
       "settings": {
         "topAboutText": "「帽⼦が似合わない」\nそう思っている全ての⼈へ。\nみんなのアタマと気持ちに\nフィットする帽⼦を、\nCAMURIが形にします。",
-        "topAboutLink": "shopify:\/\/pages\/about",
-        "topAboutImg": "shopify:\/\/shop_images\/top_illust_1_r.png"
+        "topAboutLink": "shopify://pages/about",
+        "topAboutImg": "shopify://shop_images/top_illust_1_r.png"
       }
     },
     "top_contents_wVXE7f": {
@@ -59,49 +59,49 @@
         "content_set_KN433e": {
           "type": "content_set",
           "settings": {
-            "topContentImage": "shopify:\/\/shop_images\/camuri.jpg",
+            "topContentImage": "shopify://shop_images/camuri.jpg",
             "topContentHeading": "帽子が似合わない…その理由のほとんどは形とサイズにあるんです。",
-            "topContentLink": "shopify:\/\/blogs\/ニュース"
+            "topContentLink": "shopify://blogs/ニュース"
           }
         },
         "content_set_iGpr9F": {
           "type": "content_set",
           "settings": {
-            "topContentImage": "shopify:\/\/shop_images\/hat.jpg",
+            "topContentImage": "shopify://shop_images/hat.jpg",
             "topContentHeading": "アジャスターのないハットこそ、サイズ選びでかぶり心地が変わる。",
-            "topContentLink": "shopify:\/\/blogs\/ニュース"
+            "topContentLink": "shopify://blogs/ニュース"
           }
         },
         "content_set_49jWmc": {
           "type": "content_set",
           "settings": {
-            "topContentImage": "shopify:\/\/shop_images\/beret.jpg",
+            "topContentImage": "shopify://shop_images/beret.jpg",
             "topContentHeading": "大人男女の何でもない日に似合う『挑戦させない』ベレー帽。",
-            "topContentLink": "shopify:\/\/blogs\/ニュース"
+            "topContentLink": "shopify://blogs/ニュース"
           }
         },
         "content_set_YhtAFa": {
           "type": "content_set",
           "settings": {
-            "topContentImage": "shopify:\/\/shop_images\/fitting.jpg",
+            "topContentImage": "shopify://shop_images/fitting.jpg",
             "topContentHeading": "ゆっくり自宅で試してほしいから、全ての帽子が無料で試着できます。",
-            "topContentLink": "shopify:\/\/blogs\/ニュース"
+            "topContentLink": "shopify://blogs/ニュース"
           }
         },
         "content_set_eahmKR": {
           "type": "content_set",
           "settings": {
-            "topContentImage": "shopify:\/\/shop_images\/intaview1.jpg",
+            "topContentImage": "shopify://shop_images/intaview1.jpg",
             "topContentHeading": "普遍で最高の帽子を形に。東大阪の町工場が縫製に込めるこだわり。",
-            "topContentLink": "shopify:\/\/blogs\/ニュース"
+            "topContentLink": "shopify://blogs/ニュース"
           }
         },
         "content_set_dAbr8U": {
           "type": "content_set",
           "settings": {
-            "topContentImage": "shopify:\/\/shop_images\/yui_intaview.jpg",
+            "topContentImage": "shopify://shop_images/yui_intaview.jpg",
             "topContentHeading": "帽子が好きだから被る人をもっと増やしたい。スタッフyuiの帽子愛。",
-            "topContentLink": "shopify:\/\/blogs\/ニュース"
+            "topContentLink": "shopify://blogs/ニュース"
           }
         }
       },
@@ -132,7 +132,7 @@
         "item_category_z9qmRL": {
           "type": "item_category",
           "settings": {
-            "topItemCatImage": "shopify:\/\/shop_images\/img_cat_cap.png",
+            "topItemCatImage": "shopify://shop_images/img_cat_cap.png",
             "topItemCatName": "キャップ",
             "topItemCatText": "カジュアル感が人気",
             "topItemCatLink": ""
@@ -141,7 +141,7 @@
         "item_category_naADdd": {
           "type": "item_category",
           "settings": {
-            "topItemCatImage": "shopify:\/\/shop_images\/img_cat_hat.png",
+            "topItemCatImage": "shopify://shop_images/img_cat_hat.png",
             "topItemCatName": "ハット",
             "topItemCatText": "洋服を選ばない",
             "topItemCatLink": ""
@@ -150,16 +150,16 @@
         "item_category_J9QjJN": {
           "type": "item_category",
           "settings": {
-            "topItemCatImage": "shopify:\/\/shop_images\/img_cat_knit.png",
+            "topItemCatImage": "shopify://shop_images/img_cat_knit.png",
             "topItemCatName": "ニットキャップ",
-            "topItemCatText": "柔らかな被り心地",
+            "topItemCatText": "coming soon",
             "topItemCatLink": ""
           }
         },
         "item_category_Hhgi7f": {
           "type": "item_category",
           "settings": {
-            "topItemCatImage": "shopify:\/\/shop_images\/img_cat_beret.png",
+            "topItemCatImage": "shopify://shop_images/img_cat_beret.png",
             "topItemCatName": "ベレー",
             "topItemCatText": "個性が加わる",
             "topItemCatLink": ""
@@ -168,7 +168,7 @@
         "item_category_fqQ9ej": {
           "type": "item_category",
           "settings": {
-            "topItemCatImage": "shopify:\/\/shop_images\/img_cat_casket.png",
+            "topItemCatImage": "shopify://shop_images/img_cat_casket.png",
             "topItemCatName": "キャスケット",
             "topItemCatText": "こなれ感が出る",
             "topItemCatLink": ""
@@ -177,7 +177,7 @@
         "item_category_J6KhLJ": {
           "type": "item_category",
           "settings": {
-            "topItemCatImage": "shopify:\/\/shop_images\/img_cat_care.png",
+            "topItemCatImage": "shopify://shop_images/img_cat_care.png",
             "topItemCatName": "その他雑貨",
             "topItemCatText": "帽子のケアなど",
             "topItemCatLink": ""
