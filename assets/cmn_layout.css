@@ -929,24 +929,20 @@ li {
   display: block;
   width: 17.31vw;
 }
-#itemSec #itemList 　
-li {
+#itemSec #itemList li {
   width: 17.31vw;
   margin-bottom: 5.84vw;
 }
 @media screen and (max-width: 800px) {
-  #itemSec #itemList 　
-  li {
+  #itemSec #itemList li {
     width: 43.2vw;
     margin-bottom: 10.66vw;
   }
 }
-#itemSec #itemList 　
-li .imgBlock {
+#itemSec #itemList li .imgBlock {
   position: relative;
 }
-#itemSec #itemList 　
-li .imgBlock .tabWrap {
+#itemSec #itemList li .imgBlock .tabWrap {
   position: absolute;
   top: 0;
   right: 0;
@@ -963,76 +959,63 @@ li .imgBlock .tabWrap {
   flex-wrap: wrap;
   flex-flow: row wrap;
 }
-#itemSec #itemList 　
-li .imgBlock .tabWrap span {
+#itemSec #itemList li .imgBlock .tabWrap span {
   padding: 0.12vw 0.36vw;
   font-size: 1.15vw;
 }
 @media screen and (max-width: 800px) {
-  #itemSec #itemList 　
-  li .imgBlock .tabWrap span {
+  #itemSec #itemList li .imgBlock .tabWrap span {
     padding: 0 1.6vw;
     font-size: 3.2vw;
   }
 }
-#itemSec #itemList 　
-li .imgBlock .tabWrap .labelLimited {
+#itemSec #itemList li .imgBlock .tabWrap .labelLimited {
   background-color: #E26768;
   color: #FFFFFF;
 }
-#itemSec #itemList 　
-li .imgBlock .tabWrap .labelSolidOut {
+#itemSec #itemList li .imgBlock .tabWrap .labelSolidOut {
   background-color: #000000;
   color: #FFFFFF;
 }
-#itemSec #itemList 　
-li .itemTtl {
+#itemSec #itemList li .itemTtl {
   margin-top: 1.83vw;
   font-size: 1.58vw;
   font-weight: bold;
   line-height: 1.55;
 }
 @media screen and (max-width: 800px) {
-  #itemSec #itemList 　
-  li .itemTtl {
+  #itemSec #itemList li .itemTtl {
     font-size: 4.26vw;
   }
 }
-#itemSec #itemList 　
-li .itemPrice {
+#itemSec #itemList li .itemPrice {
   margin-top: 0.79vw;
   font-size: 1.37vw;
   font-weight: bold;
 }
 @media screen and (max-width: 800px) {
-  #itemSec #itemList 　
-  li .itemPrice {
+  #itemSec #itemList li .itemPrice {
     font-size: 4.26vw;
   }
 }
-#itemSec #itemList 　
-li .itemPrice span {
+#itemSec #itemList li .itemPrice span {
   font-size: 1.01vw;
 }
 @media screen and (max-width: 800px) {
-  #itemSec #itemList 　
-  li .itemPrice span {
+  #itemSec #itemList li .itemPrice span {
     font-size: 3.73vw;
   }
 }
-#itemSec #itemList 　
-li .itemTxt {
+#itemSec #itemList li .itemTxt {
   margin-top: 1.08vw;
   font-size: 1.15vw;
 }
 @media screen and (max-width: 800px) {
-  #itemSec #itemList 　
-  li .itemTxt {
+  #itemSec #itemList li .itemTxt {
     font-size: 3.73vw;
   }
 }
-#itemSec #itemList 　
-li .tagList {
+#itemSec #itemList li .tagList {
   margin-top: 2vw;
   display: -webkit-flex;
   display: flex;
@@ -1047,9 +1030,7 @@ li .tagList {
   flex-wrap: wrap;
   flex-flow: row wrap;
 }
-#itemSec #itemList 　
-li .tagList a, #itemSec #itemList 　
-li .tagList span {
+#itemSec #itemList li .tagList a, #itemSec #itemList li .tagList span {
   display: block;
   padding: 0.4vw 1.08vw;
   border-radius: 1.8vw;
@@ -1057,23 +1038,17 @@ li .tagList span {
   margin: 5px;
 }
 @media screen and (max-width: 800px) {
-  #itemSec #itemList 　
-  li .tagList a, #itemSec #itemList 　
-  li .tagList span {
+  #itemSec #itemList li .tagList a, #itemSec #itemList li .tagList span {
     padding: 1.33vw 2.4vw;
     border-radius: 6.66vw;
     font-size: 2.93vw;
   }
 }
-#itemSec #itemList 　
-li .tagList a.tagColBry, #itemSec #itemList 　
-li .tagList span.tagColBry {
+#itemSec #itemList li .tagList a.tagColBry, #itemSec #itemList li .tagList span.tagColBry {
   background-color: #575757;
   color: #FFFFFF;
 }
-#itemSec #itemList 　
-li .tagList a.tagColWht, #itemSec #itemList 　
-li .tagList span.tagColWht {
+#itemSec #itemList li .tagList a.tagColWht, #itemSec #itemList li .tagList span.tagColWht {
   background-color: #FFFFFF;
   border: 1px solid #000000;
 }
@@ -1246,6 +1221,15 @@ li .tagList span.tagColWht {
   opacity: 0.6;
   filter: alpha(opacity=60);
   -khtml-opacity: 0.6;
+  -ms-filter: "alpha(opacity=$opacity)";
+}
+#itemSec #categoryblock #categoryList li .comingSoonItem {
+  color: #999;
+}
+#itemSec #categoryblock #categoryList li .comingSoonItem .imgBlock img {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -khtml-opacity: 0.5;
   -ms-filter: "alpha(opacity=$opacity)";
 }
 

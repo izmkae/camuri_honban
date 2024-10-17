@@ -35,11 +35,19 @@
 		<ul id="categoryList">
 		  {%- for block in section.blocks -%}
 			<li>
+				{%- if block.settings.topItemCatLink != blank -%}
 				<a href="{{block.settings.topItemCatLink }}">
+				{% else %}
+				<span class="comingSoonItem">
+				{%- endif -%}
 					<div class="imgBlock"><img src="{{  block.settings.topItemCatImage | img_url: 'master' }}"></div>
 					<p class="catTxt">{{ block.settings.topItemCatText | escape  }}</p>
 					<p class="catTtl"><span>{{ block.settings.topItemCatName | escape }}</span></p>
+				{%- if block.settings.topItemCatLink != blank -%}
 				</a>
+				{% else %}
+				</span>
+				{%- endif -%}
 			</li>
 		  {%- endfor -%}
 		</ul>
