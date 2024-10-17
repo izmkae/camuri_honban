@@ -178,8 +178,8 @@
           "type": "item_category",
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_care.png",
-            "topItemCatName": "coming soon",
-            "topItemCatText": "帽子のケアなど",
+            "topItemCatName": "その他雑貨",
+            "topItemCatText": "coming soon",
             "topItemCatLink": ""
           }
         }
