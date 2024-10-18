@@ -211,7 +211,7 @@ li {
 @media screen and (max-width: 800px) {
   .headerIn .hMenu .hNavBtn, .headerIn .hMenu .mvNavBtn, .mainVisualIn .hMenu .hNavBtn, .mainVisualIn .hMenu .mvNavBtn {
     width: 5.33vw;
-    margin-left: 2.66vw;
+    margin-left: 6.66vw;
   }
 }
 .headerIn .hMenu .hNavBtn span, .headerIn .hMenu .mvNavBtn span, .mainVisualIn .hMenu .hNavBtn span, .mainVisualIn .hMenu .mvNavBtn span {
