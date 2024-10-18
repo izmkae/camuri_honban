@@ -27,13 +27,16 @@ $max_font_size (px): 最大フォントサイズ
   position: absolute;
   z-index: 1;
 }
+.mainVisualIn .hLogo {
+  margin-top: 11px;
+}
 .mainVisualIn .hLogo img {
   width: 9.37vw;
   height: auto;
 }
 @media screen and (max-width: 800px) {
   .mainVisualIn .hLogo img {
-    width: 11.18vw;
+    width: 19.41vw;
   }
 }
 
@@ -166,7 +169,7 @@ $max_font_size (px): 最大フォントサイズ
 }
 #aboutSec .btnBlock {
   width: 100vw;
-  margin-top: -5.1vw;
+  margin-top: -9.8vw;
 }
 @media screen and (max-width: 800px) {
   #aboutSec .btnBlock {
@@ -245,7 +248,18 @@ $max_font_size (px): 最大フォントサイズ
   #contentSec #contentList li a .txtBlock .btnBlock span {
     width: 22.7vw;
     height: 7.79vw;
-    line-height: 7vw;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
   }
 }
 #contentSec #contentList li a:hover .txtBlock .btnBlock span {
@@ -407,9 +421,20 @@ $max_font_size (px): 最大フォントサイズ
   #journalSec .btnBlock a {
     width: 50.4vw;
     height: 11.2vw;
-    line-height: 11.2vw;
     border-radius: 25.2vw;
     font-size: 4vw;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
   }
 }
 
@@ -562,19 +587,28 @@ $max_font_size (px): 最大フォントサイズ
   display: block;
   width: 7.57vw;
   height: 2.59vw;
-  line-height: 2.4vw;
   font-size: 1.15vw;
   border-radius: 1.8vw;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   transition: 0.5s;
-  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 @media screen and (max-width: 800px) {
   #tryitSec #tryitList li a .flexBlock .btnBlock2 span {
     width: 28vw;
     height: 9.06vw;
-    line-height: 8vw;
     font-size: 4vw;
     border-radius: 6.66vw;
   }

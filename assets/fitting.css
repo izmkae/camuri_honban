@@ -355,6 +355,7 @@ h3 {
   height: 65px;
   line-height: 65px;
   margin: 158px auto 0;
+  border-radius: 32.5px;
 }
 @media screen and (max-width: 800px) {
   #fittingNoteSec .btnBlock a {
@@ -362,5 +363,6 @@ h3 {
     height: 55px;
     line-height: 55px;
     margin: 19.46vw auto 0;
+    border-radius: 27.5px;
   }
 }

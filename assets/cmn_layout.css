@@ -218,22 +218,22 @@ li {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: #000000;
 }
 .headerIn .hMenu .hNavBtn span:nth-of-type(1), .headerIn .hMenu .mvNavBtn span:nth-of-type(1), .mainVisualIn .hMenu .hNavBtn span:nth-of-type(1), .mainVisualIn .hMenu .mvNavBtn span:nth-of-type(1) {
-  top: 0;
+  top: 2px;
 }
 .headerIn .hMenu .hNavBtn span:nth-of-type(2), .headerIn .hMenu .mvNavBtn span:nth-of-type(2), .mainVisualIn .hMenu .hNavBtn span:nth-of-type(2), .mainVisualIn .hMenu .mvNavBtn span:nth-of-type(2) {
-  top: 12px;
+  top: 10px;
 }
 .headerIn .hMenu .hNavBtn.active span:nth-of-type(1), .headerIn .hMenu .mvNavBtn.active span:nth-of-type(1), .mainVisualIn .hMenu .hNavBtn.active span:nth-of-type(1), .mainVisualIn .hMenu .mvNavBtn.active span:nth-of-type(1) {
-  -webkit-transform: translateY(6px) rotate(45deg);
-  transform: translateY(6px) rotate(45deg);
+  -webkit-transform: translateY(4px) rotate(45deg);
+  transform: translateY(4px) rotate(45deg);
 }
 .headerIn .hMenu .hNavBtn.active span:nth-of-type(2), .headerIn .hMenu .mvNavBtn.active span:nth-of-type(2), .mainVisualIn .hMenu .hNavBtn.active span:nth-of-type(2), .mainVisualIn .hMenu .mvNavBtn.active span:nth-of-type(2) {
-  -webkit-transform: translateY(-6px) rotate(-45deg);
-  transform: translateY(-6px) rotate(-45deg);
+  -webkit-transform: translateY(-4px) rotate(-45deg);
+  transform: translateY(-4px) rotate(-45deg);
 }
 
 #gNaviWrapper {
@@ -601,7 +601,7 @@ li {
 @media screen and (max-width: 800px) {
   #footer #fNewsletterSnsBlock #newsletterBlock .camuri_field_label {
     font-size: 3.2vw;
-    line-height: 2.5;
+    line-height: 2;
   }
 }
 #footer #fNewsletterSnsBlock #newsletterBlock .camuri_mail_input:focus ~ .camuri_field_label,
@@ -849,19 +849,28 @@ li {
   display: block;
   width: 7.57vw;
   height: 2.59vw;
-  line-height: 2.4vw;
   font-size: 1.15vw;
   border-radius: 1.8vw;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   transition: 0.5s;
-  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 @media screen and (max-width: 800px) {
   .btnBlock span, .btnBlock a {
     width: 28vw;
     height: 9.06vw;
-    line-height: 8vw;
     font-size: 4vw;
     border-radius: 6.66vw;
   }
@@ -1065,16 +1074,26 @@ li {
   display: block;
   width: 20.2vw;
   height: 4.32vw;
-  line-height: 4.32vw;
   margin: auto;
   border-radius: 2.8vw;
   font-size: 1.44vw;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 @media screen and (max-width: 800px) {
   #itemSec .btnBlock a {
     width: 50.4vw;
     height: 11.2vw;
-    line-height: 11.2vw;
     border-radius: 25.2vw;
     font-size: 4vw;
   }

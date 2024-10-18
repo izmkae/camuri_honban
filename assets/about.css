@@ -322,7 +322,7 @@ h3 span {
 }
 @media screen and (max-width: 800px) {
   #messageSec .contentWrap {
-    margin-top: 50px;
+    margin-top: 0;
     flex-direction: column-reverse;
   }
 }
