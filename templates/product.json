@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -41,6 +50,11 @@
             "show_gift_card_recipient": true
           }
         },
+        "fuji3_wishlist_add_btn_QLFVwA": {
+          "type": "shopify://apps/fuji3-wishlist/blocks/add-btn/d1baf985-85f5-4ef5-b595-4e973811d187",
+          "settings": {
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -56,6 +70,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "fuji3_wishlist_add_btn_QLFVwA",
         "share"
       ],
       "settings": {
