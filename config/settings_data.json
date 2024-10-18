@@ -151,13 +151,6 @@
           "margin_y": 0
         }
       },
-      "12649886082557318988": {
-        "type": "shopify://apps/fuji3-wishlist/blocks/add-btn-vintage/d1baf985-85f5-4ef5-b595-4e973811d187",
-        "disabled": false,
-        "settings": {
-          "target_selector": ".product-form__controls-group--submit"
-        }
-      },
       "4596893873645994627": {
         "type": "shopify://apps/hulk-product-reviews/blocks/collection-reviews/34006358-52bd-4ec7-8c78-200fe58b77ba",
         "disabled": false,
@@ -174,6 +167,13 @@
         "type": "shopify://apps/table-of-contents/blocks/app-embed/d06f5754-affb-4dc7-a2a9-18d74d225f70",
         "disabled": false,
         "settings": {
+        }
+      },
+      "12649886082557318988": {
+        "type": "shopify://apps/fuji3-wishlist/blocks/add-btn-vintage/d1baf985-85f5-4ef5-b595-4e973811d187",
+        "disabled": false,
+        "settings": {
+          "target_selector": ""
         }
       }
     },
