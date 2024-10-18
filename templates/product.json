@@ -32,6 +32,11 @@
           "settings": {
           }
         },
+        "hulk_product_reviews_average_review_apQzjP": {
+          "type": "shopify://apps/hulk-product-reviews/blocks/average-review/34006358-52bd-4ec7-8c78-200fe58b77ba",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -67,6 +72,7 @@
         "title",
         "product_no_GgdeCp",
         "price",
+        "hulk_product_reviews_average_review_apQzjP",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
