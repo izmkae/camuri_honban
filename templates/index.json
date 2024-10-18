@@ -61,7 +61,7 @@
           "settings": {
             "topContentImage": "shopify://shop_images/camuri.jpg",
             "topContentHeading": "帽子が似合わない…その理由のほとんどは形とサイズにあるんです。",
-            "topContentLink": "shopify://blogs/ニュース"
+            "topContentLink": "shopify://blogs/journal"
           }
         },
         "content_set_iGpr9F": {
@@ -69,7 +69,7 @@
           "settings": {
             "topContentImage": "shopify://shop_images/hat.jpg",
             "topContentHeading": "アジャスターのないハットこそ、サイズ選びでかぶり心地が変わる。",
-            "topContentLink": "shopify://blogs/ニュース"
+            "topContentLink": "shopify://blogs/journal"
           }
         },
         "content_set_49jWmc": {
@@ -77,7 +77,7 @@
           "settings": {
             "topContentImage": "shopify://shop_images/beret.jpg",
             "topContentHeading": "大人男女の何でもない日に似合う『挑戦させない』ベレー帽。",
-            "topContentLink": "shopify://blogs/ニュース"
+            "topContentLink": "shopify://blogs/journal"
           }
         },
         "content_set_YhtAFa": {
@@ -85,7 +85,7 @@
           "settings": {
             "topContentImage": "shopify://shop_images/fitting.jpg",
             "topContentHeading": "ゆっくり自宅で試してほしいから、全ての帽子が無料で試着できます。",
-            "topContentLink": "shopify://blogs/ニュース"
+            "topContentLink": "shopify://blogs/journal"
           }
         },
         "content_set_eahmKR": {
@@ -93,7 +93,7 @@
           "settings": {
             "topContentImage": "shopify://shop_images/intaview1.jpg",
             "topContentHeading": "普遍で最高の帽子を形に。東大阪の町工場が縫製に込めるこだわり。",
-            "topContentLink": "shopify://blogs/ニュース"
+            "topContentLink": "shopify://blogs/journal"
           }
         },
         "content_set_dAbr8U": {
@@ -101,7 +101,7 @@
           "settings": {
             "topContentImage": "shopify://shop_images/yui_intaview.jpg",
             "topContentHeading": "帽子が好きだから被る人をもっと増やしたい。スタッフyuiの帽子愛。",
-            "topContentLink": "shopify://blogs/ニュース"
+            "topContentLink": "shopify://blogs/journal"
           }
         }
       },
@@ -120,7 +120,7 @@
       "type": "top_jornal",
       "settings": {
         "title": "JOURNAL",
-        "news_list": "ニュース",
+        "news_list": "journal",
         "post_limit": 10,
         "news_list_date": true,
         "news_list_category": true
