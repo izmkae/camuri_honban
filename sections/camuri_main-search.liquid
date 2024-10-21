@@ -228,9 +228,9 @@
 
 
 
-                {% assign resultArticle = 'a' %}
-                {% assign resultProduct = 'i' %}
-                {% assign resultPage = 'p' %}
+                {% assign resultArticle = '' %}
+                {% assign resultProduct = '' %}
+                {% assign resultPage = '' %}
 
                 {%- for item in search.results -%}
                   {% assign lazy_load = false %}
@@ -268,37 +268,36 @@
                           </li>
                         {% endcapture %}
 
-                        
+                     {%- when 'article' -%}
 
-
-                      {%- when 'article' -%}
-<p>article</p>
+                        <li class="blog-articles__article">
+                          <a href="{{ item.url }}"> 
+                            <div class="imgBlock">
+                              {%- if item.image -%}
+                                <img src="{{ item.image.src | image_url: width: 320 }}">
+                              {%- else -%}
+                                <img src="{{ 'img_noimage_sqr.png' | asset_url }}" alt="No image">
+                              {% endif %}
+                              <div class="tabWrap"><span>TIPS</span></div>
+                            </div>
+                            <p class="journalTtl">{{ item.title | escape }}</p>
+                            {%- if show_date -%}
+                              <p class="journalDate">{{ item.published_at | date: '%Y.%m.%d' }}</p>
+                            {%- endif -%}
+                          </a>
+                          {%- if item.tags != blank -%}
+                           <div class="tagList">
+                            {% for tag in item.tags -%}
+                              <span>#{{ tag }}</span>　
+                            {%- endfor %}
+                            </div>
+                          {%- endif -%}
+                        </li>
                        
                       {%- when 'page' -%}
-<p>page</p>
-                        <!-- <div class="article-card-wrapper card-wrapper underline-links-hover">
-                          <div
-                            class="card card--card card--text ratio color-{{ settings.blog_card_color_scheme }}"
-                            style="--ratio-percent: 100%;"
-                          >
-                            <div class="card__content">
-                              <div class="card__information">
-                                <h3 class="card__heading">
-                                  <a href="{{ item.url }}" class="full-unstyled-link">
-                                    {{ item.title | truncate: 50 | escape }}
-                                  </a>
-                                </h3>
-                              </div>
-                              <div class="card__badge {{ settings.badge_position }}">
-                                <span class="badge color-{{ settings.color_schemes | first }}">
-                                  {{- 'templates.search.page' | t -}}
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div> -->
+                        <li>page</li>
+                       
                     {%- endcase -%}
-                  </li>
                 {%- endfor -%}
 
 
