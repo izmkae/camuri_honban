@@ -240,20 +240,35 @@
 
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
-                      {% capture resultProduct %}{{resultProduct}}/product{% endcapture %}
-
-                       <!--  <li>
-                          <a href="#"> 
-                            <div class="imgBlock">
-                              <img src="_asset/images/dmy/img_item_01.png">
-                              <div class="tabWrap"><span class="labelLimited">限定</span><span class="labelSolidOut">SOLD OUT</span></div>
+                      
+                        {% capture resultProduct %}
+                          {{resultProduct}}
+                          <li>
+                            <a href="{{ item.url }}"> 
+                              <div class="imgBlock">
+                                <img src="{{ item.featured_image | product_img_url: 'large' }}" alt="{{ item.title }}">
+                                <div class="tabWrap">
+                                  {%- if item.metafields.camuri.label_limited -%}
+                                  <span class="labelLimited">LIMITED</span>
+                                  {%- endif -%}
+                                  {%- if item.available == false -%}
+                                  <span class="labelSolidOut">SOLD OUT</span>
+                                  {%- endif -%}
+                                </div>
+                              </div>
+                              <p class="itemTtl">{{ item.title }}</p>
+                              <p class="itemPrice">{{ item.price | money }}<span>（税込）</span></p>
+                              <p class="itemTxt">{{ item.metafields.camuri.excerpt }}</p>
+                            </a>
+                            <div class="tagList">
+                            {% for tag in item.tags %}
+                              <a href="/collections/all/{{ tag }}" class="tagColWht">{{ tag }}</a>
+                            {% endfor %}
                             </div>
-                            <p class="itemTtl">FUCABORI CAP</p>
-                            <p class="itemPrice">￥8,000<span>（税抜）</span></p>
-                            <p class="itemTxt">８サイズ展開で頭の小さい人も大きい人も綺麗にかぶれる究極の1品</p>
-                          </a>
-                          <div class="tagList"><a href="#" class="tagColBry">人気</a><a href="#" class="tagColWht">8サイズ展開</a></div>
-                        </li> -->
+                          </li>
+                        {% endcapture %}
+
+                        
 
 
                       {%- when 'article' -%}
