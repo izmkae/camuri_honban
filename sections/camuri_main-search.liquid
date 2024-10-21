@@ -12,6 +12,7 @@
 {%- endif -%}
 
 <script src="{{ 'main-search.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'search.js' | asset_url }}" defer="defer"></script>
 
 {%- liquid
   assign sort_by = search.sort_by | default: search.default_sort_by
@@ -92,7 +93,7 @@
           {%- endif -%}
         </div>
 
-        <ul id="searchTypeList">
+        <ul id="searchTypeList" role="tabList">
           <li>
             <button class="tabSearchItem" role="tab" aria-controls="serachResultArticle" aria-selected="true" data-type="article">
             <p class="searchTypeTxt01"><span class="txtTypeName">JORNAL</span><span class="txtCnt">20</span></p>
@@ -222,26 +223,14 @@
 
 
 
-              <ul
-                class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
-                role="list"
-              >
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+                {% assign resultArticle = '' %}
+                {% assign resultProduct = '' %}
+                {% assign resultPage = '' %}
 
                 {%- for item in search.results -%}
                   {% assign lazy_load = false %}
@@ -249,36 +238,30 @@
                     {%- assign lazy_load = true -%}
                   {%- endif -%}
 
-                  <li
-                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                    {% if settings.animations_reveal_on_scroll %}
-                      data-cascade
-                    {% endif %}
-                  >
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
-                        {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
-                        {% render 'card-product',
-                          card_product: item,
-                          media_aspect_ratio: section.settings.image_ratio,
-                          image_shape: section.settings.image_shape,
-                          show_secondary_image: section.settings.show_secondary_image,
-                          show_vendor: section.settings.show_vendor,
-                          show_rating: section.settings.show_rating,
-                          lazy_load: lazy_load
-                        %}
+                       {% resultProduct | append: '<li>Product</li>' %}
+
+                       <!--  <li>
+                          <a href="#"> 
+                            <div class="imgBlock">
+                              <img src="_asset/images/dmy/img_item_01.png">
+                              <div class="tabWrap"><span class="labelLimited">限定</span><span class="labelSolidOut">SOLD OUT</span></div>
+                            </div>
+                            <p class="itemTtl">FUCABORI CAP</p>
+                            <p class="itemPrice">￥8,000<span>（税抜）</span></p>
+                            <p class="itemTxt">８サイズ展開で頭の小さい人も大きい人も綺麗にかぶれる究極の1品</p>
+                          </a>
+                          <div class="tagList"><a href="#" class="tagColBry">人気</a><a href="#" class="tagColWht">8サイズ展開</a></div>
+                        </li> -->
+
+
                       {%- when 'article' -%}
-                        {% render 'article-card',
-                          article: item,
-                          show_image: true,
-                          show_date: section.settings.article_show_date,
-                          show_author: section.settings.article_show_author,
-                          show_badge: true,
-                          media_aspect_ratio: 1,
-                          lazy_load: lazy_load
-                        %}
+                        {% resultArticle | append: '<li>Article</li>' %}
+                       
                       {%- when 'page' -%}
-                        <div class="article-card-wrapper card-wrapper underline-links-hover">
+                        {% resultPage | append: '<li>Page</li>' %}
+                        <!-- <div class="article-card-wrapper card-wrapper underline-links-hover">
                           <div
                             class="card card--card card--text ratio color-{{ settings.blog_card_color_scheme }}"
                             style="--ratio-percent: 100%;"
@@ -298,20 +281,26 @@
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </div> -->
                     {%- endcase -%}
                   </li>
                 {%- endfor -%}
 
 
-
-
-
-
-
-
-              </ul>
-
+                <div class="panel-group">
+                  <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
+                    <h2>JOURNAL</h2>
+                    <ul>{{ resultArticle }}</ul>
+                  </div>
+                  <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="true">
+                    <h2>ITEM</h2>
+                    <ul>{{ resultProduct }}</ul>
+                  </div>
+                  <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="true">
+                    <h2>PAGE</h2>
+                    <ul>{{ resultPage }}</ul>
+                  </div>
+                </div>
 
 
               {%- if paginate.pages > 1 -%}

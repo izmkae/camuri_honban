@@ -93,3 +93,20 @@ $max_font_size (px): 最大フォントサイズ
     font-size: 13px;
   }
 }
+
+#resultSec .panelGroup .panel {
+  display: none;
+}
+#resultSec .panelGroup .panel[aria-hidden="false"] {
+  display: block;
+  animation: show .4s ease;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
