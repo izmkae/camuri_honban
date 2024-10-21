@@ -237,8 +237,37 @@
                   {%- if forloop.index > 2 -%}
                     {%- assign lazy_load = true -%}
                   {%- endif -%}
+                  
+                  {%- case item.object_type -%}
+                    {%- when 'article' -%}
 
-                    {%- case item.object_type -%}
+                        {% capture resultArticle %}
+                          {{resultProduct}}
+                          <li class="blog-articles__article">
+                            <a href="{{ item.url }}"> 
+                              <div class="imgBlock">
+                                {%- if item.image -%}
+                                  <img src="{{ item.image.src | image_url: width: 320 }}">
+                                {%- else -%}
+                                  <img src="{{ 'img_noimage_sqr.png' | asset_url }}" alt="No image">
+                                {% endif %}
+                                <div class="tabWrap"><span>TIPS</span></div>
+                              </div>
+                              <p class="journalTtl">{{ item.title | escape }}</p>
+                              {%- if show_date -%}
+                                <p class="journalDate">{{ item.published_at | date: '%Y.%m.%d' }}</p>
+                              {%- endif -%}
+                            </a>
+                            {%- if item.tags != blank -%}
+                             <div class="tagList">
+                              {% for tag in item.tags -%}
+                                <span>#{{ tag }}</span>　
+                              {%- endfor %}
+                              </div>
+                            {%- endif -%}
+                          </li>
+                        {% endcapture %}
+
                       {%- when 'product' -%}
                       
                         {% capture resultProduct %}
@@ -267,35 +296,11 @@
                             </div>
                           </li>
                         {% endcapture %}
-
-                     {%- when 'article' -%}
-
-                        <li class="blog-articles__article">
-                          <a href="{{ item.url }}"> 
-                            <div class="imgBlock">
-                              {%- if item.image -%}
-                                <img src="{{ item.image.src | image_url: width: 320 }}">
-                              {%- else -%}
-                                <img src="{{ 'img_noimage_sqr.png' | asset_url }}" alt="No image">
-                              {% endif %}
-                              <div class="tabWrap"><span>TIPS</span></div>
-                            </div>
-                            <p class="journalTtl">{{ item.title | escape }}</p>
-                            {%- if show_date -%}
-                              <p class="journalDate">{{ item.published_at | date: '%Y.%m.%d' }}</p>
-                            {%- endif -%}
-                          </a>
-                          {%- if item.tags != blank -%}
-                           <div class="tagList">
-                            {% for tag in item.tags -%}
-                              <span>#{{ tag }}</span>　
-                            {%- endfor %}
-                            </div>
-                          {%- endif -%}
-                        </li>
                        
                       {%- when 'page' -%}
+                        {% capture resultPage %}
                         <li>page</li>
+                        {% endcapture %}
                        
                     {%- endcase -%}
                 {%- endfor -%}
