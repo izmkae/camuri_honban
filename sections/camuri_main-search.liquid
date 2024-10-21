@@ -240,7 +240,7 @@
 
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
-<p>product</p>
+                      {% capture resultProduct %}{{resultProduct}}/product{% endcapture %}
 
                        <!--  <li>
                           <a href="#"> 
