@@ -302,20 +302,22 @@
                 {%- endfor -%}
 
 
-                <div class="panel-group">
-                  <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
-                    <h2>JOURNAL</h2>
-                    <ul>{{ resultArticle }}</ul>
+                <section id="resultSec">
+                  <div class="panelGroup">
+                    <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="true">
+                      <h2>JOURNAL</h2>
+                      <ul id="journalList">{{ resultArticle }}</ul>
+                    </div>
+                    <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="false">
+                      <h2>ITEM</h2>
+                      <ul id="itemList">{{ resultProduct }}</ul>
+                    </div>
+                    <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="false">
+                      <h2>PAGE</h2>
+                      <ul>{{ resultPage }}</ul>
+                    </div>
                   </div>
-                  <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="true">
-                    <h2>ITEM</h2>
-                    <ul>{{ resultProduct }}</ul>
-                  </div>
-                  <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="true">
-                    <h2>PAGE</h2>
-                    <ul>{{ resultPage }}</ul>
-                  </div>
-                </div>
+                </section>
 
 
               {%- if paginate.pages > 1 -%}
