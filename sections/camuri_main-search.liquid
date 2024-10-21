@@ -240,8 +240,7 @@
 
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
-                      {{ resultProduct }}
-                       
+<p>product</p>
 
                        <!--  <li>
                           <a href="#"> 
@@ -258,10 +257,10 @@
 
 
                       {%- when 'article' -%}
-                        {% resultArticle | append: '<li>Article</li>' %}
+<p>article</p>
                        
                       {%- when 'page' -%}
-                        {% resultPage | append: '<li>Page</li>' %}
+<p>page</p>
                         <!-- <div class="article-card-wrapper card-wrapper underline-links-hover">
                           <div
                             class="card card--card card--text ratio color-{{ settings.blog_card_color_scheme }}"
