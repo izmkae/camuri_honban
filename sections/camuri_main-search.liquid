@@ -129,6 +129,15 @@
         {%- endif -%}
       {%- endif -%}
     <!-- </div> -->
+    {%- if search.performed -%}
+      {%- if section.settings.enable_sorting
+        and section.settings.filter_type == 'vertical'
+        and search.filters != empty
+      -%}
+        
+      {%- endif -%}
+
+
 
       <div
         {% if section.settings.filter_type == 'vertical' %}
@@ -242,6 +251,7 @@
                     {%- endcase -%}
                 {%- endfor -%}
 
+
                 <section id="resultSec">
                   <div class="panelGroup">
                     <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
@@ -259,9 +269,11 @@
                   </div>
                 </section>
 
+
               {%- if paginate.pages > 1 -%}
                 {% render 'pagination', paginate: paginate %}
               {%- endif -%}
+
 
       </div>
     {%- endif -%}
