@@ -93,6 +93,9 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 
+#resultSec .panelGroup {
+  padding: 0 10.31vw 0;
+}
 #resultSec .panelGroup .panel {
   display: none;
 }
