@@ -198,24 +198,7 @@
           class="facets-vertical page-width"
         {% endif %}
       >
-        {%- if search.filters != empty -%}
-          {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-            <aside
-              aria-labelledby="verticalTitle"
-              class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
-              id="main-search-filters"
-              data-id="{{ section.id }}"
-            >
-              {% render 'facets',
-                results: search,
-                enable_filtering: section.settings.enable_filtering,
-                enable_sorting: section.settings.enable_sorting,
-                filter_type: section.settings.filter_type,
-                paginate: paginate
-              %}
-            </aside>
-          {%- endif -%}
-        {%- endif -%}
+
        
 
 
@@ -304,19 +287,15 @@
                     {%- endcase -%}
                 {%- endfor -%}
 
-
                 <section id="resultSec">
                   <div class="panelGroup">
                     <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
-                      <h2>JOURNAL</h2>
                       <ul id="journalList">{{ resultArticle }}</ul>
                     </div>
                     <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="true">
-                      <h2>ITEM</h2>
                       <ul id="itemList">{{ resultProduct }}</ul>
                     </div>
                     <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="true">
-                      <h2>PAGE</h2>
                       <ul>{{ resultPage }}</ul>
                     </div>
                   </div>
