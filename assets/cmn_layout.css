@@ -296,8 +296,12 @@ li {
     font-size: 2.93vw;
   }
 }
-#gNaviWrapper #gNaviIn .hSearchBlock .field .field__label:focus ~ .field__label {
-  top: calc(var(--inputs-border-width) + .1rem);
+@media screen and (max-width: 800px) {
+  #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label:focus ~ .field__label {
+    top: calc(var(--inputs-border-width) + .1rem);
+    font-size: 2.93vw;
+    font-size: 2vw !important;
+  }
 }
 #gNaviWrapper #gNaviIn .hBtnStyle {
   display: block;

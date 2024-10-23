@@ -546,6 +546,7 @@ $max_font_size (px): 最大フォントサイズ
 @media screen and (max-width: 800px) {
   #tryitSec .flowTxtWrap .flowTxt {
     font-size: 13.33vw;
+    height: 15.5vw;
   }
 }
 #tryitSec .flowTxtWrap .flowTxt1 {
