@@ -276,12 +276,28 @@ li {
   width: 25.25vw;
   height: 4.32vw;
   background-color: transparent;
+  border: 1px solid blk;
+}
+@media screen and (max-width: 800px) {
+  #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input {
+    width: 100%;
+    height: 11.2vw;
+  }
 }
 #gNaviWrapper #gNaviIn .hSearchBlock .field .field__button {
   height: 6rem;
 }
 #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label {
   line-height: 2.5;
+}
+@media screen and (max-width: 800px) {
+  #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label {
+    line-height: 2;
+    font-size: 2.93vw;
+  }
+}
+#gNaviWrapper #gNaviIn .hSearchBlock .field .field__label:focus ~ .field__label {
+  top: calc(var(--inputs-border-width) + .1rem);
 }
 #gNaviWrapper #gNaviIn .hBtnStyle {
   display: block;

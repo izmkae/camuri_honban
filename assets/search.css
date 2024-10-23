@@ -25,6 +25,12 @@ $max_font_size (px): 最大フォントサイズ
   max-width: 1100px;
   margin: auto;
 }
+@media screen and (max-width: 800px) {
+  .contentIn {
+    width: 100%;
+    padding: 8.53vw;
+  }
+}
 
 .contentPcIn {
   width: 92vw;
@@ -42,7 +48,54 @@ $max_font_size (px): 最大フォントサイズ
   padding-bottom: 77px;
   background-color: #E1DFD9;
 }
+#searchFormSec .searchText {
+  width: 36.7vw;
+  max-width: 510px;
+  margin: 0 auto 22px;
+  font-size: 1.44vw;
+  font-weight: bold;
+}
+@media screen and (min-width: 1388.88889px) {
+  #searchFormSec .searchText {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #searchFormSec .searchText {
+    font-size: 4.26vw;
+  }
+}
+#searchFormSec .searchText span {
+  font-size: 2.16vw;
+}
+@media screen and (min-width: 1388.88889px) {
+  #searchFormSec .searchText span {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #searchFormSec .searchText span {
+    font-size: 5.33vw;
+  }
+}
+#searchFormSec input[type=text], #searchFormSec input[type=search] {
+  width: 36.7vw;
+  max-width: 510px;
+  height: 60px;
+  border: 1px solid #000000;
+  background-color: transparent;
+  padding: 2px 10px;
+  font-size: 14px;
+  margin: auto;
+  display: block;
+}
+@media screen and (max-width: 800px) {
+  #searchFormSec input[type=text], #searchFormSec input[type=search] {
+    width: 100vw;
+  }
+}
 #searchFormSec #searchTypeList {
+  margin-top: 68px;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: flex-start;
@@ -91,6 +144,9 @@ $max_font_size (px): 最大フォントサイズ
   #searchFormSec #searchTypeList li .searchTypeTxt02 {
     font-size: 13px;
   }
+}
+#searchFormSec #searchTypeList li[aria-selected="false"] {
+  color: #808080;
 }
 
 #resultSec {
