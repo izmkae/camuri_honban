@@ -377,6 +377,19 @@ $max_font_size (px): 最大フォントサイズ
 #journalSec #topJournalList li .imgBlock {
   position: relative;
 }
+#journalSec #topJournalList li .imgBlock::before {
+  content: "";
+  padding-top: 100%;
+  display: block;
+}
+#journalSec #topJournalList li .imgBlock img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
 #journalSec #topJournalList li .imgBlock .tabWrap {
   position: absolute;
   bottom: 0;
