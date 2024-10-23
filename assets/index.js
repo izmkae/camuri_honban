@@ -29,15 +29,15 @@ $(document).ready(function(){
 	var windowSm = 800;
 	if ($(window).width() > windowSm) {
 	
-	$('#journalList').slick({
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			infinite: false,
-			arrows: true,
-			dots: false,
-		    prevArrow: '<img src="./img_arrow_left.png" class="slide-arrow prev-arrow">',
-		    nextArrow: '<img src="./img_arrow_right.png" class="slide-arrow next-arrow">',
-		});
+	$('#topJournalList').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		infinite: false,
+		arrows: true,
+		dots: false,
+	    prevArrow: '<img src="assets/img_arrow_left.png" class="slide-arrow prev-arrow">',
+	    nextArrow: '<img src="assets/img_arrow_right.png" class="slide-arrow next-arrow">',
+	});
 	}
 
 	
