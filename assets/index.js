@@ -35,8 +35,6 @@ $(document).ready(function(){
 		infinite: false,
 		arrows: true,
 		dots: false,
-	    prevArrow: '<img src="assets/img_arrow_left.png" class="slide-arrow prev-arrow">',
-	    nextArrow: '<img src="assets/img_arrow_right.png" class="slide-arrow next-arrow">',
 	});
 	}
 
