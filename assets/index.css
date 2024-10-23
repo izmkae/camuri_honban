@@ -302,7 +302,7 @@ $max_font_size (px): 最大フォントサイズ
   position: relative;
 }
 @media screen and (max-width: 800px) {
-  #journalSec #journalList {
+  #journalSec #topJournalList {
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: flex-start;
@@ -317,66 +317,77 @@ $max_font_size (px): 最大フォントサイズ
     flex-flow: row wrap;
   }
 }
-#journalSec #journalList li {
+#journalSec #topJournalList li {
   text-align: left;
   margin: 0 1.19vw;
 }
 @media screen and (max-width: 800px) {
-  #journalSec #journalList li {
+  #journalSec #topJournalList li {
     width: 43.2vw;
     margin: 8vw 0;
   }
 }
-#journalSec #journalList li .imgBlock {
+#journalSec #topJournalList li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#journalSec #topJournalList li a:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -khtml-opacity: 0.7;
+  -ms-filter: "alpha(opacity=$opacity)";
+}
+#journalSec #topJournalList li .imgBlock {
   position: relative;
 }
-#journalSec #journalList li .imgBlock .tabWrap {
+#journalSec #topJournalList li .imgBlock .tabWrap {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-#journalSec #journalList li .imgBlock .tabWrap span {
+#journalSec #topJournalList li .imgBlock .tabWrap span {
   background-color: #E1DFD9;
   padding: 0.12vw 0.36vw;
   font-size: 1.01vw;
   font-weight: bold;
 }
 @media screen and (max-width: 800px) {
-  #journalSec #journalList li .imgBlock .tabWrap span {
+  #journalSec #topJournalList li .imgBlock .tabWrap span {
     padding: 1.06vw 2.13vw;
     font-size: 2.93vw;
   }
 }
-#journalSec #journalList li .journalTtl {
+#journalSec #topJournalList li .journalTtl {
   margin-top: 1.81vw;
   font-size: 1.28vw;
   font-weight: bold;
   line-height: 1.4;
 }
 @media screen and (max-width: 800px) {
-  #journalSec #journalList li .journalTtl {
+  #journalSec #topJournalList li .journalTtl {
     margin-top: 4vw;
     font-size: 3.73vw;
   }
 }
-#journalSec #journalList li .journalDate {
+#journalSec #topJournalList li .journalDate {
   margin-top: 1vw;
   font-family: "Poppins", sans-serif;
   font-size: 1.01vw;
   font-weight: 600;
 }
 @media screen and (max-width: 800px) {
-  #journalSec #journalList li .journalDate {
+  #journalSec #topJournalList li .journalDate {
     margin-top: 2vw;
     font-size: 2.93vw;
   }
 }
-#journalSec #journalList li .tagList {
+#journalSec #topJournalList li .tagList {
   margin-top: 1vw;
   font-size: 1.01vw;
 }
 @media screen and (max-width: 800px) {
-  #journalSec #journalList li .tagList {
+  #journalSec #topJournalList li .tagList {
     font-size: 2.93vw;
   }
 }
