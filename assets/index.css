@@ -317,6 +317,42 @@ $max_font_size (px): 最大フォントサイズ
     flex-flow: row wrap;
   }
 }
+#journalSec #topJournalList .slick-next {
+  top: 50%;
+  right: -5vw;
+  z-index: 10;
+  height: 65px;
+  width: 65px;
+}
+#journalSec #topJournalList .slick-next::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(./img_arrow_right.png) !important;
+  background-size: cover !important;
+  opacity: 1;
+}
+#journalSec #topJournalList .slick-next.slick-disabled::before {
+  opacity: 0.7;
+}
+#journalSec #topJournalList .slick-prev {
+  top: 50%;
+  left: -5vw;
+  z-index: 10;
+  height: 65px;
+  width: 65px;
+}
+#journalSec #topJournalList .slick-prev::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(./img_arrow_left.png) !important;
+  background-size: cover !important;
+  opacity: 1;
+}
+#journalSec #topJournalList .slick-prev.slick-disabled::before {
+  opacity: 0.7;
+}
 #journalSec #topJournalList li {
   text-align: left;
   margin: 0 1.19vw;
