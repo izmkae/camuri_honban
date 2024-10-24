@@ -70,28 +70,107 @@
             </form>
           </main-search>
         </div>
-        {%- if search.performed -%}
-         {%- assign resultsCount = search.results_count -%}
-         {%- assign articleCount = search.article.size -%}
-         {%- assign productCount = search.products_count -%}
-         {%- assign pageCount = search.page_count -%}
-        {%- endif -%}
+
+        {% assign resultArticleCount = 0 %}
+        {% assign resultProductCount = 0 %}
+        {% assign resultPageCount = 0 %}
+
+        {% assign resultArticle = '' %}
+        {% assign resultProduct = '' %}
+        {% assign resultPage = '' %}
+
+        {%- for item in search.results -%}
+          {% assign lazy_load = false %}
+          {%- if forloop.index > 2 -%}
+            {%- assign lazy_load = true -%}
+          {%- endif -%}
+          
+          {%- case item.object_type -%}
+            {%- when 'article' -%}
+
+                {% assign resultArticleCount = resultArticleCount | plus: 1 %}
+                {% capture resultArticle %}
+                  {{resultArticle}}
+                  <li class="blog-articles__article">
+                    <a href="{{ item.url }}"> 
+                      <div class="imgBlock">
+                        {%- if item.image -%}
+                          <img src="{{ item.image.src | image_url: width: 320 }}">
+                        {%- else -%}
+                          <img src="{{ 'img_noimage_sqr.png' | asset_url }}" alt="No image">
+                        {% endif %}
+                        <div class="tabWrap"><span>TIPS</span></div>
+                      </div>
+                      <p class="journalTtl">{{ item.title | escape }}</p>
+                      {%- if show_date -%}
+                        <p class="journalDate">{{ item.published_at | date: '%Y.%m.%d' }}</p>
+                      {%- endif -%}
+                    </a>
+                    {%- if item.tags != blank -%}
+                     <div class="tagList">
+                      {% for tag in item.tags -%}
+                        <span>#{{ tag }}</span>　
+                      {%- endfor %}
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {% endcapture %}
+
+              {%- when 'product' -%}
+              
+                {% assign resultProductCount = resultProductCount | plus: 1 %}
+                {% capture resultProduct %}
+                  {{resultProduct}}
+                  <li>
+                    <a href="{{ item.url }}"> 
+                      <div class="imgBlock">
+                        <img src="{{ item.featured_image | product_img_url: 'large' }}" alt="{{ item.title }}">
+                        <div class="tabWrap">
+                          {%- if item.metafields.camuri.label_limited -%}
+                          <span class="labelLimited">LIMITED</span>
+                          {%- endif -%}
+                          {%- if item.available == false -%}
+                          <span class="labelSolidOut">SOLD OUT</span>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                      <p class="itemTtl">{{ item.title }}</p>
+                      <p class="itemPrice">{{ item.price | money }}<span>（税込）</span></p>
+                      <p class="itemTxt">{{ item.metafields.camuri.excerpt }}</p>
+                    </a>
+                    <div class="tagList">
+                    {% for tag in item.tags %}
+                      <a href="/collections/all/{{ tag }}" class="tagColWht">{{ tag }}</a>
+                    {% endfor %}
+                    </div>
+                  </li>
+                {% endcapture %}
+               
+              {%- when 'page' -%}
+
+                {% assign resultPageCount = resultPageCount | plus: 1 %}
+                {% capture resultPage %}
+                <li>page</li>
+                {% endcapture %}
+            {%- endcase -%}
+        {%- endfor -%}
+
         <ul id="searchTypeList" role="tabList">
           <li>
             <button class="tabSearchItem" role="tab" aria-controls="serachResultArticle" aria-selected="true" data-type="article">
-            <p class="searchTypeTxt01"><span class="txtTypeName">JORNAL</span><span class="txtCnt">{{ articleCount }}</span></p>
+            <p class="searchTypeTxt01"><span class="txtTypeName">JORNAL</span><span class="txtCnt">{{ resultArticleCount }}</span></p>
             <p class="searchTypeTxt02">よみもの</p>
             </button>
           </li>
           <li>
             <button class="tabSearchItem" role="tab" aria-controls="serachResultProduct" aria-selected="false" data-type="product">
-            <p class="searchTypeTxt01"><span class="txtTypeName">ITEM</span><span class="txtCnt">{{ productCount }}</span></p>
+            <p class="searchTypeTxt01"><span class="txtTypeName">ITEM</span><span class="txtCnt">{{ resultProductCount }}</span></p>
             <p class="searchTypeTxt02">商品</p>
             </button>
           </li>
           <li>
             <button class="tabSearchItem" role="tab" aria-controls="serachResultPage" aria-selected="false" data-type="page">
-            <p class="searchTypeTxt01"><span class="txtTypeName">PAGE</span><span class="txtCnt">{{ pageCount }}</span></p>
+            <p class="searchTypeTxt01"><span class="txtTypeName">PAGE</span><span class="txtCnt">{{ resultPageCount }}</span></p>
             <p class="searchTypeTxt02">その他のページ</p>
             </button>
           </li>
@@ -182,120 +261,27 @@
         {% endif %}
       >
 
-       
+        <section id="resultSec">
+          <div class="panelGroup">
+            <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
+              件数：{{ resultArticleCount }}
+              <ul id="journalList">{{ resultArticle }}</ul>
+            </div>
+            <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="true">
+              件数：{{ resultProductCount }}
+              <ul id="itemList">{{ resultProduct }}</ul>
+            </div>
+            <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="true">
+              件数：{{ resultPageCount }}
+              <ul>{{ resultPage }}</ul>
+            </div>
+          </div>
+        </section>
 
 
-
-
-
-
-
-
-                {% assign resultArticleCount = 0 %}
-                {% assign resultProductCount = 0 %}
-                {% assign resultPageCount = 0 %}
-
-                {% assign resultArticle = '' %}
-                {% assign resultProduct = '' %}
-                {% assign resultPage = '' %}
-
-                {%- for item in search.results -%}
-                  {% assign lazy_load = false %}
-                  {%- if forloop.index > 2 -%}
-                    {%- assign lazy_load = true -%}
-                  {%- endif -%}
-                  
-                  {%- case item.object_type -%}
-                    {%- when 'article' -%}
-
-                        {% assign resultArticleCount = resultArticleCount | plus: 1 %}
-                        {% capture resultArticle %}
-                          {{resultArticle}}
-                          <li class="blog-articles__article">
-                            <a href="{{ item.url }}"> 
-                              <div class="imgBlock">
-                                {%- if item.image -%}
-                                  <img src="{{ item.image.src | image_url: width: 320 }}">
-                                {%- else -%}
-                                  <img src="{{ 'img_noimage_sqr.png' | asset_url }}" alt="No image">
-                                {% endif %}
-                                <div class="tabWrap"><span>TIPS</span></div>
-                              </div>
-                              <p class="journalTtl">{{ item.title | escape }}</p>
-                              {%- if show_date -%}
-                                <p class="journalDate">{{ item.published_at | date: '%Y.%m.%d' }}</p>
-                              {%- endif -%}
-                            </a>
-                            {%- if item.tags != blank -%}
-                             <div class="tagList">
-                              {% for tag in item.tags -%}
-                                <span>#{{ tag }}</span>　
-                              {%- endfor %}
-                              </div>
-                            {%- endif -%}
-                          </li>
-                        {% endcapture %}
-
-                      {%- when 'product' -%}
-                      
-                        {% assign resultProductCount = resultProductCount | plus: 1 %}
-                        {% capture resultProduct %}
-                          {{resultProduct}}
-                          <li>
-                            <a href="{{ item.url }}"> 
-                              <div class="imgBlock">
-                                <img src="{{ item.featured_image | product_img_url: 'large' }}" alt="{{ item.title }}">
-                                <div class="tabWrap">
-                                  {%- if item.metafields.camuri.label_limited -%}
-                                  <span class="labelLimited">LIMITED</span>
-                                  {%- endif -%}
-                                  {%- if item.available == false -%}
-                                  <span class="labelSolidOut">SOLD OUT</span>
-                                  {%- endif -%}
-                                </div>
-                              </div>
-                              <p class="itemTtl">{{ item.title }}</p>
-                              <p class="itemPrice">{{ item.price | money }}<span>（税込）</span></p>
-                              <p class="itemTxt">{{ item.metafields.camuri.excerpt }}</p>
-                            </a>
-                            <div class="tagList">
-                            {% for tag in item.tags %}
-                              <a href="/collections/all/{{ tag }}" class="tagColWht">{{ tag }}</a>
-                            {% endfor %}
-                            </div>
-                          </li>
-                        {% endcapture %}
-                       
-                      {%- when 'page' -%}
-
-                        {% assign resultPageCount = resultPageCount | plus: 1 %}
-                        {% capture resultPage %}
-                        <li>page</li>
-                        {% endcapture %}
-                    {%- endcase -%}
-                {%- endfor -%}
-
-                <section id="resultSec">
-                  <div class="panelGroup">
-                    <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
-                      件数：{{ resultArticleCount }}
-                      <ul id="journalList">{{ resultArticle }}</ul>
-                    </div>
-                    <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="true">
-                      件数：{{ resultProductCount }}
-                      <ul id="itemList">{{ resultProduct }}</ul>
-                    </div>
-                    <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="true">
-                      件数：{{ resultPageCount }}
-                      <ul>{{ resultPage }}</ul>
-                    </div>
-                  </div>
-                </section>
-
-
-              {%- if paginate.pages > 1 -%}
-                {% render 'pagination', paginate: paginate %}
-              {%- endif -%}
+      {%- if paginate.pages > 1 -%}
+        {% render 'pagination', paginate: paginate %}
+      {%- endif -%}
 
 
       </div>
