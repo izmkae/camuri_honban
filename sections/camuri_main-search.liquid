@@ -72,7 +72,7 @@
         </div>
         {%- if search.performed -%}
          {%- assign resultsCount = search.results_count -%}
-         {%- assign articleCount = search.article_count -%}
+         {%- assign articleCount = search.article.size -%}
          {%- assign productCount = search.products_count -%}
          {%- assign pageCount = search.page_count -%}
         {%- endif -%}
