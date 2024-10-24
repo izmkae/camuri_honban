@@ -96,7 +96,7 @@ $max_font_size (px): 最大フォントサイズ
   height: 60px;
   border: 1px solid #000000;
   background-color: transparent;
-  padding: 2px 18px;
+  padding: 14px 18px 2px;
   font-size: 20px;
   margin: auto;
   display: block;
@@ -109,6 +109,7 @@ $max_font_size (px): 最大フォントサイズ
 }
 #searchFormSec #searchTypeList {
   margin-top: 68px;
+  padding-bottom: 7vw;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: flex-start;
@@ -136,6 +137,9 @@ $max_font_size (px): 最大フォントサイズ
   appearance: none;
   touch-action: manipulation;
 }
+#searchFormSec #searchTypeList li button[aria-selected="false"] {
+  color: #808080;
+}
 #searchFormSec #searchTypeList li .searchTypeTxt01 {
   font-size: 1.8vw;
   font-family: "Poppins", sans-serif;
@@ -157,9 +161,6 @@ $max_font_size (px): 最大フォントサイズ
   #searchFormSec #searchTypeList li .searchTypeTxt02 {
     font-size: 13px;
   }
-}
-#searchFormSec #searchTypeList li[aria-selected="false"] {
-  color: #808080;
 }
 
 #resultSec {
