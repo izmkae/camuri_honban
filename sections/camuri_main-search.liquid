@@ -75,9 +75,6 @@
          {%- assign articleCount = search.article.size -%}
          {%- assign productCount = search.products_count -%}
          {%- assign pageCount = search.page_count -%}
-
- {{ search.results_count }}
-         {{ search.products_count }}
         {%- endif -%}
         <ul id="searchTypeList" role="tabList">
           <li>
@@ -194,8 +191,9 @@
 
 
 
-
-
+                {% assign resultArticleCount = 0 %}
+                {% assign resultProductCount = 0 %}
+                {% assign resultPageCount = 0 %}
 
                 {% assign resultArticle = '' %}
                 {% assign resultProduct = '' %}
@@ -210,6 +208,7 @@
                   {%- case item.object_type -%}
                     {%- when 'article' -%}
 
+                        {% assign resultArticleCount = resultArticleCount | plus: 1 %}
                         {% capture resultArticle %}
                           {{resultArticle}}
                           <li class="blog-articles__article">
@@ -239,6 +238,7 @@
 
                       {%- when 'product' -%}
                       
+                        {% assign resultProductCount = resultProductCount | plus: 1 %}
                         {% capture resultProduct %}
                           {{resultProduct}}
                           <li>
@@ -267,6 +267,8 @@
                         {% endcapture %}
                        
                       {%- when 'page' -%}
+
+                        {% assign resultPageCount = resultPageCount | plus: 1 %}
                         {% capture resultPage %}
                         <li>page</li>
                         {% endcapture %}
@@ -276,12 +278,15 @@
                 <section id="resultSec">
                   <div class="panelGroup">
                     <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
+                      件数：{{ resultArticleCount }}
                       <ul id="journalList">{{ resultArticle }}</ul>
                     </div>
                     <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="true">
+                      件数：{{ resultProductCount }}
                       <ul id="itemList">{{ resultProduct }}</ul>
                     </div>
                     <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="true">
+                      件数：{{ resultPageCount }}
                       <ul>{{ resultPage }}</ul>
                     </div>
                   </div>
