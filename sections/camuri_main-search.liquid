@@ -72,6 +72,9 @@
         </div>
         {%- if search.performed -%}
          {%- assign resultsCount = search.results_count -%}
+         {%- assign articleCount = search.article_count -%}
+         {%- assign productCount = search.products_count -%}
+         {%- assign pageCount = search.page_count -%}
         {%- endif -%}
         <ul id="searchTypeList" role="tabList">
           <li>
