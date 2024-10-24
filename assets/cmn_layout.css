@@ -172,6 +172,9 @@ li {
     padding: 1.3vw 4vw 0;
   }
 }
+.headerIn .hLogo, .mainVisualIn .hLogo {
+  font-size: 3.68vw;
+}
 .headerIn .hLogo img, .mainVisualIn .hLogo img {
   width: 4.54vw;
 }
@@ -285,7 +288,7 @@ li {
   }
 }
 #gNaviWrapper #gNaviIn .hSearchBlock .field .field__button {
-  height: 6rem;
+  height: 100%;
 }
 #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label {
   line-height: 2.5;
@@ -531,6 +534,14 @@ li {
 }
 #gNaviWrapper #gNaviIn .menuTtl a:hover {
   color: #808080;
+}
+
+.cart-count-bubble {
+  background-color: transparent;
+  left: auto;
+  right: 1.2rem;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 /*-------------------------------------------------------------------
