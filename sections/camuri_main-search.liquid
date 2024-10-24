@@ -70,11 +70,13 @@
             </form>
           </main-search>
         </div>
-
+        {%- if search.performed -%}
+         {%- assign resultsCount = search.results_count -%}
+        {%- endif -%}
         <ul id="searchTypeList" role="tabList">
           <li>
             <button class="tabSearchItem" role="tab" aria-controls="serachResultArticle" aria-selected="true" data-type="article">
-            <p class="searchTypeTxt01"><span class="txtTypeName">JORNAL</span><span class="txtCnt">20</span></p>
+            <p class="searchTypeTxt01"><span class="txtTypeName">JORNAL</span><span class="txtCnt">{{ resultsCount }}</span></p>
             <p class="searchTypeTxt02">よみもの</p>
             </button>
           </li>
