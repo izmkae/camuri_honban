@@ -178,38 +178,25 @@
       </div><!-- contentIn -->
     </section>
 
- 
-
-
-
-      <div
-        {% if section.settings.filter_type == 'vertical' %}
-          class="facets-vertical page-width"
-        {% endif %}
-      >
-
-        <section id="resultSec">
-          <div class="panelGroup">
-            <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
-              <ul id="journalList">{{ resultArticle }}</ul>
-            </div>
-            <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="true">
-              <ul id="itemList">{{ resultProduct }}</ul>
-            </div>
-            <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="true">
-              <ul>{{ resultPage }}</ul>
-            </div>
-          </div>
-        </section>
+    <section id="resultSec">
+      <div class="panelGroup">
+        <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
+          <ul id="journalList">{{ resultArticle }}</ul>
+        </div>
+        <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="true">
+          <ul id="itemList">{{ resultProduct }}</ul>
+        </div>
+        <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="true">
+          <ul>{{ resultPage }}</ul>
+        </div>
+      </div>
+    </section>
 
 
       {%- if paginate.pages > 1 -%}
         {% render 'pagination', paginate: paginate %}
       {%- endif -%}
 
-
-      </div>
-    {%- endif -%}
   </div>
 {% endpaginate %}
 
