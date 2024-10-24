@@ -213,6 +213,64 @@ $max_font_size (px): 最大フォントサイズ
   display: block;
   animation: show .4s ease;
 }
+#resultSec #pageList {
+  padding-top: 7.5vw;
+  max-width: 510px;
+  margin: auto;
+  border-bottom: 1px solid #808080;
+}
+@media screen and (max-width: 800px) {
+  #resultSec #pageList {
+    padding-top: 15vw;
+    margin-bottom: 15vw;
+    width: 90%;
+  }
+}
+#resultSec #pageList li {
+  padding: 15px 0;
+  border-top: 1px solid #808080;
+}
+#resultSec #pageList li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#resultSec #pageList li a::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #000000;
+  border-right: 1px solid #000000;
+  transform: rotate(45deg);
+  transition: all .3s;
+}
+@media screen and (max-width: 800px) {
+  #resultSec #pageList li a::after {
+    right: 10px;
+  }
+}
+@media print, screen and (min-width: 1200px) {
+  #resultSec #pageList li a:hover {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+  }
+  #resultSec #pageList li a:hover p {
+    color: #808080;
+  }
+  #resultSec #pageList li a:hover::after {
+    border-top: 1px solid #808080;
+    border-right: 1px solid #808080;
+    right: 10px;
+  }
+}
 
 @keyframes show {
   from {
