@@ -1,95 +1,183 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,300;0,600;1,300;1,600&display=swap");
 /*
-Error: $color: "var(--color-foreground)" is not a color for `rgba'
-        on line 92 of /Users/izumikaeriyama/Documents/project/nakota/camuri/html/_asset/scss/search.scss
-
-87: 			position: absolute;
-88: 			top: calc(100% + 0.1rem);
-89: 			left: -0.1rem;
-90: 			border-width: var(--popup-border-width);
-91: 			border-style: solid;
-92: 			border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
-93: 			background-color: rgb(var(--color-background));
-94: 			z-index: 3;
-95: 			border-bottom-right-radius: var(--popup-corner-radius);
-96: 			border-bottom-left-radius: var(--popup-corner-radius);
-97: 			box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
-
-Backtrace:
-/Users/izumikaeriyama/Documents/project/nakota/camuri/html/_asset/scss/search.scss:92
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/script/tree/funcall.rb:310:in `reformat_argument_error'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/script/tree/funcall.rb:149:in `rescue in _perform'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/script/tree/funcall.rb:122:in `_perform'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/lib/ruby/gems/3.1.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/bin/compass:25:in `load'
-/Users/izumikaeriyama/.rbenv/versions/3.1.6/bin/compass:25:in `<main>'
+min-font-size ($font_size, $min_font_size)
+$font_size (vw):     可変フォントサイズ
+$min_font_size (px): 最小フォントサイズ
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: $color: \"var(--color-foreground)\" is not a color for `rgba'\A         on line 92 of /Users/izumikaeriyama/Documents/project/nakota/camuri/html/_asset/scss/search.scss\A \A 87: 			position: absolute;\A 88: 			top: calc(100% + 0.1rem);\A 89: 			left: -0.1rem;\A 90: 			border-width: var(--popup-border-width);\A 91: 			border-style: solid;\A 92: 			border-color: rgba(var(--color-foreground), var(--popup-border-opacity));\A 93: 			background-color: rgb(var(--color-background));\A 94: 			z-index: 3;\A 95: 			border-bottom-right-radius: var(--popup-corner-radius);\A 96: 			border-bottom-left-radius: var(--popup-corner-radius);\A 97: 			box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)"; }
+/*
+max-font-size ($font_size, $max_font_size)
+$font_size (vw):     可変フォントサイズ
+$max_font_size (px): 最大フォントサイズ
+*/
+/*-------------------------------------------------------------------
+	Override
+-------------------------------------------------------------------*/
+.content {
+  position: relative;
+  padding-top: 7.21vw;
+}
+
+/*-------------------------------------------------------------------
+	Search
+-------------------------------------------------------------------*/
+.contentIn {
+  width: 92vw;
+  max-width: 1100px;
+  margin: auto;
+}
+@media screen and (max-width: 800px) {
+  .contentIn {
+    width: 100%;
+    padding: 8.53vw;
+  }
+}
+
+.contentPcIn {
+  width: 92vw;
+  max-width: 1100px;
+  margin: auto;
+}
+@media screen and (max-width: 800px) {
+  .contentPcIn {
+    width: 100vw;
+  }
+}
+
+#searchFormSec {
+  padding-top: 72px;
+  padding-bottom: 77px;
+  background-color: #E1DFD9;
+}
+#searchFormSec .searchText {
+  width: 36.7vw;
+  max-width: 510px;
+  margin: 0 auto 22px;
+  font-size: 1.44vw;
+  font-weight: bold;
+}
+@media screen and (min-width: 1388.88889px) {
+  #searchFormSec .searchText {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #searchFormSec .searchText {
+    font-size: 4.26vw;
+  }
+}
+#searchFormSec .searchText span {
+  font-size: 2.16vw;
+}
+@media screen and (min-width: 1388.88889px) {
+  #searchFormSec .searchText span {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #searchFormSec .searchText span {
+    font-size: 5.33vw;
+  }
+}
+#searchFormSec .field {
+  width: 36.7vw;
+  max-width: 510px;
+  margin: auto;
+  transition: none;
+}
+@media screen and (max-width: 800px) {
+  #searchFormSec .field {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+#searchFormSec .field input[type=text], #searchFormSec .field input[type=search] {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #000000;
+  background-color: transparent;
+  padding: 2px 18px;
+  font-size: 20px;
+  margin: auto;
+  display: block;
+}
+#searchFormSec .field .field__button {
+  height: 100%;
+}
+#searchFormSec .field .field__input:focus {
+  box-shadow: none;
+}
+#searchFormSec #searchTypeList {
+  margin-top: 68px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+#searchFormSec #searchTypeList li {
+  margin: 0 4.5%;
+}
+#searchFormSec #searchTypeList li button {
+  padding: 0;
+  overflow: visible;
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+}
+#searchFormSec #searchTypeList li .searchTypeTxt01 {
+  font-size: 1.8vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+@media screen and (min-width: 1388.88889px) {
+  #searchFormSec #searchTypeList li .searchTypeTxt01 {
+    font-size: 25px;
+  }
+}
+#searchFormSec #searchTypeList li .searchTypeTxt01 .txtCnt {
+  margin-left: 18px;
+}
+#searchFormSec #searchTypeList li .searchTypeTxt02 {
+  font-size: 0.93vw;
+  text-align: left;
+}
+@media screen and (min-width: 1397.84946px) {
+  #searchFormSec #searchTypeList li .searchTypeTxt02 {
+    font-size: 13px;
+  }
+}
+#searchFormSec #searchTypeList li[aria-selected="false"] {
+  color: #808080;
+}
+
+#resultSec {
+  padding: 0 10.31vw 0;
+}
+#resultSec .panelGroup .panel {
+  display: none;
+}
+#resultSec .panelGroup .panel[aria-hidden="false"] {
+  display: block;
+  animation: show .4s ease;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
