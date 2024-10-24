@@ -71,23 +71,24 @@
           </main-search>
         </div>
 
-        {% assign resultArticleCount = 0 %}
-        {% assign resultProductCount = 0 %}
-        {% assign resultPageCount = 0 %}
+        {%- if search.performed -%}
+          {% assign resultArticleCount = 0 %}
+          {% assign resultProductCount = 0 %}
+          {% assign resultPageCount = 0 %}
 
-        {% assign resultArticle = '' %}
-        {% assign resultProduct = '' %}
-        {% assign resultPage = '' %}
+          {% assign resultArticle = '' %}
+          {% assign resultProduct = '' %}
+          {% assign resultPage = '' %}
 
-        {%- for item in search.results -%}
-          {% assign lazy_load = false %}
-          {%- if forloop.index > 2 -%}
-            {%- assign lazy_load = true -%}
-          {%- endif -%}
-          
-          {%- case item.object_type -%}
-            {%- when 'article' -%}
+          {%- for item in search.results -%}
+            {% assign lazy_load = false %}
+            {%- if forloop.index > 2 -%}
+              {%- assign lazy_load = true -%}
+            {%- endif -%}
+            
+            {%- case item.object_type -%}
 
+              {%- when 'article' -%}
                 {% assign resultArticleCount = resultArticleCount | plus: 1 %}
                 {% capture resultArticle %}
                   {{resultArticle}}
@@ -117,7 +118,6 @@
                 {% endcapture %}
 
               {%- when 'product' -%}
-              
                 {% assign resultProductCount = resultProductCount | plus: 1 %}
                 {% capture resultProduct %}
                   {{resultProduct}}
@@ -147,14 +147,13 @@
                 {% endcapture %}
                
               {%- when 'page' -%}
-
                 {% assign resultPageCount = resultPageCount | plus: 1 %}
                 {% capture resultPage %}
                 <li>page</li>
                 {% endcapture %}
             {%- endcase -%}
-        {%- endfor -%}
-
+          {%- endfor -%}
+        {%- endif -%}
         <ul id="searchTypeList" role="tabList">
           <li>
             <button class="tabSearchItem" role="tab" aria-controls="serachResultArticle" aria-selected="true" data-type="article">
@@ -178,21 +177,13 @@
       </div><!-- contentIn -->
     </section>
 
-      {%- if search.performed -%}
-
-
-      {%- endif -%}
-    <!-- </div> -->
-    {%- if search.performed -%}
       
 
 
+      
+    <!-- </div> -->
+    {%- if search.performed -%}
 
-      <div
-        {% if section.settings.filter_type == 'vertical' %}
-          class="facets-vertical page-width"
-        {% endif %}
-      >
 
         <section id="resultSec">
           <div class="panelGroup">
@@ -214,7 +205,6 @@
       {%- endif -%}
 
 
-      </div>
     {%- endif -%}
   </div>
 {% endpaginate %}
