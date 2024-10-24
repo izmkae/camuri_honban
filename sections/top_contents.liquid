@@ -4,6 +4,7 @@
       <li>
           <a href="{{ section.settings.topContentLink }}">
               <img src="{{  block.settings.topContentImage | img_url: 'master' }}">
+              <img src="{{ 'img_bgd.png' | asset_url }}" class="bgd">
               <div class="txtBlock">
                   <p class="ttlStyle">{{ block.settings.topContentHeading | newline_to_br }}</p>
                   <div class="btnBlock"><span class="btnStyleW01">VIEW</span></div>
