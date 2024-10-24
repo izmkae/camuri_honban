@@ -28,8 +28,7 @@ $max_font_size (px): 最大フォントサイズ
 }
 @media screen and (max-width: 800px) {
   .contentIn {
-    width: 100%;
-    padding: 8.53vw;
+    width: 91.48vw;
   }
 }
 
@@ -201,6 +200,11 @@ $max_font_size (px): 最大フォントサイズ
 
 #resultSec {
   padding: 0 10.31vw 10vw;
+}
+@media screen and (max-width: 800px) {
+  #resultSec {
+    padding: 0;
+  }
 }
 #resultSec .panelGroup .panel {
   display: none;
