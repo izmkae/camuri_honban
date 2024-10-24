@@ -162,6 +162,9 @@ $max_font_size (px): 最大フォントサイズ
     font-size: 13px;
   }
 }
+#searchFormSec #searchTypeList li .invalidTxt {
+  color: #808080;
+}
 
 #resultSec {
   padding: 0 10.31vw 0;
