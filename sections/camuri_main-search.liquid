@@ -155,37 +155,22 @@
 
         <ul id="searchTypeList" role="tabList">
           <li>
-            {%- if resultArticleCount > 0 -%}
               <button class="tabSearchItem" role="tab" aria-controls="serachResultArticle" aria-selected="true" data-type="article">
               <p class="searchTypeTxt01"><span class="txtTypeName">JORNAL</span><span class="txtCnt">{{ resultArticleCount }}</span></p>
               <p class="searchTypeTxt02">よみもの</p>
               </button>
-            {%- else -%}
-              <p class="searchTypeTxt01 invalidTxt"><span class="txtTypeName">JORNAL</span><span class="txtCnt">0</span></p>
-              <p class="searchTypeTxt02 invalidTxt">よみもの</p>
-            {%- endif -%}
           </li>
           <li>
-            {%- if resultProductCount > 0 -%}
               <button class="tabSearchItem" role="tab" aria-controls="serachResultProduct" aria-selected="false" data-type="product">
               <p class="searchTypeTxt01"><span class="txtTypeName">ITEM</span><span class="txtCnt">{{ resultProductCount }}</span></p>
               <p class="searchTypeTxt02">商品</p>
               </button>
-            {%- else -%}
-              <p class="searchTypeTxt01 invalidTxt"><span class="txtTypeName">ITEM</span><span class="txtCnt">0</span></p>
-              <p class="searchTypeTxt02 invalidTxt">商品</p>
-            {%- endif -%}
           </li>
           <li>
-            {%- if resultPageCount > 0 -%}
               <button class="tabSearchItem" role="tab" aria-controls="serachResultPage" aria-selected="false" data-type="page">
               <p class="searchTypeTxt01"><span class="txtTypeName">PAGE</span><span class="txtCnt">{{ resultPageCount }}</span></p>
               <p class="searchTypeTxt02">その他のページ</p>
               </button>
-            {%- else -%}
-              <p class="searchTypeTxt01 invalidTxt"><span class="txtTypeName">PAGE</span><span class="txtCnt">0</span></p>
-              <p class="searchTypeTxt02 invalidTxt">その他のページ</p>
-            {%- endif -%}
           </li>
         </ul>
       </div><!-- contentIn -->
