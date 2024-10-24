@@ -181,13 +181,25 @@
         <div class="contentIn">
           <div class="panelGroup">
             <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
+              {%- if resultArticleCount > 0 -%}
               <ul id="journalList">{{ resultArticle }}</ul>
+              {%- else -%}
+              <p>該当データがありません</p>
+              {%- endif -%}
             </div>
             <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="true">
+              {%- if resultProductCount > 0 -%}
               <ul id="itemList">{{ resultProduct }}</ul>
+              {%- else -%}
+              <p>該当データがありません</p>
+              {%- endif -%}
             </div>
             <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="true">
+              {%- if resultPageCount > 0 -%}
               <ul id="pageList">{{ resultPage }}</ul>
+              {%- else -%}
+              <p>該当データがありません</p>
+              {%- endif -%}
             </div>
           </div>
         </div>
