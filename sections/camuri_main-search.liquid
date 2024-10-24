@@ -25,9 +25,11 @@
     <section id="searchFormSec">
       <div class="contentIn">
 
+        {%- if search.terms -%}
         <h1 class="searchText"><span>{{ search.terms | escape }}</span> の検索結果</h1>
-
-
+        {%- else -%}
+        <h1 class="searchText">検索結果</h1>
+        {%- endif -%}
 
         <div class="template-search__search">
         {%- if settings.predictive_search_enabled -%}
@@ -291,7 +293,7 @@
 
                 <section id="resultSec">
                   <div class="panelGroup">
-                    <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">A
+                    <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
                       <ul id="journalList">{{ resultArticle }}</ul>
                     </div>
                     <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="true">
