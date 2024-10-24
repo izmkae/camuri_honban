@@ -95,10 +95,13 @@ $max_font_size (px): 最大フォントサイズ
   height: 60px;
   border: 1px solid #000000;
   background-color: transparent;
-  padding: 2px 10px;
-  font-size: 14px;
+  padding: 2px 18px;
+  font-size: 20px;
   margin: auto;
   display: block;
+}
+#searchFormSec .field .field__button {
+  height: 100%;
 }
 #searchFormSec #searchTypeList {
   margin-top: 68px;
