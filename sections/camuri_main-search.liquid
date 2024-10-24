@@ -62,9 +62,6 @@
                       <rect id="長方形_113" data-name="長方形 113" width="26.703" height="25.981" transform="translate(500 170.722)" fill="none"/>
                     </g>
                   </svg>
-                  <!-- <svg class="icon icon-search" aria-hidden="true" focusable="false">
-                    <use xlink:href="#icon-search">
-                  </svg> -->
                 </button>
               </div>
             </form>
@@ -154,50 +151,59 @@
             {%- endcase -%}
           {%- endfor -%}
         {%- endif -%}
+
         <ul id="searchTypeList" role="tabList">
           <li>
-            <button class="tabSearchItem" role="tab" aria-controls="serachResultArticle" aria-selected="true" data-type="article">
-            <p class="searchTypeTxt01"><span class="txtTypeName">JORNAL</span><span class="txtCnt">{{ resultArticleCount }}</span></p>
-            <p class="searchTypeTxt02">よみもの</p>
-            </button>
+            {%- if search.results_count -%}
+              <button class="tabSearchItem" role="tab" aria-controls="serachResultArticle" aria-selected="true" data-type="article">
+              <p class="searchTypeTxt01"><span class="txtTypeName">JORNAL</span><span class="txtCnt">{{ resultArticleCount }}</span></p>
+              <p class="searchTypeTxt02">よみもの</p>
+              </button>
+            {%- else -%}
+              <p class="searchTypeTxt01"><span class="txtTypeName">JORNAL</span><span class="txtCnt">0</span></p>
+              <p class="searchTypeTxt02">よみもの</p>
+            {%- endif -%}
           </li>
           <li>
-            <button class="tabSearchItem" role="tab" aria-controls="serachResultProduct" aria-selected="false" data-type="product">
-            <p class="searchTypeTxt01"><span class="txtTypeName">ITEM</span><span class="txtCnt">{{ resultProductCount }}</span></p>
-            <p class="searchTypeTxt02">商品</p>
-            </button>
+            {%- if search.results_count -%}
+              <button class="tabSearchItem" role="tab" aria-controls="serachResultProduct" aria-selected="false" data-type="product">
+              <p class="searchTypeTxt01"><span class="txtTypeName">ITEM</span><span class="txtCnt">{{ resultProductCount }}</span></p>
+              <p class="searchTypeTxt02">商品</p>
+              </button>
+            {%- else -%}
+              <p class="searchTypeTxt01"><span class="txtTypeName">ITEM</span><span class="txtCnt">0</span></p>
+              <p class="searchTypeTxt02">商品</p>
+            {%- endif -%}
           </li>
           <li>
-            <button class="tabSearchItem" role="tab" aria-controls="serachResultPage" aria-selected="false" data-type="page">
-            <p class="searchTypeTxt01"><span class="txtTypeName">PAGE</span><span class="txtCnt">{{ resultPageCount }}</span></p>
-            <p class="searchTypeTxt02">その他のページ</p>
-            </button>
+            {%- if search.results_count -%}
+              <button class="tabSearchItem" role="tab" aria-controls="serachResultPage" aria-selected="false" data-type="page">
+              <p class="searchTypeTxt01"><span class="txtTypeName">PAGE</span><span class="txtCnt">{{ resultPageCount }}</span></p>
+              <p class="searchTypeTxt02">その他のページ</p>
+              </button>
+            {%- else -%}
+              <p class="searchTypeTxt01"><span class="txtTypeName">PAGE</span><span class="txtCnt">0</span></p>
+              <p class="searchTypeTxt02">その他のページ</p>
+            {%- endif -%}
           </li>
         </ul>
       </div><!-- contentIn -->
     </section>
 
-      
-
-
-      
-    <!-- </div> -->
     {%- if search.performed -%}
-
-
-        <section id="resultSec">
-          <div class="panelGroup">
-            <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
-              <ul id="journalList">{{ resultArticle }}</ul>
-            </div>
-            <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="true">
-              <ul id="itemList">{{ resultProduct }}</ul>
-            </div>
-            <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="true">
-              <ul>{{ resultPage }}</ul>
-            </div>
+      <section id="resultSec">
+        <div class="panelGroup">
+          <div class="panel" id="serachResultArticle" role="tabpanel" aria-hidden="false">
+            <ul id="journalList">{{ resultArticle }}</ul>
           </div>
-        </section>
+          <div class="panel" id="serachResultProduct" role="tabpanel" aria-hidden="true">
+            <ul id="itemList">{{ resultProduct }}</ul>
+          </div>
+          <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="true">
+            <ul>{{ resultPage }}</ul>
+          </div>
+        </div>
+      </section>
 
 
       {%- if paginate.pages > 1 -%}
