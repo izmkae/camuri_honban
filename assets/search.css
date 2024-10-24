@@ -49,6 +49,11 @@ $max_font_size (px): 最大フォントサイズ
   padding-bottom: 77px;
   background-color: #E1DFD9;
 }
+@media screen and (max-width: 800px) {
+  #searchFormSec {
+    padding-bottom: 0;
+  }
+}
 #searchFormSec .searchText {
   width: 36.7vw;
   max-width: 510px;
@@ -63,6 +68,7 @@ $max_font_size (px): 最大フォントサイズ
 }
 @media screen and (max-width: 800px) {
   #searchFormSec .searchText {
+    width: 100%;
     font-size: 4.26vw;
   }
 }
@@ -101,6 +107,12 @@ $max_font_size (px): 最大フォントサイズ
   margin: auto;
   display: block;
 }
+@media screen and (max-width: 800px) {
+  #searchFormSec .field input[type=text], #searchFormSec .field input[type=search] {
+    height: 44px;
+    font-size: 11px;
+  }
+}
 #searchFormSec .field .field__button {
   height: 100%;
 }
@@ -109,7 +121,6 @@ $max_font_size (px): 最大フォントサイズ
 }
 #searchFormSec #searchTypeList {
   margin-top: 68px;
-  padding-bottom: 7vw;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: flex-start;
@@ -123,8 +134,20 @@ $max_font_size (px): 最大フォントサイズ
   flex-wrap: wrap;
   flex-flow: row wrap;
 }
+@media screen and (max-width: 800px) {
+  #searchFormSec #searchTypeList {
+    margin-top: 26px;
+    padding-bottom: 0;
+  }
+}
 #searchFormSec #searchTypeList li {
   margin: 0 4.5%;
+}
+@media screen and (max-width: 800px) {
+  #searchFormSec #searchTypeList li {
+    width: 100%;
+    margin: 0 0 23px;
+  }
 }
 #searchFormSec #searchTypeList li button {
   padding: 0;
@@ -150,6 +173,11 @@ $max_font_size (px): 最大フォントサイズ
     font-size: 25px;
   }
 }
+@media screen and (max-width: 800px) {
+  #searchFormSec #searchTypeList li .searchTypeTxt01 {
+    font-size: 5.33vw;
+  }
+}
 #searchFormSec #searchTypeList li .searchTypeTxt01 .txtCnt {
   margin-left: 18px;
 }
@@ -162,12 +190,17 @@ $max_font_size (px): 最大フォントサイズ
     font-size: 13px;
   }
 }
+@media screen and (max-width: 800px) {
+  #searchFormSec #searchTypeList li .searchTypeTxt02 {
+    font-size: 2.93vw;
+  }
+}
 #searchFormSec #searchTypeList li .invalidTxt {
   color: #808080;
 }
 
 #resultSec {
-  padding: 0 10.31vw 0;
+  padding: 0 10.31vw 10vw;
 }
 #resultSec .panelGroup .panel {
   display: none;

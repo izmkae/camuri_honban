@@ -294,16 +294,26 @@ li {
   line-height: 2.5;
 }
 @media screen and (max-width: 800px) {
-  #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label {
+  #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label:focus ~ .field__label {
+    top: calc(var(--inputs-border-width) + .1rem);
+    font-size: 2.93vw;
+    font-size: 2vw !important;
+  }
+}
+#gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:focus, #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:not(:placeholder-shown) {
+  box-shadow: none;
+  padding: 5px 14px;
+}
+@media screen and (max-width: 800px) {
+  #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label, #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:not(:placeholder-shown) ~ .field__label {
     line-height: 2;
     font-size: 2.93vw;
   }
 }
 @media screen and (max-width: 800px) {
-  #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label:focus ~ .field__label {
-    top: calc(var(--inputs-border-width) + .1rem);
-    font-size: 2.93vw;
-    font-size: 2vw !important;
+  #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:focus ~ .field__label, #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:not(:placeholder-shown) ~ .field__label {
+    line-height: 1.4;
+    font-size: 1.5vw;
   }
 }
 #gNaviWrapper #gNaviIn .hBtnStyle {
