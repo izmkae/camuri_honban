@@ -146,7 +146,8 @@
               {%- when 'page' -%}
                 {% assign resultPageCount = resultPageCount | plus: 1 %}
                 {% capture resultPage %}
-                <li>page</li>
+                {{resultPage}}
+                 <li><a href="{{ item.url }}">{{ item.title }}</a></li>
                 {% endcapture %}
             {%- endcase -%}
           {%- endfor -%}
@@ -201,13 +202,7 @@
               <ul id="itemList">{{ resultProduct }}</ul>
             </div>
             <div class="panel" id="serachResultPage" role="tabpanel" aria-hidden="true">
-              <ul id="pageList">{{ resultPage }}
-                <li><a href="">ページタイトル１</a></li>
-                <li><a href="">ページタイトル１</a></li>
-                <li><a href="">ページタイトル１</a></li>
-
-
-              </ul>
+              <ul id="pageList">{{ resultPage }}</ul>
             </div>
           </div>
         </div>
