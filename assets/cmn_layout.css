@@ -225,10 +225,20 @@ li {
   background-color: #000000;
 }
 .headerIn .hMenu .hNavBtn span:nth-of-type(1), .headerIn .hMenu .mvNavBtn span:nth-of-type(1), .mainVisualIn .hMenu .hNavBtn span:nth-of-type(1), .mainVisualIn .hMenu .mvNavBtn span:nth-of-type(1) {
-  top: 2px;
+  top: 0px;
+}
+@media screen and (max-width: 800px) {
+  .headerIn .hMenu .hNavBtn span:nth-of-type(1), .headerIn .hMenu .mvNavBtn span:nth-of-type(1), .mainVisualIn .hMenu .hNavBtn span:nth-of-type(1), .mainVisualIn .hMenu .mvNavBtn span:nth-of-type(1) {
+    top: 2px;
+  }
 }
 .headerIn .hMenu .hNavBtn span:nth-of-type(2), .headerIn .hMenu .mvNavBtn span:nth-of-type(2), .mainVisualIn .hMenu .hNavBtn span:nth-of-type(2), .mainVisualIn .hMenu .mvNavBtn span:nth-of-type(2) {
-  top: 10px;
+  top: 12px;
+}
+@media screen and (max-width: 800px) {
+  .headerIn .hMenu .hNavBtn span:nth-of-type(2), .headerIn .hMenu .mvNavBtn span:nth-of-type(2), .mainVisualIn .hMenu .hNavBtn span:nth-of-type(2), .mainVisualIn .hMenu .mvNavBtn span:nth-of-type(2) {
+    top: 10px;
+  }
 }
 .headerIn .hMenu .hNavBtn.active span:nth-of-type(1), .headerIn .hMenu .mvNavBtn.active span:nth-of-type(1), .mainVisualIn .hMenu .hNavBtn.active span:nth-of-type(1), .mainVisualIn .hMenu .mvNavBtn.active span:nth-of-type(1) {
   -webkit-transform: translateY(4px) rotate(45deg);
