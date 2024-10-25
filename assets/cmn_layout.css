@@ -251,8 +251,18 @@ li {
   transform: translateY(4px) rotate(45deg);
 }
 .headerIn .hMenu .hNavBtn.active span:nth-of-type(2), .headerIn .hMenu .mvNavBtn.active span:nth-of-type(2), .mainVisualIn .hMenu .hNavBtn.active span:nth-of-type(2), .mainVisualIn .hMenu .mvNavBtn.active span:nth-of-type(2) {
-  -webkit-transform: translateY(-4px) rotate(-45deg);
-  transform: translateY(-4px) rotate(-45deg);
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+@media screen and (max-width: 800px) {
+  .headerIn .hMenu .hNavBtn.active span:nth-of-type(1), .headerIn .hMenu .mvNavBtn.active span:nth-of-type(1), .mainVisualIn .hMenu .hNavBtn.active span:nth-of-type(1), .mainVisualIn .hMenu .mvNavBtn.active span:nth-of-type(1) {
+    -webkit-transform: translateY(4px) rotate(45deg);
+    transform: translateY(4px) rotate(45deg);
+  }
+  .headerIn .hMenu .hNavBtn.active span:nth-of-type(2), .headerIn .hMenu .mvNavBtn.active span:nth-of-type(2), .mainVisualIn .hMenu .hNavBtn.active span:nth-of-type(2), .mainVisualIn .hMenu .mvNavBtn.active span:nth-of-type(2) {
+    -webkit-transform: translateY(-4px) rotate(-45deg);
+    transform: translateY(-4px) rotate(-45deg);
+  }
 }
 
 #gNaviWrapper {
@@ -349,6 +359,18 @@ li {
   border: 1px solid #000000;
   margin-top: 3.39vw;
   margin-bottom: 3.39vw;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 @media screen and (max-width: 800px) {
   #gNaviWrapper #gNaviIn .hBtnStyle {
@@ -364,7 +386,7 @@ li {
 @media screen and (max-width: 800px) {
   #gNaviWrapper #gNaviIn .hBtnStyle .txtEn {
     font-size: 4.26vw;
-    line-height: 11.2vw;
+    line-height: 1;
   }
 }
 #gNaviWrapper #gNaviIn .hBtnStyle .txtJa {
@@ -374,7 +396,8 @@ li {
 @media screen and (max-width: 800px) {
   #gNaviWrapper #gNaviIn .hBtnStyle .txtJa {
     font-size: 2.93vw;
-    line-height: 11.2vw;
+    padding-left: 2.93vw;
+    line-height: 1;
   }
 }
 #gNaviWrapper #gNaviIn .hBtnStyle:hover {
