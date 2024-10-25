@@ -310,6 +310,9 @@ li {
     font-size: 2vw !important;
   }
 }
+#gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:not(:placeholder-shown) ~ .field__label {
+  display: none;
+}
 #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:focus, #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:not(:placeholder-shown) {
   box-shadow: none;
   padding: 5px 14px;
