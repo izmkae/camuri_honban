@@ -210,6 +210,9 @@ li {
   width: auto;
   padding: 0;
 }
+.headerIn .hMenu .hCart a:hover, .mainVisualIn .hMenu .hCart a:hover {
+  opacity: 0.6;
+}
 .headerIn .hMenu .hNavBtn, .headerIn .hMenu .mvNavBtn, .mainVisualIn .hMenu .hNavBtn, .mainVisualIn .hMenu .mvNavBtn {
   position: relative;
   width: 2.16vw;
@@ -574,6 +577,9 @@ li {
     margin-right: 6.66vw;
   }
 }
+#gNaviWrapper #gNaviIn .hSNSMenu li a:hover {
+  opacity: 0.6;
+}
 #gNaviWrapper #gNaviIn .menuTtl {
   margin-top: 2.6vw;
 }
@@ -776,6 +782,9 @@ li {
     width: 10.04vw;
   }
 }
+#footer #fNewsletterSnsBlock #snsBlock .fSNSMenu li a:hover {
+  opacity: 0.6;
+}
 #footer #fMenuBlock {
   display: -webkit-flex;
   display: flex;
@@ -866,6 +875,9 @@ li {
     font-size: 3.2vw;
     margin-top: 7.46vw;
   }
+}
+#footer #fMenuBlock #fMenuFlex .fMenu li a:hover {
+  color: #808080;
 }
 @media screen and (max-width: 800px) {
   #footer #fMenuBlock #fMenuFlex .fMenu li .fMenuSecondary {
