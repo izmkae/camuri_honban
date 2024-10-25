@@ -60,9 +60,7 @@
 			<p class="productCode">商品番号　{{ product.metafields.camuri.product_no | escape }}</p>
 		{%- when 'variant_picker' -%}
               {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-    {%- when 'buy_buttons' -%}
-      {%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
-		{%- when 'quantity_selector' -%}
+ 		{%- when 'quantity_selector' -%}
 			<div
 				id="Quantity-Form-{{ section.id }}"
 				class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
