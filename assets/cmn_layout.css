@@ -291,11 +291,15 @@ li {
     width: 100%;
   }
 }
+#gNaviWrapper #gNaviIn .hSearchBlock .field::before, #gNaviWrapper #gNaviIn .hSearchBlock .field::after {
+  border-radius: 0;
+  box-shadow: none;
+}
 #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input {
   width: 25.25vw;
   height: 4.32vw;
   background-color: transparent;
-  border: 1px solid blk;
+  border: 1px solid #000000;
 }
 @media screen and (max-width: 800px) {
   #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input {
