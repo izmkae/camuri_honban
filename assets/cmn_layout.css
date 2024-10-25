@@ -172,9 +172,6 @@ li {
     padding: 1.3vw 4vw 0;
   }
 }
-.headerIn .hLogo, .mainVisualIn .hLogo {
-  font-size: 3.68vw;
-}
 .headerIn .hLogo img, .mainVisualIn .hLogo img {
   width: 4.54vw;
 }
