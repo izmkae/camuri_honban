@@ -133,7 +133,7 @@
           "type": "item_category",
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_cap.png",
-            "topItemCatName": "CAP",
+            "topItemCatName": "キャップ",
             "topItemCatText": "カジュアル感が人気",
             "topItemCatLink": "shopify://collections/キャップ"
           }
