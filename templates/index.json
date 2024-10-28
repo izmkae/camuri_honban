@@ -142,7 +142,7 @@
           "type": "item_category",
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_hat.png",
-            "topItemCatName": "HAT",
+            "topItemCatName": "ハット",
             "topItemCatText": "洋服を選ばない",
             "topItemCatLink": "shopify://collections/ハット"
           }
