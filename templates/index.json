@@ -25,7 +25,7 @@
           "settings": {
             "image": "shopify://shop_images/fv3.jpg",
             "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。",
-            "link": "shopify://products/test-fucabori-cap-01"
+            "link": "shopify://pages/about"
           }
         },
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2": {
@@ -33,7 +33,7 @@
           "settings": {
             "image": "shopify://shop_images/fv2.jpg",
             "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。",
-            "link": "shopify://blogs/culture/社長のあたまから-xxxxxxxxxxxxxxx"
+            "link": "shopify://pages/about"
           }
         }
       },
