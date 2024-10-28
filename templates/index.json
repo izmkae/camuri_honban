@@ -133,7 +133,7 @@
           "type": "item_category",
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_cap.png",
-            "topItemCatName": "キャップ",
+            "topItemCatName": "CAP",
             "topItemCatText": "カジュアル感が人気",
             "topItemCatLink": "shopify://collections/キャップ"
           }
@@ -142,7 +142,7 @@
           "type": "item_category",
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_hat.png",
-            "topItemCatName": "ハット",
+            "topItemCatName": "HAT",
             "topItemCatText": "洋服を選ばない",
             "topItemCatLink": "shopify://collections/ハット"
           }
