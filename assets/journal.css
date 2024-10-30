@@ -724,7 +724,12 @@ $max_font_size (px): 最大フォントサイズ
   height: 4.68vw;
   line-height: 4.68vw;
   border-radius: 2.16vw;
-  font-size: 1.12rem;
+  font-size: 1.29vw;
+}
+@media screen and (min-width: 1395.34884px) {
+  #journalDetailPage #journalBodySec .btnBlock a {
+    font-size: 18px;
+  }
 }
 @media screen and (max-width: 800px) {
   #journalDetailPage #journalBodySec .btnBlock a {

@@ -641,7 +641,7 @@ li {
 #footer #fNewsletterSnsBlock #newsletterBlock {
   width: 50%;
   height: 25.25vw;
-  padding: 3.96vw 11.83vw 3.96vw 10.31vw;
+  padding: 3.96vw 10.31vw 3.96vw;
   background-color: #4A4A4A;
   color: #FFFFFF;
 }
@@ -690,6 +690,7 @@ li {
 #footer #fNewsletterSnsBlock #newsletterBlock .camuri_field_label {
   color: #FFFFFF;
   font-size: 1.15vw;
+  top: calc(1vw + var(--inputs-border-width));
 }
 @media screen and (max-width: 800px) {
   #footer #fNewsletterSnsBlock #newsletterBlock .camuri_field_label {
@@ -896,6 +897,9 @@ li {
     font-size: 3.2vw;
   }
 }
+#footer #fMenuBlock #fMenuFlex .fMenu li .fMenuSecondary li + li {
+  margin-top: 0.1vw;
+}
 #footer #fCopy {
   padding-right: 2.88vw;
   padding-bottom: 1.6vw;
@@ -1053,9 +1057,11 @@ li {
 }
 #journalList li .imgBlock .tabWrap span {
   background-color: #E1DFD9;
-  padding: 5px 10px;
+  padding: 0.4vw 0.72vw 0.36vw;
   font-size: 1.01vw;
   font-weight: bold;
+  display: block;
+  line-height: 1;
 }
 @media screen and (min-width: 1386.13861px) {
   #journalList li .imgBlock .tabWrap span {

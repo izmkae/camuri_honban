@@ -30,12 +30,12 @@ $max_font_size (px): 最大フォントサイズ
 .mainVisualIn .hLogo {
   margin-top: 11px;
 }
-.mainVisualIn .hLogo img {
+.mainVisualIn .hLogo a img {
   width: 9.37vw;
   height: auto;
 }
 @media screen and (max-width: 800px) {
-  .mainVisualIn .hLogo img {
+  .mainVisualIn .hLogo a img {
     width: 19.41vw;
   }
 }
@@ -397,13 +397,15 @@ $max_font_size (px): 最大フォントサイズ
 }
 #journalSec #topJournalList li .imgBlock .tabWrap span {
   background-color: #E1DFD9;
-  padding: 0.12vw 0.36vw;
+  padding: 0.36vw 0.72vw;
   font-size: 1.01vw;
   font-weight: bold;
+  display: block;
+  line-height: 1;
 }
 @media screen and (max-width: 800px) {
   #journalSec #topJournalList li .imgBlock .tabWrap span {
-    padding: 1.06vw 2.13vw;
+    padding: 0.8vw 2.13vw;
     font-size: 2.93vw;
   }
 }

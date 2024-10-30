@@ -421,7 +421,7 @@ h3 span {
 }
 @media screen and (max-width: 800px) {
   #flowImageSec h4 span::before {
-    top: 16px;
+    top: 22px;
     width: 43px;
   }
 }
@@ -438,7 +438,7 @@ h3 span {
 }
 @media screen and (max-width: 800px) {
   #flowImageSec h4 span::after {
-    top: 16px;
+    top: 22px;
     width: 43px;
   }
 }
