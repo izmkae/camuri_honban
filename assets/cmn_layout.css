@@ -898,7 +898,12 @@ li {
   }
 }
 #footer #fMenuBlock #fMenuFlex .fMenu li .fMenuSecondary li + li {
-  margin-top: 0.1vw;
+  margin-top: 0.15vw;
+}
+@media screen and (max-width: 800px) {
+  #footer #fMenuBlock #fMenuFlex .fMenu li .fMenuSecondary li + li {
+    margin-top: 2.15vw;
+  }
 }
 #footer #fCopy {
   padding-right: 2.88vw;
