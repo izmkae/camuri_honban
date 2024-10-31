@@ -194,7 +194,7 @@
       ],
       "settings": {
         "title": "ITEM",
-        "collection": "top-item",
+        "collection": "all-item",
         "products_to_show": 8
       }
     },
