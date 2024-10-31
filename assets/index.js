@@ -32,7 +32,7 @@ $(document).ready(function(){
 	$('#topJournalList').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		infinite: false,
+		infinite: true,
 		arrows: true,
 		dots: false,
 	});
