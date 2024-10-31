@@ -696,6 +696,7 @@ li {
   #footer #fNewsletterSnsBlock #newsletterBlock .camuri_field_label {
     font-size: 3.2vw;
     line-height: 2;
+    top: calc(2.3vw + var(--inputs-border-width));
   }
 }
 #footer #fNewsletterSnsBlock #newsletterBlock .camuri_mail_input:focus ~ .camuri_field_label,
