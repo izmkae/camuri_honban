@@ -600,6 +600,7 @@ li {
 
 .cart-count-bubble {
   background-color: transparent;
+  top: 0.7rem;
   left: auto;
   right: 1.2rem;
   font-size: 15px;
