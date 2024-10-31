@@ -724,6 +724,8 @@ li {
   color: #000000;
   background: #FFFFFF;
   font-size: 1.15vw;
+  margin-top: 0.1vw;
+  margin-right: 0.1vw;
 }
 @media screen and (max-width: 800px) {
   #footer #fNewsletterSnsBlock #newsletterBlock .camuri_newsletter-form__button {

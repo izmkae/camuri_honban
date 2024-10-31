@@ -332,8 +332,8 @@ $max_font_size (px): 最大フォントサイズ
   background-size: cover !important;
   opacity: 1;
 }
-#journalSec #topJournalList .slick-next.slick-disabled::before {
-  opacity: 0.7;
+#journalSec #topJournalList .slick-next:hover::before {
+  opacity: 0.5;
 }
 #journalSec #topJournalList .slick-prev {
   top: 50%;
@@ -350,8 +350,8 @@ $max_font_size (px): 最大フォントサイズ
   background-size: cover !important;
   opacity: 1;
 }
-#journalSec #topJournalList .slick-prev.slick-disabled::before {
-  opacity: 0.7;
+#journalSec #topJournalList .slick-prev:hover::before {
+  opacity: 0.5;
 }
 #journalSec #topJournalList li {
   text-align: left;

@@ -20,6 +20,11 @@ $max_font_size (px): 最大フォントサイズ
 #writingByBlock {
   width: 46.89vw;
 }
+@media screen and (max-width: 800px) {
+  #writingByBlock {
+    width: 100%;
+  }
+}
 
 /*-------------------------------------------------------------------
 	Common
@@ -564,6 +569,7 @@ $max_font_size (px): 最大フォントサイズ
   max-width: 650px;
   margin: auto;
   font-size: 1.15vw;
+  line-height: 2;
 }
 @media screen and (min-width: 1391.30435px) {
   #journalDetailPage #journalBodySec .contentIn {
@@ -722,7 +728,6 @@ $max_font_size (px): 最大フォントサイズ
 #journalDetailPage #journalBodySec .btnBlock a {
   width: 100%;
   height: 4.68vw;
-  line-height: 4.68vw;
   border-radius: 2.16vw;
   font-size: 1.29vw;
 }
