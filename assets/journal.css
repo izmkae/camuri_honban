@@ -259,10 +259,10 @@ $max_font_size (px): 最大フォントサイズ
   content: '';
   display: inline-block;
   position: absolute;
-  top: 21px;
+  top: 1.3vw;
   right: 1.8vw;
-  width: 2px;
-  height: 23px;
+  width: 0.2vw;
+  height: 1.7vw;
   background-color: #000000;
   transition: all 0.5s;
 }
