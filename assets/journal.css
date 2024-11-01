@@ -315,6 +315,12 @@ $max_font_size (px): 最大フォントサイズ
 #journalListPage #journalSec .journalBlock .acJournalBox .acBlock .journalTagList01 li {
   margin-left: 1.15vw;
 }
+@media screen and (max-width: 800px) {
+  #journalListPage #journalSec .journalBlock .acJournalBox .acBlock .journalTagList01 li {
+    margin-left: 2.66vw;
+    margin-bottom: 5.06vw;
+  }
+}
 #journalListPage #journalSec .journalBlock .acJournalBox .acBlock .journalTagList01 li a {
   height: 2.16vw;
   padding: 0.36vw 0.72vw;
