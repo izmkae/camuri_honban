@@ -261,7 +261,7 @@ $max_font_size (px): 最大フォントサイズ
   position: absolute;
   top: 1.3vw;
   right: 1.8vw;
-  width: 0.2vw;
+  width: 0.18vw;
   height: 1.7vw;
   background-color: #000000;
   transition: all 0.5s;
@@ -306,6 +306,11 @@ $max_font_size (px): 最大フォントサイズ
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   flex-flow: row wrap;
+}
+@media screen and (max-width: 800px) {
+  #journalListPage #journalSec .journalBlock .acJournalBox .acBlock .journalTagList01 {
+    padding-bottom: 5vw;
+  }
 }
 #journalListPage #journalSec .journalBlock .acJournalBox .acBlock .journalTagList01 li {
   margin-left: 1.15vw;
