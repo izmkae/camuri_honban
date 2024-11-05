@@ -2,7 +2,7 @@
     <ul id="contentList">
       {%- for block in section.blocks -%}
       <li>
-          <a href="{{ section.settings.topContentLink }}">
+          <a href="{{ block.settings.topContentLink }}">
               <img src="{{  block.settings.topContentImage | img_url: 'master' }}">
               <img src="{{ 'img_bgd.png' | asset_url }}" class="bgd">
               <div class="txtBlock">
