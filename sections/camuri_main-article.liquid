@@ -67,8 +67,8 @@
                 </div>
               </div>
 
+              {%- if article.metafields.camuri.writer != blank -%}
               <div id="writingByBlock">
-                {%- if article.metafields.camuri.writer != blank -%}
                     <div class="imgBlock">
                       <img src="{{ article.metafields.camuri.writer.value.prof_image | image_url: width: 160 }}" alt="{{ article.metafields.camuri.writer.value.name | escape }}">      
                     </div>
@@ -79,8 +79,8 @@
                     {{ article.metafields.camuri.writer.value.profile | escape }}
                   </p>
                 </div>
-                {%- endif -%}
               </div>
+              {%- endif -%}
 
               <div class="btnBlock"><a href="{{ routes.root_url }}blogs/journal" class="btnStyleB01">ALL POST</a></div>
             </div>

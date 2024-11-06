@@ -16,6 +16,11 @@ $max_font_size (px): 最大フォントサイズ
 .content {
   padding-top: 2.88vw;
 }
+@media screen and (max-width: 800px) {
+  .content {
+    padding-top: 8.6vw;
+  }
+}
 
 #writingByBlock {
   width: 46.89vw;

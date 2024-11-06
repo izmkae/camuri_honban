@@ -164,6 +164,11 @@ $max_font_size (px): 最大フォントサイズ
   display: flex;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 800px) {
+  #productBasicInfoSec .imgBlock .thumbImgList .slick-list .draggable > div {
+    justify-content: flex-start;
+  }
+}
 #productBasicInfoSec .imgBlock .thumbImgList li {
   width: 18%;
   margin-left: 2%;
@@ -172,7 +177,7 @@ $max_font_size (px): 最大フォントサイズ
 @media screen and (max-width: 800px) {
   #productBasicInfoSec .imgBlock .thumbImgList li {
     width: 15.46vw;
-    margin-left: 3.2vw;
+    margin-left: 2.9vw;
     margin-bottom: 3.2vw;
   }
 }
@@ -343,6 +348,11 @@ $max_font_size (px): 最大フォントサイズ
   min-width: 32.1vw;
   min-height: 50px;
   font-size: 1.15vw;
+}
+@media screen and (max-width: 800px) {
+  #productBasicInfoSec .infoBlock .button {
+    font-size: 3.73vw;
+  }
 }
 
 #modalSec {
