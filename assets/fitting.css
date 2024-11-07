@@ -141,7 +141,7 @@ h3 {
   }
 }
 #fittingAboutSec .fittingPointList li {
-  width: 25.7%;
+  width: 31%;
   text-align: center;
 }
 @media screen and (max-width: 800px) {
@@ -150,10 +150,13 @@ h3 {
     margin-bottom: 16.53vw;
   }
 }
+#fittingAboutSec .fittingPointList li img {
+  max-width: 272px;
+  margin: auto;
+}
 @media screen and (max-width: 800px) {
   #fittingAboutSec .fittingPointList li img {
     width: 49.86vw;
-    margin: auto;
   }
 }
 #fittingAboutSec .fittingPointList li p {
