@@ -14,7 +14,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "haderMessage": "テスト"
+        "haderMessage": ""
       }
     }
   },
