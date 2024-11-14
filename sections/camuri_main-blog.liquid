@@ -28,16 +28,19 @@
           <label for="acJournalCat01">Category</label>
           <div class="acBlock2">
             <ul class="journalCategoryList01">
-              <li><span>ALL</span></li>
-              <li><a href="#">PEDIA</a></li>
-              <li><a href="#">COUNSELING</a></li>
-              <li><a href="#">CRAFTMAN</a></li>
-              <li><a href="#">INSIDE</a></li>
-              <li><a href="#">CREATION</a></li>
-              <li><a href="#">LIFE STYLE</a></li>
-              <li><a href="#">CULTURE</a></li>
-              <li><a href="#">PRODUCT</a></li>
-              <li><a href="#">STAFF VOICE</a></li>
+              <li><a href="{{ routes.root_url }}blogs/journal/size-guide">ALL</a></li>
+
+              /blogs/news/tagged/タグ
+
+              <li><a href="{{ blog.url }}/journal/tagged/PEDIA">PEDIA</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/COUNSELING">COUNSELING</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/CRAFTMAN">CRAFTMAN</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/INSIDE">INSIDE</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/CREATION">CREATION</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/LIFE STYLE">LIFE STYLE</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/CULTURE">CULTURE</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/PRODUCT">PRODUCT</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/STAFF VOICE">STAFF VOICE</a></li>
             </ul>
           </div>
         </div>
@@ -49,11 +52,11 @@
           <label for="acJournalTag01">Tag Search</label>
           <div class="acBlock">
             <ul class="journalTagList01">
-              <li><a href="#">#帽子の種類</a></li>
-              <li><a href="#">#サファリハット</a></li>
-              <li><a href="#">#べれー</a></li>
-              <li><a href="#">#帽子の種類</a></li>
-              <li><a href="#">#サファリハット</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/帽子の種類">#帽子の種類</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/サファリハット">#サファリハット</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/べれー">#べれー</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/帽子の種類">#帽子の種類</a></li>
+              <li><a href="{{ blog.url }}/journal/tagged/サファリハット">#サファリハット</a></li>
             </ul>
           </div>
         </div>
@@ -74,7 +77,7 @@
               {%- else -%}
                 <img src="{{ 'img_noimage_sqr.png' | asset_url }}" alt="No image">
               {% endif %}
-              <div class="tabWrap"><span>TIPS</span></div>
+              <!-- <div class="tabWrap"><span>TIPS</span></div> -->
             </div>
             <p class="journalTtl">{{ article.title | escape }}</p>
             {%- if show_date -%}
