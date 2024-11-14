@@ -15,7 +15,6 @@
                           {% else %}
                             <img src="{{ article.image.src | image_url: width: 533 }}">
                           {% endif %}
-                           <div class="tabWrap"><span>TIPS</span></div>
                         </div>
                         <p class="journalTtl">{{ article.title }}</p>
                         <p class="journalDate">{{  article.published_date | date: "%Y.%m.%d" }}</p>
