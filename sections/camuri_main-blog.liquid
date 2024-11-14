@@ -70,14 +70,13 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
         >
-          <a href="{{ article.url }}"> 
+          <a href="{{ article.url }}">
             <div class="imgBlock">
               {%- if article.image -%}
                 <img src="{{ article.image.src | image_url: width: 320 }}">
               {%- else -%}
                 <img src="{{ 'img_noimage_sqr.png' | asset_url }}" alt="No image">
               {% endif %}
-              <!-- <div class="tabWrap"><span>TIPS</span></div> -->
             </div>
             <p class="journalTtl">{{ article.title | escape }}</p>
             {%- if show_date -%}
