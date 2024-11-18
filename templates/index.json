@@ -16,6 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/fv1.jpg",
+            "image_sp": "shopify://shop_images/img_slide_01_sp.jpg",
             "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。",
             "link": "shopify://pages/about"
           }
@@ -42,8 +43,7 @@
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1",
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "top_about_F9UPNq": {
       "type": "top_about",
@@ -113,8 +113,7 @@
         "content_set_eahmKR",
         "content_set_dAbr8U"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "top_jornal_drLd3i": {
       "type": "top_jornal",
@@ -200,8 +199,7 @@
     },
     "camuri_tryit_qBjbcw": {
       "type": "camuri_tryit",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
