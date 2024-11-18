@@ -37,9 +37,14 @@
 		<ul id="mainSlider">
 		{%- for block in section.blocks -%}
 			<li>
-				<div class="imgBlock"><img src="{{  block.settings.image | img_url: 'master' }}" alt="{{ section.settings.image_box.alt }}" class="jsImgSwitch"></div>
+				<div class="imgBlock">
+					<picture>
+						<source media="(max-width: 800px)" srcset="{{  block.settings.image_sp | img_url: 'master' }}">
+						<img src="{{  block.settings.image | img_url: 'master' }}" alt="{{ section.settings.image_box.alt }}">
+					</picture>
+				</div>
 				<div class="txtBlock">
-					<a href="#">
+					<a href="{{ block.settings.link }}">
 						<p>{{ block.settings.heading | newline_to_br }}</p>
 						<div class="btnBlock"><span class="btnStyleW01">ABOUT</span></div>
 					</a>
@@ -69,6 +74,11 @@
 					"type": "image_picker",
 					"id": "image",
 					"label": "t:sections.top-slideshow.blocks.slide.settings.image.label"
+				},
+				{
+					"type": "image_picker",
+					"id": "image_sp",
+					"label": "t:sections.top-slideshow.blocks.slide.settings.image_sp.label"
 				},
 				{
 					"type": "textarea",

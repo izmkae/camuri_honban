@@ -2900,6 +2900,9 @@
             "image": {
               "label": "画像"
             },
+            "image_sp": {
+              "label": "画像(スマホ)"
+            },
             "heading": {
               "label": "見出し"
             },
