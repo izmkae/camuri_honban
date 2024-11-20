@@ -509,6 +509,16 @@ h3 span {
     width: 44.53vw;
   }
 }
+#flowImageSec .infinityScrollWrap .infinityScrolllist li:nth-child(6) {
+  width: 23.88vw;
+  height: auto;
+  margin-top: 3vw;
+}
+@media screen and (max-width: 800px) {
+  #flowImageSec .infinityScrollWrap .infinityScrolllist li:nth-child(6) {
+    width: 61.86vw;
+  }
+}
 
 @keyframes infinity-scroll-left {
   from {
