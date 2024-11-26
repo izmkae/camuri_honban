@@ -17,7 +17,7 @@
           "settings": {
             "image": "shopify://shop_images/fv1.jpg",
             "image_sp": "shopify://shop_images/img_slide_01_sp.jpg",
-            "heading": "帽子が似合わない・・・その理由のほとんどは形とサイズにあるんです。",
+            "heading": "CAMURIが目指す「すべての人にフィットする帽子作り」",
             "link": "shopify://blogs/journal/size-1"
           }
         },
@@ -171,7 +171,7 @@
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_casket.png",
             "topItemCatName": "キャスケット",
-            "topItemCatText": "coming soon",
+            "topItemCatText": "こなれ感が出る",
             "topItemCatLink": ""
           }
         },
