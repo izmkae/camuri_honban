@@ -230,7 +230,6 @@ $max_font_size (px): 最大フォントサイズ
 @media screen and (max-width: 800px) {
   #journalListPage #journalSec h2 {
     font-size: 8vw;
-    text-align: center;
     padding-left: 0;
   }
 }
@@ -418,6 +417,7 @@ $max_font_size (px): 最大フォントサイズ
 }
 @media screen and (max-width: 800px) {
   #journalListPage #journalSec #journalCategory {
+    margin-top: 2.93vw;
     border-top: 1px solid #000000;
   }
 }
