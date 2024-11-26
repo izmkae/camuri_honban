@@ -29,14 +29,14 @@
           <div class="acBlock2">
             <ul class="journalCategoryList01">
               <li><a href="{{ blog.url }}" {% if current_tags %}{% else %}class="currentTag"{% endif %}>ALL</a></li>
-              <li><a href="{{ blog.url }}/tagged/PEDIA" {% if current_tags == 'PEDIA' %}class="currentTag"{% endif %}>PEDIA</a></li>
-              <li><a href="{{ blog.url }}/tagged/COUNSELING" {% if current_tags == 'COUNSELING' %}class="currentTag"{% endif %}>COUNSELING</a></li>
-              <li><a href="{{ blog.url }}/tagged/CRAFTMAN" {% if current_tags == 'CRAFTMAN' %}class="currentTag"{% endif %}>CRAFTMAN</a></li>
-              <li><a href="{{ blog.url }}/tagged/INSIDE" {% if current_tags == 'INSIDE' %}class="currentTag"{% endif %}>INSIDE</a></li>
-              <li><a href="{{ blog.url }}/tagged/CREATION" {% if current_tags == 'CREATION' %}class="currentTag"{% endif %}>CREATION</a></li>
-              <li><a href="{{ blog.url }}/tagged/LIFESTYLE" {% if current_tags == 'LIFESTYLE' %}class="currentTag"{% endif %}>LIFE STYLE</a></li>
-              <li><a href="{{ blog.url }}/tagged/CULTURE" {% if current_tags == 'CULTURE' %}class="currentTag"{% endif %}>CULTURE</a></li>
-              <li><a href="{{ blog.url }}/tagged/PRODUCT" {% if current_tags == 'PRODUCT' %}class="currentTag"{% endif %}>PRODUCT</a></li>
+              <li><a href="{{ blog.url }}/tagged/PEDIA" {% if current_tags contains 'PEDIA' %}class="currentTag"{% endif %}>PEDIA</a></li>
+              <li><a href="{{ blog.url }}/tagged/COUNSELING" {% if current_tags contains 'COUNSELING' %}class="currentTag"{% endif %}>COUNSELING</a></li>
+              <li><a href="{{ blog.url }}/tagged/CRAFTMAN" {% if current_tags contains 'CRAFTMAN' %}class="currentTag"{% endif %}>CRAFTMAN</a></li>
+              <li><a href="{{ blog.url }}/tagged/INSIDE" {% if current_tags contains 'INSIDE' %}class="currentTag"{% endif %}>INSIDE</a></li>
+              <li><a href="{{ blog.url }}/tagged/CREATION" {% if current_tags contains 'CREATION' %}class="currentTag"{% endif %}>CREATION</a></li>
+              <li><a href="{{ blog.url }}/tagged/LIFESTYLE" {% if current_tags contains 'LIFESTYLE' %}class="currentTag"{% endif %}>LIFE STYLE</a></li>
+              <li><a href="{{ blog.url }}/tagged/CULTURE" {% if current_tags contains 'CULTURE' %}class="currentTag"{% endif %}>CULTURE</a></li>
+              <li><a href="{{ blog.url }}/tagged/PRODUCT" {% if current_tags contains 'PRODUCT' %}class="currentTag"{% endif %}>PRODUCT</a></li>
               <li><a href="{{ blog.url }}/tagged/STAFFVOICE" {% if current_tags contains 'STAFFVOICE' %}class="currentTag"{% endif %}>STAFF VOICE</a></li>
             </ul>
           </div>
