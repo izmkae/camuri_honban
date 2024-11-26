@@ -17,8 +17,8 @@
           "settings": {
             "image": "shopify://shop_images/fv1.jpg",
             "image_sp": "shopify://shop_images/img_slide_01_sp.jpg",
-            "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。",
-            "link": "shopify://products/short-visor-cap"
+            "heading": "帽子が似合わない・・・\nその理由のほとんどは形とサイズにあるんです。",
+            "link": "shopify://blogs/journal/size-1"
           }
         },
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1": {
@@ -36,7 +36,7 @@
             "image": "shopify://shop_images/fv2.jpg",
             "image_sp": "shopify://shop_images/fv2_sp_3b5d801d-2313-4e48-9aee-2c95374c58ac.jpg",
             "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。",
-            "link": "shopify://pages/about"
+            "link": "shopify://collections/all"
           }
         }
       },
