@@ -416,6 +416,11 @@ $max_font_size (px): 最大フォントサイズ
     padding: 1.8vw;
   }
 }
+@media screen and (max-width: 800px) {
+  #journalListPage #journalSec #journalCategory {
+    border-top: 1px solid #000000;
+  }
+}
 #journalListPage #journalSec #journalCategory.journalBlock .acJournalBox label {
   display: none;
 }
