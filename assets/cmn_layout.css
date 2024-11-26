@@ -324,9 +324,21 @@ li {
   height: 100%;
   width: 4vw;
 }
+@media screen and (max-width: 800px) {
+  #gNaviWrapper #gNaviIn .hSearchBlock .field .field__button {
+    width: 8vw;
+    padding-right: 3vw;
+  }
+}
 #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label {
   font-size: 1vw;
   top: calc(1.35vw + var(--inputs-border-width));
+}
+@media screen and (max-width: 800px) {
+  #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label {
+    font-size: 2.93vw;
+    top: calc(3.35vw + var(--inputs-border-width));
+  }
 }
 @media screen and (max-width: 800px) {
   #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label:focus ~ .field__label {
@@ -341,12 +353,6 @@ li {
 #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:focus, #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:not(:placeholder-shown) {
   box-shadow: none;
   padding: 5px 14px;
-}
-@media screen and (max-width: 800px) {
-  #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label, #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:not(:placeholder-shown) ~ .field__label {
-    line-height: 2;
-    font-size: 2.93vw;
-  }
 }
 @media screen and (max-width: 800px) {
   #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:focus ~ .field__label, #gNaviWrapper #gNaviIn .hSearchBlock .field .field__input:not(:placeholder-shown) ~ .field__label {
