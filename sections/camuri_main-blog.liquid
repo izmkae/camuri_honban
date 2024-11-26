@@ -37,7 +37,7 @@
               <li><a href="{{ blog.url }}/tagged/LIFESTYLE" {% if current_tags == 'LIFESTYLE' %}class="currentTag"{% endif %}>LIFE STYLE</a></li>
               <li><a href="{{ blog.url }}/tagged/CULTURE" {% if current_tags == 'CULTURE' %}class="currentTag"{% endif %}>CULTURE</a></li>
               <li><a href="{{ blog.url }}/tagged/PRODUCT" {% if current_tags == 'PRODUCT' %}class="currentTag"{% endif %}>PRODUCT</a></li>
-              <li><a href="{{ blog.url }}/tagged/STAFFVOICE" {% if current_tags == 'STAFFVOICE' %}class="currentTag"{% endif %}>STAFF VOICE</a></li>
+              <li><a href="{{ blog.url }}/tagged/STAFFVOICE" {% if current_tags contains 'STAFFVOICE' %}class="currentTag"{% endif %}>STAFF VOICE</a></li>
             </ul>
           </div>
         </div>
