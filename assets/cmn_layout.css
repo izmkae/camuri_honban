@@ -296,7 +296,7 @@ li {
 @media screen and (max-width: 800px) {
   #gNaviWrapper #gNaviIn {
     width: 100vw;
-    padding: 27.4vw 8vw 5vw;
+    padding: 27.4vw 8vw 25vw;
   }
 }
 @media screen and (max-width: 800px) {
@@ -1925,3 +1925,7 @@ li {
     font-size: 3.73vw;
   }
 }
+
+/* ----------------------------------------------------------------------- 
+	アプリなどオーバーライド
+----------------------------------------------------------------------- */
