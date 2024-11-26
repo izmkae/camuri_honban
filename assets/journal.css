@@ -336,6 +336,9 @@ $max_font_size (px): 最大フォントサイズ
     padding: 0.36vw 2.66vw 0.42vw;
   }
 }
+#journalListPage #journalSec .journalBlock .acJournalBox .acBlock .journalTagList01 li a:hover {
+  color: #808080;
+}
 #journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 {
   transition: all 0.5s;
 }
