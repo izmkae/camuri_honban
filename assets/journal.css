@@ -385,6 +385,12 @@ $max_font_size (px): 最大フォントサイズ
 #journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 .journalCategoryList01 li a {
   color: #B1B1B1;
 }
+#journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 .journalCategoryList01 li a.currentTag {
+  color: #000000;
+}
+#journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 .journalCategoryList01 li a:hover {
+  color: #808080;
+}
 #journalListPage #journalSec .journalBlock .acJournalBox input {
   display: none;
   transition: all 0.5s;
