@@ -168,10 +168,11 @@
         },
         "item_category_fqQ9ej": {
           "type": "item_category",
+          "disabled": true,
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_casket.png",
             "topItemCatName": "キャスケット",
-            "topItemCatText": "こなれ感が出る",
+            "topItemCatText": "coming soon",
             "topItemCatLink": ""
           }
         },
