@@ -19,7 +19,7 @@
 <div id="journalListPage" class="headerOn main-blog page-width section-{{ section.id }}-padding">
   {%- paginate blog.articles by 12 -%}
   <section id="journalSec">
-    <div class="contentIn">
+    <div class="contentIn {{ current_tags }}">
       <h2>JOURNAL</h2>
 
       <div id="journalCategory" class="journalBlock">
@@ -34,10 +34,10 @@
               <li><a href="{{ blog.url }}/tagged/CRAFTMAN">CRAFTMAN</a></li>
               <li><a href="{{ blog.url }}/tagged/INSIDE">INSIDE</a></li>
               <li><a href="{{ blog.url }}/tagged/CREATION">CREATION</a></li>
-              <li><a href="{{ blog.url }}/tagged/LIFE STYLE">LIFE STYLE</a></li>
+              <li><a href="{{ blog.url }}/tagged/LIFESTYLE">LIFE STYLE</a></li>
               <li><a href="{{ blog.url }}/tagged/CULTURE">CULTURE</a></li>
               <li><a href="{{ blog.url }}/tagged/PRODUCT">PRODUCT</a></li>
-              <li><a href="{{ blog.url }}/tagged/STAFF VOICE">STAFF VOICE</a></li>
+              <li><a href="{{ blog.url }}/tagged/STAFFVOICE">STAFF VOICE</a></li>
             </ul>
           </div>
         </div>
