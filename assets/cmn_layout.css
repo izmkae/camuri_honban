@@ -322,9 +322,11 @@ li {
 }
 #gNaviWrapper #gNaviIn .hSearchBlock .field .field__button {
   height: 100%;
+  width: 4vw;
 }
 #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label {
-  line-height: 2.5;
+  font-size: 1vw;
+  top: calc(1.35vw + var(--inputs-border-width));
 }
 @media screen and (max-width: 800px) {
   #gNaviWrapper #gNaviIn .hSearchBlock .field .field__label:focus ~ .field__label {
