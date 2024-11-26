@@ -273,7 +273,7 @@ $max_font_size (px): 最大フォントサイズ
 }
 @media screen and (max-width: 800px) {
   #journalListPage #journalSec .journalBlock .acJournalBox label::before, #journalListPage #journalSec .journalBlock .acJournalBox label::after {
-    top: 2.8vw;
+    top: 3.5vw;
     right: 4vw;
     height: 16px;
   }
@@ -428,6 +428,11 @@ $max_font_size (px): 最大フォントサイズ
   margin-top: 2.02vw;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
+}
+@media screen and (max-width: 800px) {
+  #journalListPage #journalSec #journalTag {
+    margin-top: 0;
+  }
 }
 
 /*-------------------------------------------------------------------
