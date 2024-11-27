@@ -32,15 +32,10 @@
               
               <div class="shareButtonBlock">
                 <p>please shere</p>
-                <ul>
+                <div class="icoShare">
                   {% assign share_url = request.origin | append: article.url %}
                   {% render 'share-button', block: block, share_link: share_url %}
-                  <!-- 
-                  <li><a href="#"><img src="{{ 'ico_instagram.png' | asset_url }}" alt="Instagram"></a></li>
-                  <li><a href="#"><img src="{{ 'ico_facebook.png' | asset_url }}" alt="Facebook"></a></li>
-                  <li class="ico_x"><a href="#"><img src="{{ 'ico_x.png' | asset_url }}" alt="X"></a></li>
-                   -->
-                </ul>
+                </div>
               </div>
             </div>
           </section>

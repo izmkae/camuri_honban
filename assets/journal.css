@@ -565,6 +565,9 @@ $max_font_size (px): 最大フォントサイズ
     font-size: 2.93vw;
   }
 }
+#journalDetailPage #journalHeadSec .contentIn .shareButtonBlock .icoShare {
+  margin-left: 10px;
+}
 #journalDetailPage #journalHeadSec .contentIn .shareButtonBlock ul {
   display: -webkit-flex;
   display: flex;
