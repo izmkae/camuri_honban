@@ -39,7 +39,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: $font;
-	font-size: 16px;
+	@include max-font-size(1.15vw, 16px);
 	font-weight: 400;
 	color: $text;
 	text-align: left;
@@ -144,11 +144,20 @@ li {
 	}
 
 	.hLogo {
-		img {
-			width: 4.54vw;
+		font-size: 0.8em;
+		line-height: 0.8em;
 
-			@include media-sp {
-				width: 11.18vw;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+
+			img {
+				width: 4.54vw;
+
+				@include media-sp {
+					width: 11.18vw;
+				}
 			}
 		}
 	}
@@ -156,9 +165,20 @@ li {
 		@include flex(center, flex-end);
 
 		.hCart {
-			
+			.header__icon,
+			.header__icon--cart .icon {
+				height: auto;
+				width: auto;
+				padding: 0;
+			}
+
+			a {
+				&:hover {
+					opacity: $hover_opacity;
+				}
+			}
 		}
-		.hNavBtn {
+		.hNavBtn, .mvNavBtn {
 			position: relative;
 			width: 2.16vw;
 			height: 14px;
@@ -167,32 +187,53 @@ li {
 
 			@include media-sp {
 				width: 5.33vw;
-				margin-left: 2.66vw;
+				margin-left: 6.66vw;
 			}
 			
 			span {
 				position: absolute;
 				left: 0;
 				width: 100%;
-				height: 3px;
+				height: 2px;
 				background-color: $blk;
 
 				&:nth-of-type(1) {
-					top: 0;
+					top: 0px;
+
+					@include media-sp {
+						top: 2px;
+					}
 				}
 				&:nth-of-type(2) {
-					top: 13px;
+					top: 12px;
+
+					@include media-sp {
+						top: 10px;
+					}
 				}
 			}
 			&.active {
+
 				span {
 					&:nth-of-type(1) {
-						-webkit-transform: translateY(6px) rotate(45deg);
-								transform: translateY(6px) rotate(45deg);
+						-webkit-transform: translateY(4px) rotate(45deg);
+								transform: translateY(4px) rotate(45deg);
 					}
 					&:nth-of-type(2) {
-						-webkit-transform: translateY(-6px) rotate(-45deg);
-								transform: translateY(-6px) rotate(-45deg);
+						-webkit-transform: translateY(-8px) rotate(-45deg);
+								transform: translateY(-8px) rotate(-45deg);
+					}
+				}
+				@include media-sp {
+					span {
+						&:nth-of-type(1) {
+							-webkit-transform: translateY(4px) rotate(45deg);
+									transform: translateY(4px) rotate(45deg);
+						}
+						&:nth-of-type(2) {
+							-webkit-transform: translateY(-4px) rotate(-45deg);
+									transform: translateY(-4px) rotate(-45deg);
+						}
 					}
 				}
 			}
@@ -215,7 +256,7 @@ li {
 
 		@include media-sp {
 			width: 100vw;
-			padding: 27.4vw 8vw 5vw;
+			padding: 27.4vw 8vw 30vw;
 		}
 
 		#gMenu01, #gMenu02, #gMenu03, #gMenu04 {
@@ -226,16 +267,63 @@ li {
 		.hSearchBlock {
 			
 			.field {
+
+				&::before, &::after {
+					border-radius:0;
+					box-shadow: none;
+				}
 				.field__input {
 					width: 25.25vw;
 					height: 4.32vw;
 					background-color: transparent;
+					border: 1px solid $blk;
+
+					@include media-sp {
+						width: 100%;
+						height: 11.2vw;
+					}					
 				}
 				.field__button {
-					height: 6rem;
+					height: 100%;
+					width: 4vw;
+					@include media-sp {
+						width: 8vw;
+						padding-right: 3vw;
+					}
 				}
 				.field__label {
-					line-height: 2.5;
+					font-size: 1vw;
+					top: calc(1.35vw + var(--inputs-border-width));
+					
+					@include media-sp {
+						font-size: 2.93vw;
+						top: calc(3.35vw + var(--inputs-border-width));
+					}
+					&:focus~.field__label {
+						@include media-sp {
+							top: calc(var(--inputs-border-width) + .1rem);
+							font-size: 2.93vw;
+							font-size: 2vw !important;
+						}
+					}
+				}
+				.field__input:not(:placeholder-shown)~.field__label {
+					display: none;
+				}
+				.field__input:focus, .field__input:not(:placeholder-shown) {
+					box-shadow: none;
+					padding: 5px 14px;
+				}
+				.field__label, .field__input:not(:placeholder-shown)~.field__label {
+					@include media-sp {
+
+					}
+				}
+				.field__input:focus~.field__label, .field__input:not(:placeholder-shown)~.field__label {
+					@include media-sp {
+						line-height: 1.4;
+						font-size: 1.5vw;
+					}
 				}
 			}
 		}
@@ -250,6 +338,7 @@ li {
 			border: 1px solid $blk;
 			margin-top: 3.39vw;
 			margin-bottom: 3.39vw;
+			@include flex(center, center);
 
 			@include media-sp {
 				width: 100%;
@@ -263,7 +352,7 @@ li {
 
 				@include media-sp {
 					font-size: 4.26vw;
-					line-height: 11.2vw;
+					line-height: 1;
 				}
 			}
 			.txtJa {
@@ -272,7 +361,8 @@ li {
 
 				@include media-sp {
 					font-size: 2.93vw;
-					line-height: 11.2vw;
+					padding-left: 2.93vw;
+					line-height: 1;				
 				}
 			}
 
@@ -447,6 +537,11 @@ li {
 					width: 7.73vw;
 					margin-right: 6.66vw;
 				}
+				a {
+					&:hover {
+						opacity: $hover_opacity;
+					}
+				}
 
 			}
 		}
@@ -466,9 +561,16 @@ li {
 				}
 			}
 		}
-	}
+	}	
 }
-
+.cart-count-bubble {
+	background-color: transparent;
+	top: 0.7rem;
+    left: auto;
+    right: 1.2rem;
+    font-size: 15px;
+    font-family: $font_en;
+}
 /*-------------------------------------------------------------------
 	footer
 -------------------------------------------------------------------*/
@@ -492,7 +594,7 @@ li {
 		#newsletterBlock {
 			width: 50%;
 			height: 25.25vw;
-			padding: 3.96vw 11.83vw 3.96vw 10.31vw;
+			padding: 3.96vw 10.31vw 3.96vw;
 			background-color: #4A4A4A;
 			color:$wht;
 
@@ -507,6 +609,7 @@ li {
 			.newsletterTxt {
 				margin-top: 1.8vw;
 				line-height: 1.75;
+				font-size: 1.15vw;
 
 				@include media-sp {
 					margin-top: 5.06vw;
@@ -519,6 +622,64 @@ li {
 					margin-top: 5.6vw;
 				}
 			}
+
+			.camuri_mail_input {
+				height: 3.6vw;
+				padding: 1vw;
+				background-color: transparent;
+				border: 1px solid $wht;
+				color: $wht;
+
+				@include media-sp {
+					height: 11.2vw;
+					padding: 3vw;
+				}
+			}
+			.camuri_field_label {
+				color: $wht;
+				font-size: 1.15vw;
+				top: calc(1vw + var(--inputs-border-width));
+
+				@include media-sp {
+					font-size: 3.2vw;
+					line-height: 2;
+					top: calc(2.3vw + var(--inputs-border-width));
+				}
+			}
+			.camuri_mail_input:focus ~ .camuri_field_label,
+			.camuri_mail_input:not(:placeholder-shown) ~ .field__label {
+				font-size: 0.6vw;
+				top: calc(var(--inputs-border-width) + 0.5rem);
+				left: calc(var(--inputs-border-width) + 2rem);
+				letter-spacing: 0.04rem;
+
+				@include media-sp {
+					font-size: 2vw;
+					line-height: 2.5;
+				}
+			}
+			.camuri_mail_input:focus,
+			.camuri_mail_input:not(:placeholder-shown),
+			.camuri_mail_input:-webkit-autofill {
+				padding: 2.2rem 1.5rem 0.8rem 2rem;
+				margin: var(--inputs-border-width);
+			}
+			.camuri_newsletter-form__button {
+				width: 6.2vw;
+				height: 3.6vw;
+				color: $blk;
+				background: $wht;
+				font-size: 1.15vw;
+				margin-top: 0.1vw;
+    			margin-right: 0.1vw;
+
+				@include media-sp {
+					width: 19.2vw;
+					height: 11.2vw;
+					font-size: 3.2vw;
+				}
+			}
+
 		}
 		#snsBlock {
 			width: 50%;
@@ -553,6 +714,12 @@ li {
 						
 						@include media-sp {
 							width: 10.04vw;
+						}
+					}
+
+					a {
+						&:hover {
+							opacity: $hover_opacity;
 						}
 					}
 				}
@@ -611,6 +778,12 @@ li {
 						margin-top: 7.46vw;
 					}
 
+					a {
+						&:hover {
+							color: $hover;
+						}
+					}
+
 					.fMenuSecondary {
 						@include media-sp {
 							margin-top: 4.8vw;
@@ -624,6 +797,14 @@ li {
 							@include media-sp {
 								margin-top: 3.73vw;
 								font-size: 3.2vw;
+							}
+
+							&+li {
+								margin-top: 0.15vw;
+
+								@include media-sp {
+									margin-top: 2.15vw;
+								}
 							}
 						}
 					}
@@ -679,18 +860,16 @@ li {
 		display: block;
 		width: 7.57vw;
 		height: 2.59vw;
-		line-height: 2.4vw;
 		font-size: 1.15vw;
 		border-radius: 1.8vw;
 		font-family: $font_en;
 		font-weight: 600;
 		transition: 0.5s;
-		text-align: center;
+		@include flex(center, center);
 
 		@include media-sp {
 			width: 28vw;
 			height: 9.06vw;
-			line-height: 8vw;
 			font-size: 4vw;
 			border-radius: 6.66vw;
 		}
@@ -716,9 +895,115 @@ li {
 	}
 }
 /* ----------------------------------------------------------------------- 
+	journalList
+----------------------------------------------------------------------- */
+#journalList {
+	padding-top: 9.37vw;
+	@include flex(flex-start, space-between, wrap, row wrap);
+
+	@include media-sp {
+		
+	}
+	&::after {
+		display: block;
+		content:"";
+		width: 29%;
+	}
+
+	li {
+		width: 29%;
+		text-align: left;
+		margin-bottom: 70px;
+
+		@include media-sp {
+			width: 43.2vw;
+			margin: 8vw 0;
+		}
+
+		.imgBlock{
+			position: relative;
+			width: 100%;
+
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 0;
+				padding-top: 100%;
+			}
+
+			img{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				object-fit: cover;
+			}
+
+			.tabWrap {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+
+				span {
+					background-color: $bge;
+					padding: 0.4vw 0.72vw 0.36vw;
+					@include max-font-size(1.01vw, 14px);
+					font-weight: bold;
+					display: block;
+					line-height: 1;
+
+
+					@include media-sp {
+						padding: 1.06vw 2.13vw;
+						font-size: 2.93vw;
+					}
+				}
+			}
+		}
+		
+		.journalTtl {
+			margin-top: 21px;
+			@include max-font-size(1.28vw, 18px);
+			font-size: 1.28vw;
+			font-weight: bold;
+			line-height: 1.4;
+
+			@include media-sp {
+				margin-top: 4vw;
+				font-size: 3.73vw;
+			}
+		}
+		.journalDate {
+			margin-top: 10px;
+			font-family: $font_en;
+			@include max-font-size(1.01vw, 14px);
+			font-weight: 600;
+
+			@include media-sp {
+				margin-top: 2vw;
+				font-size: 2.93vw;
+			}
+		}
+		.tagList {
+			margin-top: 10px;
+			@include max-font-size(1.01vw, 14px);
+			color: #313131;
+
+			@include media-sp {
+				font-size: 2.93vw;
+			}
+		}
+	}
+}
+/* ----------------------------------------------------------------------- 
 	itemList
 ----------------------------------------------------------------------- */
-#itemSec {
+#itemSec ,#resultSec {
 	padding: 8.22vw 10.31vw 17.46vw;
 
 	@include media-sp {
@@ -739,6 +1024,18 @@ li {
 		padding-top: 7.5vw;
 		@include flex(flex-start, space-between);
 
+		.container::before{
+			content:"";
+			display: block;
+			width: 17.31vw;
+			order: 1;
+		}
+		.container::after{
+			content:"";
+			display: block;
+			width: 17.31vw;
+		}
+
 		li {
 			width: 17.31vw;
 			margin-bottom: 5.84vw;
@@ -746,6 +1043,15 @@ li {
 			@include media-sp {
 				width: 43.2vw;
 				margin-bottom: 10.66vw;
+			}
+			> a {
+				display: block;
+				width: 100%;
+				height: 100%;
+
+				&:hover {
+					@include opacity(0.7);
+				}
 			}
 
 			.imgBlock {
@@ -851,15 +1157,14 @@ li {
 			display: block;
 			width: 20.2vw;
 			height: 4.32vw;
-			line-height: 4.32vw;
 			margin: auto;
 			border-radius: 2.8vw;
 			font-size: 1.44vw;
+			@include flex(center, center);
 
 			@include media-sp {
 				width: 50.4vw;
 				height: 11.2vw;
-				line-height: 11.2vw;
 				border-radius: 25.2vw;
 				font-size: 4vw;
 			}
@@ -991,6 +1296,14 @@ li {
 						}
 					}
 				}
+				.comingSoonItem {
+					color: #999;
+					.imgBlock {
+						img {
+							@include opacity(0.5);
+						}
+					}
+				}
 			}
 		}
 	}
@@ -998,8 +1311,7 @@ li {
 
 #tryitSec {
 	position: relative;
-	z-index: 3;
-
+	
 	.flowTxtWrap {
 		display: flex;
 		position: absolute;
@@ -1122,6 +1434,11 @@ li {
 		}
 
 		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			object-fit: contain;
+
 			@include media-sp {
 				width: 28.26vw;
 			}
@@ -1179,4 +1496,135 @@ li {
 	@include media-sp {
 		font-size: 10.66vw;
 	}
+}
+
+/* ----------------------------------------------------------------------- 
+	FAQなど共通テンプレート
+----------------------------------------------------------------------- */
+.cmnTemplate {
+	padding-bottom: 7.21vw;
+
+	@include media-sp {
+		padding-bottom: 20vw;
+	}
+
+	.contentIn {
+		width: 100%;
+		max-width: 1100px;
+		margin: auto;
+
+		@include media-sp {
+			width: 91.48vw;
+		}
+	}
+	#titleSec {
+		margin: 2.45vw 0 3vw;
+
+		.menuTitleStyle {
+			text-align: center;
+			
+			span {
+				display: block;
+
+				&.txtEn {
+					font-family: $font_en;
+					@include max-font-size(3.24vw, 45px);
+					font-weight: 600;
+					line-height: 1.4;
+
+					@include media-sp {
+						font-size: 6.66vw;
+					}
+				}
+
+				&.txtJa {
+					@include max-font-size(1.29vw, 18px);
+					font-weight: normal;
+
+					@include media-sp {
+						font-size: 3.73vw;
+					}
+				}
+			}
+		}
+	}
+	h3 {
+		padding-top: 7.21vw;
+		@include max-font-size(1.8vw, 25px);
+		font-weight: bold;
+		padding-bottom: 1vw;
+		border-bottom: 2px solid $blk;
+		line-height: 1.6;
+
+		@include media-sp {
+			padding-top: 18vw;
+			font-size: 5.33vw;
+		}
+		
+	}
+	.cmnMenuList {
+		@include flex(flex-start, space-around, wrap, row wrap);
+		li {
+			width: 23.16vw;
+			height: 4.68vw;
+			line-height: 4.68vw;
+			max-width: 321px;
+			border: 1px solid $blk;
+			border-radius:2.34vw;
+			text-align: center;
+			margin: 1.5vw 0;
+
+			@include media-sp {
+				width: 100%;
+				height: 14.66vw;
+				line-height: 14.66vw;
+				border-radius:7.33vw;
+			}
+
+			a {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.cmnDLList {
+		dt {
+			margin-top: 2.74vw;
+			@include max-font-size(1.44vw, 20px);
+			font-weight: bold;
+
+			@include media-sp {
+				margin-top: 7.19vw;
+				font-size: 4.26vw;
+			}
+		}
+		dd {
+			margin-top: 0.72vw;
+			@include max-font-size(1.29vw, 18px);
+			font-weight: normal;
+
+			@include media-sp {
+				margin-top: 2vw;
+				font-size: 3.73vw;
+			}
+		}
+	}
+	p {
+		margin-top: 1.94vw;
+		@include max-font-size(1.15vw, 16px);
+		font-weight: normal;
+
+		@include media-sp {
+			margin-top: 5.33vw;
+			font-size: 3.73vw;
+		}
+	}
+}
+
+/* ----------------------------------------------------------------------- 
+	アプリなどオーバーライド
+----------------------------------------------------------------------- */
+.fuji3_floatbtn_custom {
+
 }
