@@ -519,7 +519,6 @@ $max_font_size (px): 最大フォントサイズ
 
 #tryitSec {
   position: relative;
-  z-index: 3;
 }
 #tryitSec .flowTxtWrap {
   display: flex;
