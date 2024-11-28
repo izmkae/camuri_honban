@@ -154,11 +154,6 @@
         "disabled": false,
         "settings": {}
       },
-      "18218067344242134805": {
-        "type": "shopify://apps/hulk-product-reviews/blocks/app/34006358-52bd-4ec7-8c78-200fe58b77ba",
-        "disabled": false,
-        "settings": {}
-      },
       "15399298802885521802": {
         "type": "shopify://apps/table-of-contents/blocks/app-embed/d06f5754-affb-4dc7-a2a9-18d74d225f70",
         "disabled": false,
@@ -170,6 +165,11 @@
         "settings": {
           "target_selector": ".product-form__controls-group--submit"
         }
+      },
+      "18218067344242134805": {
+        "type": "shopify://apps/hulk-product-reviews/blocks/app/34006358-52bd-4ec7-8c78-200fe58b77ba",
+        "disabled": true,
+        "settings": {}
       }
     },
     "color_schemes": {
