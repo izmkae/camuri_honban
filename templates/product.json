@@ -14,27 +14,26 @@
       "blocks": {
         "subtitle_y6RFMz": {
           "type": "subtitle",
-          "settings": {
-          }
+          "settings": {}
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "product_no_GgdeCp": {
           "type": "product_no",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
-        "hulk_product_reviews_average_review_apQzjP": {
-          "type": "shopify://apps/hulk-product-reviews/blocks/average-review/34006358-52bd-4ec7-8c78-200fe58b77ba",
+        "trustoo_io_reviews_star_rating_widget_cHj9ED": {
+          "type": "shopify://apps/trustoo-io-reviews/blocks/star-rating-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
           "settings": {
+            "star_size": 20,
+            "font_size": 16,
+            "block_aligment": "flex-start"
           }
         },
         "variant_picker": {
@@ -45,8 +44,7 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -56,9 +54,8 @@
           }
         },
         "fuji3_wishlist_add_btn_QLFVwA": {
-          "type": "shopify://apps/fuji3-wishlist/blocks/add-btn/d1baf985-85f5-4ef5-b595-4e973811d187",
-          "settings": {
-          }
+          "type": "shopify://apps/mf-wishlist/blocks/add-btn/d1baf985-85f5-4ef5-b595-4e973811d187",
+          "settings": {}
         },
         "share": {
           "type": "share",
@@ -72,7 +69,7 @@
         "title",
         "product_no_GgdeCp",
         "price",
-        "hulk_product_reviews_average_review_apQzjP",
+        "trustoo_io_reviews_star_rating_widget_cHj9ED",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -95,6 +92,21 @@
         "padding_bottom": 0
       }
     },
+    "173275896593e941bc": {
+      "type": "apps",
+      "blocks": {
+        "trustoo_io_reviews_card_carousel_p9nTEp": {
+          "type": "shopify://apps/trustoo-io-reviews/blocks/card-carousel/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "trustoo_io_reviews_card_carousel_p9nTEp"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "camuri_related-products": {
       "type": "camuri_related-products",
       "settings": {
@@ -108,10 +120,18 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "17327588365bfe1dbe": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "camuri_related-products"
+    "173275896593e941bc",
+    "camuri_related-products",
+    "17327588365bfe1dbe"
   ]
 }
