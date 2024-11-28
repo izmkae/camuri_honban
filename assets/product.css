@@ -345,7 +345,7 @@ $max_font_size (px): 最大フォントサイズ
   border-right: 1px solid #000000;
 }
 #productBasicInfoSec .infoBlock .button {
-  min-width: 32.1vw;
+  width: 100%;
   min-height: 50px;
   font-size: 1.15vw;
 }
