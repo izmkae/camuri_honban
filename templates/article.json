@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -26,14 +26,12 @@
           }
         },
         "table_of_contents_theme_extension_ngjNAn": {
-          "type": "shopify:\/\/apps\/table-of-contents\/blocks\/theme-extension\/d06f5754-affb-4dc7-a2a9-18d74d225f70",
-          "settings": {
-          }
+          "type": "shopify://apps/table-of-contents/blocks/theme-extension/d06f5754-affb-4dc7-a2a9-18d74d225f70",
+          "settings": {}
         },
         "content": {
           "type": "content",
-          "settings": {
-          }
+          "settings": {}
         },
         "share": {
           "type": "share",
@@ -44,8 +42,17 @@
         "article_xgi8Gz": {
           "type": "article",
           "settings": {
-            "article1": "journal\/帰山テスト",
-            "article2": "journal\/帰山テスト",
+            "article1": "journal/帰山テスト",
+            "article2": "journal/帰山テスト",
+            "article3": "",
+            "article4": ""
+          }
+        },
+        "article_HHAXfR": {
+          "type": "article",
+          "settings": {
+            "article1": "",
+            "article2": "",
             "article3": "",
             "article4": ""
           }
@@ -57,10 +64,10 @@
         "table_of_contents_theme_extension_ngjNAn",
         "content",
         "share",
-        "article_xgi8Gz"
+        "article_xgi8Gz",
+        "article_HHAXfR"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
