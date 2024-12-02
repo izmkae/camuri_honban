@@ -35,7 +35,7 @@ $max_font_size (px): 最大フォントサイズ
   border-top: 1px solid #070707;
 }
 #tryitSec h2 {
-  padding: 2.45vw 0 0 10.31vw;
+  padding: 2.45vw 0 0 0;
 }
 @media screen and (max-width: 800px) {
   #tryitSec h2 {
