@@ -1613,6 +1613,9 @@ li {
   display: block;
   cursor: pointer;
 }
+#tryitSec #tryitList li a .imgBlock {
+  line-height: 1;
+}
 #tryitSec #tryitList li a .flexBlock {
   margin-top: 1.2vw;
   display: -webkit-flex;
