@@ -28,20 +28,20 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #productList #itemSec {
-  padding: 8.22vw 10.31vw 7.57vw;
+  padding: 8.22vw 10.31vw 0;
 }
-#productList #tryitSec {
+
+#tryitSec {
   border-top: 1px solid #070707;
 }
-#productList #tryitSec h2 {
+#tryitSec h2 {
   padding: 2.45vw 0 0 10.31vw;
 }
 @media screen and (max-width: 800px) {
-  #productList #tryitSec h2 {
+  #tryitSec h2 {
     padding: 18.93vw 0 0 0;
   }
 }
-
 #tryitSec .flowTxtWrap {
   display: none;
 }
