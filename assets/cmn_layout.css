@@ -1546,6 +1546,9 @@ li {
     font-size: 13.33vw;
   }
 }
+#tryitSec .flowTxtWrap .flowTxt {
+  animation: loop 80s linear infinite;
+}
 #tryitSec .flowTxtWrap .flowTxt1 {
   animation: loop 80s -25s linear infinite;
 }
