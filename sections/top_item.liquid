@@ -1,6 +1,6 @@
 <section id="itemSec">
 	<h2>{{ section.settings.title | escape }}</h2>
-	<ul id="itemList">
+	<ul id="itemList" class="container">
 		{%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
 		<li>
 			<a href="{{ product.url }}"> 

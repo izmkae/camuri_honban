@@ -135,7 +135,7 @@
 
           <section id="itemSec">
             <div class="loading-overlay gradient"></div>
-            <ul id="itemList">
+            <ul id="itemList" class="container">
               {%- for product in collection.products -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
