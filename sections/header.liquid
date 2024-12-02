@@ -38,11 +38,6 @@
 	{{ 'journal.css' | asset_url | stylesheet_tag }}
 {% endif %}
 
-
-{% if template == 'list-collections' %}
-	{{ 'product.css' | asset_url | stylesheet_tag }}
-{% endif %}
-
 {% if template contains 'product' %}
 	{{ 'slick.css' | asset_url | stylesheet_tag }}
 	{{ 'slick-theme.css' | asset_url | stylesheet_tag }}
