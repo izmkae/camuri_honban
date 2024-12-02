@@ -51,10 +51,10 @@
         "article_HHAXfR": {
           "type": "article",
           "settings": {
-            "article1": "",
-            "article2": "",
-            "article3": "",
-            "article4": ""
+            "article1": "journal/beret",
+            "article2": "journal/hat",
+            "article3": "journal/factory-1",
+            "article4": "journal/size-1"
           }
         }
       },
