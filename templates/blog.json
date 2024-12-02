@@ -25,10 +25,10 @@
     "camuri_featured_blog_X4gzgd": {
       "type": "camuri-featured-blog",
       "settings": {
-        "article1": "",
-        "article2": "",
-        "article3": "",
-        "article4": ""
+        "article1": "journal/buckethat",
+        "article2": "journal/factory-1",
+        "article3": "journal/スタッフインタビューyui",
+        "article4": "journal/帽子のお手入れ方法"
       }
     }
   },
