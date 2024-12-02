@@ -1178,13 +1178,13 @@ li {
   flex-wrap: wrap;
   flex-flow: row wrap;
 }
-#itemSec #itemList .container::before, #resultSec #itemList .container::before {
+#itemSec #itemList.container::before, #resultSec #itemList.container::before {
   content: "";
   display: block;
   width: 17.31vw;
   order: 1;
 }
-#itemSec #itemList .container::after, #resultSec #itemList .container::after {
+#itemSec #itemList.container::after, #resultSec #itemList.container::after {
   content: "";
   display: block;
   width: 17.31vw;
