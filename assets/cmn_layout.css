@@ -1609,8 +1609,12 @@ li {
     margin-bottom: 12vw;
   }
 }
-#tryitSec #tryitList li .flexBlock {
-  margin-top: 1.8vw;
+#tryitSec #tryitList li a {
+  display: block;
+  cursor: pointer;
+}
+#tryitSec #tryitList li a .flexBlock {
+  margin-top: 1.2vw;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -1624,17 +1628,61 @@ li {
   flex-wrap: wrap;
   flex-flow: row wrap;
 }
-#tryitSec #tryitList li .flexBlock .listTtl {
+#tryitSec #tryitList li a .flexBlock .listTtl {
   width: 16.59vw;
-  font-size: 1.44vw;
+  font-size: 1.15vw;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.56;
 }
 @media screen and (max-width: 800px) {
-  #tryitSec #tryitList li .flexBlock .listTtl {
+  #tryitSec #tryitList li a .flexBlock .listTtl {
     width: 64vw;
     font-size: 5.33vw;
   }
+}
+#tryitSec #tryitList li a .flexBlock .btnBlock2 span {
+  display: block;
+  width: 7.57vw;
+  height: 2.59vw;
+  font-size: 1.15vw;
+  border-radius: 1.8vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transition: 0.5s;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+@media screen and (max-width: 800px) {
+  #tryitSec #tryitList li a .flexBlock .btnBlock2 span {
+    width: 28vw;
+    height: 9.06vw;
+    font-size: 4vw;
+    border-radius: 6.66vw;
+  }
+}
+#tryitSec #tryitList li a .flexBlock .btnBlock2 span.btnStyleB01 {
+  border: 2px solid #000000;
+  color: #000000;
+}
+#tryitSec #tryitList li a:hover img {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -khtml-opacity: 0.6;
+  -ms-filter: "alpha(opacity=$opacity)";
+}
+#tryitSec #tryitList li a:hover .flexBlock .btnBlock2 span {
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 #writingByBlock {
