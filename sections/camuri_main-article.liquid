@@ -95,7 +95,7 @@
                   <a href="{{ product.url }}">
                     <img src="{{ product.featured_media | image_url: width: 300 }}">
                     <p class="itemTtl">{{ product.title | escape }}</p>
-                    <p class="itemPrice">{{ product.price | money }}<span>（税抜）</span></p>
+                    <p class="itemPrice">{{ product.price | money }}<span>（税込）</span></p>
                   </a>
                 </li>
               {%- endfor %}
