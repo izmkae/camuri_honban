@@ -93,7 +93,8 @@ $max_font_size (px): 最大フォントサイズ
   color: #FFFFFF;
   font-size: 1.8vw;
   font-weight: bold;
-  line-height: 1.8;
+  line-height: 1.6;
+  padding-right: 5vw;
 }
 @media screen and (max-width: 800px) {
   #mainVisualSec #mainSlider li .txtBlock {
