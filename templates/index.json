@@ -17,8 +17,15 @@
           "settings": {
             "image": "shopify://shop_images/fv1.jpg",
             "image_sp": "shopify://shop_images/img_slide_01_sp.jpg",
-            "heading": "CAMURIが目指す\n「すべての人に\nフィットする帽子作り」",
+            "heading": "頭が小さい人も大きい人も\n自然にきれいにかぶれるキャップ。",
             "link": "shopify://blogs/journal/被り心地の軽さは単純に-帽子が軽いから-だけじゃない"
+          }
+        },
+        "slide_LEQqrY": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "link": ""
           }
         },
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1": {
@@ -42,6 +49,7 @@
       },
       "block_order": [
         "slide_FTPQVJ",
+        "slide_LEQqrY",
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1",
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2"
       ],
