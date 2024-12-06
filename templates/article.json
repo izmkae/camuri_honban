@@ -19,10 +19,6 @@
             "blog_show_author": false
           }
         },
-        "product_blog_tags_free_KreTAk": {
-          "type": "shopify://apps/product-blog-tags/blocks/free/67632605-1942-48ed-8754-52e0f58207d1",
-          "settings": {}
-        },
         "featured_image": {
           "type": "featured_image",
           "settings": {
@@ -60,7 +56,6 @@
       },
       "block_order": [
         "title",
-        "product_blog_tags_free_KreTAk",
         "featured_image",
         "content",
         "share",
