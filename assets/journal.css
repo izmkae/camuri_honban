@@ -442,7 +442,7 @@ $max_font_size (px): 最大フォントサイズ
 	journal Detail
 -------------------------------------------------------------------*/
 #journalDetailPage #journalHeadSec {
-  padding: 5.48vw 0 3.03vw;
+  padding: 5.48vw 0 3.1vw;
   background-color: #E1DFD9;
 }
 @media screen and (max-width: 800px) {
@@ -516,6 +516,7 @@ $max_font_size (px): 最大フォントサイズ
 }
 #journalDetailPage #journalHeadSec .contentIn .imgBlock {
   margin-top: 2.4%;
+  line-height: 1;
 }
 @media screen and (max-width: 800px) {
   #journalDetailPage #journalHeadSec .contentIn .imgBlock {
