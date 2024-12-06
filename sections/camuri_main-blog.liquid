@@ -86,9 +86,7 @@
               {% endif %}
             </div>
             <p class="journalTtl">{{ article.title | escape }}</p>
-            <!-- {%- if show_date -%} -->
-              <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
-            <!-- {%- endif -%} -->
+            <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
           </a>
           {%- if article.tags != blank -%}
            <div class="tagList">
@@ -124,7 +122,7 @@
               <div class="tagList">
                 {%- if block.settings.article1.tags != blank -%}
                   {% for tag in block.settings.article1.tags -%}
-                    <span>{{ tag }}</span>　
+                    <span>#{{ tag }}</span>　
                   {%- endfor %}
                 {%- endif -%}
               </div>
