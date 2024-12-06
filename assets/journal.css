@@ -160,7 +160,7 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #journalReccomendSec #journalReccomendList li .txtBlock .journalDate {
-  margin-top: 1.15vw;
+  margin-top: 10px;
   font-family: "Poppins", sans-serif;
   font-size: 1.01vw;
   font-weight: 600;
@@ -174,6 +174,21 @@ $max_font_size (px): 最大フォントサイズ
   #journalReccomendSec #journalReccomendList li .txtBlock .journalDate {
     margin-top: 2vw;
     font-size: 3.2vw;
+  }
+}
+#journalReccomendSec #journalReccomendList li .txtBlock .tagList {
+  margin-top: 10px;
+  font-size: 1.01vw;
+  color: #313131;
+}
+@media screen and (min-width: 1386.13861px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .tagList {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .tagList {
+    font-size: 2.93vw;
   }
 }
 
