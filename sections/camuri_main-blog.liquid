@@ -86,9 +86,9 @@
               {% endif %}
             </div>
             <p class="journalTtl">{{ article.title | escape }}</p>
-            {%- if show_date -%}
+            <!-- {%- if show_date -%} -->
               <p class="journalDate">{{ article.published_at | date: '%Y.%m.%d' }}</p>
-            {%- endif -%}
+            <!-- {%- endif -%} -->
           </a>
           {%- if article.tags != blank -%}
            <div class="tagList">
