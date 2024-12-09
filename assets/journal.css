@@ -37,7 +37,7 @@ $max_font_size (px): 最大フォントサイズ
 #journalReccomendSec .contentIn {
   width: 100%;
   max-width: 1100px;
-  margin: 3.2vw auto 6.78vw;
+  margin: 6.4vw auto 6.78vw;
   border: 2px solid #000000;
 }
 @media screen and (max-width: 800px) {
@@ -69,7 +69,7 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #journalReccomendSec #journalReccomendList {
-  padding: 3.66% 1.83%;
+  padding: 1.83%;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: flex-start;
@@ -447,7 +447,7 @@ $max_font_size (px): 最大フォントサイズ
 }
 @media screen and (max-width: 800px) {
   #journalDetailPage #journalHeadSec {
-    padding: 8.53vw 0 9.33vw;
+    padding: 8.53vw 0 6.53vw;
   }
 }
 #journalDetailPage #journalHeadSec .contentIn {

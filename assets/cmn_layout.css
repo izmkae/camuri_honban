@@ -1644,7 +1644,7 @@ li {
 @media screen and (max-width: 800px) {
   #tryitSec #tryitList li a .flexBlock .listTtl {
     width: 64vw;
-    font-size: 5.33vw;
+    font-size: 4.26vw;
   }
 }
 #tryitSec #tryitList li a .flexBlock .btnBlock2 span {
