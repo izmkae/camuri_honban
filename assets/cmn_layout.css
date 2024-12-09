@@ -1819,64 +1819,64 @@ li {
 /* ----------------------------------------------------------------------- 
 	FAQなど共通テンプレート
 ----------------------------------------------------------------------- */
-.cmnTemplate {
+.cmnTemplate, .cmnTemplateTitle {
   padding-bottom: 7.21vw;
 }
 @media screen and (max-width: 800px) {
-  .cmnTemplate {
+  .cmnTemplate, .cmnTemplateTitle {
     padding-bottom: 20vw;
   }
 }
-.cmnTemplate .contentIn {
+.cmnTemplate .contentIn, .cmnTemplateTitle .contentIn {
   width: 100%;
   max-width: 1100px;
   margin: auto;
 }
 @media screen and (max-width: 800px) {
-  .cmnTemplate .contentIn {
+  .cmnTemplate .contentIn, .cmnTemplateTitle .contentIn {
     width: 91.48vw;
   }
 }
-.cmnTemplate #titleSec {
+.cmnTemplate #titleSec, .cmnTemplateTitle #titleSec {
   margin: 2.45vw 0 3vw;
 }
-.cmnTemplate #titleSec .menuTitleStyle {
+.cmnTemplate #titleSec .menuTitleStyle, .cmnTemplateTitle #titleSec .menuTitleStyle {
   text-align: center;
 }
-.cmnTemplate #titleSec .menuTitleStyle span {
+.cmnTemplate #titleSec .menuTitleStyle span, .cmnTemplateTitle #titleSec .menuTitleStyle span {
   display: block;
 }
-.cmnTemplate #titleSec .menuTitleStyle span.txtEn {
+.cmnTemplate #titleSec .menuTitleStyle span.txtEn, .cmnTemplateTitle #titleSec .menuTitleStyle span.txtEn {
   font-family: "Poppins", sans-serif;
   font-size: 3.24vw;
   font-weight: 600;
   line-height: 1.4;
 }
 @media screen and (min-width: 1388.88889px) {
-  .cmnTemplate #titleSec .menuTitleStyle span.txtEn {
+  .cmnTemplate #titleSec .menuTitleStyle span.txtEn, .cmnTemplateTitle #titleSec .menuTitleStyle span.txtEn {
     font-size: 45px;
   }
 }
 @media screen and (max-width: 800px) {
-  .cmnTemplate #titleSec .menuTitleStyle span.txtEn {
+  .cmnTemplate #titleSec .menuTitleStyle span.txtEn, .cmnTemplateTitle #titleSec .menuTitleStyle span.txtEn {
     font-size: 6.66vw;
   }
 }
-.cmnTemplate #titleSec .menuTitleStyle span.txtJa {
+.cmnTemplate #titleSec .menuTitleStyle span.txtJa, .cmnTemplateTitle #titleSec .menuTitleStyle span.txtJa {
   font-size: 1.29vw;
   font-weight: normal;
 }
 @media screen and (min-width: 1395.34884px) {
-  .cmnTemplate #titleSec .menuTitleStyle span.txtJa {
+  .cmnTemplate #titleSec .menuTitleStyle span.txtJa, .cmnTemplateTitle #titleSec .menuTitleStyle span.txtJa {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 800px) {
-  .cmnTemplate #titleSec .menuTitleStyle span.txtJa {
+  .cmnTemplate #titleSec .menuTitleStyle span.txtJa, .cmnTemplateTitle #titleSec .menuTitleStyle span.txtJa {
     font-size: 3.73vw;
   }
 }
-.cmnTemplate h3 {
+.cmnTemplate h3, .cmnTemplateTitle h3 {
   padding-top: 7.21vw;
   font-size: 1.8vw;
   font-weight: bold;
@@ -1885,17 +1885,17 @@ li {
   line-height: 1.6;
 }
 @media screen and (min-width: 1388.88889px) {
-  .cmnTemplate h3 {
+  .cmnTemplate h3, .cmnTemplateTitle h3 {
     font-size: 25px;
   }
 }
 @media screen and (max-width: 800px) {
-  .cmnTemplate h3 {
+  .cmnTemplate h3, .cmnTemplateTitle h3 {
     padding-top: 18vw;
     font-size: 5.33vw;
   }
 }
-.cmnTemplate .cmnMenuList {
+.cmnTemplate .cmnMenuList, .cmnTemplateTitle .cmnMenuList {
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: flex-start;
@@ -1909,7 +1909,7 @@ li {
   flex-wrap: wrap;
   flex-flow: row wrap;
 }
-.cmnTemplate .cmnMenuList li {
+.cmnTemplate .cmnMenuList li, .cmnTemplateTitle .cmnMenuList li {
   width: 23.16vw;
   height: 4.68vw;
   line-height: 4.68vw;
@@ -1920,65 +1920,69 @@ li {
   margin: 1.5vw 0;
 }
 @media screen and (max-width: 800px) {
-  .cmnTemplate .cmnMenuList li {
+  .cmnTemplate .cmnMenuList li, .cmnTemplateTitle .cmnMenuList li {
     width: 100%;
     height: 14.66vw;
     line-height: 14.66vw;
     border-radius: 7.33vw;
   }
 }
-.cmnTemplate .cmnMenuList li a {
+.cmnTemplate .cmnMenuList li a, .cmnTemplateTitle .cmnMenuList li a {
   display: block;
   width: 100%;
   height: 100%;
 }
-.cmnTemplate .cmnDLList dt {
+.cmnTemplate .cmnDLList dt, .cmnTemplateTitle .cmnDLList dt {
   margin-top: 2.74vw;
   font-size: 1.44vw;
   font-weight: bold;
 }
 @media screen and (min-width: 1388.88889px) {
-  .cmnTemplate .cmnDLList dt {
+  .cmnTemplate .cmnDLList dt, .cmnTemplateTitle .cmnDLList dt {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 800px) {
-  .cmnTemplate .cmnDLList dt {
+  .cmnTemplate .cmnDLList dt, .cmnTemplateTitle .cmnDLList dt {
     margin-top: 7.19vw;
     font-size: 4.26vw;
   }
 }
-.cmnTemplate .cmnDLList dd {
+.cmnTemplate .cmnDLList dd, .cmnTemplateTitle .cmnDLList dd {
   margin-top: 0.72vw;
   font-size: 1.29vw;
   font-weight: normal;
 }
 @media screen and (min-width: 1395.34884px) {
-  .cmnTemplate .cmnDLList dd {
+  .cmnTemplate .cmnDLList dd, .cmnTemplateTitle .cmnDLList dd {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 800px) {
-  .cmnTemplate .cmnDLList dd {
+  .cmnTemplate .cmnDLList dd, .cmnTemplateTitle .cmnDLList dd {
     margin-top: 2vw;
     font-size: 3.73vw;
   }
 }
-.cmnTemplate p {
+.cmnTemplate p, .cmnTemplateTitle p {
   margin-top: 1.94vw;
   font-size: 1.15vw;
   font-weight: normal;
 }
 @media screen and (min-width: 1391.30435px) {
-  .cmnTemplate p {
+  .cmnTemplate p, .cmnTemplateTitle p {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 800px) {
-  .cmnTemplate p {
+  .cmnTemplate p, .cmnTemplateTitle p {
     margin-top: 5.33vw;
     font-size: 3.73vw;
   }
+}
+
+.cmnTemplateTitle {
+  padding-bottom: 0;
 }
 
 /* ----------------------------------------------------------------------- 
