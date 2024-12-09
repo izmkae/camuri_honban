@@ -387,7 +387,7 @@ h3 span {
   font-weight: 600;
   font-size: 2.16vw;
   text-align: center;
-  padding-bottom: 243px;
+  padding-bottom: 12.04vw;
 }
 @media screen and (min-width: 1388.88889px) {
   #flowImageSec h4 {
@@ -397,7 +397,7 @@ h3 span {
 @media screen and (max-width: 800px) {
   #flowImageSec h4 {
     font-size: 5.33vw;
-    padding-bottom: 24.26vw;
+    padding-bottom: 22.37vw;
   }
 }
 #flowImageSec h4 span {
