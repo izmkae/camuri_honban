@@ -551,7 +551,7 @@ $max_font_size (px): 最大フォントサイズ
 }
 @media screen and (max-width: 800px) {
   #journalDetailPage #journalHeadSec .contentIn .shareButtonBlock {
-    margin-top: 3.73vw;
+    margin-top: 6.53vw;
     font-size: 2.93vw;
   }
 }
