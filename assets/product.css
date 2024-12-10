@@ -30,8 +30,10 @@ $max_font_size (px): 最大フォントサイズ
 #productList #itemSec {
   padding: 3.96vw 10.31vw 0;
 }
-#productList #itemSec #itemList {
-  padding: 0 4vw;
+@media screen and (max-width: 800px) {
+  #productList #itemSec {
+    padding: 0 4vw;
+  }
 }
 
 #tryitSec {
