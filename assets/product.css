@@ -31,7 +31,7 @@ $max_font_size (px): 最大フォントサイズ
   padding: 3.96vw 10.31vw 0;
 }
 #productList #itemSec #itemList {
-  padding-top: 0;
+  padding: 0 4vw;
 }
 
 #tryitSec {
