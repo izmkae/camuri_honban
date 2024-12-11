@@ -323,6 +323,22 @@ $max_font_size (px): 最大フォントサイズ
     font-size: 3.73vw;
   }
 }
+#productBasicInfoSec .infoBlock .productPriceAddTxt {
+  margin-bottom: 20px;
+  font-size: 1.33vw;
+  font-weight: bold;
+}
+@media screen and (min-width: 1203.00752px) {
+  #productBasicInfoSec .infoBlock .productPriceAddTxt {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #productBasicInfoSec .infoBlock .productPriceAddTxt {
+    margin-bottom: 2.66vw;
+    font-size: 3.73vw;
+  }
+}
 #productBasicInfoSec .infoBlock .form__label, #productBasicInfoSec .infoBlock .quantity__label {
   margin-top: 30px;
   font-size: 1.66vw;
