@@ -405,5 +405,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".fuji3_floatbtn_custom{}"
+    ]
   }
 }
