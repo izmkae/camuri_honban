@@ -1869,6 +1869,9 @@
         "price": {
           "name": "商品価格"
         },
+        "price_add_txt": {
+          "name": "商品価格 補足"
+        },
         "quantity_selector": {
           "name": "数量セレクター"
         },
