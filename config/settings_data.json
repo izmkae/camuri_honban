@@ -9,9 +9,8 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/apple-touch-icon.png",
+    "logo": "shopify://shop_images/logo_camuri.svg",
     "logo_width": 130,
-    "favicon": "shopify://shop_images/apple-touch-icon.png",
     "type_header_font": "poppins_n4",
     "type_header_jp_font": "\"游ゴシック体\", YuGothic, \"游ゴシック\", \"Yu Gothic\"",
     "heading_scale": 100,
@@ -409,7 +408,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".fuji3_floatbtn_custom {}"
+      ".fuji3_floatbtn_custom{}"
     ]
   }
 }
