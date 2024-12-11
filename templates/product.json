@@ -28,10 +28,6 @@
           "type": "price",
           "settings": {}
         },
-        "text_td3HYk": {
-          "type": "price_add_txt",
-          "settings": {}
-        },
         "trustoo_io_reviews_star_rating_widget_cHj9ED": {
           "type": "shopify://apps/trustoo-io-reviews/blocks/star-rating-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
           "settings": {
@@ -73,7 +69,6 @@
         "title",
         "product_no_GgdeCp",
         "price",
-        "text_td3HYk",
         "trustoo_io_reviews_star_rating_widget_cHj9ED",
         "variant_picker",
         "quantity_selector",
