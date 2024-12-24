@@ -1,10 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "173500529201ed141e": {
+      "type": "apps",
+      "blocks": {
+        "all_in_gift_app_block_cart_tM3NQM": {
+          "type": "shopify://apps/all-in-gift/blocks/app-block-cart/14c78036-27a0-4098-a9e3-c3f1525dedff",
+          "settings": {
+            "font_color": "#000000",
+            "secondary_font_color": "#5570E9",
+            "font_size": 14,
+            "checkout_button_text": "購入手続きへ",
+            "checkout_button_text_color": "#FFFFFF",
+            "checkout_button_color": "#000000",
+            "primary_button_color": "#5570E9",
+            "primary_button_text_color": "#FFFFFF",
+            "secondary_button_color": "#FFFFFF",
+            "secondary_button_text_color": "#5570E9",
+            "button_radius": 8,
+            "gift_setting_button_text": "ギフト設定",
+            "gift_setting_cancel_button_text": "ギフト設定をキャンセルする",
+            "multiship_gift_setting_button_text": "贈る相手を追加",
+            "icon_show": "true",
+            "gift_radio_text": "指定の住所に贈る",
+            "gift_checkbox_text": "ギフト配送を希望する",
+            "e_gift_radio_text": "住所を知らない相手にeギフトで贈る",
+            "giver_name_label_text": "贈り主の名前を入力してください",
+            "header_text": "お届け方法",
+            "e_gift_description_text": "",
+            "e_gift_description_color": "#000000",
+            "e_gift_description_url": "",
+            "original_color_enable": "true",
+            "hidden_elements": ""
+          }
+        }
+      },
+      "block_order": [
+        "all_in_gift_app_block_cart_tM3NQM"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "cart-footer": {
@@ -12,36 +63,47 @@
       "blocks": {
         "subtotal": {
           "type": "subtotal",
-          "settings": {
-          }
+          "settings": {}
         },
         "buttons": {
           "type": "buttons",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
         "subtotal",
         "buttons"
-      ]
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
         "title": "Featured collection",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 4,
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
+        "full_width": false,
         "show_view_all": true,
-        "swipe_on_mobile": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "square",
+        "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -49,6 +111,7 @@
   },
   "order": [
     "cart-items",
+    "173500529201ed141e",
     "cart-footer",
     "featured-collection"
   ]
