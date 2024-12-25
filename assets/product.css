@@ -48,11 +48,13 @@ $max_font_size (px): 最大フォントサイズ
 #productList .facet-filters__field .select {
   height: 32px;
   border: 1px solid #000;
+  padding: 0 2vw;
 }
 #productList .facet-filters__field .select select {
   font-size: 1.15vw;
 }
-#productList .facet-filters__field .select .facet-filters__sort + .icon-caret {
+#productList .facet-filters__field .select .facet-filters__sort + .icon-order {
+  width: 24px;
   right: 1.5vw;
 }
 #productList .facet-filters__sort:focus-visible {
