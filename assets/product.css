@@ -34,6 +34,8 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #productList .facets-wrapper {
+  max-width: 100%;
+  margin: 0;
   padding: 0 10.31vw;
 }
 #productList .facets-wrapper .mobile-facets__open-label {
@@ -57,7 +59,7 @@ $max_font_size (px): 最大フォントサイズ
 }
 #productList .facet-filters__field .select .facet-filters__sort + .icon-order {
   width: 24px;
-  right: 1.5vw;
+  right: 10px;
 }
 #productList .facet-filters__sort:focus-visible {
   outline: none;
