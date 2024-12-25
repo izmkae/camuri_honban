@@ -28,7 +28,7 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #productList #itemSec {
-  padding: 3.96vw 10.31vw 0;
+  padding: 0 10.31vw;
 }
 @media screen and (max-width: 800px) {
   #productList #itemSec {
@@ -338,6 +338,10 @@ $max_font_size (px): 最大フォントサイズ
     margin-bottom: 2.66vw;
     font-size: 3.73vw;
   }
+}
+#productBasicInfoSec .infoBlock variant-radios,
+#productBasicInfoSec .infoBlock variant-selects {
+  margin-top: 20px;
 }
 #productBasicInfoSec .infoBlock .form__label, #productBasicInfoSec .infoBlock .quantity__label {
   margin-top: 30px;
