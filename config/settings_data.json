@@ -11,6 +11,7 @@
   "current": {
     "logo": "shopify://shop_images/CAMURI_logo.jpg",
     "logo_width": 130,
+    "favicon": "shopify://shop_images/CAMURI_logo.jpg",
     "type_header_font": "poppins_n4",
     "type_header_jp_font": "\"游ゴシック体\", YuGothic, \"游ゴシック\", \"Yu Gothic\"",
     "heading_scale": 100,
