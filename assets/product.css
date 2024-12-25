@@ -18,13 +18,19 @@ $max_font_size (px): 最大フォントサイズ
 -------------------------------------------------------------------*/
 #productList .pageTitle {
   font-size: 4.32vw;
-  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 7.21vw 10.31vw;
+}
+@media screen and (min-width: 1388.88889px) {
+  #productList .pageTitle {
+    font-size: 60px;
+  }
 }
 @media screen and (max-width: 800px) {
   #productList .pageTitle {
     font-size: 8vw;
-    text-align: center;
-    padding-left: 0;
+    padding: 0 4vw;
   }
 }
 #productList #itemSec {
