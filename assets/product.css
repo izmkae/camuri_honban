@@ -16,12 +16,12 @@ $max_font_size (px): 最大フォントサイズ
 /*-------------------------------------------------------------------
 	product
 -------------------------------------------------------------------*/
-#productList h2 {
+#productList .pageTitle {
   font-size: 4.32vw;
   text-align: left;
 }
 @media screen and (max-width: 800px) {
-  #productList h2 {
+  #productList .pageTitle {
     font-size: 8vw;
     text-align: center;
     padding-left: 0;
