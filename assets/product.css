@@ -36,6 +36,13 @@ $max_font_size (px): 最大フォントサイズ
 #productList .facets-wrapper {
   padding: 0 10.31vw;
 }
+#productList .mobile-facets__open-wrapper {
+  border: 1px solid #000;
+  padding: 0 4.32vw;
+}
+#productList .product-count {
+  display: none;
+}
 #productList #itemSec {
   padding: 0 10.31vw;
 }
