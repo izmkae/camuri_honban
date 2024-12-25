@@ -20,7 +20,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 4.32vw;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  padding: 7.21vw 10.31vw;
+  padding: 9.81vw 10.31vw 6.63vw;
 }
 @media screen and (min-width: 1388.88889px) {
   #productList .pageTitle {
@@ -32,6 +32,9 @@ $max_font_size (px): 最大フォントサイズ
     font-size: 8vw;
     padding: 0 4vw;
   }
+}
+#productList .facets-wrapper {
+  padding: 0 10.31vw;
 }
 #productList #itemSec {
   padding: 0 10.31vw;
