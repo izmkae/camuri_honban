@@ -948,7 +948,27 @@ li {
     padding-top: 19.73vw;
   }
 }
-
+.content .fadeIn {
+  opacity: 0;
+}
+.content .inview {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-delay: .5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+  0% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 /* ----------------------------------------------------------------------- 
 	label
 ----------------------------------------------------------------------- */
