@@ -1,10 +1,9 @@
 {%- assign blog = blogs[section.settings.news_list] -%}
 
 <section id="journalSec">
-    <h2>{{ section.settings.title | escape }}</h2>
+    <h2 class="fadeIn">{{ section.settings.title | escape }}</h2>
     <div class="inner">
         <div class="lineup">
-          
             <ul id="topJournalList">
               {% for article in blog.articles limit: section.settings.post_limit %}
                 <li>
