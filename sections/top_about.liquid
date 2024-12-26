@@ -1,11 +1,11 @@
 <section id="aboutSec">
-	<div class="txtBlock">
+	<div class="txtBlock fadeIn">
 		<p>
 			{{ section.settings.topAboutText | newline_to_br }}
 		</p>
 	</div>
-	<div class="imgBlock"><img src="{{  section.settings.topAboutImg | img_url: 'master' }}"></div>
-	<div class="btnBlock"><a href="{{ pages.about.url }}" class="btnStyleB01">ABOUT</a></div>
+	<div class="imgBlock fadeIn"><img src="{{  section.settings.topAboutImg | img_url: 'master' }}"></div>
+	<div class="btnBlock fadeIn"><a href="{{ pages.about.url }}" class="btnStyleB01">ABOUT</a></div>
 </section>
 
 {% schema %}

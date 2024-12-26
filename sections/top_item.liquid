@@ -1,8 +1,8 @@
 <section id="itemSec">
-	<h2>{{ section.settings.title | escape }}</h2>
+	<h2 class="fadeIn">{{ section.settings.title | escape }}</h2>
 	<ul id="itemList" class="container">
 		{%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-		<li>
+		<li class="fadeIn">
 			<a href="{{ product.url }}"> 
 				<div class="imgBlock">
 					<img src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.title }}">
@@ -28,11 +28,11 @@
 		{%- endfor -%}
 	</ul>
 
-	<div class="btnBlock"><a href="{{ routes.root_url }}collections/all-item" class="btnStyleB01">ALL ITEM</a></div>
+	<div class="btnBlock fadeIn"><a href="{{ routes.root_url }}collections/all-item" class="btnStyleB01">ALL ITEM</a></div>
 
 	<div id="categoryblock">
-		<h2><span>CATEGORY</span></h2>
-		<ul id="categoryList">
+		<h2 class="fadeIn"><span>CATEGORY</span></h2>
+		<ul id="categoryList fadeIn">
 		  {%- for block in section.blocks -%}
 			<li>
 				{%- if block.settings.topItemCatLink != blank -%}

@@ -1,7 +1,7 @@
 <section id="contentSec">
     <ul id="contentList">
       {%- for block in section.blocks -%}
-      <li>
+      <li class="fadeIn">
           <a href="{{ block.settings.topContentLink }}">
               <img src="{{  block.settings.topContentImage | img_url: 'master' }}">
               <img src="{{ 'img_bgd.png' | asset_url }}" class="bgd">
