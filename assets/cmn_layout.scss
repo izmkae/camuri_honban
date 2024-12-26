@@ -839,6 +839,27 @@ li {
 	@include media-sp {
 		padding-top: $hdr_height_sp;
 	}
+	.fadeIn {
+		opacity: 0;
+	}
+	.inview {
+		animation-name: fade-in;
+		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
+		animation-delay: .5s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: forwards;
+	}
+	@keyframes fade-in {
+		0% {
+			transform: translateY(40px);
+		}
+		100% {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+	}	
 }
 
 /* ----------------------------------------------------------------------- 
@@ -860,6 +881,7 @@ li {
 		display: block;
 		width: 7.57vw;
 		height: 2.59vw;
+		line-height: 2.4vw;
 		font-size: 1.15vw;
 		border-radius: 1.8vw;
 		font-family: $font_en;
@@ -1024,13 +1046,13 @@ li {
 		padding-top: 7.5vw;
 		@include flex(flex-start, space-between);
 
-		.container::before{
+		&.container::before{
 			content:"";
 			display: block;
 			width: 17.31vw;
 			order: 1;
 		}
-		.container::after{
+		&.container::after{
 			content:"";
 			display: block;
 			width: 17.31vw;
@@ -1311,7 +1333,6 @@ li {
 
 #tryitSec {
 	position: relative;
-	
 	.flowTxtWrap {
 		display: flex;
 		position: absolute;
@@ -1339,10 +1360,12 @@ li {
 			}
 
 		}
+		.flowTxt {
+			animation: loop 80s linear infinite;
+		}
 		.flowTxt1 {
 			animation: loop 80s -25s linear infinite;
 		}
-
 		.flowTxt2 {
 			animation: loop2 80s linear infinite;
 		}
@@ -1392,20 +1415,69 @@ li {
 				width: 92vw;
 				margin-bottom: 12vw;
 			}
+			a {
+				display: block;
+				cursor: pointer;
 
-			.flexBlock {
-				margin-top: 1.8vw;
-				@include flex(center, space-between);
+				.imgBlock {
+					line-height: 1;
+					//background-color: $blk;
+				}
 
-				.listTtl{
-					width: 16.59vw;
-					font-size: 1.44vw;
-					font-weight: 600;
-					line-height: 1.5;
+				.flexBlock {
+					margin-top: 1.2vw;
+					@include flex(center, space-between);
 
-					@include media-sp {
-						width: 64vw;
-						font-size: 5.33vw;
+					.listTtl{
+						width: 16.59vw;
+						font-size: 1.29vw;
+						font-weight: 600;
+						line-height: 1.56;
+
+						@include media-sp {
+							width: 64vw;
+							font-size: 4.26vw;
+						}
+					}
+					.btnBlock2 {
+						span {
+							display: block;
+							width: 7.57vw;
+							height: 2.59vw;
+							line-height: 2.59vw;
+							font-size: 1.15vw;
+							border-radius: 1.8vw;
+							font-family: $font_en;
+							font-weight: 600;
+							transition: 0.5s;
+							@include flex(center, center);
+
+							@include media-sp {
+								width: 28vw;
+								height: 9.06vw;
+								font-size: 4vw;
+								border-radius: 6.66vw;
+							}
+
+							&.btnStyleB01 {
+								border: 2px solid $blk;
+								color: $blk;
+							}
+						}
+					}
+				}
+				&:hover {
+					img {
+						@include opacity(0.6);
+					}
+
+					.flexBlock {
+						.btnBlock2 {
+							span {
+								background-color: $blk;
+								color: $wht;
+							}
+						}
 					}
 				}
 			}
@@ -1501,7 +1573,7 @@ li {
 /* ----------------------------------------------------------------------- 
 	FAQなど共通テンプレート
 ----------------------------------------------------------------------- */
-.cmnTemplate {
+.cmnTemplate, .cmnTemplateTitle {
 	padding-bottom: 7.21vw;
 
 	@include media-sp {
@@ -1621,7 +1693,9 @@ li {
 		}
 	}
 }
-
+.cmnTemplateTitle {
+	padding-bottom: 0;
+}
 /* ----------------------------------------------------------------------- 
 	アプリなどオーバーライド
 ----------------------------------------------------------------------- */

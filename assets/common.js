@@ -63,55 +63,30 @@ $(document).ready(function(){
 			contSize();
 	});
 });
-// $(document).ready(function(){
-//     var $setContentCol2 = $('.contentIn.col2');
-	
-//     $setContentCol2 .each(function(){
-//         function cont2Size(){
-// 			var winWidth=$(window).width();
-// 			 var cont2width = $('.content.col2').width();
-//            if(cont2width < winWidth) {
-// 				$setContentCol2.css("width", winWidth);
-//             }
-//         }
-//         $(window).on('load resize', function(){cont2Size();});
-//         	cont2Size();
-//     });
-// });
 
-// // -------------------------------------------------------------------
-// //　wrapperにヘッダー分の高さ
-// // -------------------------------------------------------------------
-// $(document).ready(function(){
-// 	var timer = false;
-// 	var ua = navigator.userAgent;
-// 	if((ua.indexOf('iPhone') > 0) || ua.indexOf('iPod') > 0 || (ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0)){
-// 		$(window).on('load', function(){
-// 			if (timer !== false) {
-// 				clearTimeout(timer);
-// 			}
-// 			timer = setTimeout(function() {
-
-// 				var height=$("#header").outerHeight();
-// 					$(".wrapper").css("padding-top", height);
-
-// 			}, 20);
-// 		});
-// 		} else {
-// 		$(window).on('load resize', function(){
-// 			if (timer !== false) {
-// 				clearTimeout(timer);
-// 			}
-// 			timer = setTimeout(function() {
-
-// 				var height=$("#header").outerHeight();
-// 					$(".wrapper").css("padding-top", height);
-
-// 			}, 20);
-// 		});
-// 	}
-// });
-
+// -------------------------------------------------------------------
+//   フェイドイン
+// -------------------------------------------------------------------
+$(document).ready(function(){
+	$('.fadeIn').each(function() {
+		var pos = $(this).offset().top;
+		var scroll = $(window).scrollTop();
+		var wHeight = $(window).height();
+		if (scroll > pos - wHeight + wHeight/100){
+			$(this).addClass('inview');
+		}
+	});
+});
+$(window).scroll(function() {
+  $('.fadeIn').each(function() {
+    var pos = $(this).offset().top;
+    var scroll = $(window).scrollTop();
+    var wHeight = $(window).height();
+    if (scroll > pos - wHeight + wHeight/100){
+      $(this).addClass('inview');
+    }
+  });
+});
 
 // -------------------------------------------------------------------
 //   トップに戻るボタン
