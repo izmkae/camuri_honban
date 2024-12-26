@@ -32,9 +32,9 @@
 
 	<div id="categoryblock">
 		<h2 class="fadeIn"><span>CATEGORY</span></h2>
-		<ul id="categoryList" class="fadeIn">
+		<ul id="categoryList">
 		  {%- for block in section.blocks -%}
-			<li>
+			<li class="fadeIn">
 				{%- if block.settings.topItemCatLink != blank -%}
 				<a href="{{block.settings.topItemCatLink }}">
 				{% else %}
