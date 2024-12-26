@@ -4,7 +4,7 @@
     <h2 class="fadeIn">{{ section.settings.title | escape }}</h2>
     <div class="inner">
         <div class="lineup">
-            <ul id="topJournalList">
+            <ul id="topJournalList" class="fadeIn">
               {% for article in blog.articles limit: section.settings.post_limit %}
                 <li>
                     <a href="{{ article.url }}"> 
