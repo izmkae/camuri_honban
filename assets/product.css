@@ -43,6 +43,9 @@ $max_font_size (px): 最大フォントサイズ
     padding: 0 4vw;
   }
 }
+#productList .facets-wrapper .mobile-facets__wrapper {
+  margin-top: 14.93vw;
+}
 #productList .facets-wrapper .mobile-facets__open-label {
   font-size: 1.15vw;
   letter-spacing: 0;
