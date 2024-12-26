@@ -52,7 +52,7 @@ $max_font_size (px): 最大フォントサイズ
   border: 1px solid #000;
   padding: 0 4.32vw;
 }
-#productList .facets-wrapper .mobile-facets__wrapper .mobile-facets__open:hover .mobile-facets__open {
+#productList .facets-wrapper .mobile-facets__wrapper .mobile-facets__open:hover .mobile-facets__open-label {
   text-decoration: none;
 }
 #productList .facets-wrapper .mobile-facets__wrapper .mobile-facets__open-label {
