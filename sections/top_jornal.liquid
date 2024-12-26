@@ -5,7 +5,7 @@
     <div class="inner">
         <div class="lineup">
           
-            <ul id="topJournalList fadeIn">
+            <ul id="topJournalList">
               {% for article in blog.articles limit: section.settings.post_limit %}
                 <li>
                     <a href="{{ article.url }}"> 
@@ -31,7 +31,7 @@
             </ul>
         </div>
     </div>
-    <div class="btnBlock fadeIn"><a href="{{ blog.url }}" class="btnStyleB01">MORE READ</a></div>
+    <div class="btnBlock"><a href="{{ blog.url }}" class="btnStyleB01">MORE READ</a></div>
 </section>
 
 {% schema %}
