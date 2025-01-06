@@ -458,6 +458,7 @@ li {
 #gNaviWrapper #gNaviIn .acMenuBox {
   margin-top: 2.5vw;
   width: 17.02vw;
+  color: #000000;
 }
 @media screen and (max-width: 800px) {
   #gNaviWrapper #gNaviIn .acMenuBox {
@@ -539,6 +540,9 @@ li {
 #gNaviWrapper #gNaviIn .acMenuBox input {
   display: none;
   transition: all 0.5s;
+}
+#gNaviWrapper #gNaviIn .acMenuBox input:checked ~ label {
+  color: #808080;
 }
 #gNaviWrapper #gNaviIn .acMenuBox input:checked ~ label::before {
   transform: rotate(45deg);
