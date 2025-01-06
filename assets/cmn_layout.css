@@ -539,6 +539,9 @@ li {
   display: none;
   transition: all 0.5s;
 }
+#gNaviWrapper #gNaviIn .acMenuBox input:checked ~ label {
+  color: #000000;
+}
 #gNaviWrapper #gNaviIn .acMenuBox input:checked ~ label::before {
   transform: rotate(45deg);
 }
