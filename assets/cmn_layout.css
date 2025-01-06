@@ -498,6 +498,14 @@ li {
 #gNaviWrapper #gNaviIn .acMenuBox input ~ label::after {
   transform: rotate(90deg);
 }
+@media print, screen and (min-width: 1200px) {
+  #gNaviWrapper #gNaviIn .acMenuBox input ~ label:hover {
+    color: #808080;
+  }
+  #gNaviWrapper #gNaviIn .acMenuBox input ~ label:hover::before, #gNaviWrapper #gNaviIn .acMenuBox input ~ label:hover::after {
+    background-color: #808080;
+  }
+}
 #gNaviWrapper #gNaviIn .acMenuBox .acMenuList {
   height: auto;
   padding: 0px;
