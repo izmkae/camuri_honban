@@ -85,7 +85,7 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #productList .facet-filters__field .select .facet-filters__sort + .icon-order {
-  width: 24px;
+  width: 18px;
   right: 10px;
 }
 #productList .facet-filters__sort:focus-visible,
