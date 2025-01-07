@@ -52,6 +52,10 @@ $max_font_size (px): 最大フォントサイズ
   border: 1px solid #000;
   padding: 0 4.32vw;
 }
+#productList .facets-wrapper .mobile-facets__wrapper .mobile-facets__open {
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+}
 #productList .facets-wrapper .mobile-facets__wrapper .mobile-facets__open:hover .mobile-facets__open-label {
   text-decoration: none;
 }
@@ -66,12 +70,12 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #productList .facet-filters__field .select {
-  height: 32px;
   border: 1px solid #000;
   padding: 0 2vw;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
 }
 #productList .facet-filters__field .select select {
-  width: 120px;
   font-size: 1.15vw;
   font-weight: bold;
 }
