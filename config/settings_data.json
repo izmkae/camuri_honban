@@ -177,13 +177,13 @@
         "disabled": false,
         "settings": {
           "button_color": "#000000",
-          "secondary_color": "#FFFFFF",
-          "ternary_color": "#6A6A6A",
+          "secondary_color": "#ffffff",
+          "ternary_color": "#6a6a6a",
           "button_icon": "chat_bubble",
           "button_text": "chat_with_us",
           "button_horizontal_position": "bottom_right",
           "button_vertical_position": "higher",
-          "greeting_message": "こんにちは！何かご不明な点がございましたらなんでもお問合せください！"
+          "greeting_message": "「どの帽子が似合うだろう...」\n「いつまでに届くかな...？」\n「注文方法がわからない...」\n\nそんな疑問や不安も\nお気軽にご相談ください！"
         }
       }
     },
