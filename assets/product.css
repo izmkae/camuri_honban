@@ -104,14 +104,19 @@ $max_font_size (px): 最大フォントサイズ
 }
 
 #productList .facet-filters__field .select {
+  position: relative;
   border: 1px solid #000;
-  padding: 0 2vw;
-  padding-top: 1.3rem;
-  padding-bottom: 1.3rem;
+  width: 14.43vw;
+  height: 3.46vw;
 }
 #productList .facet-filters__field .select select {
+  position: absolute;
   font-size: 1.15vw;
-  font-weight: bold;
+  font-weight: 700;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
 }
 @media screen and (max-width: 800px) {
   #productList .facet-filters__field .select select {
@@ -119,9 +124,15 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #productList .facet-filters__field .select .facet-filters__sort + .icon-order {
-  width: 18px;
-  right: 10px;
+  position: absolute;
+  width: 1.6rem;
+  top: 0;
+  right: .97vw;
+  bottom: 0;
+  left: auto;
+  margin: auto;
 }
+
 #productList .facet-filters__sort:focus-visible,
 #productList .mobile-facets__sort .select__select:focus-visible {
   outline: none;
