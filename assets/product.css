@@ -57,12 +57,19 @@ $max_font_size (px): 最大フォントサイズ
   height: 3.46vw;
   border: 1px solid #000;
 }
+@media screen and (max-width: 800px) {
+  #productList .facets-wrapper .mobile-facets__wrapper .cmr_mobile-facets__open-wrapper {
+    width: 29.33vw;
+    height: 6.93vw;
+  }
+}
+
 #productList .facets-wrapper .mobile-facets__wrapper .mobile-facets__open {
   width: 100%;
   height: 100%;
   display: block;
   position: relative;
-  line-height: 3.46vw;
+  line-height: 100%;
   padding: 0;
 }
 #productList .facets-wrapper .mobile-facets__wrapper .mobile-facets__open:hover .mobile-facets__open-label {
