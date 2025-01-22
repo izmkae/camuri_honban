@@ -59,8 +59,8 @@ $max_font_size (px): 最大フォントサイズ
 }
 @media screen and (max-width: 800px) {
   #productList .facets-wrapper .mobile-facets__wrapper .cmr_mobile-facets__open-wrapper {
-    width: 29.33vw;
-    height: 6.93vw;
+    width: 53.33vw;
+    height: 7.93vw;
   }
 }
 
@@ -84,6 +84,7 @@ $max_font_size (px): 最大フォントサイズ
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin: auto;
 }
 @media screen and (max-width: 800px) {
   #productList .facets-wrapper .mobile-facets__wrapper .mobile-facets__open-label {
