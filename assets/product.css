@@ -118,6 +118,7 @@ $max_font_size (px): 最大フォントサイズ
   transform: translate(-50%, -50%);
   margin: auto;
   text-align: center;
+  
 }
 @media screen and (max-width: 800px) {
   #productList .facet-filters__field .select select {
