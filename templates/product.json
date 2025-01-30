@@ -121,6 +121,15 @@
         "padding_bottom": 28
       }
     },
+    "camuri_featured_blog_tdWqPE": {
+      "type": "camuri-featured-blog",
+      "settings": {
+        "article1": "journal/size-guide",
+        "article2": "journal/size-1",
+        "article3": "journal/factory-1",
+        "article4": "journal/beret"
+      }
+    },
     "17327588365bfe1dbe": {
       "type": "apps",
       "settings": {
@@ -132,6 +141,7 @@
     "main",
     "173275896593e941bc",
     "camuri_related-products",
+    "camuri_featured_blog_tdWqPE",
     "17327588365bfe1dbe"
   ]
 }
