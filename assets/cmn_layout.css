@@ -1167,7 +1167,7 @@ li {
 }
 
 /* ----------------------------------------------------------------------- 
-	itemList
+	共通sec
 ----------------------------------------------------------------------- */
 #itemSec, #resultSec {
   padding: 8.22vw 10.31vw 17.46vw;
@@ -1816,6 +1816,164 @@ li {
   #writingByBlock .txtBlock .writerProfile {
     margin-top: 4vw;
     font-size: 3.73vw;
+  }
+}
+
+#journalReccomendSec .contentIn {
+  width: 100%;
+  max-width: 1100px;
+  margin: 6.4vw auto 6.78vw;
+  border: 2px solid #000000;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec .contentIn {
+    width: 91.48vw;
+    border: 1px solid #000000;
+    margin: 7.46vw auto 7.46vw;
+  }
+}
+#journalReccomendSec h3 {
+  font-size: 2.16vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  line-height: 4.9vw;
+  border-bottom: 2px solid #000000;
+}
+@media screen and (min-width: 1388.88889px) {
+  #journalReccomendSec h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec h3 {
+    font-size: 5.33vw;
+    line-height: 10.66vw;
+    padding-left: 0;
+    border-bottom: 1px solid #000000;
+  }
+}
+#journalReccomendSec #journalReccomendList {
+  padding: 1.83%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList {
+    padding: 4.53vw;
+  }
+}
+#journalReccomendSec #journalReccomendList::after {
+  display: block;
+  content: "";
+  width: 37.8vw;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList {
+    padding: 4vw;
+  }
+}
+#journalReccomendSec #journalReccomendList li {
+  width: 50%;
+  padding: 1.83%;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li {
+    width: 100%;
+    padding: 5.33vw 0;
+    border-bottom: 1px solid #D3D3D3;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li:last-child {
+    border-bottom: none;
+  }
+}
+#journalReccomendSec #journalReccomendList li a {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+#journalReccomendSec #journalReccomendList li .imgBlock {
+  width: 42.4%;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li .imgBlock {
+    width: 26.66vw;
+  }
+}
+#journalReccomendSec #journalReccomendList li .txtBlock {
+  width: 53%;
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock {
+    width: 53.86vw;
+  }
+}
+#journalReccomendSec #journalReccomendList li .txtBlock .journalTtl {
+  font-size: 1.28vw;
+  font-weight: bold;
+  line-height: 1.4;
+}
+@media screen and (min-width: 1406.25px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .journalTtl {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .journalTtl {
+    font-size: 4vw;
+  }
+}
+#journalReccomendSec #journalReccomendList li .txtBlock .journalDate {
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.01vw;
+  font-weight: 600;
+}
+@media screen and (min-width: 1584.15842px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .journalDate {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .journalDate {
+    margin-top: 2vw;
+    font-size: 3.2vw;
+  }
+}
+#journalReccomendSec #journalReccomendList li .txtBlock .tagList {
+  margin-top: 10px;
+  font-size: 1.01vw;
+  color: #313131;
+}
+@media screen and (min-width: 1386.13861px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .tagList {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #journalReccomendSec #journalReccomendList li .txtBlock .tagList {
+    font-size: 2.93vw;
   }
 }
 
