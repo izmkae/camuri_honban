@@ -96,6 +96,15 @@
       "type": "camuri_tryit",
       "settings": {}
     },
+    "camuri_featured_blog_9htbbX": {
+      "type": "camuri-featured-blog",
+      "settings": {
+        "article1": "journal/kissfm-kobe",
+        "article2": "journal/size-guide",
+        "article3": "journal/size-1",
+        "article4": "journal/factory-1"
+      }
+    },
     "173275896593e941bc": {
       "type": "apps",
       "blocks": {
@@ -144,6 +153,7 @@
   "order": [
     "main",
     "camuri_tryit_DbbEVf",
+    "camuri_featured_blog_9htbbX",
     "173275896593e941bc",
     "camuri_related-products",
     "17327588365bfe1dbe",
