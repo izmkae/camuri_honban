@@ -92,6 +92,10 @@
         "padding_bottom": 0
       }
     },
+    "camuri_tryit_DbbEVf": {
+      "type": "camuri_tryit",
+      "settings": {}
+    },
     "173275896593e941bc": {
       "type": "apps",
       "blocks": {
@@ -121,10 +125,6 @@
         "padding_bottom": 28
       }
     },
-    "camuri_tryit_DbbEVf": {
-      "type": "camuri_tryit",
-      "settings": {}
-    },
     "17327588365bfe1dbe": {
       "type": "apps",
       "settings": {
@@ -134,9 +134,9 @@
   },
   "order": [
     "main",
+    "camuri_tryit_DbbEVf",
     "173275896593e941bc",
     "camuri_related-products",
-    "camuri_tryit_DbbEVf",
     "17327588365bfe1dbe"
   ]
 }
