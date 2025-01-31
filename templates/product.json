@@ -130,6 +130,15 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "camuri_featured_blog_Gb77Ab": {
+      "type": "camuri-featured-blog",
+      "settings": {
+        "article1": "",
+        "article2": "",
+        "article3": "",
+        "article4": ""
+      }
     }
   },
   "order": [
@@ -137,6 +146,7 @@
     "camuri_tryit_DbbEVf",
     "173275896593e941bc",
     "camuri_related-products",
-    "17327588365bfe1dbe"
+    "17327588365bfe1dbe",
+    "camuri_featured_blog_Gb77Ab"
   ]
 }
