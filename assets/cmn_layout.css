@@ -2129,18 +2129,34 @@ li {
     font-size: 4.26vw;
   }
 }
-.cmnTemplate .cmnDLList dd, .cmnTemplate .cmnDLList li, .cmnTemplateTitle .cmnDLList dd, .cmnTemplateTitle .cmnDLList li {
+.cmnTemplate .cmnDLList dd, .cmnTemplateTitle .cmnDLList dd {
   margin-top: 0.72vw;
   font-size: 1.29vw;
   font-weight: normal;
 }
 @media screen and (min-width: 1395.34884px) {
-  .cmnTemplate .cmnDLList dd, .cmnTemplate .cmnDLList li, .cmnTemplateTitle .cmnDLList dd, .cmnTemplateTitle .cmnDLList li {
+  .cmnTemplate .cmnDLList dd, .cmnTemplateTitle .cmnDLList dd {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 800px) {
-  .cmnTemplate .cmnDLList dd, .cmnTemplate .cmnDLList li, .cmnTemplateTitle .cmnDLList dd, .cmnTemplateTitle .cmnDLList li {
+  .cmnTemplate .cmnDLList dd, .cmnTemplateTitle .cmnDLList dd {
+    margin-top: 2vw;
+    font-size: 3.73vw;
+  }
+}
+.cmnTemplate .cmnList li, .cmnTemplateTitle .cmnList li {
+  margin-top: 2.74vw;
+  font-size: 1.29vw;
+  font-weight: normal;
+}
+@media screen and (min-width: 1395.34884px) {
+  .cmnTemplate .cmnList li, .cmnTemplateTitle .cmnList li {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .cmnTemplate .cmnList li, .cmnTemplateTitle .cmnList li {
     margin-top: 2vw;
     font-size: 3.73vw;
   }
