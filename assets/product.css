@@ -63,7 +63,6 @@ $max_font_size (px): 最大フォントサイズ
     height: 7.93vw;
   }
 }
-
 #productList .facets-wrapper .mobile-facets__wrapper .mobile-facets__open {
   width: 100%;
   height: 100%;
@@ -93,7 +92,7 @@ $max_font_size (px): 最大フォントサイズ
     transform: translate(0, -50%);
   }
 }
-.mobile-facets__open svg {
+#productList .mobile-facets__open svg {
   position: absolute;
   width: 2rem;
   top: 0;
@@ -102,15 +101,15 @@ $max_font_size (px): 最大フォントサイズ
   left: auto;
   margin: auto;
 }
-
 #productList .facet-filters__field .select {
   position: relative;
   border: 1px solid #000;
-  width: 14.43vw;
+  width: 16.43vw;
   height: 3.46vw;
 }
 #productList .facet-filters__field .select select {
   position: absolute;
+  width: 80%;
   font-size: 1.15vw;
   font-weight: 700;
   top: 50%;
@@ -118,7 +117,6 @@ $max_font_size (px): 最大フォントサイズ
   transform: translate(-50%, -50%);
   margin: auto;
   text-align: center;
-  
 }
 @media screen and (max-width: 800px) {
   #productList .facet-filters__field .select select {
@@ -134,7 +132,6 @@ $max_font_size (px): 最大フォントサイズ
   left: auto;
   margin: auto;
 }
-
 #productList .facet-filters__sort:focus-visible,
 #productList .mobile-facets__sort .select__select:focus-visible {
   outline: none;
