@@ -2129,18 +2129,18 @@ li {
     font-size: 4.26vw;
   }
 }
-.cmnTemplate .cmnDLList dd, .cmnTemplateTitle .cmnDLList dd {
+.cmnTemplate .cmnDLList dd, .cmnTemplate .cmnDLList li, .cmnTemplateTitle .cmnDLList dd, .cmnTemplateTitle .cmnDLList li {
   margin-top: 0.72vw;
   font-size: 1.29vw;
   font-weight: normal;
 }
 @media screen and (min-width: 1395.34884px) {
-  .cmnTemplate .cmnDLList dd, .cmnTemplateTitle .cmnDLList dd {
+  .cmnTemplate .cmnDLList dd, .cmnTemplate .cmnDLList li, .cmnTemplateTitle .cmnDLList dd, .cmnTemplateTitle .cmnDLList li {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 800px) {
-  .cmnTemplate .cmnDLList dd, .cmnTemplateTitle .cmnDLList dd {
+  .cmnTemplate .cmnDLList dd, .cmnTemplate .cmnDLList li, .cmnTemplateTitle .cmnDLList dd, .cmnTemplateTitle .cmnDLList li {
     margin-top: 2vw;
     font-size: 3.73vw;
   }
