@@ -142,14 +142,6 @@
     },
     "content_for_index": [],
     "blocks": {
-      "11073810213930537447": {
-        "type": "shopify://apps/fuji3-wishlist/blocks/core/d1baf985-85f5-4ef5-b595-4e973811d187",
-        "disabled": false,
-        "settings": {
-          "margin_x": 0,
-          "margin_y": 0
-        }
-      },
       "12649886082557318988": {
         "type": "shopify://apps/mf-wishlist/blocks/add-btn-vintage/d1baf985-85f5-4ef5-b595-4e973811d187",
         "disabled": true,
@@ -184,6 +176,14 @@
           "button_horizontal_position": "bottom_right",
           "button_vertical_position": "higher",
           "greeting_message": "「どの帽子が似合うだろう...」\n「いつまでに届くかな...？」\n「注文方法がわからない...」\n\nそんな疑問や不安も\nお気軽にご相談ください！"
+        }
+      },
+      "11073810213930537447": {
+        "type": "shopify://apps/mf-wishlist/blocks/core/d1baf985-85f5-4ef5-b595-4e973811d187",
+        "disabled": false,
+        "settings": {
+          "margin_x": 12,
+          "margin_y": 0
         }
       }
     },
