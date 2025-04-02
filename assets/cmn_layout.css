@@ -1977,6 +1977,24 @@ li {
   }
 }
 
+.pagination__list .pagination__item {
+  font-size: 2.16vw;
+  color: #B1B1B1;
+}
+@media screen and (min-width: 1388.88889px) {
+  .pagination__list .pagination__item {
+    font-size: 30px;
+  }
+}
+.pagination__list .pagination__item.pagination__item--current {
+  color: #000000;
+}
+.pagination__list .pagination__item--current::after,
+.pagination__list .pagination__item:hover::after {
+  content: '';
+  display: none;
+}
+
 /* ----------------------------------------------------------------------- 
 	title
 ----------------------------------------------------------------------- */
@@ -1994,6 +2012,7 @@ li {
 @media screen and (max-width: 800px) {
   .menuTitleStyle {
     font-size: 10.66vw;
+    cplor: #B1B1B1;
   }
 }
 
@@ -2181,7 +2200,3 @@ li {
 .cmnTemplateTitle {
   padding-bottom: 0;
 }
-
-/* ----------------------------------------------------------------------- 
-	アプリなどオーバーライド
------------------------------------------------------------------------ */
