@@ -1538,6 +1538,23 @@ li {
   -ms-filter: "alpha(opacity=$opacity)";
 }
 
+#itemSec {
+  background-color: #E2E5E6;
+}
+#itemSec h2 {
+  font-size: 4.68vw;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  #itemSec h2 {
+    font-size: 8vw;
+    text-align: center;
+  }
+}
+#itemSec #itemList {
+  padding-top: 7.5vw;
+}
+
 #tryitSec {
   position: relative;
 }

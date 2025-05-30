@@ -501,23 +501,6 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 
-#itemSec {
-  background-color: #E2E5E6;
-}
-#itemSec h2 {
-  font-size: 4.68vw;
-  text-align: center;
-}
-@media screen and (max-width: 800px) {
-  #itemSec h2 {
-    font-size: 8vw;
-    text-align: center;
-  }
-}
-#itemSec #itemList {
-  padding-top: 7.5vw;
-}
-
 #reviewSec {
   padding: 4.06vw 3.05vw;
   border-top: 1px solid #B1B1B1;
