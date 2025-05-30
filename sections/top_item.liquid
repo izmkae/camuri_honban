@@ -1,7 +1,5 @@
-{%- assign is_home = template.name == 'index' -%}
-{%- assign is_flagged_page = template.name == 'page' and page.metafields.custom.item_disp_flag -%}
 
-{%- if is_home or is_flagged_page -%}
+{%- if template.name == 'index' -%}
 <section id="itemSec">
 	<h2 class="fadeIn">{{ section.settings.title | escape }}</h2>
 	<ul id="itemList" class="container">
