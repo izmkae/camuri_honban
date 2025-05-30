@@ -1,9 +1,3 @@
-{%- assign is_flagged_page = false -%}
-{%- if template.name == 'page' and page.metafields.custom.item_disp_flag -%}
-  {%- assign is_flagged_page = true -%}
-{%- endif -%}
-
-{%- if template.name == 'index' or is_flagged_page -%}
 <section id="itemSec">
 	<h2 class="fadeIn">{{ section.settings.title | escape }}</h2>
 	<ul id="itemList" class="container">
@@ -61,7 +55,6 @@
 	</div>
 	{% endif %}
 </section>
-{%- endif -%}
 
 {% schema %}
   {

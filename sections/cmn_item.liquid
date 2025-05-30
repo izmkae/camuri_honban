@@ -48,7 +48,7 @@
 			"id": "title",
 			"type": "text",
 			"label": "見出し",
-			"default": "RECOMMENDED RANKING"
+			"default": "ITEM"
 		},
 		{
 			"type": "collection",
@@ -65,9 +65,47 @@
 			"label": "t:sections.featured-collection.settings.products_to_show.label"
 		}
 	],
+	"blocks": [
+		{
+			"type": "item_category",
+			"name": "Item Category",
+			"limit": 6,
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "topItemCatImage",
+					"label": "画像",
+					"info": "180 x 150px"                  
+				},
+				{
+					"type": "text",
+					"id": "topItemCatName",
+					"label": "カテゴリー名"
+				},
+				{
+					"type": "text",
+					"id": "topItemCatText",
+					"label": "カテゴリー一言"
+				},
+				{
+					"type": "url",
+					"id": "topItemCatLink",
+					"label": "リンク"
+				}
+			]
+		}
+	],
 	"presets": [
 		{
-			"name": "トップ アイテム"
+			"name": "トップ アイテム",
+			"blocks": [
+				{
+					"type": "item_category"
+				},
+				{
+					"type": "item_category"
+				}
+			]
 		}
 	]
   }
