@@ -30,6 +30,7 @@
 
 	<div class="btnBlock fadeIn"><a href="{{ routes.root_url }}collections/all-item" class="btnStyleB01">ALL ITEM</a></div>
 
+	{% if section.blocks.size > 0 %}
 	<div id="categoryblock">
 		<h2 class="fadeIn"><span>CATEGORY</span></h2>
 		<ul id="categoryList">
@@ -52,6 +53,7 @@
 		  {%- endfor -%}
 		</ul>
 	</div>
+	{% endif %}
 </section>
 
 {% schema %}
