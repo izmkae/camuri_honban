@@ -11,22 +11,12 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "top_item_iRYJXU": {
-      "type": "top_item",
-      "name": "トップ アイテム",
-      "settings": {
-        "title": "RECOMMENDED RANKING",
-        "collection": "all-item",
-        "products_to_show": 8
-      }
-    },
     "footer": {
       "type": "footer",
       "settings": {}
     }
   },
   "order": [
-    "top_item_iRYJXU",
     "footer"
   ]
 }
