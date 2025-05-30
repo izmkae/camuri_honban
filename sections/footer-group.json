@@ -11,12 +11,22 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "cmn_item_6KpNeP": {
+      "type": "cmn_item",
+      "name": "共通 アイテム",
+      "settings": {
+        "title": "RECOMMENDED RANKING",
+        "collection": "all-item",
+        "products_to_show": 8
+      }
+    },
     "footer": {
       "type": "footer",
       "settings": {}
     }
   },
   "order": [
+    "cmn_item_6KpNeP",
     "footer"
   ]
 }
