@@ -1,9 +1,5 @@
 {%- assign is_home = template.name == 'index' -%}
-{%- assign is_flagged_page = false -%}
-{%- if template.name == 'page' and page.metafields.custom.item_disp_flag -%}
-  {%- assign is_flagged_page = true -%}
-{%- endif -%}
-
+{%- assign is_flagged_page = template.name == 'page' and page.metafields.custom.item_disp_flag -%}
 
 {%- if is_home or is_flagged_page -%}
 <section id="itemSec">
