@@ -916,12 +916,12 @@ $max_font_size (px): 最大フォントサイズ
   margin-top: 20px;
 }
 .btnCartBlock .form__label, .btnCartBlock .quantity__label {
-  margin-top: 30px;
-  font-size: 1.66vw;
+  margin-top: 10px;
+  font-size: 1.33vw;
 }
-@media screen and (min-width: 1204.81928px) {
+@media screen and (min-width: 1127.81955px) {
   .btnCartBlock .form__label, .btnCartBlock .quantity__label {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -931,19 +931,20 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 .btnCartBlock .product-form__input input[type=radio] + label {
-  margin: 0.2rem 0.5rem 0.2rem 0;
-  padding: 0.88rem 1.8rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  padding: .7rem 1.5rem;
   letter-spacing: 0;
+  font-size: 1.2rem;
 }
 .btnCartBlock .product-form__buttons {
   margin-top: 44px;
 }
 .btnCartBlock .quantity {
-  width: 240px;
-  min-height: 50px;
+  width: 180px;
+  min-height: 36px;
 }
 .btnCartBlock .quantity .quantity__button {
-  width: 50px;
+  width: 40px;
 }
 .btnCartBlock .quantity .quantity__input {
   width: 90px;

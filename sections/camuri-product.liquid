@@ -304,14 +304,13 @@
 	{%- for block in section.blocks -%}
 
 		{%- case block.type -%}
-		{%- when '@app' -%}
-			{% render block %}
+
 
 			
-				{%- when 'title' -%}
+			{%- when 'title' -%}
 				<div class="flexWrap">
 				<h2 class="productName">{{ product.title | escape }}</h2>
-				{%- when 'price' -%}
+			{%- when 'price' -%}
 				<p class="productPrice">{{ product.price | money }}<span>（税込）</span></p>
 				</div>
 
