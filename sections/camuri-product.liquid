@@ -307,12 +307,13 @@
 		{%- when '@app' -%}
 			{% render block %}
 
-			<div class="flexWrap">
+			
 				{%- when 'title' -%}
+				<div class="flexWrap">
 				<h2 class="productName">{{ product.title | escape }}</h2>
 				{%- when 'price' -%}
 				<p class="productPrice">{{ product.price | money }}<span>（税込）</span></p>
-			</div>
+				</div>
 
 			{%- if product.metafields.camuri.product_price_add_text -%}
 				<p class="productPriceAddTxt">{{ product.metafields.camuri.product_price_add_text | escape }}</p>
