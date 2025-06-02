@@ -1734,7 +1734,7 @@ li {
 }
 
 #writingByBlock {
-  margin-top: 4.83vw;
+  margin: 4.83vw auto 0;
   width: 59.09vw;
   max-width: 650px;
   display: -webkit-flex;
@@ -1754,7 +1754,8 @@ li {
 }
 @media screen and (max-width: 800px) {
   #writingByBlock {
-    margin-top: 15.73vw;
+    margin: 15.73vw auto 0;
+    width: 80vw;
     padding: 7.46vw 5.33vw 5.6vw;
   }
 }
