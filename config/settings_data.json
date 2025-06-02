@@ -185,6 +185,11 @@
           "margin_x": 12,
           "margin_y": 0
         }
+      },
+      "pagefly-page-builder": {
+        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
