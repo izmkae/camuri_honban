@@ -33,7 +33,10 @@
           "settings": {
             "star_size": 20,
             "font_size": 16,
-            "block_aligment": "flex-start"
+            "text_color": "#585858",
+            "block_aligment": "flex-start",
+            "margin_top": 10,
+            "margin_bottom": 0
           }
         },
         "variant_picker": {
@@ -101,7 +104,9 @@
       "blocks": {
         "trustoo_io_reviews_review_widget_JeLrca": {
           "type": "shopify://apps/trustoo-io-reviews/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
-          "settings": {}
+          "settings": {
+            "product": ""
+          }
         }
       },
       "block_order": [
@@ -114,10 +119,10 @@
     "camuri_featured_blog_9htbbX": {
       "type": "camuri-featured-blog",
       "settings": {
-        "article1": "journal/kissfm-kobe",
+        "article1": "journal/makuake-2025-2",
         "article2": "journal/size-guide",
-        "article3": "journal/size-1",
-        "article4": "journal/factory-1"
+        "article3": "journal/factory-1",
+        "article4": "journal/camuri-sns"
       }
     },
     "camuri_related-products": {
