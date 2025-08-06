@@ -38,12 +38,21 @@
             "heading": "CAMURIが目指す\n「すべての人に\nフィットする帽子作り」",
             "link": "shopify://pages/about"
           }
+        },
+        "slide_k7yE7c": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/samune_syusei3.jpg",
+            "heading": "クラウドファンディングのMakuakeにて、はじめての挑戦中。",
+            "link": "https://www.makuake.com/project/camuri-01/"
+          }
         }
       },
       "block_order": [
         "slide_FTPQVJ",
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1",
-        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2"
+        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2",
+        "slide_k7yE7c"
       ],
       "settings": {}
     },
