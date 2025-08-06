@@ -12,15 +12,6 @@
     "01d42623-6eea-41c0-935c-b7f7eeedaae6": {
       "type": "top-slideshow",
       "blocks": {
-        "slide_FTPQVJ": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/fv1.jpg",
-            "image_sp": "shopify://shop_images/img_slide_01_sp.jpg",
-            "heading": "本当の軽さとは、被っていることを忘れる心地よさのこと。",
-            "link": "shopify://blogs/journal/shortvisorcap1"
-          }
-        },
         "slide_k7yE7c": {
           "type": "slide",
           "settings": {
@@ -39,6 +30,15 @@
             "link": "shopify://pages/about"
           }
         },
+        "slide_FTPQVJ": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/fv1.jpg",
+            "image_sp": "shopify://shop_images/img_slide_01_sp.jpg",
+            "heading": "本当の軽さとは、被っていることを忘れる心地よさのこと。",
+            "link": "shopify://blogs/journal/shortvisorcap1"
+          }
+        },
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1": {
           "type": "slide",
           "settings": {
@@ -50,9 +50,9 @@
         }
       },
       "block_order": [
-        "slide_FTPQVJ",
         "slide_k7yE7c",
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2",
+        "slide_FTPQVJ",
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1"
       ],
       "settings": {}
