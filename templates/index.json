@@ -30,15 +30,6 @@
             "link": "https://www.makuake.com/project/camuri-01/"
           }
         },
-        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/fv3.jpg",
-            "image_sp": "shopify://shop_images/fv3_sp_857c2833-1a8f-45ac-bc21-7af52e9ef231.jpg",
-            "heading": "帽子が好きだから被る人をもっと増やしたい。スタッフyuiの帽子愛。",
-            "link": "shopify://blogs/journal/スタッフインタビューyui"
-          }
-        },
         "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2": {
           "type": "slide",
           "settings": {
@@ -47,13 +38,22 @@
             "heading": "CAMURIが目指す\n「すべての人に\nフィットする帽子作り」",
             "link": "shopify://pages/about"
           }
+        },
+        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/fv3.jpg",
+            "image_sp": "shopify://shop_images/fv3_sp_857c2833-1a8f-45ac-bc21-7af52e9ef231.jpg",
+            "heading": "帽子が好きだから被る人をもっと増やしたい。スタッフyuiの帽子愛。",
+            "link": "shopify://blogs/journal/スタッフインタビューyui"
+          }
         }
       },
       "block_order": [
         "slide_FTPQVJ",
         "slide_k7yE7c",
-        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1",
-        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2"
+        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-2",
+        "template--15322147553368__01d42623-6eea-41c0-935c-b7f7eeedaae6-slide-1"
       ],
       "settings": {}
     },
