@@ -127,6 +127,47 @@
       ],
       "settings": {}
     },
+    "collection_list_xpUhgB": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_7Kkp9y": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "2025ss"
+          }
+        },
+        "featured_collection_HcXgNj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "2025aw"
+          }
+        },
+        "featured_collection_wmD3DM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "2026aw"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_7Kkp9y",
+        "featured_collection_HcXgNj",
+        "featured_collection_wmD3DM"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "<strong>CAMURI-LOOK</strong>",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "top_jornal_drLd3i": {
       "type": "top_jornal",
       "settings": {
@@ -218,6 +259,7 @@
     "01d42623-6eea-41c0-935c-b7f7eeedaae6",
     "top_about_F9UPNq",
     "top_contents_wVXE7f",
+    "collection_list_xpUhgB",
     "top_jornal_drLd3i",
     "top_item_xUxTWh",
     "camuri_tryit_qBjbcw"
