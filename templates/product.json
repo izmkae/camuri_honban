@@ -56,6 +56,23 @@
             "show_gift_card_recipient": true
           }
         },
+        "recustomer_try_button_egTEjE": {
+          "type": "shopify://apps/recustomer/blocks/try_button/aa6f55cc-eb64-4540-85cc-fe63446a301b",
+          "settings": {
+            "button_block_margin_top": 0,
+            "button_block_margin_bottom": 0,
+            "button_text": "今すぐ自宅で試着する - ¥0",
+            "button_text_color": "rgba(0,0,0,0)",
+            "button_classes": "button button--full-width",
+            "trial_description": "7日間の自宅で無料試着の後にお支払い!",
+            "description_text_color": "rgba(0,0,0,0)",
+            "form_selector": "form[action*='/add']:not([id*='installment'])",
+            "add_cart_selector": "button[name='add']",
+            "variant_picker_selector": "variant-picker",
+            "add_cart_text_selector": "",
+            "trial_display_behavior_script": ""
+          }
+        },
         "fuji3_wishlist_add_btn_QLFVwA": {
           "type": "shopify://apps/mf-wishlist/blocks/add-btn/d1baf985-85f5-4ef5-b595-4e973811d187",
           "settings": {}
@@ -76,6 +93,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "recustomer_try_button_egTEjE",
         "fuji3_wishlist_add_btn_QLFVwA",
         "share"
       ],
