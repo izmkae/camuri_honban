@@ -58,6 +58,7 @@
         },
         "recustomer_try_button_egTEjE": {
           "type": "shopify://apps/recustomer/blocks/try_button/aa6f55cc-eb64-4540-85cc-fe63446a301b",
+          "disabled": true,
           "settings": {
             "button_block_margin_top": 0,
             "button_block_margin_bottom": 0,
