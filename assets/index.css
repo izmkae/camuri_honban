@@ -346,9 +346,9 @@ $max_font_size (px): 最大フォントサイズ
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
-@media screen and (min-width: 1444.4444444444px) {
+@media screen and (min-width: 1388.8888888889px) {
   #styleSec .styleThumbList .thumbItem p {
-    font-size: 26px;
+    font-size: 25px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -664,4 +664,6 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 28px;
   cursor: pointer;
   z-index: 10;
+  background-color: transparent;
+  border: none;
 }

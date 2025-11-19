@@ -1,0 +1,45 @@
+<div id="styleSec">
+	<div class="contentIn">
+		<h2>STYLE</h2>
+		<div class="styleThumbList fadeIn">
+			<div class="thumbItem" data-style="winter24">
+				<img src="{{ 'top_style_winter24-1.jpg' | asset_url }}" alt="2024 Winter" loading="lazy">
+				<p>2024 Winter</p>
+			</div>
+			<div class="thumbItem" data-style="spring25">
+				<img src="{{ 'top_style_spring25-1.jpg' | asset_url }}" alt="2025 Spring" loading="lazy">
+				<p>2025 Spring</p>
+			</div>
+			<div class="thumbItem" data-style="summer25">
+				<img src="{{ 'top_style_summer25-1.jpg' | asset_url }}" alt="2025 Summer" loading="lazy">
+				<p>2025 Summer</p>
+			</div>
+			<div class="thumbItem" data-style="autumn25">
+				<img src="{{ 'top_style_autumn25-1.jpg' | asset_url }}" alt="2025 Autumn" loading="lazy">
+				<p>2025 Autumn</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="styleSecTitle">
+	<div class="modal-content">
+		<button type="button" class="close-btn" aria-label="Close">&times;</button>
+		<div class="slider"></div>
+	</div>
+</div>
+
+{% schema %}
+  {
+    "name": "トップ スタイル",
+    "tag": "section",
+	"class": "top_style",
+    "settings": [
+	],
+	"presets": [
+		{
+			"name": "トップ スタイル"
+		}
+	]
+  }
+{% endschema %}
