@@ -60,7 +60,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 1.44vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #searchFormSec .searchText {
     font-size: 20px;
   }
@@ -74,7 +74,7 @@ $max_font_size (px): 最大フォントサイズ
 #searchFormSec .searchText span {
   font-size: 2.16vw;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #searchFormSec .searchText span {
     font-size: 30px;
   }
@@ -88,6 +88,7 @@ $max_font_size (px): 最大フォントサイズ
   width: 36.7vw;
   max-width: 510px;
   margin: auto;
+  -webkit-transition: none;
   transition: none;
 }
 @media screen and (max-width: 800px) {
@@ -116,25 +117,37 @@ $max_font_size (px): 最大フォントサイズ
   height: 100%;
 }
 #searchFormSec .field .field__input:focus {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+#searchFormSec .field .field__input:not(:-moz-placeholder) ~ .field__label {
+  display: none;
+}
+#searchFormSec .field .field__input:not(:-ms-input-placeholder) ~ .field__label {
+  display: none;
 }
 #searchFormSec .field .field__input:not(:placeholder-shown) ~ .field__label {
   display: none;
 }
 #searchFormSec #searchTypeList {
   margin-top: 68px;
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-justify-content: center;
-  justify-content: center;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 @media screen and (max-width: 800px) {
   #searchFormSec #searchTypeList {
@@ -159,10 +172,12 @@ $max_font_size (px): 最大フォントサイズ
   border-radius: 0;
   cursor: pointer;
   -webkit-appearance: none;
-  appearance: none;
-  touch-action: manipulation;
+  -moz-appearance: none;
+       appearance: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
-#searchFormSec #searchTypeList li button[aria-selected="false"] {
+#searchFormSec #searchTypeList li button[aria-selected=false] {
   color: #808080;
 }
 #searchFormSec #searchTypeList li .searchTypeTxt01 {
@@ -170,7 +185,7 @@ $max_font_size (px): 最大フォントサイズ
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #searchFormSec #searchTypeList li .searchTypeTxt01 {
     font-size: 25px;
   }
@@ -187,7 +202,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 0.93vw;
   text-align: left;
 }
-@media screen and (min-width: 1397.84946px) {
+@media screen and (min-width: 1397.8494623656px) {
   #searchFormSec #searchTypeList li .searchTypeTxt02 {
     font-size: 13px;
   }
@@ -212,9 +227,10 @@ $max_font_size (px): 最大フォントサイズ
 #resultSec .panelGroup .panel {
   display: none;
 }
-#resultSec .panelGroup .panel[aria-hidden="false"] {
+#resultSec .panelGroup .panel[aria-hidden=false] {
   display: block;
-  animation: show .4s ease;
+  -webkit-animation: show 0.4s ease;
+          animation: show 0.4s ease;
 }
 #resultSec #pageList {
   padding-top: 7.5vw;
@@ -250,8 +266,10 @@ $max_font_size (px): 最大フォントサイズ
   height: 10px;
   border-top: 1px solid #000000;
   border-right: 1px solid #000000;
-  transform: rotate(45deg);
-  transition: all .3s;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 @media screen and (max-width: 800px) {
   #resultSec #pageList li a::after {
@@ -262,8 +280,8 @@ $max_font_size (px): 最大フォントサイズ
   #resultSec #pageList li a:hover {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
   }
   #resultSec #pageList li a:hover p {
     color: #808080;
@@ -272,6 +290,15 @@ $max_font_size (px): 最大フォントサイズ
     border-top: 1px solid #808080;
     border-right: 1px solid #808080;
     right: 10px;
+  }
+}
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

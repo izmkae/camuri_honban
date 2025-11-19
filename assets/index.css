@@ -15,12 +15,13 @@ $max_font_size (px): 最大フォントサイズ
 -------------------------------------------------------------------*/
 #header {
   opacity: 0;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 0;
 }
 #header.fixed {
   opacity: 1;
-  z-index: 9999;
+  z-index: 9998;
 }
 
 .mainVisualIn {
@@ -82,7 +83,8 @@ $max_font_size (px): 最大フォントサイズ
     margin: auto;
     max-height: 100%;
     max-width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
   }
 }
@@ -119,18 +121,23 @@ $max_font_size (px): 最大フォントサイズ
 
 #aboutSec {
   background-color: #E1DFD9;
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   padding: 8.94vw 13.49vw 11.9vw 14.93vw;
 }
 @media screen and (max-width: 800px) {
@@ -184,18 +191,23 @@ $max_font_size (px): 最大フォントサイズ
 }
 
 #contentSec #contentList {
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-justify-content: center;
-  justify-content: center;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 #contentSec #contentList li {
   width: 33.33%;
@@ -249,22 +261,100 @@ $max_font_size (px): 最大フォントサイズ
   #contentSec #contentList li a .txtBlock .btnBlock span {
     width: 22.7vw;
     height: 7.79vw;
-    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    -webkit-align-items: center;
     -ms-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-justify-content: center;
-    justify-content: center;
-    -webkit-flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
   }
 }
 #contentSec #contentList li a:hover .txtBlock .btnBlock span {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+#styleSec {
+  overflow: hidden;
+  padding: 8.65vw 0 7.72vw;
+}
+#styleSec .contentIn {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+#styleSec h2 {
+  font-size: 3.24vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  #styleSec h2 {
+    font-size: 8vw;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+#styleSec .styleThumbList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+#styleSec .styleThumbList .thumbItem {
+  cursor: pointer;
+  width: 23%;
+  text-align: center;
+}
+#styleSec .styleThumbList .thumbItem img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#styleSec .styleThumbList .thumbItem img:hover {
+  opacity: 0.8;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+#styleSec .styleThumbList .thumbItem p {
+  margin-top: 10px;
+  font-size: 1.8vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+@media screen and (min-width: 1444.4444444444px) {
+  #styleSec .styleThumbList .thumbItem p {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #styleSec .styleThumbList .thumbItem {
+    width: 45%;
+  }
 }
 
 #journalSec {
@@ -304,18 +394,23 @@ $max_font_size (px): 最大フォントサイズ
 }
 @media screen and (max-width: 800px) {
   #journalSec #topJournalList {
-    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    -webkit-align-items: flex-start;
     -ms-align-items: flex-start;
-    align-items: flex-start;
-    -webkit-justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -ms-justify-content: space-between;
-    justify-content: space-between;
-    -webkit-flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
   }
 }
 #journalSec #topJournalList .slick-next {
@@ -389,7 +484,8 @@ $max_font_size (px): 最大フォントサイズ
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #journalSec #topJournalList li .imgBlock .tabWrap {
   position: absolute;
@@ -486,18 +582,23 @@ $max_font_size (px): 最大フォントサイズ
     height: 11.2vw;
     border-radius: 25.2vw;
     font-size: 4vw;
-    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    -webkit-align-items: center;
     -ms-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-justify-content: center;
-    justify-content: center;
-    -webkit-flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
   }
 }
 
@@ -519,4 +620,48 @@ $max_font_size (px): 最大フォントサイズ
 }
 #reviewSec p {
   text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+.modal.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.slider img {
+  max-width: 100%;
+  max-height: 85vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0 auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10;
 }

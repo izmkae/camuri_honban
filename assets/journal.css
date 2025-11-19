@@ -53,7 +53,7 @@ $max_font_size (px): 最大フォントサイズ
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #journalListPage #journalSec h2 {
     font-size: 60px;
   }
@@ -76,7 +76,7 @@ $max_font_size (px): 最大フォントサイズ
   text-align: right;
   padding-right: 3.6vw;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #journalListPage #journalSec .journalBlock .acJournalBox label {
     font-size: 25px;
   }
@@ -91,7 +91,7 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #journalListPage #journalSec .journalBlock .acJournalBox label::before, #journalListPage #journalSec .journalBlock .acJournalBox label::after {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   top: 1.3vw;
@@ -99,6 +99,7 @@ $max_font_size (px): 最大フォントサイズ
   width: 0.18vw;
   height: 1.7vw;
   background-color: #000000;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 @media screen and (max-width: 800px) {
@@ -109,7 +110,8 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #journalListPage #journalSec .journalBlock .acJournalBox label::after {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 #journalListPage #journalSec .journalBlock .acJournalBox label:hover {
   color: #808080;
@@ -120,6 +122,7 @@ $max_font_size (px): 最大フォントサイズ
 #journalListPage #journalSec .journalBlock .acJournalBox .acBlock {
   height: 0;
   opacity: 0;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   padding: 0 2.2%;
 }
@@ -129,18 +132,23 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #journalListPage #journalSec .journalBlock .acJournalBox .acBlock .journalTagList01 {
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 @media screen and (max-width: 800px) {
   #journalListPage #journalSec .journalBlock .acJournalBox .acBlock .journalTagList01 {
@@ -171,6 +179,7 @@ $max_font_size (px): 最大フォントサイズ
   color: #808080;
 }
 #journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 {
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 @media screen and (max-width: 800px) {
@@ -181,18 +190,23 @@ $max_font_size (px): 最大フォントサイズ
 }
 #journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 .journalCategoryList01 {
   margin-top: 6.78vw;
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 @media screen and (max-width: 800px) {
   #journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 .journalCategoryList01 {
@@ -206,7 +220,7 @@ $max_font_size (px): 最大フォントサイズ
   font-weight: 600;
   font-size: 1.8vw;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #journalListPage #journalSec .journalBlock .acJournalBox .acBlock2 .journalCategoryList01 li {
     font-size: 25px;
   }
@@ -227,13 +241,16 @@ $max_font_size (px): 最大フォントサイズ
 }
 #journalListPage #journalSec .journalBlock .acJournalBox input {
   display: none;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 #journalListPage #journalSec .journalBlock .acJournalBox input:checked ~ label::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 #journalListPage #journalSec .journalBlock .acJournalBox input:checked ~ label::after {
-  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 #journalListPage #journalSec .journalBlock .acJournalBox input:checked ~ .acBlock {
   height: auto;
@@ -307,7 +324,7 @@ $max_font_size (px): 最大フォントサイズ
   line-height: 1.6em;
   font-weight: bold;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #journalDetailPage #journalHeadSec .contentIn h1 {
     font-size: 30px;
   }
@@ -322,7 +339,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 1.44vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #journalDetailPage #journalHeadSec .contentIn .journalDate {
     font-size: 20px;
   }
@@ -345,7 +362,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 1.15vw;
   padding-right: 3.72vw;
 }
-@media screen and (min-width: 1391.30435px) {
+@media screen and (min-width: 1391.3043478261px) {
   #journalDetailPage #journalHeadSec .contentIn .tagList span {
     font-size: 16px;
   }
@@ -370,23 +387,28 @@ $max_font_size (px): 最大フォントサイズ
 }
 #journalDetailPage #journalHeadSec .contentIn .shareButtonBlock {
   margin-top: 3.1vw;
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
   -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   font-family: "Poppins", sans-serif;
   font-size: 1.01vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1386.13861px) {
+@media screen and (min-width: 1386.1386138614px) {
   #journalDetailPage #journalHeadSec .contentIn .shareButtonBlock {
     font-size: 14px;
   }
@@ -405,18 +427,23 @@ $max_font_size (px): 最大フォントサイズ
   height: 20px;
 }
 #journalDetailPage #journalHeadSec .contentIn .shareButtonBlock ul {
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
   -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 #journalDetailPage #journalHeadSec .contentIn .shareButtonBlock ul li {
   width: 1.65vw;
@@ -451,7 +478,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 1.15vw;
   line-height: 2;
 }
-@media screen and (min-width: 1391.30435px) {
+@media screen and (min-width: 1391.3043478261px) {
   #journalDetailPage #journalBodySec .contentIn {
     font-size: 16px;
   }
@@ -481,7 +508,7 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #journalDetailPage #journalBodySec .contentIn .acIndexBox label::before, #journalDetailPage #journalBodySec .contentIn .acIndexBox label::after {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   top: 27px;
@@ -489,6 +516,7 @@ $max_font_size (px): 最大フォントサイズ
   width: 2px;
   height: 23px;
   background-color: #000000;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 @media screen and (max-width: 800px) {
@@ -499,7 +527,8 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #journalDetailPage #journalBodySec .contentIn .acIndexBox label::after {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 #journalDetailPage #journalBodySec .contentIn .acIndexBox label:hover {
   color: #808080;
@@ -510,18 +539,22 @@ $max_font_size (px): 最大フォントサイズ
 #journalDetailPage #journalBodySec .contentIn .acIndexBox .acBlock {
   height: 0;
   opacity: 0;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   padding: 0 1.8vw;
 }
 #journalDetailPage #journalBodySec .contentIn .acIndexBox input {
   display: none;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 #journalDetailPage #journalBodySec .contentIn .acIndexBox input:checked ~ label::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 #journalDetailPage #journalBodySec .contentIn .acIndexBox input:checked ~ label::after {
-  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 #journalDetailPage #journalBodySec .contentIn .acIndexBox input:checked ~ .acBlock {
   height: auto;
@@ -543,7 +576,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 1.8vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #journalDetailPage #journalBodySec .contentIn .journalMain h2 {
     font-size: 25px;
   }
@@ -559,7 +592,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 1.44vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #journalDetailPage #journalBodySec .contentIn .journalMain h3 {
     font-size: 20px;
   }
@@ -611,7 +644,7 @@ $max_font_size (px): 最大フォントサイズ
   border-radius: 2.16vw;
   font-size: 1.29vw;
 }
-@media screen and (min-width: 1395.34884px) {
+@media screen and (min-width: 1395.3488372093px) {
   #journalDetailPage #journalBodySec .btnBlock a {
     font-size: 18px;
   }
@@ -644,7 +677,7 @@ $max_font_size (px): 最大フォントサイズ
   font-weight: bold;
   text-align: center;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #journalDetailPage #journalRelatedSec h3 {
     font-size: 30px;
   }
@@ -655,35 +688,45 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #journalDetailPage #journalRelatedSec .relatedItemList {
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
   -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-justify-content: center;
-  justify-content: center;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 @media screen and (max-width: 800px) {
   #journalDetailPage #journalRelatedSec .relatedItemList {
     width: 92vw;
     margin: auto;
-    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    -webkit-align-items: flex-start;
     -ms-align-items: flex-start;
-    align-items: flex-start;
-    -webkit-justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -ms-justify-content: space-between;
-    justify-content: space-between;
-    -webkit-flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
   }
 }
 #journalDetailPage #journalRelatedSec .relatedItemList li {
@@ -701,7 +744,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 1.58vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1582.27848px) {
+@media screen and (min-width: 1582.2784810127px) {
   #journalDetailPage #journalRelatedSec .relatedItemList li .itemTtl {
     font-size: 25px;
   }
@@ -717,7 +760,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 1.29vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1395.34884px) {
+@media screen and (min-width: 1395.3488372093px) {
   #journalDetailPage #journalRelatedSec .relatedItemList li .itemPrice {
     font-size: 18px;
   }
@@ -731,7 +774,7 @@ $max_font_size (px): 最大フォントサイズ
 #journalDetailPage #journalRelatedSec .relatedItemList li .itemPrice span {
   font-size: 1.01vw;
 }
-@media screen and (min-width: 1386.13861px) {
+@media screen and (min-width: 1386.1386138614px) {
   #journalDetailPage #journalRelatedSec .relatedItemList li .itemPrice span {
     font-size: 14px;
   }

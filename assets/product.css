@@ -26,7 +26,7 @@ $max_font_size (px): 最大フォントサイズ
   font-weight: 600;
   padding: 9.81vw 10.31vw 6.63vw;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #productList .pageTitle {
     font-size: 60px;
   }
@@ -82,14 +82,16 @@ $max_font_size (px): 最大フォントサイズ
   font-weight: 700;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin: auto;
 }
 @media screen and (max-width: 800px) {
   #productList .facets-wrapper .mobile-facets__wrapper .mobile-facets__open-label {
     font-size: 2.93vw;
     left: 15%;
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
 }
 #productList .mobile-facets__open svg {
@@ -114,7 +116,8 @@ $max_font_size (px): 最大フォントサイズ
   font-weight: 700;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin: auto;
   text-align: center;
 }
@@ -127,7 +130,7 @@ $max_font_size (px): 最大フォントサイズ
   position: absolute;
   width: 1.6rem;
   top: 0;
-  right: .97vw;
+  right: 0.97vw;
   bottom: 0;
   left: auto;
   margin: auto;
@@ -135,7 +138,8 @@ $max_font_size (px): 最大フォントサイズ
 #productList .facet-filters__sort:focus-visible,
 #productList .mobile-facets__sort .select__select:focus-visible {
   outline: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 #productList .product-count {
   display: none;
@@ -189,7 +193,7 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 .acProductList label::before, .acProductList label::after {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   top: 27px;
@@ -197,6 +201,7 @@ $max_font_size (px): 最大フォントサイズ
   width: 2px;
   height: 23px;
   background-color: #000000;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 @media screen and (max-width: 800px) {
@@ -207,7 +212,8 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 .acProductList label::after {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .acProductList label:hover {
   color: #808080;
@@ -218,18 +224,22 @@ $max_font_size (px): 最大フォントサイズ
 .acProductList .acBlock {
   height: 0;
   opacity: 0;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   padding: 0 1.8vw;
 }
 .acProductList input {
   display: none;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 .acProductList input:checked ~ label::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .acProductList input:checked ~ label::after {
-  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 .acProductList input:checked ~ .acBlock {
   height: auto;
@@ -241,18 +251,23 @@ $max_font_size (px): 最大フォントサイズ
 #productBasicInfoSec {
   max-width: 1200px;
   margin: auto;
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   padding: 51px 0;
 }
 @media screen and (max-width: 800px) {
@@ -283,12 +298,17 @@ $max_font_size (px): 最大フォントサイズ
 }
 #productBasicInfoSec .imgBlock .thumbImgList .slick-list .draggable > div {
   width: 100% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media screen and (max-width: 800px) {
   #productBasicInfoSec .imgBlock .thumbImgList .slick-list .draggable > div {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 #productBasicInfoSec .imgBlock .thumbImgList li {
@@ -330,25 +350,30 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 #productBasicInfoSec .infoBlock .tabWrap {
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 #productBasicInfoSec .infoBlock .tabWrap span {
   padding: 4px 18px;
   font-weight: bold;
   font-size: 1.33vw;
 }
-@media screen and (min-width: 1203.00752px) {
+@media screen and (min-width: 1203.007518797px) {
   #productBasicInfoSec .infoBlock .tabWrap span {
     font-size: 16px;
   }
@@ -365,7 +390,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 1.33vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1203.00752px) {
+@media screen and (min-width: 1203.007518797px) {
   #productBasicInfoSec .infoBlock .productCopy {
     font-size: 16px;
   }
@@ -382,7 +407,7 @@ $max_font_size (px): 最大フォントサイズ
   font-weight: bold;
   line-height: 1.4;
 }
-@media screen and (min-width: 1202.74914px) {
+@media screen and (min-width: 1202.7491408935px) {
   #productBasicInfoSec .infoBlock .productName {
     font-size: 35px;
   }
@@ -397,7 +422,7 @@ $max_font_size (px): 最大フォントサイズ
   margin-top: 5px;
   font-size: 1.33vw;
 }
-@media screen and (min-width: 1203.00752px) {
+@media screen and (min-width: 1203.007518797px) {
   #productBasicInfoSec .infoBlock .productCode {
     font-size: 16px;
   }
@@ -412,7 +437,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 2.91vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1202.74914px) {
+@media screen and (min-width: 1202.7491408935px) {
   #productBasicInfoSec .infoBlock .productPrice {
     font-size: 35px;
   }
@@ -426,7 +451,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 1.33vw;
   line-height: 3;
 }
-@media screen and (min-width: 1203.00752px) {
+@media screen and (min-width: 1203.007518797px) {
   #productBasicInfoSec .infoBlock .productPrice span {
     font-size: 16px;
   }
@@ -441,7 +466,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 1.33vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1203.00752px) {
+@media screen and (min-width: 1203.007518797px) {
   #productBasicInfoSec .infoBlock .productPriceAddTxt {
     font-size: 16px;
   }
@@ -460,7 +485,7 @@ $max_font_size (px): 最大フォントサイズ
   margin-top: 30px;
   font-size: 1.66vw;
 }
-@media screen and (min-width: 1204.81928px) {
+@media screen and (min-width: 1204.8192771084px) {
   #productBasicInfoSec .infoBlock .form__label, #productBasicInfoSec .infoBlock .quantity__label {
     font-size: 20px;
   }
@@ -524,7 +549,8 @@ $max_font_size (px): 最大フォントサイズ
   position: absolute;
   top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 70%;
   max-width: 550px;
 }
@@ -573,7 +599,8 @@ $max_font_size (px): 最大フォントサイズ
   cursor: pointer;
   background: transparent;
   color: transparent;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   padding: 0;
   border: none;
   outline: none;
@@ -625,7 +652,7 @@ $max_font_size (px): 最大フォントサイズ
 #productDetailSec #productDescription {
   font-size: 1.33vw;
 }
-@media screen and (min-width: 1203.00752px) {
+@media screen and (min-width: 1203.007518797px) {
   #productDetailSec #productDescription {
     font-size: 16px;
   }
@@ -639,7 +666,7 @@ $max_font_size (px): 最大フォントサイズ
   background-color: #E1DFD9;
   line-height: 1.4;
 }
-@media screen and (min-width: 1201.92308px) {
+@media screen and (min-width: 1201.9230769231px) {
   #productDetailSec #productDescription h2 {
     font-size: 25px;
   }
@@ -656,7 +683,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 2.08vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1201.92308px) {
+@media screen and (min-width: 1201.9230769231px) {
   #productDetailSec #productDescription h3 {
     font-size: 25px;
   }
@@ -672,7 +699,7 @@ $max_font_size (px): 最大フォントサイズ
   font-size: 1.33vw;
   line-height: 1.87;
 }
-@media screen and (min-width: 1203.00752px) {
+@media screen and (min-width: 1203.007518797px) {
   #productDetailSec #productDescription p {
     font-size: 16px;
   }
@@ -687,7 +714,7 @@ $max_font_size (px): 最大フォントサイズ
   margin-top: 1.22vw;
   font-size: 1.16vw;
 }
-@media screen and (min-width: 1206.89655px) {
+@media screen and (min-width: 1206.8965517241px) {
   #productDetailSec #productDescription .sTxt {
     font-size: 14px;
   }
@@ -833,18 +860,23 @@ $max_font_size (px): 最大フォントサイズ
   }
 }
 .btnCartBlock .flexWrap {
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-end;
   -ms-align-items: flex-end;
-  align-items: flex-end;
-  -webkit-justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -ms-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 @media screen and (max-width: 800px) {
   .btnCartBlock .flexWrap {
@@ -856,7 +888,7 @@ $max_font_size (px): 最大フォントサイズ
   font-weight: bold;
   line-height: 1.4;
 }
-@media screen and (min-width: 1204.18848px) {
+@media screen and (min-width: 1204.1884816754px) {
   .btnCartBlock .productName {
     font-size: 23px;
   }
@@ -886,7 +918,7 @@ $max_font_size (px): 最大フォントサイズ
 .btnCartBlock .productPrice span {
   font-size: 1.08vw;
 }
-@media screen and (min-width: 1203.7037px) {
+@media screen and (min-width: 1203.7037037037px) {
   .btnCartBlock .productPrice span {
     font-size: 13px;
   }
@@ -900,7 +932,7 @@ $max_font_size (px): 最大フォントサイズ
   margin-bottom: 20px;
   font-size: 1.16vw;
 }
-@media screen and (min-width: 1206.89655px) {
+@media screen and (min-width: 1206.8965517241px) {
   .btnCartBlock .productPriceAddTxt {
     font-size: 14px;
   }
@@ -919,22 +951,27 @@ $max_font_size (px): 最大フォントサイズ
   margin-top: 10px;
   font-size: 1.33vw;
 }
-@media screen and (min-width: 1127.81955px) {
+@media screen and (min-width: 1127.8195488722px) {
   .btnCartBlock .form__label, .btnCartBlock .quantity__label {
     font-size: 15px;
   }
 }
 @media screen and (max-width: 800px) {
   .btnCartBlock .form__label, .btnCartBlock .quantity__label {
-    margin-top: 8vw;
+    margin-top: 5vw;
     font-size: 3.73vw;
   }
 }
 .btnCartBlock .product-form__input input[type=radio] + label {
   margin: 0.5rem 0.5rem 0.5rem 0;
-  padding: .7rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   letter-spacing: 0;
   font-size: 1.2rem;
+}
+@media screen and (max-width: 800px) {
+  .btnCartBlock .product-form__input input[type=radio] + label {
+    margin: 0.8rem 0.5rem 0.8rem 0;
+  }
 }
 .btnCartBlock .product-form__buttons {
   margin-top: 44px;

@@ -22,7 +22,7 @@ h3 {
   font-weight: 600;
   text-align: center;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   h3 {
     font-size: 45px;
   }
@@ -37,7 +37,7 @@ h3 span {
   font-size: 1.63vw;
   color: #808080;
 }
-@media screen and (min-width: 1104.29448px) {
+@media screen and (min-width: 1104.2944785276px) {
   h3 span {
     font-size: 18px;
   }
@@ -76,14 +76,6 @@ h3 span {
     padding-top: 8.66vw;
   }
 }
-#conceptSec .contentPcIn {
-  padding-bottom: 167px;
-}
-@media screen and (max-width: 800px) {
-  #conceptSec .contentPcIn {
-    padding-bottom: 23.2vw;
-  }
-}
 #conceptSec .mainImgBlock {
   padding-top: 71px;
 }
@@ -98,7 +90,8 @@ h3 span {
   #conceptSec .mainImgBlock img {
     width: auto;
     height: 75.73vw;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 #conceptSec .txtBlock {
@@ -115,7 +108,7 @@ h3 span {
   line-height: 2.25;
   text-align: center;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #conceptSec .txtBlock p {
     font-size: 20px;
   }
@@ -126,46 +119,54 @@ h3 span {
     font-size: 3.73vw;
   }
 }
-#conceptSec .imgBlock #conceptImg01 {
+#conceptSec .contentPcIn {
+  padding-bottom: 167px;
+}
+@media screen and (max-width: 800px) {
+  #conceptSec .contentPcIn {
+    padding-bottom: 23.2vw;
+  }
+}
+#conceptSec .contentPcIn .imgBlock #conceptImg01 {
   width: 39%;
   height: auto;
   margin-top: 10%;
 }
 @media screen and (max-width: 800px) {
-  #conceptSec .imgBlock #conceptImg01 {
+  #conceptSec .contentPcIn .imgBlock #conceptImg01 {
     width: 73.8vw;
     margin-top: 13%;
   }
 }
-#conceptSec .imgBlock #conceptImg02 {
+#conceptSec .contentPcIn .imgBlock #conceptImg02 {
   width: 50%;
   height: auto;
   margin: -11% 0 0 auto;
 }
 @media screen and (max-width: 800px) {
-  #conceptSec .imgBlock #conceptImg02 {
+  #conceptSec .contentPcIn .imgBlock #conceptImg02 {
     width: 90.66vw;
     margin: 6.66vw 0 0 auto;
   }
 }
-#conceptSec .imgBlock #conceptImg03 {
+#conceptSec .contentPcIn .imgBlock #conceptImg03 {
   width: 34.5%;
   height: auto;
   margin: -5% auto 0 7.2%;
 }
 @media screen and (max-width: 800px) {
-  #conceptSec .imgBlock #conceptImg03 {
+  #conceptSec .contentPcIn .imgBlock #conceptImg03 {
     width: 62.64vw;
     margin: 6.66vw auto 0 0;
   }
 }
-#conceptSec .imgBlock #conceptImg04 {
+#conceptSec .contentPcIn .imgBlock #conceptImg04 {
   width: 39%;
   height: auto;
   margin: -25% 5.4% 0 auto;
 }
 @media screen and (max-width: 800px) {
-  #conceptSec .imgBlock #conceptImg04 {
+  #conceptSec .contentPcIn .imgBlock #conceptImg04 {
     width: 73.86vw;
     margin: 6.66vw 0 0 auto;
   }
@@ -188,18 +189,23 @@ h3 span {
   }
 }
 #promiseSec .promiseList li {
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   margin-bottom: 100px;
 }
 @media screen and (max-width: 800px) {
@@ -217,18 +223,23 @@ h3 span {
   }
 }
 #promiseSec .promiseList li .txtBlock .ttlWrap {
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
   -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 @media screen and (max-width: 800px) {
   #promiseSec .promiseList li .txtBlock .ttlWrap {
@@ -242,7 +253,7 @@ h3 span {
   font-weight: 300;
   font-size: 6.49vw;
 }
-@media screen and (min-width: 1386.74884px) {
+@media screen and (min-width: 1386.748844376px) {
   #promiseSec .promiseList li .txtBlock .ttlWrap .numTxt {
     font-size: 90px;
   }
@@ -258,7 +269,7 @@ h3 span {
   font-size: 1.44vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #promiseSec .promiseList li .txtBlock .ttlWrap .titleTxt {
     font-size: 20px;
   }
@@ -272,7 +283,7 @@ h3 span {
   font-size: 1.15vw;
   line-height: 2em;
 }
-@media screen and (min-width: 1391.30435px) {
+@media screen and (min-width: 1391.3043478261px) {
   #promiseSec .promiseList li .txtBlock .descTxt {
     font-size: 16px;
   }
@@ -303,23 +314,31 @@ h3 span {
 }
 #messageSec .contentWrap {
   margin-top: 109px;
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 @media screen and (max-width: 800px) {
   #messageSec .contentWrap {
     margin-top: 0;
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 #messageSec .contentWrap .txtBlock {
@@ -334,7 +353,7 @@ h3 span {
   font-size: 1.44vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #messageSec .contentWrap .txtBlock .titleTxt {
     font-size: 20px;
   }
@@ -352,7 +371,7 @@ h3 span {
   margin-top: 44px;
   margin-right: 9%;
 }
-@media screen and (min-width: 1391.30435px) {
+@media screen and (min-width: 1391.3043478261px) {
   #messageSec .contentWrap .txtBlock .descTxt {
     font-size: 16px;
   }
@@ -389,7 +408,7 @@ h3 span {
   text-align: center;
   padding-bottom: 12.04vw;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #flowImageSec h4 {
     font-size: 30px;
   }
@@ -410,14 +429,15 @@ h3 span {
   }
 }
 #flowImageSec h4 span::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 25px;
   left: 0;
   width: 50px;
   height: 2px;
   background-color: #000000;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 @media screen and (max-width: 800px) {
   #flowImageSec h4 span::before {
@@ -426,7 +446,7 @@ h3 span {
   }
 }
 #flowImageSec h4 span::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 25px;
   right: 0;
@@ -434,7 +454,8 @@ h3 span {
   width: 50px;
   height: 2px;
   background-color: #000000;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 @media screen and (max-width: 800px) {
   #flowImageSec h4 span::after {
@@ -443,14 +464,19 @@ h3 span {
   }
 }
 #flowImageSec .infinityScrollWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
 }
 #flowImageSec .infinityScrollWrap .infinityScrolllist {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
   padding: 0;
-  animation: infinity-scroll-left 80s infinite linear 0.5s both;
+  -webkit-animation: infinity-scroll-left 80s infinite linear 0.5s both;
+          animation: infinity-scroll-left 80s infinite linear 0.5s both;
 }
 #flowImageSec .infinityScrollWrap .infinityScrolllist li {
   margin-left: 2.16vw;
@@ -520,11 +546,24 @@ h3 span {
   }
 }
 
-@keyframes infinity-scroll-left {
+@-webkit-keyframes infinity-scroll-left {
   from {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes infinity-scroll-left {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }

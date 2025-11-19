@@ -22,7 +22,7 @@ h2 {
   font-weight: 600;
   text-align: center;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   h2 {
     font-size: 45px;
   }
@@ -37,7 +37,7 @@ h2 span {
   font-size: 1.63vw;
   font-weight: normal;
 }
-@media screen and (min-width: 1104.29448px) {
+@media screen and (min-width: 1104.2944785276px) {
   h2 span {
     font-size: 18px;
   }
@@ -53,7 +53,7 @@ h3 {
   font-weight: bold;
   text-align: center;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   h3 {
     font-size: 30px;
   }
@@ -92,7 +92,8 @@ h3 {
   #fittingAboutSec .mainImgBlock img {
     width: auto;
     height: 75.73vw;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 #fittingAboutSec .txtBlock {
@@ -109,7 +110,7 @@ h3 {
   line-height: 1.87;
   text-align: center;
 }
-@media screen and (min-width: 1391.30435px) {
+@media screen and (min-width: 1391.3043478261px) {
   #fittingAboutSec .txtBlock p {
     font-size: 16px;
   }
@@ -122,18 +123,23 @@ h3 {
 }
 #fittingAboutSec .fittingPointList {
   padding: 111px 20px 0;
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
   -ms-align-items: flex-start;
-  align-items: flex-start;
-  -webkit-justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 @media screen and (max-width: 800px) {
   #fittingAboutSec .fittingPointList {
@@ -165,7 +171,7 @@ h3 {
   font-weight: bold;
   line-height: 1.75;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #fittingAboutSec .fittingPointList li p {
     font-size: 20px;
   }
@@ -206,18 +212,23 @@ h3 {
 }
 #fittingFlowSec .fittingFlowList li {
   height: 350px;
-  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
   -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   border-bottom: 2px solid #000000;
 }
 @media screen and (max-width: 800px) {
@@ -275,7 +286,7 @@ h3 {
   font-size: 1.44vw;
   font-weight: bold;
 }
-@media screen and (min-width: 1388.88889px) {
+@media screen and (min-width: 1388.8888888889px) {
   #fittingFlowSec .fittingFlowList li .txtBlock .titleTxt {
     font-size: 20px;
   }
@@ -293,7 +304,7 @@ h3 {
   font-size: 1.15vw;
   line-height: 1.6em;
 }
-@media screen and (min-width: 1391.30435px) {
+@media screen and (min-width: 1391.3043478261px) {
   #fittingFlowSec .fittingFlowList li .txtBlock .descTxt, #fittingFlowSec .fittingFlowList li .txtBlock .descTxt2 {
     font-size: 16px;
   }
@@ -311,7 +322,7 @@ h3 {
 #fittingFlowSec .fittingFlowList li .txtBlock .descTxt2 {
   font-size: 1.01vw;
 }
-@media screen and (min-width: 1386.13861px) {
+@media screen and (min-width: 1386.1386138614px) {
   #fittingFlowSec .fittingFlowList li .txtBlock .descTxt2 {
     font-size: 14px;
   }
