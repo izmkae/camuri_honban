@@ -287,7 +287,7 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
       }
     </script>
   {% include 'pagefly-app-header' %}</head>
-  <body><div class="pagefly-container">
+<body data-basepath="{{ '' | asset_url }}"><div class="pagefly-container">
               {{ content_for_layout }}
             </div></body>
 </html>
