@@ -50,9 +50,16 @@ $(document).ready(function () {
 	};
 
 	const modal = document.getElementById('modal');
-  const overlay = document.querySelector('.modal-overlay');
 	const closeBtn = document.querySelector('.close-btn');
 	const sliderContainer = document.querySelector('.slider');
+
+	modal.addEventListener('click', (e) => {
+		// modal-content の中をクリックしてたら何もしない
+		if (e.target.closest('.modal-content')) return;
+
+		// それ以外（背景側）をクリックしたら閉じる
+		closeModal();
+	});
 
 	function initSlick() {
 		$(sliderContainer).slick({
@@ -113,7 +120,7 @@ $(document).ready(function () {
 		});
 	});
 
-  overlay.addEventListener('click', closeModal);
+	closeBtn.addEventListener('click', closeModal);
 
-  closeBtn.addEventListener('click', closeModal);
+
 });
