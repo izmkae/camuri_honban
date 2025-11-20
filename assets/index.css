@@ -288,10 +288,20 @@ $max_font_size (px): 最大フォントサイズ
   overflow: hidden;
   padding: 8.65vw 0 7.72vw;
 }
+@media screen and (max-width: 800px) {
+  #styleSec {
+    padding: 12.8vw 0 14.66vw;
+  }
+}
 #styleSec .contentIn {
   width: 100%;
   max-width: 1200px;
   margin: auto;
+}
+@media screen and (max-width: 800px) {
+  #styleSec .contentIn {
+    width: 90%;
+  }
 }
 #styleSec h2 {
   font-size: 3.24vw;
@@ -302,8 +312,6 @@ $max_font_size (px): 最大フォントサイズ
 @media screen and (max-width: 800px) {
   #styleSec h2 {
     font-size: 8vw;
-    text-align: center;
-    padding-left: 0;
   }
 }
 #styleSec .styleThumbList {
@@ -349,6 +357,11 @@ $max_font_size (px): 最大フォントサイズ
 @media screen and (min-width: 1388.8888888889px) {
   #styleSec .styleThumbList .thumbItem p {
     font-size: 25px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #styleSec .styleThumbList .thumbItem p {
+    font-size: 3vw;
   }
 }
 @media screen and (max-width: 800px) {
