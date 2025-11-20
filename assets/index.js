@@ -50,15 +50,9 @@ $(document).ready(function () {
 	};
 
 	const modal = document.getElementById('modal');
+  const overlay = document.querySelector('.modal-overlay');
 	const closeBtn = document.querySelector('.close-btn');
 	const sliderContainer = document.querySelector('.slider');
-
-	// 背景クリックでモーダル閉じる
-	modal.addEventListener('click', e => {
-		if (e.target === modal) {
-			closeModal();
-		}
-	});
 
 	function initSlick() {
 		$(sliderContainer).slick({
@@ -104,12 +98,12 @@ $(document).ready(function () {
 		}
 	}
 
-	function closeModal() {
-		modal.classList.remove('active');
-		if ($(sliderContainer).hasClass('slick-initialized')) {
-			$(sliderContainer).slick('unslick');
-		}
-	}
+  function closeModal() {
+    modal.classList.remove('active');
+    if ($(sliderContainer).hasClass('slick-initialized')) {
+      $(sliderContainer).slick('unslick');
+    }
+  }
 
 	// サムネクリックでモーダルオープン
 	document.querySelectorAll('.thumbItem').forEach(item => {
@@ -119,7 +113,7 @@ $(document).ready(function () {
 		});
 	});
 
-	closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
 
-
+  closeBtn.addEventListener('click', closeModal);
 });

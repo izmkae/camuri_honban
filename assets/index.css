@@ -626,44 +626,97 @@ $max_font_size (px): 最大フォントサイズ
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 9999;
-  padding: 20px;
 }
 .modal.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
-.modal-content {
+.modal .modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+}
+.modal .modal-content {
   position: relative;
+  z-index: 1;
   max-width: 90vw;
   max-height: 90vh;
 }
-
-.slider img {
+.modal .modal-content .slider img {
+  display: block;
   max-width: 100%;
   max-height: 85vh;
   -o-object-fit: contain;
      object-fit: contain;
   margin: 0 auto;
 }
-
-.close-btn {
+.modal .modal-content .close-btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 28px;
+  top: 16px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  background: transparent;
   cursor: pointer;
   z-index: 10;
-  background-color: transparent;
-  border: none;
+  font-size: 0;
+  line-height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.modal .modal-content .close-btn::before, .modal .modal-content .close-btn::after {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  -webkit-transition: background-color 0.2s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.2s ease, -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, -webkit-transform 0.2s ease;
+}
+.modal .modal-content .close-btn::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.modal .modal-content .close-btn::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.modal:hover::before, .modal:hover::after {
+  background-color: #f5f5f5;
+  -webkit-transform: scale(1.05) rotate(45deg);
+          transform: scale(1.05) rotate(45deg);
+}
+.modal:hover::after {
+  -webkit-transform: scale(1.05) rotate(-45deg);
+          transform: scale(1.05) rotate(-45deg);
+}
+.modal .close-btn:focus,
+.modal .close-btn:focus-visible,
+.modal .close-btn:active {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
