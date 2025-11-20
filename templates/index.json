@@ -212,12 +212,18 @@
     "camuri_tryit_qBjbcw": {
       "type": "camuri_tryit",
       "settings": {}
+    },
+    "top_style_TmVRdm": {
+      "type": "top_style",
+      "name": "トップ スタイル",
+      "settings": {}
     }
   },
   "order": [
     "01d42623-6eea-41c0-935c-b7f7eeedaae6",
     "top_about_F9UPNq",
     "top_contents_wVXE7f",
+    "top_style_TmVRdm",
     "top_jornal_drLd3i",
     "top_item_xUxTWh",
     "camuri_tryit_qBjbcw"
