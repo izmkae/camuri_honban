@@ -343,6 +343,11 @@ $max_font_size (px): 最大フォントサイズ
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+@media screen and (max-width: 800px) {
+  #styleSec .styleThumbList .thumbItem img {
+    height: 200px;
+  }
+}
 #styleSec .styleThumbList .thumbItem img:hover {
   opacity: 0.8;
   -webkit-transform: scale(1.03);
