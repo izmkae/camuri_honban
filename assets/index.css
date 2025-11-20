@@ -366,6 +366,7 @@ $max_font_size (px): 最大フォントサイズ
 }
 @media screen and (max-width: 800px) {
   #styleSec .styleThumbList .thumbItem p {
+    margin-top: 3px;
     font-size: 3vw;
   }
 }
