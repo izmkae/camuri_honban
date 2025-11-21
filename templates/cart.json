@@ -13,7 +13,7 @@
       "type": "main-cart-items",
       "custom_css": [
         ".title-wrapper-with-link .title {margin: 0 auto;}",
-        ".cart-item__details > * + * {margin-top: 0.6rem;}"
+        ".cart-item__details > * + * {margin-top: 0;}"
       ],
       "settings": {
         "color_scheme": "",
