@@ -282,7 +282,8 @@
                               class="button button--tertiary"
                               aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
                             >
-                              {% render 'icon-remove' %}
+                              {% comment %} {% render 'icon-remove' %} {% endcomment %}
+                               削除する
                             </a>
                           </cart-remove-button>
                         </div>
