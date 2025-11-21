@@ -11,6 +11,10 @@
   "sections": {
     "cart-items": {
       "type": "main-cart-items",
+      "custom_css": [
+        ".title-wrapper-with-link .title {margin: 0 auto;}",
+        ".cart-item__details > * + * {margin-top: 0.6rem;}"
+      ],
       "settings": {
         "color_scheme": "",
         "padding_top": 36,
