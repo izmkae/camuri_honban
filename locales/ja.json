@@ -584,6 +584,9 @@
         "duties_and_taxes_options": {
           "ddp_title": "ご注文を確定する"
         }
+      },
+      "order_payment_collection": {
+        "pay_now": "ご注文を確定する"
       }
     },
     "subscriptions": {
