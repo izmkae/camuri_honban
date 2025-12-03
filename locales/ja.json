@@ -562,5 +562,17 @@
       "signup_form_success": "We will send you an email right before we open!",
       "password_link": "Enter using password"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "order_summary": {
+        "deferred_payment_info": {
+          "paid_today": " "
+        },
+        "payment_terms_totals": {
+          "due_today_next": " "
+        }
+      }
+    }
   }
 }
