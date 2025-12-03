@@ -597,6 +597,11 @@
             "storefront_body": "他のお帽子をさがす"
           }
         }
+      },
+      "payment": {
+        "subscription_agreement_label": "　",
+        "purchase_options_agreement_label": "　",
+        "purchase_options_and_vaulting_agreement_label": "　"
       }
     },
     "subscriptions": {
