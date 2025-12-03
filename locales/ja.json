@@ -37,7 +37,7 @@
         "tiktok": "TikTok"
       }
     },
-    "continue_shopping": "買い物を続ける",
+    "continue_shopping": "他のお帽子をさがす",
     "pagination": {
       "label": "ページネーション",
       "page": "{{ number }}ページ",
@@ -587,6 +587,16 @@
       },
       "order_payment_collection": {
         "pay_now": "ご注文を確定する"
+      },
+      "thank_you": {
+        "return_to_store_link_label": "他のお帽子をさがす"
+      },
+      "throttle": {
+        "inventory": {
+          "sold_out": {
+            "storefront_body": "他のお帽子をさがす"
+          }
+        }
       }
     },
     "subscriptions": {
@@ -605,6 +615,11 @@
         "payment_status": {
           "pay_now": "ご注文を確定する"
         }
+      }
+    },
+    "payment_methods": {
+      "update_success": {
+        "done_button": "他のお帽子をさがす"
       }
     }
   }
