@@ -571,7 +571,8 @@
         },
         "payment_terms_totals": {
           "due_today_next": "お試し購入の場合本日のお支払いは ¥0 です。"
-        }
+        },
+        "title": "ご注文内容"
       },
       "customer_account": {
         "save_my_information_label": "ご注文内容を保存する"
@@ -579,6 +580,14 @@
     },
     "subscriptions": {
       "buyer_consent_cart": "お試し購入の場合は、本日のお支払いは¥0ですのでご安心くださいませ！"
+    }
+  },
+  "customer_accounts": {
+    "order_details": {
+      "summary_title": "ご注文内容",
+      "mobile_summary_toggle_button": {
+        "open": "ご注文内容"
+      }
     }
   }
 }
