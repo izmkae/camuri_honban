@@ -572,6 +572,9 @@
         "payment_terms_totals": {
           "due_today_next": "お試し購入の場合本日のお支払いは ¥0 です。"
         }
+      },
+      "customer_account": {
+        "save_my_information_label": "ご注文内容を保存する"
       }
     },
     "subscriptions": {
