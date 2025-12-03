@@ -599,6 +599,13 @@
       "mobile_summary_toggle_button": {
         "open": "ご注文内容"
       }
+    },
+    "B2B": {
+      "draft_order_details": {
+        "payment_status": {
+          "pay_now": "ご注文を確定する"
+        }
+      }
     }
   }
 }
