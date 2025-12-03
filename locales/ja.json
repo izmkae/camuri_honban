@@ -576,6 +576,9 @@
       },
       "customer_account": {
         "save_my_information_label": "ご注文内容を保存する"
+      },
+      "general": {
+        "pay_now_button_label": "ご注文を確定する"
       }
     },
     "subscriptions": {
