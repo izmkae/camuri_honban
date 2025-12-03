@@ -570,7 +570,7 @@
           "paid_today": " "
         },
         "payment_terms_totals": {
-          "due_today_next": "【お試し購入】本日のご請求はございません。"
+          "due_today_next": "【お試し購入】本日のお支払いはありません。"
         },
         "title": "ご注文内容"
       },
