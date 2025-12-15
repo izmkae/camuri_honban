@@ -45,7 +45,7 @@
             "image": "shopify://shop_images/samune_syusei3.jpg",
             "image_sp": "shopify://shop_images/samune_syusei3-2.jpg",
             "heading": "フィットを追求した\n『深型キャップ』\nクラウドファンディングのMakuakeにて、はじめて挑戦しました。",
-            "link": "https://www.makuake.com/project/camuri-01/"
+            "link": "shopify://products/baseball-cap-deep"
           }
         }
       },
@@ -125,6 +125,11 @@
         "content_set_eahmKR",
         "content_set_dAbr8U"
       ],
+      "settings": {}
+    },
+    "top_style_TmVRdm": {
+      "type": "top_style",
+      "name": "トップ スタイル",
       "settings": {}
     },
     "top_jornal_drLd3i": {
@@ -211,11 +216,6 @@
     },
     "camuri_tryit_qBjbcw": {
       "type": "camuri_tryit",
-      "settings": {}
-    },
-    "top_style_TmVRdm": {
-      "type": "top_style",
-      "name": "トップ スタイル",
       "settings": {}
     }
   },
