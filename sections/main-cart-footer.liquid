@@ -57,25 +57,26 @@
                     </ul>
                   {%- endif -%}
                 </div>
-{%- liquid
-	assign payable_total = 0
 
-	for item in cart.items
-		# お試し購入は除外
-		if item.selling_plan_allocation
-			if item.selling_plan_allocation.selling_plan.name != 'お試し購入'
-				assign payable_total = payable_total | plus: item.final_line_price
-			endif
-		else
-			# selling_plan が無い通常商品
-			assign payable_total = payable_total | plus: item.final_line_price
-		endif
-	endfor
--%}
+                {%- liquid
+                  assign payable_total = 0
+
+                  for item in cart.items
+                    # お試し購入は除外
+                    if item.selling_plan_allocation
+                      if item.selling_plan_allocation.selling_plan.name != 'お試し購入'
+                        assign payable_total = payable_total | plus: item.final_line_price
+                      endif
+                    else
+                      # selling_plan が無い通常商品
+                      assign payable_total = payable_total | plus: item.final_line_price
+                    endif
+                  endfor
+                -%}
                 <div class="totals">
                   <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
-                  {% comment %} <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p> {% endcomment %}
-                  <p class="totals__total-value">{{ payable_total | money_with_currency }}</p>
+                  <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
+                  {% comment %} <p class="totals__total-value">{{ payable_total | money_with_currency }}</p> {% endcomment %}
                 </div>
 
                 <small class="tax-note caption-large rte">
