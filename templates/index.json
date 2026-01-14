@@ -57,6 +57,78 @@
       ],
       "settings": {}
     },
+    "top_item_xUxTWh": {
+      "type": "top_item",
+      "blocks": {
+        "item_category_z9qmRL": {
+          "type": "item_category",
+          "settings": {
+            "topItemCatImage": "shopify://shop_images/img_cat_cap.png",
+            "topItemCatName": "キャップ",
+            "topItemCatText": "カジュアル感が人気",
+            "topItemCatLink": "shopify://collections/cap"
+          }
+        },
+        "item_category_naADdd": {
+          "type": "item_category",
+          "settings": {
+            "topItemCatImage": "shopify://shop_images/img_cat_hat.png",
+            "topItemCatName": "ハット",
+            "topItemCatText": "洋服を選ばない",
+            "topItemCatLink": "shopify://collections/hat"
+          }
+        },
+        "item_category_J9QjJN": {
+          "type": "item_category",
+          "settings": {
+            "topItemCatImage": "shopify://shop_images/img_cat_knit.png",
+            "topItemCatName": "ニットキャップ",
+            "topItemCatText": "coming soon",
+            "topItemCatLink": ""
+          }
+        },
+        "item_category_Hhgi7f": {
+          "type": "item_category",
+          "settings": {
+            "topItemCatImage": "shopify://shop_images/img_cat_beret.png",
+            "topItemCatName": "ベレー",
+            "topItemCatText": "個性が加わる",
+            "topItemCatLink": "shopify://collections/beret"
+          }
+        },
+        "item_category_fqQ9ej": {
+          "type": "item_category",
+          "settings": {
+            "topItemCatImage": "shopify://shop_images/img_cat_casket.png",
+            "topItemCatName": "キャスケット",
+            "topItemCatText": "こなれ感が出る",
+            "topItemCatLink": "shopify://collections/casquette"
+          }
+        },
+        "item_category_J6KhLJ": {
+          "type": "item_category",
+          "settings": {
+            "topItemCatImage": "shopify://shop_images/img_cat_care.png",
+            "topItemCatName": "その他雑貨",
+            "topItemCatText": "coming soon",
+            "topItemCatLink": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_category_z9qmRL",
+        "item_category_naADdd",
+        "item_category_J9QjJN",
+        "item_category_Hhgi7f",
+        "item_category_fqQ9ej",
+        "item_category_J6KhLJ"
+      ],
+      "settings": {
+        "title": "RECOMMENDED RANKING",
+        "collection": "all-item",
+        "products_to_show": 8
+      }
+    },
     "top_about_F9UPNq": {
       "type": "top_about",
       "settings": {
@@ -142,78 +214,6 @@
         "news_list_category": true
       }
     },
-    "top_item_xUxTWh": {
-      "type": "top_item",
-      "blocks": {
-        "item_category_z9qmRL": {
-          "type": "item_category",
-          "settings": {
-            "topItemCatImage": "shopify://shop_images/img_cat_cap.png",
-            "topItemCatName": "キャップ",
-            "topItemCatText": "カジュアル感が人気",
-            "topItemCatLink": "shopify://collections/cap"
-          }
-        },
-        "item_category_naADdd": {
-          "type": "item_category",
-          "settings": {
-            "topItemCatImage": "shopify://shop_images/img_cat_hat.png",
-            "topItemCatName": "ハット",
-            "topItemCatText": "洋服を選ばない",
-            "topItemCatLink": "shopify://collections/hat"
-          }
-        },
-        "item_category_J9QjJN": {
-          "type": "item_category",
-          "settings": {
-            "topItemCatImage": "shopify://shop_images/img_cat_knit.png",
-            "topItemCatName": "ニットキャップ",
-            "topItemCatText": "coming soon",
-            "topItemCatLink": ""
-          }
-        },
-        "item_category_Hhgi7f": {
-          "type": "item_category",
-          "settings": {
-            "topItemCatImage": "shopify://shop_images/img_cat_beret.png",
-            "topItemCatName": "ベレー",
-            "topItemCatText": "個性が加わる",
-            "topItemCatLink": "shopify://collections/beret"
-          }
-        },
-        "item_category_fqQ9ej": {
-          "type": "item_category",
-          "settings": {
-            "topItemCatImage": "shopify://shop_images/img_cat_casket.png",
-            "topItemCatName": "キャスケット",
-            "topItemCatText": "こなれ感が出る",
-            "topItemCatLink": "shopify://collections/casquette"
-          }
-        },
-        "item_category_J6KhLJ": {
-          "type": "item_category",
-          "settings": {
-            "topItemCatImage": "shopify://shop_images/img_cat_care.png",
-            "topItemCatName": "その他雑貨",
-            "topItemCatText": "coming soon",
-            "topItemCatLink": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_category_z9qmRL",
-        "item_category_naADdd",
-        "item_category_J9QjJN",
-        "item_category_Hhgi7f",
-        "item_category_fqQ9ej",
-        "item_category_J6KhLJ"
-      ],
-      "settings": {
-        "title": "RECOMMENDED RANKING",
-        "collection": "all-item",
-        "products_to_show": 8
-      }
-    },
     "camuri_tryit_qBjbcw": {
       "type": "camuri_tryit",
       "settings": {}
@@ -221,11 +221,11 @@
   },
   "order": [
     "01d42623-6eea-41c0-935c-b7f7eeedaae6",
-    "top_about_F9UPNq",
-    "top_contents_wVXE7f",
-    "top_style_TmVRdm",
-    "top_jornal_drLd3i",
     "top_item_xUxTWh",
+    "top_style_TmVRdm",
+    "top_contents_wVXE7f",
+    "top_jornal_drLd3i",
+    "top_about_F9UPNq",
     "camuri_tryit_qBjbcw"
   ]
 }
