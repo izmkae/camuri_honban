@@ -129,13 +129,14 @@
         "products_to_show": 8
       }
     },
-    "top_about_F9UPNq": {
-      "type": "top_about",
-      "settings": {
-        "topAboutText": "「帽⼦が似合わない」\nそう思っている全ての⼈へ。\nみんなのアタマと気持ちに\nフィットする帽⼦を、\nCAMURIが形にします。",
-        "topAboutLink": "shopify://pages/about",
-        "topAboutImg": "shopify://shop_images/top_illust_1_r.png"
-      }
+    "camuri_tryit_qBjbcw": {
+      "type": "camuri_tryit",
+      "settings": {}
+    },
+    "top_style_TmVRdm": {
+      "type": "top_style",
+      "name": "トップ スタイル",
+      "settings": {}
     },
     "top_contents_wVXE7f": {
       "type": "top_contents",
@@ -199,11 +200,6 @@
       ],
       "settings": {}
     },
-    "top_style_TmVRdm": {
-      "type": "top_style",
-      "name": "トップ スタイル",
-      "settings": {}
-    },
     "top_jornal_drLd3i": {
       "type": "top_jornal",
       "settings": {
@@ -214,18 +210,22 @@
         "news_list_category": true
       }
     },
-    "camuri_tryit_qBjbcw": {
-      "type": "camuri_tryit",
-      "settings": {}
+    "top_about_F9UPNq": {
+      "type": "top_about",
+      "settings": {
+        "topAboutText": "「帽⼦が似合わない」\nそう思っている全ての⼈へ。\nみんなのアタマと気持ちに\nフィットする帽⼦を、\nCAMURIが形にします。",
+        "topAboutLink": "shopify://pages/about",
+        "topAboutImg": "shopify://shop_images/top_illust_1_r.png"
+      }
     }
   },
   "order": [
     "01d42623-6eea-41c0-935c-b7f7eeedaae6",
     "top_item_xUxTWh",
+    "camuri_tryit_qBjbcw",
     "top_style_TmVRdm",
     "top_contents_wVXE7f",
     "top_jornal_drLd3i",
-    "top_about_F9UPNq",
-    "camuri_tryit_qBjbcw"
+    "top_about_F9UPNq"
   ]
 }
