@@ -1210,16 +1210,41 @@ class VariantRadios extends VariantSelects {
     super();
   }
 
-  setInputAvailability(listOfOptions, listOfAvailableOptions) {
-    
+setInputAvailability(listOfOptions, listOfAvailableOptions) {
+  // 初回：まず全部アクティブに戻して終了（＝初期表示は全部有効）
+  if (!this._availabilityInitialized) {
+    this._availabilityInitialized = true;
+
     listOfOptions.forEach((input) => {
-      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
-        input.classList.remove('disabled');
-      } else {
-        input.classList.add('disabled');
+      input.classList.remove('disabled');
+      // もし disabled 属性を使ってる実装が混ざってても剥がす
+      if (input.hasAttribute('disabled')) input.removeAttribute('disabled');
+      input.disabled = false;
+
+      // もし label 側に disabled を付けてる実装があっても剥がす（保険）
+      const label = input.nextElementSibling;
+      if (label && label.tagName === 'LABEL') {
+        label.classList.remove('disabled');
+        label.removeAttribute('aria-disabled');
       }
     });
+
+    return;
   }
+
+  // 2回目以降：在庫状況に応じて制御
+  listOfOptions.forEach((input) => {
+    const available = listOfAvailableOptions.includes(input.getAttribute('value'));
+
+    input.classList.toggle('disabled', !available);
+
+    // “押せない” まで制御したいなら disabled も付ける（見た目だけならこの2行は消してOK）
+    input.disabled = !available;
+    if (!available) input.setAttribute('disabled', '');
+    else input.removeAttribute('disabled');
+  });
+}
+
 
   // updateOptions() {
   //   const fieldsets = Array.from(this.querySelectorAll('fieldset'));
