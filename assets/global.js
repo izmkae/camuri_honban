@@ -1233,6 +1233,17 @@ class VariantRadios extends VariantSelects {
       return checked ? checked.value : null; // checkedが無い瞬間でも落とさない
     });
   }
+  
+  connectedCallback() {
+  super.connectedCallback?.();
+
+  // 初期表示だけ：disabledを全部剥がす（1回だけ）
+  if (this.dataset.initialAllActiveDone === 'true') return;
+  this.dataset.initialAllActiveDone = 'true';
+
+  this.querySelectorAll('fieldset.product-form__input input[type="radio"].disabled')
+    .forEach((input) => input.classList.remove('disabled'));
+}
 }
 
 customElements.define('variant-radios', VariantRadios);
