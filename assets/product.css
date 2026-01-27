@@ -17,6 +17,15 @@ $max_font_size (px): 最大フォントサイズ
   padding: 4.33vw 0 0 !important;
 }
 
+.variant-init-all-active .product-form__input input.disabled {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.variant-init-all-active .product-form__input label.disabled {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /*-------------------------------------------------------------------
 	product
@@ -1001,18 +1010,4 @@ $max_font_size (px): 最大フォントサイズ
   .btnCartBlock .button {
     font-size: 3.73vw;
   }
-}
-
-
-
-
-
-.variant-init-all-active .product-form__input input.disabled {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.variant-init-all-active .product-form__input label.disabled {
-  opacity: 1;
-  pointer-events: auto;
 }
