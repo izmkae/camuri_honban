@@ -3535,12 +3535,3 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
-.variant-init-all-active .product-form__input input.disabled {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.variant-init-all-active .product-form__input label.disabled {
-  opacity: 1;
-  pointer-events: auto;
-}
