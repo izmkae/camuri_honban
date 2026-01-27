@@ -1211,12 +1211,7 @@ class VariantRadios extends VariantSelects {
   }
 
   setInputAvailability(listOfOptions, listOfAvailableOptions) {
-    // 初回ロードでは何もしない（= disabled付けない）
-    if (!this.dataset.availabilityInitialized) {
-      this.dataset.availabilityInitialized = 'true';
-      return;
-    }
-
+    
     listOfOptions.forEach((input) => {
       if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
         input.classList.remove('disabled');
