@@ -1276,3 +1276,11 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+document.documentElement.classList.add('variant-init-all-active');
+
+document.addEventListener('change', (e) => {
+  if (e.target.closest('variant-radios, variant-selects')) {
+    document.documentElement.classList.remove('variant-init-all-active');
+  }
+}, { capture: true, once: true });
