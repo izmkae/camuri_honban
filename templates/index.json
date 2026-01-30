@@ -215,6 +215,7 @@
       "blocks": {
         "trustwill_trustoo_barrage_carousel_Vj9FLd": {
           "type": "shopify://apps/trustwill-trustoo/blocks/barrage-carousel/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "disabled": true,
           "settings": {}
         },
         "trustwill_trustoo_review_widget_mdcQyX": {
