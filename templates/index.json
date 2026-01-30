@@ -210,6 +210,28 @@
         "news_list_category": true
       }
     },
+    "1769744995210f79c8": {
+      "type": "apps",
+      "blocks": {
+        "trustwill_trustoo_barrage_carousel_Vj9FLd": {
+          "type": "shopify://apps/trustwill-trustoo/blocks/barrage-carousel/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {}
+        },
+        "trustwill_trustoo_review_widget_mdcQyX": {
+          "type": "shopify://apps/trustwill-trustoo/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "trustwill_trustoo_barrage_carousel_Vj9FLd",
+        "trustwill_trustoo_review_widget_mdcQyX"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "top_about_F9UPNq": {
       "type": "top_about",
       "settings": {
@@ -226,6 +248,7 @@
     "top_style_TmVRdm",
     "top_contents_wVXE7f",
     "top_jornal_drLd3i",
+    "1769744995210f79c8",
     "top_about_F9UPNq"
   ]
 }
