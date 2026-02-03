@@ -48,10 +48,18 @@
 					</picture>
 				</div>
 				<div class="txtBlock">
-					<a href="{{ block.settings.link }}">
-						<p>{{ block.settings.heading | newline_to_br }}</p>
-						<div class="btnBlock"><span class="btnStyleW01">VIEW</span></div>
-					</a>
+					{%- if block.settings.link == '/pages/about' -%}
+						<a href="{{ routes.root_url }}#about">
+							<p>{{ block.settings.heading | newline_to_br }}</p>
+							<div class="btnBlock"><span class="btnStyleW01">VIEW</span></div>
+						</a>
+					{%- else -%}
+						<a href="{{ block.settings.link }}">
+							<p>{{ block.settings.heading | newline_to_br }}</p>
+							<div class="btnBlock"><span class="btnStyleW01">VIEW</span></div>
+						</a>
+					{%- endif -%}
+						
 				</div>
 			</li>
 		{%- endfor -%}
