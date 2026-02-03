@@ -17,7 +17,12 @@ $max_font_size (px): 最大フォントサイズ
 	About
 -------------------------------------------------------------------*/
 #about {
-	scroll-margin-top: 7vw; 
+  scroll-margin-top: 7vw;
+}
+@media screen and (max-width: 800px) {
+  #about {
+    scroll-margin-top: 10vw;
+  }
 }
 h3 {
   font-size: 3.24vw;
