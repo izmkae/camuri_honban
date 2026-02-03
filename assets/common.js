@@ -234,3 +234,69 @@ if(document.getElementById("sideCurrentBar")) {
 });
 
 
+(function () {
+  function getHeaderOffset() {
+    // Dawn系: sticky-header や header-wrapper があることが多い
+    const sticky = document.querySelector('sticky-header');
+    if (sticky) return sticky.getBoundingClientRect().height;
+
+    const header = document.querySelector('.header-wrapper, header');
+    return header ? header.getBoundingClientRect().height : 0;
+  }
+
+  function closeHeaderDrawer() {
+    const drawer = document.querySelector('header-drawer');
+    if (!drawer) return;
+
+    // Dawn系は <details open> で開閉してる
+    const opened = drawer.querySelector('details[open]');
+    if (opened) opened.removeAttribute('open');
+
+    // body のスクロールロック解除（テーマにより class 名が違うことがある）
+    document.body.classList.remove('overflow-hidden');
+    document.documentElement.classList.remove('overflow-hidden');
+  }
+
+  function scrollToHash(hash, behavior = 'smooth') {
+    if (!hash) return;
+    const id = decodeURIComponent(hash.replace('#', ''));
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const offset = getHeaderOffset();
+    const top = el.getBoundingClientRect().top + window.pageYOffset - offset - 8;
+
+    window.scrollTo({ top, behavior });
+  }
+
+  // ① 同一ページ内アンカーをクリックしたら：メニュー閉じる＋スクロール
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href*="#"]');
+    if (!a) return;
+
+    // href を正規化
+    const href = a.getAttribute('href');
+    if (!href) return;
+
+    // 「#about」だけ or 「/ #about」みたいなルート+hash を対象にする
+    // ※ここは安全寄りに “hashがあるリンク” を対象にしてOK
+    const url = new URL(href, window.location.origin);
+
+    // 同一ページへのアンカーの場合だけ、JSで処理（ページ遷移しないので）
+    if (url.pathname === window.location.pathname && url.hash) {
+      e.preventDefault();
+
+      closeHeaderDrawer();
+      // すぐだとズレることがあるので1フレーム待つ
+      requestAnimationFrame(() => scrollToHash(url.hash, 'smooth'));
+    }
+  });
+
+  // ② 別ページから /#about で来た時：読み込み後にもう一回スクロール
+  window.addEventListener('load', () => {
+    if (!window.location.hash) return;
+
+    // load直後でもズレるサイトがあるので軽く遅延
+    setTimeout(() => scrollToHash(window.location.hash, 'auto'), 50);
+  });
+})();
