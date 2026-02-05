@@ -20,6 +20,28 @@
         "products_to_show": 8
       }
     },
+    "17702805565871680b": {
+      "type": "apps",
+      "blocks": {
+        "trustwill_trustoo_barrage_carousel_YmjWP8": {
+          "type": "shopify://apps/trustwill-trustoo/blocks/barrage-carousel/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {}
+        },
+        "trustwill_trustoo_review_widget_dckWJN": {
+          "type": "shopify://apps/trustwill-trustoo/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "trustwill_trustoo_barrage_carousel_YmjWP8",
+        "trustwill_trustoo_review_widget_dckWJN"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "footer": {
       "type": "footer",
       "settings": {}
@@ -27,6 +49,7 @@
   },
   "order": [
     "cmn_item_6KpNeP",
+    "17702805565871680b",
     "footer"
   ]
 }
