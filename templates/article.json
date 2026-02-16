@@ -63,9 +63,15 @@
         "article_HHAXfR"
       ],
       "settings": {}
+    },
+    "camuri_tryit_gdntxh": {
+      "type": "camuri_tryit",
+      "name": "TRY IT!",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "camuri_tryit_gdntxh"
   ]
 }
