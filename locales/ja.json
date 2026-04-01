@@ -602,7 +602,7 @@
         "purchase_options_agreement_label": "商品到着後7日間はご自宅でお試しいただけます。返品代金や送料は無料ですのでご安心くださいませ。お客様のカードが有効であることを確認するため、カードに事前承認を行いますが、お支払いはお客様のお手元にございます商品代金のみご請求致します。"
       },
       "marketing": {
-        "accept_marketing_checkbox_label": "新作・再入荷を先行でご案内します"
+        "accept_marketing_checkbox_label": "新作・再入荷をメールで受け取る"
       }
     },
     "subscriptions": {
