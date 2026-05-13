@@ -36,6 +36,14 @@
                   {%- assign share_url = request.origin | append: article.url -%}
                   {%- assign share_url_encoded = share_url | url_encode -%}
                   {%- assign share_title_encoded = article.title | url_encode -%}
+                  {%- if article.excerpt != blank -%}
+                    {%- assign share_description = article.excerpt | strip_html | truncate: 150 -%}
+                  {%- elsif article.content != blank -%}
+                    {%- assign share_description = article.content | strip_html | truncate: 150 -%}
+                  {%- else -%}
+                    {%- assign share_description = shop.description -%}
+                  {%- endif -%}
+                  {%- assign share_description_encoded = share_description | url_encode -%}
 
                   <a href="https://twitter.com/intent/tweet?text={{ share_title_encoded }}&url={{ share_url_encoded }}"
                      target="_blank" rel="noopener noreferrer"
@@ -43,7 +51,7 @@
                     <img src="{{ 'ico_x.png' | asset_url }}" alt="X" width="27" height="27">
                   </a>
 
-                  <a href="https://www.threads.net/intent/post?text={{ share_title_encoded }}%20{{ share_url_encoded }}"
+                  <a href="https://www.threads.net/intent/post?text={{ share_description_encoded }}%0A{{ share_url_encoded }}"
                      target="_blank" rel="noopener noreferrer"
                      class="sns-share-btn sns-share-btn--threads" aria-label="Threadsでシェア" style="padding: 0 3px;">
                     <img src="{{ 'ico_threads.png' | asset_url }}" alt="Threads" width="30" height="30">
