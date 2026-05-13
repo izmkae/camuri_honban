@@ -31,10 +31,29 @@
               {%- endif -%}
               
               <div class="shareButtonBlock">
-                <p>please shere</p>
+                <p class="shareLabel">Share</p>
                 <div class="icoShare">
-                  {% assign share_url = request.origin | append: article.url %}
-                  {% render 'share-button', block: block, share_link: share_url %}
+                  {%- assign share_url = request.origin | append: article.url -%}
+                  {%- assign share_url_encoded = share_url | url_encode -%}
+                  {%- assign share_title_encoded = article.title | url_encode -%}
+
+                  <a href="https://twitter.com/intent/tweet?text={{ share_title_encoded }}&url={{ share_url_encoded }}"
+                     target="_blank" rel="noopener noreferrer"
+                     class="sns-share-btn sns-share-btn--x" aria-label="Xでシェア" style="padding: 0 3px;">
+                    <img src="{{ 'ico_x.png' | asset_url }}" alt="X" width="27" height="27">
+                  </a>
+
+                  <a href="https://www.threads.net/intent/post?text={{ share_title_encoded }}%20{{ share_url_encoded }}"
+                     target="_blank" rel="noopener noreferrer"
+                     class="sns-share-btn sns-share-btn--threads" aria-label="Threadsでシェア" style="padding: 0 3px;">
+                    <img src="{{ 'ico_threads.png' | asset_url }}" alt="Threads" width="30" height="30">
+                  </a>
+
+                  <a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url_encoded }}"
+                     target="_blank" rel="noopener noreferrer"
+                     class="sns-share-btn sns-share-btn--facebook" aria-label="Facebookでシェア" style="padding: 0 3px;">
+                    <img src="{{ 'ico_facebook.png' | asset_url }}" alt="Facebook" width="30" height="30">
+                  </a>
                 </div>
               </div>
             </div>
