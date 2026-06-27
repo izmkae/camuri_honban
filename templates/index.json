@@ -129,6 +129,14 @@
         "products_to_show": 8
       }
     },
+    "top_item_BxWfqy": {
+      "type": "top_item",
+      "settings": {
+        "title": "\\ NEW ITEMS /",
+        "collection": "new-items",
+        "products_to_show": 8
+      }
+    },
     "top_about_F9UPNq": {
       "type": "top_about",
       "settings": {
@@ -244,6 +252,7 @@
   "order": [
     "01d42623-6eea-41c0-935c-b7f7eeedaae6",
     "top_item_xUxTWh",
+    "top_item_BxWfqy",
     "top_about_F9UPNq",
     "camuri_tryit_qBjbcw",
     "1769744995210f79c8",
