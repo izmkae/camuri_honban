@@ -300,6 +300,8 @@
   {%- endif -%}
 
   <!-- bottom Cart -->
+	{%- assign btm_id = section.id | append: '-btm' -%}
+	{%- assign btm_form_id = 'product-form-' | append: btm_id -%}
 	<div class="btnCartBlock btmCart">
 	{%- for block in section.blocks -%}
 
@@ -319,10 +321,10 @@
 			{%- endif -%}
 
 			{%- when 'variant_picker' -%}
-	      {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+	      {% render 'product-variant-picker', product: product, block: block, product_form_id: btm_form_id, unique_id: btm_id %}
 	 		{%- when 'quantity_selector' -%}
 			<div
-				id="Quantity-Form-{{ section.id }}"
+				id="Quantity-Form-{{ btm_id }}"
 				class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
 				{{ block.shopify_attributes }}
 			>
@@ -330,7 +332,7 @@
 				{% # theme-check-disable %}
 				{%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
 				{% # theme-check-enable %}
-				<label class="quantity__label form__label" for="Quantity-{{ section.id }}">
+				<label class="quantity__label form__label" for="Quantity-{{ btm_id }}">
 					{{ 'products.product.quantity.label' | t }}
 					<span class="quantity__rules-cart no-js-hidden{% if cart_qty == 0 %} hidden{% endif %}">
 						{%- render 'loading-spinner' -%}
@@ -338,7 +340,7 @@
 					</span>
 				</label>
 				<div class="price-per-item__container">
-					<quantity-input class="quantity" data-url="{{ product.url }}" data-section="{{ section.id }}">
+					<quantity-input class="quantity" data-url="{{ product.url }}" data-section="{{ btm_id }}">
 						<button class="quantity__button no-js-hidden" name="minus" type="button">
 							<span class="visually-hidden">
 								{{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
@@ -349,7 +351,7 @@
 							class="quantity__input"
 							type="number"
 							name="quantity"
-							id="Quantity-{{ section.id }}"
+							id="Quantity-{{ btm_id }}"
 							data-cart-quantity="{{ cart_qty }}"
 							data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
 							min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
@@ -377,7 +379,7 @@
 
 					-%}
 					{%- if product.quantity_price_breaks_configured? -%}
-						<price-per-item class="no-js-hidden" id="Price-Per-Item-{{ section.id }}" data-section-id="{{ section.id }}" data-variant-id="{{ product.selected_or_first_available_variant.id }}">
+						<price-per-item class="no-js-hidden" id="Price-Per-Item-{{ btm_id }}" data-section-id="{{ btm_id }}" data-variant-id="{{ product.selected_or_first_available_variant.id }}">
 							{%- if product.selected_or_first_available_variant.quantity_price_breaks.size > 0 -%}
 								{%- assign variant_price_compare = product.selected_or_first_available_variant.compare_at_price -%}
 								<div class="price-per-item">
@@ -435,7 +437,7 @@
 						</price-per-item>
 					{%- endif -%}
 				</div>
-				<div class="quantity__rules caption no-js-hidden" id="Quantity-Rules-{{ section.id }}">
+				<div class="quantity__rules caption no-js-hidden" id="Quantity-Rules-{{ btm_id }}">
 					{%- if product.selected_or_first_available_variant.quantity_rule.increment > 1 -%}
 						<span class="divider">
 							{{-
@@ -462,7 +464,7 @@
 					{%- endif -%}
 				</div>
 				{%- if product.quantity_price_breaks_configured? -%}
-					<volume-pricing class="parent-display no-js-hidden" id="Volume-{{ section.id }}">
+					<volume-pricing class="parent-display no-js-hidden" id="Volume-{{ btm_id }}">
 						{%- if product.selected_or_first_available_variant.quantity_price_breaks.size > 0 -%}
 							<span class="caption-large">{{ 'products.product.volume_pricing.title' | t }}</span>
 							<ul class="list-unstyled no-js-hidden">
@@ -483,7 +485,7 @@
 								<show-more-button>
 									<button
 										class="button-show-more link underlined-link"
-										id="Show-More-{{ section.id }}"
+										id="Show-More-{{ btm_id }}"
 										type="button"
 									>
 										<span class="label-show-more label-text"
@@ -500,7 +502,7 @@
 
 			{%- when 'buy_buttons' -%}
 			<div class="cartBtnBlock">
-				{%- render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true -%}
+				{%- render 'buy-buttons', block: block, product: product, product_form_id: btm_form_id, section_id: btm_id, show_pickup_availability: true -%}
 			</div>
 		{%- endcase -%}
 	{%- endfor -%}

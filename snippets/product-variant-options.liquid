@@ -20,7 +20,8 @@
   assign variants_option2_arr = product.variants | map: 'option2'
   assign variants_option3_arr = product.variants | map: 'option3'
 
-  assign product_form_id = 'product-form-' | append: section.id
+  assign unique_id = unique_id | default: section.id
+  assign product_form_id = 'product-form-' | append: unique_id
 -%}
 
 {%- for value in option.values -%}
@@ -48,7 +49,7 @@
   {%- if block.settings.picker_type == 'button' -%}
     <input
       type="radio"
-      id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+      id="{{ unique_id }}-{{ option.position }}-{{ forloop.index0 }}"
       name="{{ option.name }}"
       value="{{ value | escape }}"
       form="{{ product_form_id }}"
@@ -59,7 +60,7 @@
         class="disabled"
       {% endif %}
     >
-    <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+    <label for="{{ unique_id }}-{{ option.position }}-{{ forloop.index0 }}">
       {{ value -}}
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>
