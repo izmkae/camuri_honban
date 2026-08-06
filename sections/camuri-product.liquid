@@ -648,8 +648,65 @@
     }
   </script>
 
+  {%- comment -%} 試着ボタンのローディング表示（追加ボタンではなく試着ボタン上でスピナーを回す） {%- endcomment -%}
+  <style>
+    #trial_button_root.is-loading button[name="add"] { position: relative; pointer-events: none; }
+    #trial_button_root.is-loading button[name="add"] > span { visibility: hidden; }
+    #trial_button_root.is-loading button[name="add"]::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1.25em;
+      height: 1.25em;
+      margin: -0.625em 0 0 -0.625em;
+      border: 2px solid currentColor;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: rcmrTrySpin 0.7s linear infinite;
+    }
+    @keyframes rcmrTrySpin { to { transform: rotate(360deg); } }
+    /* 試着中は追加ボタン側のスピナーを抑制 */
+    body.rcmr-trying .product-form__submit .loading__spinner { display: none !important; }
+  </style>
+  <script>
+    (function () {
+      function init() {
+        var tryRoot = document.getElementById('trial_button_root');
+        if (!tryRoot) return;
+        var submit = document.querySelector('.product-form__submit');
+        var spinner = submit && submit.querySelector('.loading__spinner');
+        // Recustomerのapp blockは遅延読み込みされるため、要素が揃うまで待つ
+        if (!spinner) { setTimeout(init, 500); return; }
 
+        var tryActive = false;
 
+        function clear() {
+          tryActive = false;
+          tryRoot.classList.remove('is-loading');
+          document.body.classList.remove('rcmr-trying');
+        }
+
+        tryRoot.addEventListener('click', function (e) {
+          if (!e.target.closest('button[name="add"]')) return;
+          tryActive = true;
+          tryRoot.classList.add('is-loading');
+          document.body.classList.add('rcmr-trying');
+          // フォールバック（試着フローが完了/離脱しない場合の保険）
+          setTimeout(function () { if (tryActive) clear(); }, 12000);
+        }, true);
+
+        // 追加ボタンのスピナーがRecustomerによって解除されたら（＝処理完了）試着ボタン側も解除
+        var obs = new MutationObserver(function () {
+          if (tryActive && spinner.classList.contains('hidden')) clear();
+        });
+        obs.observe(spinner, { attributes: true, attributeFilter: ['class'] });
+      }
+
+      if (document.readyState !== 'loading') init();
+      else document.addEventListener('DOMContentLoaded', init);
+    })();
+  </script>
 
 
 
