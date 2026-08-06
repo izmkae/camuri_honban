@@ -238,7 +238,7 @@
 		{% if settings.logo %}
 			"logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
 		{% endif %}
-		{%- assign social_links = '' | split: '' -%}
+		{%- assign social_links = '' -%}
 		{%- if settings.social_twitter_link != blank -%}{%- assign social_links = social_links | append: settings.social_twitter_link | append: '|' -%}{%- endif -%}
 		{%- if settings.social_facebook_link != blank -%}{%- assign social_links = social_links | append: settings.social_facebook_link | append: '|' -%}{%- endif -%}
 		{%- if settings.social_pinterest_link != blank -%}{%- assign social_links = social_links | append: settings.social_pinterest_link | append: '|' -%}{%- endif -%}
@@ -251,7 +251,7 @@
 		{%- assign social_links = social_links | split: '|' -%}
 		"sameAs": [
 			{%- for link in social_links -%}
-				{{ link | json }}{% unless forloop.last %},{% endunless %}
+				{{ link | strip | json }}{% unless forloop.last %},{% endunless %}
 			{%- endfor -%}
 		],
 		"url": {{ request.origin | append: page.url | json }}
