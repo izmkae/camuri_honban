@@ -29,12 +29,13 @@
           "settings": {}
         },
         "trustoo_io_reviews_star_rating_widget_cHj9ED": {
-          "type": "shopify://apps/trustwill-trustoo/blocks/star-rating-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/star-rating-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
           "settings": {
             "star_size": 20,
             "font_size": 16,
             "text_color": "#585858",
             "block_aligment": "flex-start",
+            "rating_decimal_places": "1",
             "margin_top": 10,
             "margin_bottom": 0
           }
@@ -124,7 +125,7 @@
       "type": "apps",
       "blocks": {
         "trustoo_io_reviews_review_widget_JeLrca": {
-          "type": "shopify://apps/trustwill-trustoo/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/review-widget/c8f15077-6475-4e86-ad06-b66038d5ba2c",
           "settings": {
             "product": ""
           }
@@ -140,10 +141,10 @@
     "camuri_featured_blog_9htbbX": {
       "type": "camuri-featured-blog",
       "settings": {
-        "article1": "journal/makuake-2025-2",
-        "article2": "journal/size-guide",
-        "article3": "journal/factory-1",
-        "article4": "journal/camuri-sns"
+        "article1": "journal/customerreviews",
+        "article2": "journal/2026ss_denim2",
+        "article3": "journal/knit-kikaku4",
+        "article4": "journal/makuake-2025-2"
       }
     },
     "camuri_related-products": {
@@ -165,7 +166,7 @@
       "type": "apps",
       "blocks": {
         "trustwill_trustoo_barrage_carousel_QBDzkw": {
-          "type": "shopify://apps/trustwill-trustoo/blocks/barrage-carousel/c8f15077-6475-4e86-ad06-b66038d5ba2c",
+          "type": "shopify://apps/cwilltrustoo-reviews/blocks/barrage-carousel/c8f15077-6475-4e86-ad06-b66038d5ba2c",
           "settings": {}
         }
       },
