@@ -69,8 +69,24 @@
     },
     "top_item_xUxTWh": {
       "type": "top_item",
+      "settings": {
+        "title": "\\ WEEKLY RANKING /",
+        "collection": "all-item",
+        "products_to_show": 8
+      }
+    },
+    "top_item_QmdXFQ": {
+      "type": "top_item",
+      "settings": {
+        "title": "\\ NEW ITEMS /",
+        "collection": "new-items",
+        "products_to_show": 8
+      }
+    },
+    "top_item_LJhPML": {
+      "type": "top_item",
       "blocks": {
-        "item_category_z9qmRL": {
+        "item_category_CD7kD7": {
           "type": "item_category",
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_cap.png",
@@ -79,7 +95,7 @@
             "topItemCatLink": "shopify://collections/cap"
           }
         },
-        "item_category_naADdd": {
+        "item_category_zCcAjJ": {
           "type": "item_category",
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_hat.png",
@@ -88,7 +104,7 @@
             "topItemCatLink": "shopify://collections/hat"
           }
         },
-        "item_category_J9QjJN": {
+        "item_category_4m7YWT": {
           "type": "item_category",
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_knit.png",
@@ -97,7 +113,7 @@
             "topItemCatLink": ""
           }
         },
-        "item_category_Hhgi7f": {
+        "item_category_4hKhid": {
           "type": "item_category",
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_beret.png",
@@ -106,7 +122,7 @@
             "topItemCatLink": "shopify://collections/beret"
           }
         },
-        "item_category_fqQ9ej": {
+        "item_category_dXaGVK": {
           "type": "item_category",
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_casket.png",
@@ -115,7 +131,7 @@
             "topItemCatLink": "shopify://collections/casquette"
           }
         },
-        "item_category_J6KhLJ": {
+        "item_category_6tXJA8": {
           "type": "item_category",
           "settings": {
             "topItemCatImage": "shopify://shop_images/img_cat_care.png",
@@ -126,29 +142,13 @@
         }
       },
       "block_order": [
-        "item_category_z9qmRL",
-        "item_category_naADdd",
-        "item_category_J9QjJN",
-        "item_category_Hhgi7f",
-        "item_category_fqQ9ej",
-        "item_category_J6KhLJ"
+        "item_category_CD7kD7",
+        "item_category_zCcAjJ",
+        "item_category_4m7YWT",
+        "item_category_4hKhid",
+        "item_category_dXaGVK",
+        "item_category_6tXJA8"
       ],
-      "settings": {
-        "title": "\\ WEEKLY RANKING /",
-        "collection": "all-item",
-        "products_to_show": 8
-      }
-    },
-    "top_item_BxWfqy": {
-      "type": "top_item",
-      "settings": {
-        "title": "\\ NEW ITEMS /",
-        "collection": "new-items",
-        "products_to_show": 8
-      }
-    },
-    "top_item_QmdXFQ": {
-      "type": "top_item",
       "settings": {
         "title": "\\ RESTOCK /",
         "collection": "restock",
@@ -270,8 +270,8 @@
   "order": [
     "01d42623-6eea-41c0-935c-b7f7eeedaae6",
     "top_item_xUxTWh",
-    "top_item_BxWfqy",
     "top_item_QmdXFQ",
+    "top_item_LJhPML",
     "top_about_F9UPNq",
     "camuri_tryit_qBjbcw",
     "1769744995210f79c8",
