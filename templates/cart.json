@@ -87,11 +87,6 @@
         "padding_bottom": 40
       }
     },
-    "camuri_tryit_VCLTHD": {
-      "type": "camuri_tryit",
-      "name": "TRY IT!",
-      "settings": {}
-    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
@@ -101,7 +96,7 @@
         "show_description": false,
         "description_style": "body",
         "collection": "all",
-        "products_to_show": 4,
+        "products_to_show": 25,
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
@@ -125,7 +120,6 @@
     "cart-items",
     "173500529201ed141e",
     "cart-footer",
-    "camuri_tryit_VCLTHD",
     "featured-collection"
   ]
 }
