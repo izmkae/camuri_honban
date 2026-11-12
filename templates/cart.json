@@ -14,8 +14,7 @@
       "custom_css": [
         ".title-wrapper-with-link .title {margin: 0 auto;}",
         ".cart-item__details > * + * {margin-top: 0;}",
-        "h1 {font-size: 12px;}",
-        "h1 {white-space: pre-line;}",
+        "h1 {font-size: 20px;}",
         "p {font-size: 15px;}"
       ],
       "settings": {
