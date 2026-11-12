@@ -90,7 +90,7 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "その他のアイテム",
+        "title": "<strong>ITEMS</strong>",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -103,9 +103,9 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "scheme-1",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
